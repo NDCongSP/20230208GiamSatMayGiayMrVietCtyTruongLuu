@@ -40,31 +40,31 @@ namespace QuanLyGiay
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(876, 12);
+            this.panel2.Location = new System.Drawing.Point(1358, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(376, 281);
+            this.panel2.Size = new System.Drawing.Size(534, 537);
             this.panel2.TabIndex = 1;
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(12, 299);
+            this.panel3.Location = new System.Drawing.Point(12, 555);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1240, 115);
+            this.panel3.Size = new System.Drawing.Size(1880, 150);
             this.panel3.TabIndex = 1;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.grvDonHang);
-            this.panel4.Location = new System.Drawing.Point(12, 420);
+            this.panel4.Location = new System.Drawing.Point(12, 711);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1240, 249);
+            this.panel4.Size = new System.Drawing.Size(1880, 318);
             this.panel4.TabIndex = 2;
             // 
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(858, 281);
+            this.panel1.Size = new System.Drawing.Size(1340, 537);
             this.panel1.TabIndex = 2;
             // 
             // grvDonHang
@@ -74,14 +74,14 @@ namespace QuanLyGiay
             this.grvDonHang.Location = new System.Drawing.Point(0, 0);
             this.grvDonHang.Name = "grvDonHang";
             this.grvDonHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grvDonHang.Size = new System.Drawing.Size(1240, 249);
+            this.grvDonHang.Size = new System.Drawing.Size(1880, 318);
             this.grvDonHang.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
