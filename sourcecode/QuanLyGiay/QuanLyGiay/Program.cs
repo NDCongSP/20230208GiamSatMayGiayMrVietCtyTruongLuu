@@ -14,6 +14,10 @@ namespace QuanLyGiay
         [STAThread]
         static void Main()
         {
+            #region đọc các giá trị khởi tạo ban đầu
+            GlobalVariable.ConnectionString = Properties.Settings.Default.ConnectionString;
+            #endregion
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
