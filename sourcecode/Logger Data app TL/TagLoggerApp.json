@@ -1,0 +1,1083 @@
+{
+  "ProjectPath": "C:\\Users\\User1039\\Desktop\\TagLoggerApp.json",
+  "Username": null,
+  "Password": null,
+  "ParameterContainer": null,
+  "Childs": [
+    {
+  "Name": "Local Station",
+  "Description": null,
+  "ItemType": "LocalStation",
+  "IsReadOnly": true,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:35:13.8403705+07:00",
+  "ModifiedDate": "2023-02-16T14:29:43.6630912+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {}
+},
+  "CommunicationMode": "ReceiveFromServer",
+  "StationType": "Local",
+  "RemoteAddress": null,
+  "Port": 0,
+  "ConnectionString": null,
+  "RefreshRate": 0,
+  "Childs": [
+    {
+  "Name": "StationC",
+  "Description": "Đầu sóng C",
+  "ItemType": "Channel",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:35:56.1895109+07:00",
+  "ModifiedDate": "2023-02-16T14:29:21.1633873+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "IpAddress": "192.168.1.10",
+    "Port": "502",
+    "DelayBetweenPool": "5",
+    "ScanRate": "1000"
+  }
+},
+  "DriverPath": "ModbusTCP",
+  "Childs": [
+    {
+  "Name": "StC_HMI",
+  "Description": "HMI Đầu sóng C",
+  "ItemType": "Device",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:40:16.0342238+07:00",
+  "ModifiedDate": "2023-02-16T14:29:21.1633873+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "UnitId": "1",
+    "Timeout": "1000",
+    "TryReadWriteTimes": "3",
+    "ReadMode": "Block",
+    "InputContactReadBlockSettings": "[]",
+    "OutputCoilsReadBlockSettings": "[]",
+    "InputRegisterReadBlockSettings": "[]",
+    "HoldingRegisterReadBlockSettings": "[\r\n  {\r\n    \"AddressType\": 4,\r\n    \"Enabled\": true,\r\n    \"StartAddress\": \"400500\",\r\n    \"EndAddress\": \"400519\"\r\n  }\r\n]",
+    "MaxWritesCount": "10"
+  }
+},
+  "ByteOrder": "ABCD",
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": [
+    {
+  "Name": "StC_FaceIn",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:47:34.214636+07:00",
+  "ModifiedDate": "2023-02-15T11:47:34.214636+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400500"
+  }
+},
+  "Address": "400500",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StC_WaveIn",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:47:34.2156651+07:00",
+  "ModifiedDate": "2023-02-15T11:47:34.2156651+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400502"
+  }
+},
+  "Address": "400502",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StC_PaperOut",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:47:34.2156651+07:00",
+  "ModifiedDate": "2023-02-15T11:47:34.2156651+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400504"
+  }
+},
+  "Address": "400504",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StC_ConRemain",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:47:34.2156651+07:00",
+  "ModifiedDate": "2023-02-15T11:47:34.2156651+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400506"
+  }
+},
+  "Address": "400506",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StC_OnRemainOld",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:47:34.2156651+07:00",
+  "ModifiedDate": "2023-02-15T11:47:34.2156651+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400508"
+  }
+},
+  "Address": "400508",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StC_TypeRst",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:47:34.2156651+07:00",
+  "ModifiedDate": "2023-02-15T11:47:34.2156651+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400510"
+  }
+},
+  "Address": "400510",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StC_Command",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:47:34.2156651+07:00",
+  "ModifiedDate": "2023-02-15T11:47:34.2156651+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400512"
+  }
+},
+  "Address": "400512",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StC_Status",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:47:34.2156651+07:00",
+  "ModifiedDate": "2023-02-15T11:47:34.2156651+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400514"
+  }
+},
+  "Address": "400514",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StC_SetLength",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:47:34.2156651+07:00",
+  "ModifiedDate": "2023-02-15T11:47:34.2156651+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400516"
+  }
+},
+  "Address": "400516",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StC_RemainRun",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:47:34.2156651+07:00",
+  "ModifiedDate": "2023-02-15T11:47:34.2156651+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400518"
+  }
+},
+  "Address": "400518",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+}
+  ]
+}
+  ]
+},
+    {
+  "Name": "StationB",
+  "Description": "Đầu sóng B",
+  "ItemType": "Channel",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:36:24.2468043+07:00",
+  "ModifiedDate": "2023-02-16T14:29:21.1633873+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "IpAddress": "192.168.1.10",
+    "Port": "502",
+    "DelayBetweenPool": "5",
+    "ScanRate": "1000"
+  }
+},
+  "DriverPath": "ModbusTCP",
+  "Childs": [
+    {
+  "Name": "StB_HMI",
+  "Description": "HMI Đầu sóng B",
+  "ItemType": "Device",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:39:53.9386529+07:00",
+  "ModifiedDate": "2023-02-16T14:29:21.1633873+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "UnitId": "1",
+    "Timeout": "1000",
+    "TryReadWriteTimes": "3",
+    "ReadMode": "Block",
+    "InputContactReadBlockSettings": "[]",
+    "OutputCoilsReadBlockSettings": "[]",
+    "InputRegisterReadBlockSettings": "[]",
+    "HoldingRegisterReadBlockSettings": "[\r\n  {\r\n    \"AddressType\": 4,\r\n    \"Enabled\": true,\r\n    \"StartAddress\": \"400500\",\r\n    \"EndAddress\": \"400519\"\r\n  }\r\n]",
+    "MaxWritesCount": "10"
+  }
+},
+  "ByteOrder": "CDAB",
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": [
+    {
+  "Name": "StB_FaceIn",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:47:47.5342517+07:00",
+  "ModifiedDate": "2023-02-15T11:47:47.5342517+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400500"
+  }
+},
+  "Address": "400500",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StB_WaveIn",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:47:47.5342517+07:00",
+  "ModifiedDate": "2023-02-15T11:47:47.5342517+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400502"
+  }
+},
+  "Address": "400502",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StB_PaperOut",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:47:47.5342517+07:00",
+  "ModifiedDate": "2023-02-15T11:47:47.5342517+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400504"
+  }
+},
+  "Address": "400504",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StB_ConRemain",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:47:47.5342517+07:00",
+  "ModifiedDate": "2023-02-15T11:47:47.5342517+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400506"
+  }
+},
+  "Address": "400506",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StB_OnRemainOld",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:47:47.5342517+07:00",
+  "ModifiedDate": "2023-02-15T11:47:47.5342517+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400508"
+  }
+},
+  "Address": "400508",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StB_TypeRst",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:47:47.5342517+07:00",
+  "ModifiedDate": "2023-02-15T11:47:47.5342517+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400510"
+  }
+},
+  "Address": "400510",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StB_Command",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:47:47.5342517+07:00",
+  "ModifiedDate": "2023-02-15T11:47:47.5342517+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400512"
+  }
+},
+  "Address": "400512",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StB_Status",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:47:47.5342517+07:00",
+  "ModifiedDate": "2023-02-15T11:47:47.5342517+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400514"
+  }
+},
+  "Address": "400514",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StB_SetLength",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:47:47.5342517+07:00",
+  "ModifiedDate": "2023-02-15T11:47:47.5342517+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400516"
+  }
+},
+  "Address": "400516",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StB_RemainRun",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:47:47.5342517+07:00",
+  "ModifiedDate": "2023-02-15T11:47:47.5342517+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400518"
+  }
+},
+  "Address": "400518",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+}
+  ]
+}
+  ]
+},
+    {
+  "Name": "StationE",
+  "Description": "Đầu sóng E",
+  "ItemType": "Channel",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:36:45.1944316+07:00",
+  "ModifiedDate": "2023-02-16T14:29:21.1633873+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "IpAddress": "192.168.1.10",
+    "Port": "502",
+    "DelayBetweenPool": "5",
+    "ScanRate": "1000"
+  }
+},
+  "DriverPath": "ModbusTCP",
+  "Childs": [
+    {
+  "Name": "Ste_HMI",
+  "Description": "HMI đầu sóng E",
+  "ItemType": "Device",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:38:20.4161414+07:00",
+  "ModifiedDate": "2023-02-16T14:29:21.1633873+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "UnitId": "1",
+    "Timeout": "1000",
+    "TryReadWriteTimes": "3",
+    "ReadMode": "Block",
+    "InputContactReadBlockSettings": "[]",
+    "OutputCoilsReadBlockSettings": "[]",
+    "InputRegisterReadBlockSettings": "[]",
+    "HoldingRegisterReadBlockSettings": "[\r\n  {\r\n    \"AddressType\": 4,\r\n    \"Enabled\": true,\r\n    \"StartAddress\": \"400500\",\r\n    \"EndAddress\": \"400519\"\r\n  }\r\n]",
+    "MaxWritesCount": "10"
+  }
+},
+  "ByteOrder": "CDAB",
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": [
+    {
+  "Name": "StE_FaceIn",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:45:18.1010144+07:00",
+  "ModifiedDate": "2023-02-15T11:45:18.1010144+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400500"
+  }
+},
+  "Address": "400500",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StE_WaveIn",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:45:18.1010144+07:00",
+  "ModifiedDate": "2023-02-15T11:45:18.1010144+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400502"
+  }
+},
+  "Address": "400502",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StE_PaperOut",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:45:18.1010144+07:00",
+  "ModifiedDate": "2023-02-15T11:45:18.1010144+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400504"
+  }
+},
+  "Address": "400504",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StE_ConRemain",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:45:18.1010144+07:00",
+  "ModifiedDate": "2023-02-15T11:45:18.1010144+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400506"
+  }
+},
+  "Address": "400506",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StE_OnRemainOld",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:45:18.1010144+07:00",
+  "ModifiedDate": "2023-02-15T11:45:18.1010144+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400508"
+  }
+},
+  "Address": "400508",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StE_TypeRst",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:45:18.1010144+07:00",
+  "ModifiedDate": "2023-02-15T11:45:18.1010144+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400510"
+  }
+},
+  "Address": "400510",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StE_Command",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:45:18.1010144+07:00",
+  "ModifiedDate": "2023-02-15T11:45:18.1010144+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400512"
+  }
+},
+  "Address": "400512",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StE_Status",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:45:18.1010144+07:00",
+  "ModifiedDate": "2023-02-15T11:45:18.1010144+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400514"
+  }
+},
+  "Address": "400514",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StE_SetLength",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:45:18.1010144+07:00",
+  "ModifiedDate": "2023-02-15T11:45:18.1010144+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400516"
+  }
+},
+  "Address": "400516",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "StE_RemainRun",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-02-15T11:45:18.1010144+07:00",
+  "ModifiedDate": "2023-02-15T11:45:18.1010144+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Float",
+    "Address": "400518"
+  }
+},
+  "Address": "400518",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+}
+  ]
+}
+  ]
+}
+  ]
+}
+  ]
+}
