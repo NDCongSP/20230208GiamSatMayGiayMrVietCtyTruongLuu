@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<CimDataSet xmlns="CimSystem">
+  <ReadyDecSpeed>
+    <DiffSpeed>0</DiffSpeed>
+    <ReadyLen>10</ReadyLen>
+  </ReadyDecSpeed>
+  <ReadyDecSpeed>
+    <DiffSpeed>20</DiffSpeed>
+    <ReadyLen>30</ReadyLen>
+  </ReadyDecSpeed>
+  <ReadyDecSpeed>
+    <DiffSpeed>30</DiffSpeed>
+    <ReadyLen>40</ReadyLen>
+  </ReadyDecSpeed>
+</CimDataSet>

@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="yes"?>
+<CimDataSet xmlns="CimSystem">
+  <TileOrderList>
+    <SortID>1</SortID>
+    <Tile1>B</Tile1>
+    <Tile2>C</Tile2>
+    <Tile3>B</Tile3>
+    <Tile4>-</Tile4>
+    <IfUsing>1</IfUsing>
+  </TileOrderList>
+  <TileOrderList>
+    <SortID>6</SortID>
+    <Tile1>E</Tile1>
+    <Tile2>C</Tile2>
+    <Tile3>B</Tile3>
+    <Tile4>-</Tile4>
+    <IfUsing>0</IfUsing>
+  </TileOrderList>
+</CimDataSet>

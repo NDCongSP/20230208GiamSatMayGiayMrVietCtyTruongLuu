@@ -1,0 +1,47 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <LinearParameter>
+    <ValueX>0</ValueX>
+    <ValueY>0</ValueY>
+  </LinearParameter>
+  <LinearParameter>
+    <ValueX>10</ValueX>
+    <ValueY>10</ValueY>
+  </LinearParameter>
+  <LinearParameter>
+    <ValueX>20</ValueX>
+    <ValueY>20</ValueY>
+  </LinearParameter>
+  <LinearParameter>
+    <ValueX>30</ValueX>
+    <ValueY>30</ValueY>
+  </LinearParameter>
+  <LinearParameter>
+    <ValueX>40</ValueX>
+    <ValueY>40</ValueY>
+  </LinearParameter>
+  <LinearParameter>
+    <ValueX>50</ValueX>
+    <ValueY>50</ValueY>
+  </LinearParameter>
+  <LinearParameter>
+    <ValueX>60</ValueX>
+    <ValueY>60</ValueY>
+  </LinearParameter>
+  <LinearParameter>
+    <ValueX>70</ValueX>
+    <ValueY>70</ValueY>
+  </LinearParameter>
+  <LinearParameter>
+    <ValueX>80</ValueX>
+    <ValueY>80</ValueY>
+  </LinearParameter>
+  <LinearParameter>
+    <ValueX>90</ValueX>
+    <ValueY>90</ValueY>
+  </LinearParameter>
+  <LinearParameter>
+    <ValueX>100</ValueX>
+    <ValueY>100</ValueY>
+  </LinearParameter>
+</DocumentElement>

@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="yes"?>
+<CimDataSet xmlns="CimSystem">
+  <SCTypeRec>
+    <SCType>0</SCType>
+    <SCTypeName>不压</SCTypeName>
+    <ToSCCode>5</ToSCCode>
+    <ToSCCode1>5</ToSCCode1>
+  </SCTypeRec>
+  <SCTypeRec>
+    <SCType>1</SCType>
+    <SCTypeName>凹尖</SCTypeName>
+    <ToSCCode>2</ToSCCode>
+    <ToSCCode1>2</ToSCCode1>
+  </SCTypeRec>
+  <SCTypeRec>
+    <SCType>2</SCType>
+    <SCTypeName>平尖</SCTypeName>
+    <ToSCCode>1</ToSCCode>
+    <ToSCCode1>1</ToSCCode1>
+  </SCTypeRec>
+  <SCTypeRec>
+    <SCType>3</SCType>
+    <SCTypeName>双尖</SCTypeName>
+    <ToSCCode>4</ToSCCode>
+    <ToSCCode1>4</ToSCCode1>
+  </SCTypeRec>
+  <SCTypeRec>
+    <SCType>4</SCType>
+    <SCTypeName>单尖</SCTypeName>
+    <ToSCCode>3</ToSCCode>
+  </SCTypeRec>
+</CimDataSet>

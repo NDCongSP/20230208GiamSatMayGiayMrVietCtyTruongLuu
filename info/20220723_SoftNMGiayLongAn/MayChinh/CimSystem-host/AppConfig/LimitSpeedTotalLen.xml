@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="yes"?>
+<CimDataSet xmlns="CimSystem">
+  <LimitSpeedTotalLen>
+    <TotalLen>15</TotalLen>
+    <LimitSpeed>120</LimitSpeed>
+    <TargetSpeed>120</TargetSpeed>
+  </LimitSpeedTotalLen>
+  <LimitSpeedTotalLen>
+    <TotalLen>0</TotalLen>
+    <LimitSpeed>120</LimitSpeed>
+    <TargetSpeed>120</TargetSpeed>
+  </LimitSpeedTotalLen>
+  <LimitSpeedTotalLen>
+    <TotalLen>30</TotalLen>
+    <LimitSpeed>150</LimitSpeed>
+    <TargetSpeed>150</TargetSpeed>
+  </LimitSpeedTotalLen>
+  <LimitSpeedTotalLen>
+    <TotalLen>1000000000</TotalLen>
+    <LimitSpeed>150</LimitSpeed>
+    <TargetSpeed>150</TargetSpeed>
+  </LimitSpeedTotalLen>
+</CimDataSet>

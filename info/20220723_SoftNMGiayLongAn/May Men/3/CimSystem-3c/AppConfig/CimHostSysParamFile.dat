@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<CimDataSet xmlns="CimSystem">
+  <SysParamRec>
+    <RecID>1</RecID>
+    <ParamName>ClassList</ParamName>
+    <ParamDes>可选班次列表</ParamDes>
+    <ParamValue>A/B/C/D</ParamValue>
+  </SysParamRec>
+  <SysParamRec>
+    <RecID>2</RecID>
+    <ParamName>ClearPastDays</ParamName>
+    <ParamDes>完工记录保存天数</ParamDes>
+    <ParamValue>20</ParamValue>
+  </SysParamRec>
+  <SysParamRec>
+    <RecID>3</RecID>
+    <ParamName>CountStopSeconds</ParamName>
+    <ParamDes>停机超过N秒计停机</ParamDes>
+    <ParamValue>10</ParamValue>
+  </SysParamRec>
+  <SysParamRec>
+    <RecID>4</RecID>
+    <ParamName>DeviceLinkOrderCount</ParamName>
+    <ParamDes>外部设备每次最大传送订单数</ParamDes>
+    <ParamValue>10</ParamValue>
+  </SysParamRec>
+  <SysParamRec>
+    <RecID>5</RecID>
+    <ParamName>SpeedSource</ParamName>
+    <ParamDes>车速来源，1-本地,2、糊车</ParamDes>
+    <ParamValue>2</ParamValue>
+  </SysParamRec>
+</CimDataSet>

@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <LinearParameter>
+    <ValueX>0</ValueX>
+  </LinearParameter>
+  <LinearParameter>
+    <ValueX>50</ValueX>
+  </LinearParameter>
+  <LinearParameter>
+    <ValueX>100</ValueX>
+  </LinearParameter>
+  <LinearParameter>
+    <ValueX>150</ValueX>
+  </LinearParameter>
+  <LinearParameter>
+    <ValueX>200</ValueX>
+  </LinearParameter>
+  <LinearParameter>
+    <ValueX>250</ValueX>
+  </LinearParameter>
+  <LinearParameter>
+    <ValueX>300</ValueX>
+  </LinearParameter>
+  <LinearParameter>
+    <ValueX>350</ValueX>
+  </LinearParameter>
+</DocumentElement>

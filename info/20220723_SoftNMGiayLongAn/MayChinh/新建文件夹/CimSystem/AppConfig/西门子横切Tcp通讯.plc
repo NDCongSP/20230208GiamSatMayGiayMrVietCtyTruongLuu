@@ -1,0 +1,35 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <CtrlParametersRec>
+    <RecID>1</RecID>
+    <RegAddr>2</RegAddr>
+    <RegName>刀棍周长</RegName>
+    <UnitName>毫米</UnitName>
+    <Success>false</Success>
+  </CtrlParametersRec>
+  <CtrlParametersRec>
+    <RecID>2</RecID>
+    <RegAddr>3</RegAddr>
+    <RegName>同步区角度</RegName>
+    <UnitName>度</UnitName>
+    <Success>false</Success>
+  </CtrlParametersRec>
+  <CtrlParametersRec>
+    <RecID>3</RecID>
+    <RegAddr>4</RegAddr>
+    <RegName>同步区速度比，1/100</RegName>
+    <Success>false</Success>
+  </CtrlParametersRec>
+  <CtrlParametersRec>
+    <RecID>4</RecID>
+    <RegAddr>5</RegAddr>
+    <RegName>近端测米轮标定值</RegName>
+    <Success>false</Success>
+  </CtrlParametersRec>
+  <CtrlParametersRec>
+    <RecID>5</RecID>
+    <RegAddr>6</RegAddr>
+    <RegName>远端测米轮标定值</RegName>
+    <Success>false</Success>
+  </CtrlParametersRec>
+</DocumentElement>

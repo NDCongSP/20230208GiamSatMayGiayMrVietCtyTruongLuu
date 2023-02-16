@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="yes"?>
+<CimDataSet xmlns="CimSystem">
+  <StackNumSet>
+    <BoardLen>9000</BoardLen>
+    <BoardLayers>3</BoardLayers>
+    <StackNum>400</StackNum>
+  </StackNumSet>
+  <StackNumSet>
+    <BoardLen>9000</BoardLen>
+    <BoardLayers>5</BoardLayers>
+    <StackNum>250</StackNum>
+  </StackNumSet>
+</CimDataSet>

@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="yes"?>
+<CimDataSet xmlns="CimSystem">
+  <SuckFreqRec>
+    <Layers>3</Layers>
+    <MinTrimWid>3</MinTrimWid>
+    <MaxTrimWid>75</MaxTrimWid>
+    <MinFreqValue>20</MinFreqValue>
+    <MaxFreqValue>50</MaxFreqValue>
+  </SuckFreqRec>
+  <SuckFreqRec>
+    <Layers>4</Layers>
+    <MinTrimWid>3</MinTrimWid>
+    <MaxTrimWid>75</MaxTrimWid>
+    <MinFreqValue>20</MinFreqValue>
+    <MaxFreqValue>50</MaxFreqValue>
+  </SuckFreqRec>
+  <SuckFreqRec>
+    <Layers>5</Layers>
+    <MinTrimWid>3</MinTrimWid>
+    <MaxTrimWid>75</MaxTrimWid>
+    <MinFreqValue>25</MinFreqValue>
+    <MaxFreqValue>50</MaxFreqValue>
+  </SuckFreqRec>
+</CimDataSet>
