@@ -14,6 +14,10 @@ namespace Logger_Aplication
         [STAThread]
         static void Main()
         {
+            #region Get các giá trị cài đặt ban đầu
+            GlobalVariables.ConnectionString = Properties.Settings.Default.ConString;
+            #endregion
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainPage());

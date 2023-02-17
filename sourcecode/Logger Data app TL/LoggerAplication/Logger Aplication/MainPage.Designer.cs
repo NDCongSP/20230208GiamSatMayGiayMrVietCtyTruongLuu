@@ -30,7 +30,6 @@ namespace Logger_Aplication
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.DriverConnect = new EasyScada.Winforms.Controls.EasyDriverConnector(this.components);
             this.easyLabel1 = new EasyScada.Winforms.Controls.EasyLabel();
             this.easyLabel2 = new EasyScada.Winforms.Controls.EasyLabel();
             this.easyLabel3 = new EasyScada.Winforms.Controls.EasyLabel();
@@ -54,7 +53,7 @@ namespace Logger_Aplication
             this.richTextBox9 = new System.Windows.Forms.RichTextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.DriverConnect)).BeginInit();
+            this.easyDriverConnector1 = new EasyScada.Winforms.Controls.EasyDriverConnector(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel3)).BeginInit();
@@ -67,20 +66,8 @@ namespace Logger_Aplication
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.easyDriverConnector1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DriverConnect
-            // 
-            this.DriverConnect.CollectionName = null;
-            this.DriverConnect.CommunicationMode = EasyScada.Core.CommunicationMode.ReceiveFromServer;
-            this.DriverConnect.DatabaseName = null;
-            this.DriverConnect.MongoDb_ConnectionString = null;
-            this.DriverConnect.Port = ((ushort)(8800));
-            this.DriverConnect.RefreshRate = 1000;
-            this.DriverConnect.ServerAddress = "127.0.0.1";
-            this.DriverConnect.StationName = null;
-            this.DriverConnect.Timeout = 30;
-            this.DriverConnect.UseMongoDb = false;
             // 
             // easyLabel1
             // 
@@ -286,7 +273,7 @@ namespace Logger_Aplication
             this.richTextBox5.ForeColor = System.Drawing.Color.Red;
             this.richTextBox5.Location = new System.Drawing.Point(200, 139);
             this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(219, 54);
+            this.richTextBox5.Size = new System.Drawing.Size(219, 0);
             this.richTextBox5.TabIndex = 16;
             this.richTextBox5.Text = "GIẤY MẶT";
             // 
@@ -299,7 +286,7 @@ namespace Logger_Aplication
             this.richTextBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.richTextBox6.Location = new System.Drawing.Point(484, 139);
             this.richTextBox6.Name = "richTextBox6";
-            this.richTextBox6.Size = new System.Drawing.Size(219, 54);
+            this.richTextBox6.Size = new System.Drawing.Size(219, 0);
             this.richTextBox6.TabIndex = 17;
             this.richTextBox6.Text = "GIẤY SÓNG";
             // 
@@ -312,7 +299,7 @@ namespace Logger_Aplication
             this.richTextBox7.ForeColor = System.Drawing.Color.Blue;
             this.richTextBox7.Location = new System.Drawing.Point(769, 139);
             this.richTextBox7.Name = "richTextBox7";
-            this.richTextBox7.Size = new System.Drawing.Size(219, 54);
+            this.richTextBox7.Size = new System.Drawing.Size(219, 0);
             this.richTextBox7.TabIndex = 18;
             this.richTextBox7.Text = "GHÉP LỚP";
             // 
@@ -326,14 +313,14 @@ namespace Logger_Aplication
             this.richTextBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.richTextBox8.Location = new System.Drawing.Point(1054, 139);
             this.richTextBox8.Name = "richTextBox8";
-            this.richTextBox8.Size = new System.Drawing.Size(219, 54);
+            this.richTextBox8.Size = new System.Drawing.Size(219, 0);
             this.richTextBox8.TabIndex = 19;
             this.richTextBox8.Text = "TRÊN DÀN";
             // 
             // richTextBox9
             // 
             this.richTextBox9.Font = new System.Drawing.Font("Cambria", 27.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.richTextBox9.Location = new System.Drawing.Point(269, 46);
+            this.richTextBox9.Location = new System.Drawing.Point(266, 12);
             this.richTextBox9.Name = "richTextBox9";
             this.richTextBox9.Size = new System.Drawing.Size(810, 54);
             this.richTextBox9.TabIndex = 20;
@@ -349,7 +336,7 @@ namespace Logger_Aplication
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Cambria", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.Location = new System.Drawing.Point(1116, 664);
+            this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(207, 51);
             this.button1.TabIndex = 22;
@@ -357,11 +344,24 @@ namespace Logger_Aplication
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // easyDriverConnector1
+            // 
+            this.easyDriverConnector1.CollectionName = null;
+            this.easyDriverConnector1.CommunicationMode = EasyScada.Core.CommunicationMode.ReceiveFromServer;
+            this.easyDriverConnector1.DatabaseName = null;
+            this.easyDriverConnector1.MongoDb_ConnectionString = null;
+            this.easyDriverConnector1.Port = ((ushort)(8800));
+            this.easyDriverConnector1.RefreshRate = 1000;
+            this.easyDriverConnector1.ServerAddress = "127.0.0.1";
+            this.easyDriverConnector1.StationName = null;
+            this.easyDriverConnector1.Timeout = 30;
+            this.easyDriverConnector1.UseMongoDb = false;
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1350, 727);
+            this.ClientSize = new System.Drawing.Size(1350, 506);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.richTextBox9);
@@ -387,7 +387,6 @@ namespace Logger_Aplication
             this.Controls.Add(this.easyLabel1);
             this.Name = "MainPage";
             this.Text = "Truong Luu Automation Logger Data App";
-            ((System.ComponentModel.ISupportInitialize)(this.DriverConnect)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel3)).EndInit();
@@ -400,13 +399,12 @@ namespace Logger_Aplication
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.easyDriverConnector1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private EasyScada.Winforms.Controls.EasyDriverConnector DriverConnect;
         private EasyScada.Winforms.Controls.EasyLabel easyLabel1;
         private EasyScada.Winforms.Controls.EasyLabel easyLabel2;
         private EasyScada.Winforms.Controls.EasyLabel easyLabel3;
@@ -430,6 +428,7 @@ namespace Logger_Aplication
         private System.Windows.Forms.RichTextBox richTextBox9;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
+        private EasyScada.Winforms.Controls.EasyDriverConnector easyDriverConnector1;
     }
 }
 

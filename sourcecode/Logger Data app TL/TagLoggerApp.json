@@ -1,5 +1,5 @@
 {
-  "ProjectPath": "C:\\Users\\User1039\\Desktop\\TagLoggerApp.json",
+  "ProjectPath": "D:\\MyCompany\\8.SourceCode\\3.Projects\\20230208GiamSatMayGiayMrVietCtyTruongLuu\\sourcecode\\Logger Data app TL\\TagLoggerApp.json",
   "Username": null,
   "Password": null,
   "ParameterContainer": null,
@@ -11,7 +11,7 @@
   "IsReadOnly": true,
   "Enabled": true,
   "CreatedDate": "2023-02-15T11:35:13.8403705+07:00",
-  "ModifiedDate": "2023-02-16T14:29:43.6630912+07:00",
+  "ModifiedDate": "2023-02-17T21:24:11.1789246+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -31,13 +31,13 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2023-02-15T11:35:56.1895109+07:00",
-  "ModifiedDate": "2023-02-16T14:29:21.1633873+07:00",
+  "ModifiedDate": "2023-02-17T21:24:11.1789246+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
   "Parameters": {
-    "IpAddress": "192.168.1.10",
-    "Port": "502",
+    "IpAddress": "127.0.0.1",
+    "Port": "503",
     "DelayBetweenPool": "5",
     "ScanRate": "1000"
   }
@@ -51,7 +51,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2023-02-15T11:40:16.0342238+07:00",
-  "ModifiedDate": "2023-02-16T14:29:21.1633873+07:00",
+  "ModifiedDate": "2023-02-17T21:24:11.1789246+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -382,13 +382,13 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2023-02-15T11:36:24.2468043+07:00",
-  "ModifiedDate": "2023-02-16T14:29:21.1633873+07:00",
+  "ModifiedDate": "2023-02-17T21:24:11.1789246+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
   "Parameters": {
-    "IpAddress": "192.168.1.10",
-    "Port": "502",
+    "IpAddress": "127.0.0.1",
+    "Port": "503",
     "DelayBetweenPool": "5",
     "ScanRate": "1000"
   }
@@ -402,7 +402,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2023-02-15T11:39:53.9386529+07:00",
-  "ModifiedDate": "2023-02-16T14:29:21.1633873+07:00",
+  "ModifiedDate": "2023-02-17T21:24:11.1789246+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -733,13 +733,13 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2023-02-15T11:36:45.1944316+07:00",
-  "ModifiedDate": "2023-02-16T14:29:21.1633873+07:00",
+  "ModifiedDate": "2023-02-17T21:24:11.1789246+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
   "Parameters": {
-    "IpAddress": "192.168.1.10",
-    "Port": "502",
+    "IpAddress": "127.0.0.1",
+    "Port": "503",
     "DelayBetweenPool": "5",
     "ScanRate": "1000"
   }
@@ -753,7 +753,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2023-02-15T11:38:20.4161414+07:00",
-  "ModifiedDate": "2023-02-16T14:29:21.1633873+07:00",
+  "ModifiedDate": "2023-02-17T21:24:11.1789246+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,

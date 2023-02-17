@@ -21,5 +21,10 @@ namespace Logger_Aplication
         {
             this.Close();
         }
+
+        private void Report_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

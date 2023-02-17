@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dapper;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,15 @@ namespace Logger_Aplication
         public MainPage()
         {
             InitializeComponent();
+            Load += MainPage_Load;
+        }
+
+        private void MainPage_Load(object sender, EventArgs e)
+        {
+            using (var connection=GlobalVariables.GetConnection())
+            {
+                connection.Query<>
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
