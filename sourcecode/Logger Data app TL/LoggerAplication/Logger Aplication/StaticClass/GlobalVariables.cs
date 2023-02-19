@@ -13,6 +13,7 @@ namespace Logger_Aplication
     public static class GlobalVariables
     {
         public static string ConnectionString { get; set; }
+        public static string PathApp { get; set; }
 
         public static IDbConnection GetDbConnectionSql()
         {

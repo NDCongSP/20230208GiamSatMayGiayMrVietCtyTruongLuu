@@ -11,7 +11,7 @@
   "IsReadOnly": true,
   "Enabled": true,
   "CreatedDate": "2023-02-15T11:35:13.8403705+07:00",
-  "ModifiedDate": "2023-02-17T21:24:11.1789246+07:00",
+  "ModifiedDate": "2023-02-17T22:12:09.7064344+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -31,7 +31,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2023-02-15T11:35:56.1895109+07:00",
-  "ModifiedDate": "2023-02-17T21:24:11.1789246+07:00",
+  "ModifiedDate": "2023-02-17T22:12:09.7064344+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -51,7 +51,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2023-02-15T11:40:16.0342238+07:00",
-  "ModifiedDate": "2023-02-17T21:24:11.1789246+07:00",
+  "ModifiedDate": "2023-02-17T22:12:09.7064344+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -238,7 +238,7 @@
   }
 },
   "Address": "400510",
-  "DataTypeName": "Float",
+  "DataTypeName": "Word",
   "RefreshRate": 100,
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
@@ -382,13 +382,13 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2023-02-15T11:36:24.2468043+07:00",
-  "ModifiedDate": "2023-02-17T21:24:11.1789246+07:00",
+  "ModifiedDate": "2023-02-17T22:12:09.7064344+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
   "Parameters": {
     "IpAddress": "127.0.0.1",
-    "Port": "503",
+    "Port": "504",
     "DelayBetweenPool": "5",
     "ScanRate": "1000"
   }
@@ -402,7 +402,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2023-02-15T11:39:53.9386529+07:00",
-  "ModifiedDate": "2023-02-17T21:24:11.1789246+07:00",
+  "ModifiedDate": "2023-02-17T22:12:09.7064344+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -589,7 +589,7 @@
   }
 },
   "Address": "400510",
-  "DataTypeName": "Float",
+  "DataTypeName": "Word",
   "RefreshRate": 100,
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
@@ -733,13 +733,13 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2023-02-15T11:36:45.1944316+07:00",
-  "ModifiedDate": "2023-02-17T21:24:11.1789246+07:00",
+  "ModifiedDate": "2023-02-17T22:12:09.7064344+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
   "Parameters": {
     "IpAddress": "127.0.0.1",
-    "Port": "503",
+    "Port": "505",
     "DelayBetweenPool": "5",
     "ScanRate": "1000"
   }
@@ -747,13 +747,13 @@
   "DriverPath": "ModbusTCP",
   "Childs": [
     {
-  "Name": "Ste_HMI",
+  "Name": "StE_HMI",
   "Description": "HMI đầu sóng E",
   "ItemType": "Device",
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2023-02-15T11:38:20.4161414+07:00",
-  "ModifiedDate": "2023-02-17T21:24:11.1789246+07:00",
+  "ModifiedDate": "2023-02-17T22:12:09.7064344+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -940,7 +940,7 @@
   }
 },
   "Address": "400510",
-  "DataTypeName": "Float",
+  "DataTypeName": "Word",
   "RefreshRate": 100,
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",

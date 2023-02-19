@@ -24,7 +24,7 @@ namespace Logger_Aplication
 
         private void Report_Load(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

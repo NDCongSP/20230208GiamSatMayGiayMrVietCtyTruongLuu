@@ -25,7 +25,8 @@ namespace Logger_Aplication.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Database=quanlygiay;UID=root;Password=100100; Min Pool Size" +
+            "=0;Max Pool Size=1000;Pooling=true; Connect Timeout=65535;")]
         public string ConString {
             get {
                 return ((string)(this["ConString"]));

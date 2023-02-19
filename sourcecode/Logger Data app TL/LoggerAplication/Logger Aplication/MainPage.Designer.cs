@@ -54,6 +54,7 @@ namespace Logger_Aplication
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.easyDriverConnector1 = new EasyScada.Winforms.Controls.EasyDriverConnector(this.components);
+            this.labDriverStatus = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel3)).BeginInit();
@@ -357,11 +358,21 @@ namespace Logger_Aplication
             this.easyDriverConnector1.Timeout = 30;
             this.easyDriverConnector1.UseMongoDb = false;
             // 
+            // labDriverStatus
+            // 
+            this.labDriverStatus.Location = new System.Drawing.Point(1238, 474);
+            this.labDriverStatus.Name = "labDriverStatus";
+            this.labDriverStatus.Size = new System.Drawing.Size(100, 23);
+            this.labDriverStatus.TabIndex = 23;
+            this.labDriverStatus.Text = "Driver Status";
+            this.labDriverStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 506);
+            this.Controls.Add(this.labDriverStatus);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.richTextBox9);
@@ -429,6 +440,7 @@ namespace Logger_Aplication
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
         private EasyScada.Winforms.Controls.EasyDriverConnector easyDriverConnector1;
+        private System.Windows.Forms.Label labDriverStatus;
     }
 }
 

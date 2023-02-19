@@ -29,7 +29,6 @@ namespace Logger_Aplication
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.grvData = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtFrom = new System.Windows.Forms.DateTimePicker();
@@ -43,18 +42,6 @@ namespace Logger_Aplication
             ((System.ComponentModel.ISupportInitialize)(this.grvData)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(254, 51);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "GIÁM SÁT THÔNG SỐ";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // grvData
             // 
@@ -171,8 +158,8 @@ namespace Logger_Aplication
             this.ClientSize = new System.Drawing.Size(1350, 727);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.grvData);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
+            this.MaximizeBox = false;
             this.Name = "Report";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Report";
@@ -186,8 +173,6 @@ namespace Logger_Aplication
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView grvData;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnQuery;
