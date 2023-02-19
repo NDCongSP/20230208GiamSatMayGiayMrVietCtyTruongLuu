@@ -56,6 +56,7 @@ namespace Logger_Aplication
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -64,10 +65,10 @@ namespace Logger_Aplication
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.labTime = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel3)).BeginInit();
@@ -215,7 +216,7 @@ namespace Logger_Aplication
             this.easyLabel9.Size = new System.Drawing.Size(274, 102);
             this.easyLabel9.StringFormat = null;
             this.easyLabel9.TabIndex = 11;
-            this.easyLabel9.TagPath = "Local Station/StationE/Ste_HMI/StE_ConRemain";
+            this.easyLabel9.TagPath = "Local Station/StationE/StE_HMI/StE_ConRemain";
             this.easyLabel9.Text = "123456789.0";
             this.easyLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -225,12 +226,12 @@ namespace Logger_Aplication
             this.easyLabel10.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
             this.easyLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.84906F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.easyLabel10.ForeColor = System.Drawing.Color.Blue;
-            this.easyLabel10.Location = new System.Drawing.Point(756, 536);
+            this.easyLabel10.Location = new System.Drawing.Point(757, 536);
             this.easyLabel10.Name = "easyLabel10";
             this.easyLabel10.Size = new System.Drawing.Size(274, 102);
             this.easyLabel10.StringFormat = null;
             this.easyLabel10.TabIndex = 10;
-            this.easyLabel10.TagPath = "Local Station/StationE/Ste_HMI/StE_PaperOut";
+            this.easyLabel10.TagPath = "Local Station/StationE/StE_HMI/StE_PaperOut";
             this.easyLabel10.Text = "123456789.0";
             this.easyLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -245,7 +246,7 @@ namespace Logger_Aplication
             this.easyLabel11.Size = new System.Drawing.Size(274, 102);
             this.easyLabel11.StringFormat = null;
             this.easyLabel11.TabIndex = 9;
-            this.easyLabel11.TagPath = "Local Station/StationE/Ste_HMI/StE_WaveIn";
+            this.easyLabel11.TagPath = "Local Station/StationE/StE_HMI/StE_WaveIn";
             this.easyLabel11.Text = "123456789.0";
             this.easyLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -260,14 +261,14 @@ namespace Logger_Aplication
             this.easyLabel12.Size = new System.Drawing.Size(274, 102);
             this.easyLabel12.StringFormat = null;
             this.easyLabel12.TabIndex = 8;
-            this.easyLabel12.TagPath = "Local Station/StationE/Ste_HMI/StE_FaceIn";
+            this.easyLabel12.TagPath = "Local Station/StationE/StE_HMI/StE_FaceIn";
             this.easyLabel12.Text = "123456789.0";
             this.easyLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // richTextBox9
             // 
             this.richTextBox9.Font = new System.Drawing.Font("Cambria", 27.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.richTextBox9.Location = new System.Drawing.Point(294, 34);
+            this.richTextBox9.Location = new System.Drawing.Point(280, 34);
             this.richTextBox9.Name = "richTextBox9";
             this.richTextBox9.Size = new System.Drawing.Size(810, 54);
             this.richTextBox9.TabIndex = 20;
@@ -275,13 +276,14 @@ namespace Logger_Aplication
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Lime;
             this.button1.Font = new System.Drawing.Font("Cambria", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button1.Location = new System.Drawing.Point(41, 34);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(207, 51);
             this.button1.TabIndex = 22;
             this.button1.Text = "XUẤT BÁO CÁO";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // easyDriverConnector1
@@ -404,6 +406,14 @@ namespace Logger_Aplication
             this.panel2.Size = new System.Drawing.Size(1290, 1);
             this.panel2.TabIndex = 25;
             // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Black;
+            this.panel11.Location = new System.Drawing.Point(997, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(1, 524);
+            this.panel11.TabIndex = 26;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -468,14 +478,6 @@ namespace Logger_Aplication
             this.panel10.Size = new System.Drawing.Size(1, 524);
             this.panel10.TabIndex = 26;
             // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.Black;
-            this.panel11.Location = new System.Drawing.Point(997, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1, 524);
-            this.panel11.TabIndex = 26;
-            // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.Black;
@@ -502,11 +504,24 @@ namespace Logger_Aplication
             this.labTime.TabIndex = 27;
             this.labTime.Text = "label9";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Lime;
+            this.button2.Font = new System.Drawing.Font("Cambria", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button2.Location = new System.Drawing.Point(1125, 34);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(207, 51);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "SET ĐỘ DÀI";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.labTime);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel12);
@@ -605,6 +620,7 @@ namespace Logger_Aplication
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label labTime;
+        private System.Windows.Forms.Button button2;
     }
 }
 

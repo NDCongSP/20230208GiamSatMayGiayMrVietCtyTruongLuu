@@ -84,12 +84,12 @@ namespace Logger_Aplication
 
                 if (resultData.Count > 0)
                 {
-                    XuatExcel(dtFrom.Value, dtTo.Value, resultData);
+                    XuatExcel(dtFrom.Text, dtTo.Text, resultData);
                 }
             }
         }
 
-        public void XuatExcel(DateTime fromTime, DateTime toTime, List<MaySongLodModel> dataExport)
+        public void XuatExcel(string fromTime, string toTime, List<MaySongLodModel> dataExport)
         {
             try
             {
@@ -133,6 +133,8 @@ namespace Logger_Aplication
 
                         wsThuMua.Cell("A3").InsertTable(dtThuMua.AsEnumerable());
                         wsThuMua.Range("A4", $"A{dtThuMua.Rows.Count}").CellsUsed().SetDataType(XLDataType.DateTime);
+
+                        wsThuMua.Range("C4", $"H{dtThuMua.Rows.Count +3}").CellsUsed().SetDataType(XLDataType.Number);
 
                         wsThuMua.Columns().AdjustToContents();
                         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -317,9 +317,10 @@ namespace Logger_Aplication
             catch { }
         }
 
-        private void MainPage_Load_1(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
+            frmSetLength nF = new frmSetLength();
+            nF.ShowDialog();
         }
     }
 }
