@@ -18,6 +18,8 @@ namespace Logger_Aplication
         private MaySongLodModel _maySongCInfo = new MaySongLodModel() { MaySong = "C" };
         private MaySongLodModel _maySongEInfo = new MaySongLodModel() { MaySong = "E" };
 
+        Timer _t1 = new Timer();
+
         public MainPage()
         {
             InitializeComponent();
@@ -27,10 +29,17 @@ namespace Logger_Aplication
         private void MainPage_Load(object sender, EventArgs e)
         {
             easyDriverConnector1.Started += EasyDriverConnector1_Started;
-            //using (var connection=GlobalVariables.GetConnection())
-            //{
-            //    //connection.Query<>
-            //}
+
+
+            _t1.Interval = 100;
+            _t1.Enabled = true;
+            _t1.Tick += (s, o) =>
+            {
+                Timer t = (Timer)s;
+                t.Enabled = false;
+                this.Invoke((MethodInvoker)delegate { labTime.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"); });
+                t.Enabled = true;
+            };
         }
 
         private void EasyDriverConnector1_Started(object sender, EventArgs e)
@@ -256,7 +265,7 @@ namespace Logger_Aplication
 
         private void StE_Command_ValueChanged(object sender, TagValueChangedEventArgs e)
         {
-            if (e.NewValue == "1")
+            if (e.NewValue != "0")
             {
                 LogData(_maySongEInfo);
             }
@@ -264,7 +273,7 @@ namespace Logger_Aplication
 
         private void StB_Command_ValueChanged(object sender, TagValueChangedEventArgs e)
         {
-            if (e.NewValue == "1")
+            if (e.NewValue != "0")
             {
                 LogData(_maySongBInfo);
             }
@@ -272,7 +281,7 @@ namespace Logger_Aplication
 
         private void StC_Command_ValueChanged(object sender, EasyScada.Core.TagValueChangedEventArgs e)
         {
-            if (e.NewValue == "1")
+            if (e.NewValue != "0")
             {
                 LogData(_maySongCInfo);
             }
@@ -281,7 +290,7 @@ namespace Logger_Aplication
 
 
         private void button1_Click(object sender, EventArgs e)
-        {            
+        {
             Report form2 = new Report();
             form2.ShowDialog();
         }
@@ -306,6 +315,11 @@ namespace Logger_Aplication
                 }
             }
             catch { }
+        }
+
+        private void MainPage_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
