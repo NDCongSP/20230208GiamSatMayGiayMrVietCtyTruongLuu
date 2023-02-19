@@ -27,7 +27,8 @@ namespace Logger_Aplication
 
             #region Get các giá trị cài đặt ban đầu
             GlobalVariables.ConnectionString = Properties.Settings.Default.ConString;
-            GlobalVariables.PathApp= Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            //GlobalVariables.PathApp= Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            GlobalVariables.PathApp = Properties.Settings.Default.ExportExcelPath;
 
             #endregion
 

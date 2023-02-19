@@ -281,8 +281,7 @@ namespace Logger_Aplication
 
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            var c = _maySongCInfo;
+        {            
             Report form2 = new Report();
             form2.ShowDialog();
         }

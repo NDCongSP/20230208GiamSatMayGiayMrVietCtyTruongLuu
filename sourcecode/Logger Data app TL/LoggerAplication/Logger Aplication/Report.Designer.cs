@@ -29,34 +29,66 @@ namespace Logger_Aplication
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grvData = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtFrom = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.dtTo = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnQuery = new System.Windows.Forms.Button();
             this.btnExport = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.cbSong = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grvData)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grvData
             // 
+            this.grvData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.grvData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grvData.DefaultCellStyle = dataGridViewCellStyle2;
             this.grvData.Location = new System.Drawing.Point(12, 149);
             this.grvData.Name = "grvData";
+            this.grvData.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grvData.Size = new System.Drawing.Size(1326, 566);
             this.grvData.TabIndex = 25;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.cbSong);
             this.panel1.Controls.Add(this.btnExport);
             this.panel1.Controls.Add(this.btnQuery);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dtTo);
             this.panel1.Controls.Add(this.dtFrom);
@@ -67,20 +99,20 @@ namespace Logger_Aplication
             // 
             // dtFrom
             // 
-            this.dtFrom.CustomFormat = "yyyy-MM-dd HH:mm:ss";
+            this.dtFrom.CustomFormat = "yyyy-MM-dd 00:00:00";
             this.dtFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFrom.Location = new System.Drawing.Point(105, 17);
+            this.dtFrom.Location = new System.Drawing.Point(105, 19);
             this.dtFrom.Name = "dtFrom";
             this.dtFrom.Size = new System.Drawing.Size(249, 30);
-            this.dtFrom.TabIndex = 0;
+            this.dtFrom.TabIndex = 1;
             this.dtFrom.Value = new System.DateTime(2023, 2, 17, 21, 45, 7, 0);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label1.Location = new System.Drawing.Point(9, 20);
+            this.label1.Location = new System.Drawing.Point(9, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 25);
             this.label1.TabIndex = 1;
@@ -88,30 +120,20 @@ namespace Logger_Aplication
             // 
             // dtTo
             // 
-            this.dtTo.CustomFormat = "yyyy-MM-dd HH:mm:ss";
+            this.dtTo.CustomFormat = "yyyy-MM-dd 23:59:59";
             this.dtTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTo.Location = new System.Drawing.Point(507, 17);
+            this.dtTo.Location = new System.Drawing.Point(467, 19);
             this.dtTo.Name = "dtTo";
             this.dtTo.Size = new System.Drawing.Size(249, 30);
-            this.dtTo.TabIndex = 0;
+            this.dtTo.TabIndex = 2;
             this.dtTo.Value = new System.DateTime(2023, 2, 17, 21, 45, 7, 0);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label2.Location = new System.Drawing.Point(402, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Từ ngày:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label3.Location = new System.Drawing.Point(402, 20);
+            this.label3.Location = new System.Drawing.Point(361, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 25);
             this.label3.TabIndex = 1;
@@ -122,24 +144,26 @@ namespace Logger_Aplication
             this.btnQuery.BackColor = System.Drawing.Color.Lime;
             this.btnQuery.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.btnQuery.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnQuery.Location = new System.Drawing.Point(845, 10);
+            this.btnQuery.Location = new System.Drawing.Point(1020, 12);
             this.btnQuery.Name = "btnQuery";
-            this.btnQuery.Size = new System.Drawing.Size(192, 45);
-            this.btnQuery.TabIndex = 2;
+            this.btnQuery.Size = new System.Drawing.Size(136, 45);
+            this.btnQuery.TabIndex = 4;
             this.btnQuery.Text = "Truy vấn";
             this.btnQuery.UseVisualStyleBackColor = false;
+            this.btnQuery.Click += new System.EventHandler(this.btnQuery_Click);
             // 
             // btnExport
             // 
-            this.btnExport.BackColor = System.Drawing.Color.Lime;
+            this.btnExport.BackColor = System.Drawing.Color.Aqua;
             this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExport.Location = new System.Drawing.Point(1107, 10);
+            this.btnExport.Location = new System.Drawing.Point(1177, 12);
             this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(192, 45);
-            this.btnExport.TabIndex = 2;
+            this.btnExport.Size = new System.Drawing.Size(136, 45);
+            this.btnExport.TabIndex = 5;
             this.btnExport.Text = "Xuất Excel";
             this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // label4
             // 
@@ -150,6 +174,31 @@ namespace Logger_Aplication
             this.label4.Size = new System.Drawing.Size(285, 39);
             this.label4.TabIndex = 1;
             this.label4.Text = "XUẤT BÁO CÁO";
+            // 
+            // cbSong
+            // 
+            this.cbSong.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.cbSong.FormattingEnabled = true;
+            this.cbSong.Items.AddRange(new object[] {
+            "Tất cả",
+            "B",
+            "C",
+            "E"});
+            this.cbSong.Location = new System.Drawing.Point(820, 18);
+            this.cbSong.Name = "cbSong";
+            this.cbSong.Size = new System.Drawing.Size(121, 33);
+            this.cbSong.TabIndex = 3;
+            this.cbSong.Text = "Tất cả";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label2.Location = new System.Drawing.Point(743, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 25);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Sóng:";
             // 
             // Report
             // 
@@ -177,11 +226,12 @@ namespace Logger_Aplication
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnQuery;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtTo;
         private System.Windows.Forms.DateTimePicker dtFrom;
         private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbSong;
     }
 }
