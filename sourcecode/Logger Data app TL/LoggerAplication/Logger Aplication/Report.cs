@@ -39,12 +39,12 @@ namespace Logger_Aplication
                 List<MaySongLodModel> resultData = new List<MaySongLodModel>();
                 var para = new DynamicParameters();
 
-                if (cbSong.Text=="Tất cả")
+                if (cbSong.Text == "Tất cả")
                 {
                     para.Add("_From", dtFrom.Text);
                     para.Add("_To", dtTo.Text);
 
-                     resultData = connection.Query<MaySongLodModel>("sp_dataMaySongGetsFromTo", para, commandType: CommandType.StoredProcedure).ToList();
+                    resultData = connection.Query<MaySongLodModel>("sp_dataMaySongGetsFromTo", para, commandType: CommandType.StoredProcedure).ToList();
                 }
                 else
                 {
@@ -55,7 +55,11 @@ namespace Logger_Aplication
                     resultData = connection.Query<MaySongLodModel>("sp_dataMaySongGetsFromToSong", para, commandType: CommandType.StoredProcedure).ToList();
                 }
 
-                this.Invoke((MethodInvoker)delegate { grvData.DataSource = resultData; });
+                this.Invoke((MethodInvoker)delegate
+                {
+                    grvData.DataSource = resultData;
+                    grvData.Columns["CreatedDate"].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
+                });
             }
         }
 
@@ -132,9 +136,10 @@ namespace Logger_Aplication
                            .Font.FontSize = 12;
 
                         wsThuMua.Cell("A3").InsertTable(dtThuMua.AsEnumerable());
-                        wsThuMua.Range("A4", $"A{dtThuMua.Rows.Count}").CellsUsed().SetDataType(XLDataType.DateTime);
+                        wsThuMua.Range("A4", $"A{dtThuMua.Rows.Count + 3}").CellsUsed().SetDataType(XLDataType.DateTime);
+                        wsThuMua.Range("A4", $"A{dtThuMua.Rows.Count + 3}").Style.DateFormat.Format = "yyyy-MM-dd HH:mm:ss";
 
-                        wsThuMua.Range("C4", $"H{dtThuMua.Rows.Count +3}").CellsUsed().SetDataType(XLDataType.Number);
+                        wsThuMua.Range("C4", $"H{dtThuMua.Rows.Count + 3}").CellsUsed().SetDataType(XLDataType.Number);
 
                         wsThuMua.Columns().AdjustToContents();
                         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
