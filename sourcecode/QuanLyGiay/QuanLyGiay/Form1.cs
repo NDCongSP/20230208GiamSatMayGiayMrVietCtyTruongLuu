@@ -1,4 +1,5 @@
-﻿using Dapper;
+﻿using CommonControl;
+using Dapper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace QuanLyGiay
 {
     public partial class Form1 : Form
     {
+        private Timer _t = new Timer();
         public Form1()
         {
             InitializeComponent();
@@ -22,18 +24,25 @@ namespace QuanLyGiay
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            using (var connection = GlobalVariable.GetDbConnection())
+            _t.Interval = 100;
+            _t.Enabled = true;
+            _t.Tick += (s, o) =>
             {
-                var res = connection.Query<tblDanhSachDonHangModel>("sp_tblDanhSachDonHangGets").ToList();
+                Timer sen = (Timer)s;
+                sen.Enabled = false;
 
-                this.Invoke((MethodInvoker)delegate
-                {
-                    grvDonHang.DataSource = res;
-                });
-            }
+                this.Invoke((MethodInvoker)delegate { labDateTime.Text = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss"); });
+
+                sen.Enabled = true;
+            };
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

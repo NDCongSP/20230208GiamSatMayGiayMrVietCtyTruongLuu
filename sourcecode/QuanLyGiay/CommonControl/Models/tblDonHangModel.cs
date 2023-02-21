@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyGiay
+namespace CommonControl
 {
-   public class tblDanhSachDonHangModel
+   public class tblDonHangModel
     {
         [Browsable(false)]
         public Guid Id { get; set; }
