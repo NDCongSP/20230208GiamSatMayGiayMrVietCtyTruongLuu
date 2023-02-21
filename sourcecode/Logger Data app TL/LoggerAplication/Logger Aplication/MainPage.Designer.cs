@@ -558,7 +558,8 @@ namespace Logger_Aplication
             this.Controls.Add(this.easyLabel3);
             this.Controls.Add(this.easyLabel2);
             this.Controls.Add(this.easyLabel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "MainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Truong Luu Automation Logger Data App";
