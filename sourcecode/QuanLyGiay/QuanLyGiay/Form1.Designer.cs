@@ -77,7 +77,7 @@ namespace QuanLyGiay
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1340, 537);
+            this.panel1.Size = new System.Drawing.Size(1340, 447);
             this.panel1.TabIndex = 2;
             // 
             // tableLayoutPanel1
