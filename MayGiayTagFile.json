@@ -1,5 +1,5 @@
 {
-  "ProjectPath": "D:\\MyCompany\\8.SourceCode\\3.Projects\\2020GiamSatMayCatGiayCatornMrCuong\\MayGiayTagFile.json",
+  "ProjectPath": "D:\\MyCompany\\8.SourceCode\\3.Projects\\20230208GiamSatMayGiayMrVietCtyTruongLuu\\MayGiayTagFile.json",
   "Username": null,
   "Password": null,
   "ParameterContainer": null,
@@ -11,7 +11,7 @@
   "IsReadOnly": true,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:42:59.5967265+07:00",
-  "ModifiedDate": "2022-12-17T11:22:35.8102413+07:00",
+  "ModifiedDate": "2023-02-21T21:55:41.0860758+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -31,13 +31,13 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:43:27.6047728+07:00",
-  "ModifiedDate": "2022-12-17T11:22:35.8102413+07:00",
+  "ModifiedDate": "2023-02-21T21:55:41.0860758+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
   "Parameters": {
     "IpAddress": "127.0.0.1",
-    "Port": "502",
+    "Port": "503",
     "DelayBetweenPool": "5",
     "ScanRate": "1000"
   }
@@ -51,7 +51,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:43:42.3323097+07:00",
-  "ModifiedDate": "2022-12-17T11:22:35.8102413+07:00",
+  "ModifiedDate": "2023-02-21T21:55:41.0860758+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -82,7 +82,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400001"
+  }
 },
   "Address": "400001",
   "DataTypeName": "Word",
@@ -109,7 +112,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400002"
+  }
 },
   "Address": "400002",
   "DataTypeName": "Word",
@@ -136,7 +142,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400003"
+  }
 },
   "Address": "400003",
   "DataTypeName": "Word",
@@ -163,7 +172,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400004"
+  }
 },
   "Address": "400004",
   "DataTypeName": "Word",
@@ -190,7 +202,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400005"
+  }
 },
   "Address": "400005",
   "DataTypeName": "Word",
@@ -217,7 +232,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400006"
+  }
 },
   "Address": "400006",
   "DataTypeName": "Word",
@@ -244,7 +262,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400007"
+  }
 },
   "Address": "400007",
   "DataTypeName": "Word",
@@ -271,7 +292,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400008"
+  }
 },
   "Address": "400008",
   "DataTypeName": "Word",
@@ -298,7 +322,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:53:37.4671924+07:00",
-  "ModifiedDate": "2022-12-17T11:22:35.8102413+07:00",
+  "ModifiedDate": "2023-02-21T21:55:41.0860758+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -318,7 +342,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:53:42.0554424+07:00",
-  "ModifiedDate": "2022-12-17T11:22:35.8102413+07:00",
+  "ModifiedDate": "2023-02-21T21:55:41.0860758+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -349,7 +373,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400001"
+  }
 },
   "Address": "400001",
   "DataTypeName": "Word",
@@ -376,7 +403,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400002"
+  }
 },
   "Address": "400002",
   "DataTypeName": "Word",
@@ -403,7 +433,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400003"
+  }
 },
   "Address": "400003",
   "DataTypeName": "Word",
@@ -430,7 +463,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400004"
+  }
 },
   "Address": "400004",
   "DataTypeName": "Word",
@@ -457,7 +493,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400005"
+  }
 },
   "Address": "400005",
   "DataTypeName": "Word",
@@ -484,7 +523,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400006"
+  }
 },
   "Address": "400006",
   "DataTypeName": "Word",
@@ -511,7 +553,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400007"
+  }
 },
   "Address": "400007",
   "DataTypeName": "Word",
@@ -538,7 +583,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400008"
+  }
 },
   "Address": "400008",
   "DataTypeName": "Word",
@@ -565,7 +613,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400009"
+  }
 },
   "Address": "400009",
   "DataTypeName": "Word",
@@ -592,7 +643,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400010"
+  }
 },
   "Address": "400010",
   "DataTypeName": "Word",
@@ -619,7 +673,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400011"
+  }
 },
   "Address": "400011",
   "DataTypeName": "Word",
@@ -646,7 +703,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400012"
+  }
 },
   "Address": "400012",
   "DataTypeName": "Word",
@@ -673,7 +733,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400013"
+  }
 },
   "Address": "400013",
   "DataTypeName": "Word",
@@ -700,7 +763,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400014"
+  }
 },
   "Address": "400014",
   "DataTypeName": "Word",
@@ -727,7 +793,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400015"
+  }
 },
   "Address": "400015",
   "DataTypeName": "Word",
@@ -754,7 +823,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400016"
+  }
 },
   "Address": "400016",
   "DataTypeName": "Word",
@@ -781,7 +853,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400017"
+  }
 },
   "Address": "400017",
   "DataTypeName": "Word",
@@ -808,7 +883,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400018"
+  }
 },
   "Address": "400018",
   "DataTypeName": "Word",
@@ -835,7 +913,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400019"
+  }
 },
   "Address": "400019",
   "DataTypeName": "Word",
@@ -862,7 +943,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400020"
+  }
 },
   "Address": "400020",
   "DataTypeName": "Word",
@@ -889,7 +973,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400021"
+  }
 },
   "Address": "400021",
   "DataTypeName": "Word",
@@ -916,7 +1003,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400022"
+  }
 },
   "Address": "400022",
   "DataTypeName": "Word",
@@ -943,7 +1033,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400023"
+  }
 },
   "Address": "400023",
   "DataTypeName": "Word",
@@ -970,7 +1063,10 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400024"
+  }
 },
   "Address": "400024",
   "DataTypeName": "Word",
