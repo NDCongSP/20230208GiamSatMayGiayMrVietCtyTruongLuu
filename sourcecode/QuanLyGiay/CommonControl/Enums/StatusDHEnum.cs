@@ -10,6 +10,7 @@ namespace CommonControl
     {
         NewOrder,
         Processing,
-        Finish
+        Finish,
+        Cancel
     }
 }

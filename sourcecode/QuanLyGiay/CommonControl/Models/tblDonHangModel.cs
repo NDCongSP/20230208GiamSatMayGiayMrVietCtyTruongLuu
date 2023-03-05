@@ -10,7 +10,8 @@ namespace CommonControl
    public class tblDonHangModel
     {
         [Browsable(false)]
-        public Guid Id { get; set; }
+        public int Id { get; set; }
+        public StatusDHEnum Status { get; set; }
         public int? STT { get; set; }
         [DisplayName("Mã")]
         public string Ma { get; set; }
@@ -53,7 +54,6 @@ namespace CommonControl
         public string GhiChu { get; set; }
         [DisplayName("Ngày tạo")]
         public DateTime? CreatedDate { get; set; }
-        public StatusDHEnum Status { get; set; }
 
         [Browsable(false)]
         public string KhachHang { get; set; }

@@ -1,7 +1,7 @@
 ﻿
 namespace QuanLyGiay
 {
-    partial class Form1
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,6 @@ namespace QuanLyGiay
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel39 = new System.Windows.Forms.Panel();
             this.panel38 = new System.Windows.Forms.Panel();
             this.panel37 = new System.Windows.Forms.Panel();
@@ -99,12 +98,12 @@ namespace QuanLyGiay
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.grvDH = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnOrder = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
+            this.btnReport = new System.Windows.Forms.Button();
+            this.btnPrintOrder = new System.Windows.Forms.Button();
+            this.btnNapMayXa = new System.Windows.Forms.Button();
+            this.btnReviceError = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.labDateTime = new System.Windows.Forms.Label();
             this.panel24.SuspendLayout();
@@ -695,6 +694,7 @@ namespace QuanLyGiay
             // easyDriverConnector1
             // 
             this.easyDriverConnector1.CollectionName = null;
+            this.easyDriverConnector1.CommunicationMode = EasyScada.Core.CommunicationMode.ReceiveFromServer;
             this.easyDriverConnector1.DatabaseName = null;
             this.easyDriverConnector1.MongoDb_ConnectionString = null;
             this.easyDriverConnector1.Port = ((ushort)(8800));
@@ -807,82 +807,74 @@ namespace QuanLyGiay
             this.grvDH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grvDH.Location = new System.Drawing.Point(3, 26);
             this.grvDH.Name = "grvDH";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvDH.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grvDH.Size = new System.Drawing.Size(1874, 381);
             this.grvDH.TabIndex = 0;
             // 
-            // button1
+            // btnOrder
             // 
-            this.button1.BackColor = System.Drawing.Color.SpringGreen;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button1.Location = new System.Drawing.Point(15, 934);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(170, 63);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Đơn Hàng (F1)";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnOrder.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnOrder.Location = new System.Drawing.Point(15, 934);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(170, 63);
+            this.btnOrder.TabIndex = 6;
+            this.btnOrder.Text = "Đơn Hàng (F1)";
+            this.btnOrder.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnSettings
             // 
-            this.button2.BackColor = System.Drawing.Color.SpringGreen;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button2.Location = new System.Drawing.Point(221, 934);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(170, 63);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Cài Đặt (F2)";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnSettings.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnSettings.Location = new System.Drawing.Point(221, 934);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(170, 63);
+            this.btnSettings.TabIndex = 6;
+            this.btnSettings.Text = "Cài Đặt (F2)";
+            this.btnSettings.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnReport
             // 
-            this.button3.BackColor = System.Drawing.Color.SpringGreen;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button3.Location = new System.Drawing.Point(435, 934);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(170, 63);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Báo Cáo (F3)";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnReport.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnReport.Location = new System.Drawing.Point(435, 934);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(170, 63);
+            this.btnReport.TabIndex = 6;
+            this.btnReport.Text = "Báo Cáo (F3)";
+            this.btnReport.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnPrintOrder
             // 
-            this.button4.BackColor = System.Drawing.Color.SpringGreen;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button4.Location = new System.Drawing.Point(652, 934);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(170, 63);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "In Đơn (F4)";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnPrintOrder.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnPrintOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnPrintOrder.Location = new System.Drawing.Point(652, 934);
+            this.btnPrintOrder.Name = "btnPrintOrder";
+            this.btnPrintOrder.Size = new System.Drawing.Size(170, 63);
+            this.btnPrintOrder.TabIndex = 6;
+            this.btnPrintOrder.Text = "In Đơn (F4)";
+            this.btnPrintOrder.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnNapMayXa
             // 
-            this.button5.BackColor = System.Drawing.Color.SpringGreen;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button5.Location = new System.Drawing.Point(872, 934);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(170, 63);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Nạp Máy Xả (F5)";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnNapMayXa.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnNapMayXa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnNapMayXa.Location = new System.Drawing.Point(872, 934);
+            this.btnNapMayXa.Name = "btnNapMayXa";
+            this.btnNapMayXa.Size = new System.Drawing.Size(170, 63);
+            this.btnNapMayXa.TabIndex = 6;
+            this.btnNapMayXa.Text = "Nạp Máy Xả (F5)";
+            this.btnNapMayXa.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btnReviceError
             // 
-            this.button6.BackColor = System.Drawing.Color.SpringGreen;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button6.Location = new System.Drawing.Point(1082, 934);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(170, 63);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "+/- Lỗi (F6)";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnReviceError.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnReviceError.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnReviceError.Location = new System.Drawing.Point(1082, 934);
+            this.btnReviceError.Name = "btnReviceError";
+            this.btnReviceError.Size = new System.Drawing.Size(170, 63);
+            this.btnReviceError.TabIndex = 6;
+            this.btnReviceError.Text = "+/- Lỗi (F6)";
+            this.btnReviceError.UseVisualStyleBackColor = false;
             // 
             // button7
             // 
@@ -905,25 +897,25 @@ namespace QuanLyGiay
             this.labDateTime.TabIndex = 7;
             this.labDateTime.Text = "Datetime";
             // 
-            // Form1
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.labDateTime);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnReviceError);
+            this.Controls.Add(this.btnNapMayXa);
+            this.Controls.Add(this.btnPrintOrder);
+            this.Controls.Add(this.btnReport);
+            this.Controls.Add(this.btnSettings);
+            this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainServer";
             this.panel24.ResumeLayout(false);
@@ -1016,12 +1008,12 @@ namespace QuanLyGiay
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView grvDH;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Button btnReport;
+        private System.Windows.Forms.Button btnPrintOrder;
+        private System.Windows.Forms.Button btnNapMayXa;
+        private System.Windows.Forms.Button btnReviceError;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label labDateTime;
     }

@@ -16,6 +16,8 @@ namespace Logger_Aplication
 {
     public partial class Report : Form
     {
+
+        private Timer _t = new Timer();
         public Report()
         {
             InitializeComponent();
@@ -30,12 +32,30 @@ namespace Logger_Aplication
         {
             dtFrom.Value = DateTime.Now;
             dtTo.Value = DateTime.Now;
+
+            //_t.Interval = 100;
+            //_t.Tick += _t_Tick;
+            //_t.Enabled = true;
+        }
+
+        private void _t_Tick(object sender, EventArgs e)
+        {
+            Timer t = (Timer)sender;
+            t.Enabled = false;
+            using (var connection = GlobalVariables.GetConnection())
+            {
+                var a = connection.Query<tblDonHangModel>("sp_tblDonHangGetAll").ToList();
+            }
+
+            t.Enabled = true;
         }
 
         private void btnQuery_Click(object sender, EventArgs e)
         {
             using (var connection = GlobalVariables.GetConnection())
             {
+                var a = connection.Query<tblDonHangModel>("sp_tblDonHangGetAll").ToList();
+
                 List<MaySongLodModel> resultData = new List<MaySongLodModel>();
                 var para = new DynamicParameters();
 

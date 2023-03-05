@@ -5,6 +5,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CommonControl;
+using MySql.Data.MySqlClient;
 
 namespace QuanLyGiay
 {
@@ -12,11 +14,16 @@ namespace QuanLyGiay
     {
         public static string ConnectionString { get; set; }
 
-        public static IDbConnection GetDbConnection()
+        public static MySqlConnection GetDbConnection()
         {
-            return new SqlConnection(ConnectionString);
+            return new MySqlConnection(ConnectionString);
         }
 
+        public static MySqlConnection GetConnection()
+        {
+            return new MySqlConnection(ConnectionString);
+        }
 
+        public static CustomeEvents MyEvents { get; set; } = new CustomeEvents();
     }
 }

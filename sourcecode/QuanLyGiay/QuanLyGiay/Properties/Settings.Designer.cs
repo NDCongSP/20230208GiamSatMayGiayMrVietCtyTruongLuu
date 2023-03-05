@@ -25,9 +25,8 @@ namespace QuanLyGiay.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.180.216;Database=IDCScaleSystem_Test;UID=idc_ad_system;Passwo" +
-            "rd= _%v%259G.G234Y466Q530U947I358u; Min Pool Size=0;Max Pool Size=1000;Pooling=t" +
-            "rue; Connect Timeout=65535;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Port=3306;Database=quanlygiay;UID=root;Password=100100; Min" +
+            " Pool Size=0;Max Pool Size=1000;Pooling=true; Connect Timeout=65535;")]
         public string ConnectionString {
             get {
                 return ((string)(this["ConnectionString"]));
