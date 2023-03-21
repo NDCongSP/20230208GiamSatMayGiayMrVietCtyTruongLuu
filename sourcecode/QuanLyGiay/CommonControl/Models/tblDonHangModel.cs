@@ -11,8 +11,8 @@ namespace CommonControl
     {
         [Browsable(false)]
         public int Id { get; set; }
-        public StatusDHEnum Status { get; set; }
-        public int? STT { get; set; }
+        public StatusDHEnum Status { get; set; } = StatusDHEnum.NewOrder;
+        public int STT { get; set; }
         [DisplayName("Mã")]
         public string Ma { get; set; }
         [DisplayName("Sóng")]
@@ -26,43 +26,45 @@ namespace CommonControl
         public string Pallet { get; set; }
         [DisplayName("Xả")]
         public string Xa { get; set; }
-        [DisplayName("Nắp 1")]
-        public string NapC { get; set; }
+        [DisplayName("Rộng")]
+        public string Rong { get; set; }
+        [DisplayName("Cánh")]
+        public string Canh { get; set; }
+        [DisplayName("Cao")]
         public string Cao { get; set; }
-        [DisplayName("Nắp 2")]
-        public string NapL { get; set; }
         [DisplayName("Lằng")]
         public string Lang { get; set; }
-        [DisplayName("Mền")]
+        [DisplayName("Giấy Sóng E")]
+        public string GiaySongE { get; set; }
+        [DisplayName("Giấy Mặt E")]
+        public string GiayMatE { get; set; }
+        [DisplayName("Giấy Sóng B")]
+        public string GiaySongB { get; set; }
+        [DisplayName("Giấy Mặt B")]
+        public string GiayMatB { get; set; }
+        [DisplayName("GiấySóng C")]
+        public string GiaySongC { get; set; }
+        [DisplayName("Giấy Mặt C")]
+        public string GiayMatC { get; set; }
+        [DisplayName("Giấy Mền")]
         public string GiayMen { get; set; }
-        [DisplayName("Sóng 1")]
-        public string GiaySong1 { get; set; }
-        [DisplayName("Mặt 1")]
-        public string GiayMat1 { get; set; }
-        [DisplayName("Sóng 2")]
-        public string GiaySong2 { get; set; }
-        [DisplayName("Mặt 2")]
-        public string GiayMat2 { get; set; }
-        [DisplayName("Sóng 3")]
-        public string GiaySong3 { get; set; }
-        [DisplayName("Mặt 3")]
-        public string GiayMat3 { get; set; }
+        [DisplayName("Ghi chú")]
+        public string GhiChu { get; set; }
+
         [DisplayName("Máy xả")]
         public string MayXa { get; set; }
         public string Line { get; set; }
-        [DisplayName("Ghi chú")]
-        public string GhiChu { get; set; }
         [DisplayName("Ngày tạo")]
         public DateTime? CreatedDate { get; set; }
 
         [Browsable(false)]
         public string KhachHang { get; set; }
         [Browsable(false)]
-        public string DaiKH { get; set; }
+        public string DaiKH { get; set; } = "0";
         [Browsable(false)]
-        public string RongKH { get; set; }
+        public string RongKH { get; set; } = "0";
         [Browsable(false)]
-        public string CaoKH { get; set; }
+        public string CaoKH { get; set; } = "0";
         [Browsable(false)]
         public string DonHang { get; set; }
         [Browsable(false)]

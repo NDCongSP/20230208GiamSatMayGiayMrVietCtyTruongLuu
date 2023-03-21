@@ -19,11 +19,6 @@ namespace QuanLyGiay
             return new MySqlConnection(ConnectionString);
         }
 
-        public static MySqlConnection GetConnection()
-        {
-            return new MySqlConnection(ConnectionString);
-        }
-
         public static CustomeEvents MyEvents { get; set; } = new CustomeEvents();
     }
 }

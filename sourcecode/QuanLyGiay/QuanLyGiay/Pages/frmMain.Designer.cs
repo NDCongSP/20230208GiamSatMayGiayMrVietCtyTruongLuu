@@ -106,6 +106,7 @@ namespace QuanLyGiay
             this.btnReviceError = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.labDateTime = new System.Windows.Forms.Label();
+            this._labDriverStatus = new System.Windows.Forms.Label();
             this.panel24.SuspendLayout();
             this.panel21.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -538,7 +539,7 @@ namespace QuanLyGiay
             this.easyLabel5.Size = new System.Drawing.Size(200, 50);
             this.easyLabel5.StringFormat = null;
             this.easyLabel5.TabIndex = 1;
-            this.easyLabel5.TagPath = "Local Station/ChannelCutter/Device/TocDo";
+            this.easyLabel5.TagPath = "Local Station/ChannelServer/DeviceCutter/TocDo";
             this.easyLabel5.Text = "easyLabel1";
             // 
             // easyLabel2
@@ -550,7 +551,7 @@ namespace QuanLyGiay
             this.easyLabel2.Size = new System.Drawing.Size(200, 50);
             this.easyLabel2.StringFormat = null;
             this.easyLabel2.TabIndex = 1;
-            this.easyLabel2.TagPath = "Local Station/ChannelCutter/Device/ChieuDaiCat1";
+            this.easyLabel2.TagPath = "Local Station/ChannelServer/DeviceCutter/ChieuDaiCat1";
             this.easyLabel2.Text = "easyLabel1";
             // 
             // easyLabel1
@@ -562,7 +563,7 @@ namespace QuanLyGiay
             this.easyLabel1.Size = new System.Drawing.Size(200, 50);
             this.easyLabel1.StringFormat = null;
             this.easyLabel1.TabIndex = 1;
-            this.easyLabel1.TagPath = "Local Station/ChannelCutter/Device/SoLuongCat1";
+            this.easyLabel1.TagPath = "Local Station/ChannelServer/DeviceCutter/SoLuongCat1";
             this.easyLabel1.Text = "easyLabel1";
             // 
             // easyLabel4
@@ -574,7 +575,7 @@ namespace QuanLyGiay
             this.easyLabel4.Size = new System.Drawing.Size(200, 50);
             this.easyLabel4.StringFormat = null;
             this.easyLabel4.TabIndex = 1;
-            this.easyLabel4.TagPath = "Local Station/ChannelCutter/Device/Pallet1";
+            this.easyLabel4.TagPath = "Local Station/ChannelServer/DeviceCutter/Pallet1";
             this.easyLabel4.Text = "easyLabel1";
             // 
             // easyLabel3
@@ -586,7 +587,7 @@ namespace QuanLyGiay
             this.easyLabel3.Size = new System.Drawing.Size(200, 50);
             this.easyLabel3.StringFormat = null;
             this.easyLabel3.TabIndex = 1;
-            this.easyLabel3.TagPath = "Local Station/ChannelCutter/Device/SoLuongLoi";
+            this.easyLabel3.TagPath = "Local Station/ChannelServer/DeviceCutter/SoLuongLoi";
             this.easyLabel3.Text = "easyLabel1";
             // 
             // elabSlDat
@@ -598,7 +599,7 @@ namespace QuanLyGiay
             this.elabSlDat.Size = new System.Drawing.Size(200, 50);
             this.elabSlDat.StringFormat = null;
             this.elabSlDat.TabIndex = 1;
-            this.elabSlDat.TagPath = "Local Station/ChannelCutter/Device/SoLuongDat";
+            this.elabSlDat.TagPath = "Local Station/ChannelServer/DeviceCutter/SoLuongDat";
             this.elabSlDat.Text = "easyLabel1";
             // 
             // label6
@@ -890,12 +891,22 @@ namespace QuanLyGiay
             // labDateTime
             // 
             this.labDateTime.AutoSize = true;
-            this.labDateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.labDateTime.Location = new System.Drawing.Point(12, 1010);
+            this.labDateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.labDateTime.Location = new System.Drawing.Point(105, 1014);
             this.labDateTime.Name = "labDateTime";
-            this.labDateTime.Size = new System.Drawing.Size(89, 25);
+            this.labDateTime.Size = new System.Drawing.Size(64, 17);
             this.labDateTime.TabIndex = 7;
             this.labDateTime.Text = "Datetime";
+            // 
+            // _labDriverStatus
+            // 
+            this._labDriverStatus.AutoSize = true;
+            this._labDriverStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this._labDriverStatus.Location = new System.Drawing.Point(12, 1014);
+            this._labDriverStatus.Name = "_labDriverStatus";
+            this._labDriverStatus.Size = new System.Drawing.Size(86, 17);
+            this._labDriverStatus.TabIndex = 0;
+            this._labDriverStatus.Text = "DriverStatus";
             // 
             // frmMain
             // 
@@ -913,6 +924,7 @@ namespace QuanLyGiay
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this._labDriverStatus);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "frmMain";
@@ -1016,6 +1028,7 @@ namespace QuanLyGiay
         private System.Windows.Forms.Button btnReviceError;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label labDateTime;
+        private System.Windows.Forms.Label _labDriverStatus;
     }
 }
 

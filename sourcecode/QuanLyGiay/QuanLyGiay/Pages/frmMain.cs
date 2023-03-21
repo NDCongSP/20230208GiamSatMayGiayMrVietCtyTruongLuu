@@ -1,9 +1,11 @@
 ﻿using CommonControl;
 using Dapper;
+using EasyScada.Core;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,12 +21,14 @@ namespace QuanLyGiay
         private Timer _t = new Timer();
         private Task _taskLoadOrder;
 
+        tblDonHangModel _donHangDangChay = new tblDonHangModel();
+
         public frmMain()
         {
             InitializeComponent();
 
             Load += Form1_Load;
-            
+
         }
 
         private async void Form1_Load(object sender, EventArgs e)
@@ -70,13 +74,16 @@ namespace QuanLyGiay
                     GlobalVariable.MyEvents.Refresh = false;
                 }
             };
+
+            GlobalVariable.MyEvents.Refresh = true;
             //_taskLoadOrder = new Task(LoadOrder);
             //_taskLoadOrder.Start();
         }
 
         private void BtnOrder_Click(object sender, EventArgs e)
         {
-            GlobalVariable.MyEvents.Refresh = true;
+            frmAddDonHang nf = new frmAddDonHang();
+            nf.ShowDialog();
         }
 
         private void LoadOrder()
@@ -104,17 +111,53 @@ namespace QuanLyGiay
 
         private void EasyDriverConnector1_Started(object sender, EventArgs e)
         {
+            easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/LenhChuyenDon").ValueChanged += LenhChuyenDonCutter_ValueChanged;
 
+            LenhChuyenDonCutter_ValueChanged(easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/LenhChuyenDon"),
+                              new TagValueChangedEventArgs(easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/LenhChuyenDon")
+                              , "", easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/LenhChuyenDon").Value));
+
+            if (easyDriverConnector1.ConnectionStatus == ConnectionStatus.Connected)
+            {
+                _labDriverStatus.BackColor = Color.Green;
+            }
+            else
+            {
+                _labDriverStatus.BackColor = Color.Red;
+            }
         }
 
-        private void RefresjOrder()
+        //Lenh chuyen don may cat tam. tu PLC truyen ve
+        private void LenhChuyenDonCutter_ValueChanged(object sender, EasyScada.Core.TagValueChangedEventArgs e)
         {
-            using (var connection = GlobalVariable.GetDbConnection())
+            if (e.NewValue == "1")
             {
-                var para = new DynamicParameters();
-                para.Add("", "");
+                Debug.WriteLine("Chuyen don");
 
-                var resultData = connection.Query<tblDonHangModel>("", para, commandType: CommandType.StoredProcedure).ToList();
+                using (var connection = GlobalVariable.GetDbConnection())
+                {
+                    var resultData = connection.Query<tblDonHangModel>("sp_tblDonHangGetOnProcess").ToList();
+
+                    if (resultData.Count > 0)
+                    {
+                        _donHangDangChay = resultData.FirstOrDefault(x => x.STT == resultData.Min(u => u.STT));
+
+                        DoiDonCutter(_donHangDangChay);
+                    }
+                }
+
+                easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/LenhChuyenDon").WriteAsync("0", WritePiority.High);
+            }
+        }
+
+        private void DoiDonCutter(tblDonHangModel donHangDangChay)
+        {
+            easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/ChieuDaiCat1").WriteAsync(donHangDangChay.ChieuDai.ToString(), WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/SoLuongCat1").WriteAsync(donHangDangChay.SoLuong.ToString(), WritePiority.High);
+
+            using (var connection =GlobalVariable.GetDbConnection())
+            {
+                connection.Execute($"UPDATE tbldonhang set Status = 1 WHERE Id = {donHangDangChay.Id}");
             }
         }
     }

@@ -11,7 +11,7 @@
   "IsReadOnly": true,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:42:59.5967265+07:00",
-  "ModifiedDate": "2023-03-19T11:40:04.2571638+07:00",
+  "ModifiedDate": "2023-03-21T17:59:00.7167038+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -25,13 +25,13 @@
   "RefreshRate": 0,
   "Childs": [
     {
-  "Name": "ChannelServer",
+  "Name": "ChannelServer1",
   "Description": null,
   "ItemType": "Channel",
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:43:27.6047728+07:00",
-  "ModifiedDate": "2023-03-19T11:40:04.2571638+07:00",
+  "ModifiedDate": "2023-03-21T17:59:00.7167038+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -51,7 +51,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:43:42.3323097+07:00",
-  "ModifiedDate": "2023-03-19T11:40:04.2571638+07:00",
+  "ModifiedDate": "2023-03-21T17:59:00.7167038+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -292,13 +292,13 @@
   ]
 },
     {
-  "Name": "ChannelCutter",
+  "Name": "ChannelServer",
   "Description": null,
   "ItemType": "Channel",
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:53:37.4671924+07:00",
-  "ModifiedDate": "2023-03-19T11:40:04.2571638+07:00",
+  "ModifiedDate": "2023-03-21T17:59:00.7167038+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -312,13 +312,13 @@
   "DriverPath": "ModbusTCP",
   "Childs": [
     {
-  "Name": "Device",
+  "Name": "DeviceCutter",
   "Description": null,
   "ItemType": "Device",
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:53:42.0554424+07:00",
-  "ModifiedDate": "2023-03-19T11:40:04.2571638+07:00",
+  "ModifiedDate": "2023-03-21T17:59:00.7167038+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -997,7 +997,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2023-01-03T08:12:43.1645774+07:00",
-  "ModifiedDate": "2023-03-19T11:40:04.2571638+07:00",
+  "ModifiedDate": "2023-03-21T17:59:00.7167038+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -1017,7 +1017,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2023-01-03T08:12:49.0831984+07:00",
-  "ModifiedDate": "2023-03-19T11:40:04.2571638+07:00",
+  "ModifiedDate": "2023-03-21T17:59:00.7167038+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
