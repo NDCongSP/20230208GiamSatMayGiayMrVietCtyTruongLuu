@@ -538,7 +538,7 @@ namespace QuanLyGiay
             this.easyLabel5.Size = new System.Drawing.Size(200, 50);
             this.easyLabel5.StringFormat = null;
             this.easyLabel5.TabIndex = 1;
-            this.easyLabel5.TagPath = "Local Station/ChannelServer/Device/ChieuDaiCat";
+            this.easyLabel5.TagPath = "Local Station/ChannelCutter/Device/TocDo";
             this.easyLabel5.Text = "easyLabel1";
             // 
             // easyLabel2
@@ -550,7 +550,7 @@ namespace QuanLyGiay
             this.easyLabel2.Size = new System.Drawing.Size(200, 50);
             this.easyLabel2.StringFormat = null;
             this.easyLabel2.TabIndex = 1;
-            this.easyLabel2.TagPath = "Local Station/ChannelServer/Device/ChieuDaiCat";
+            this.easyLabel2.TagPath = "Local Station/ChannelCutter/Device/ChieuDaiCat1";
             this.easyLabel2.Text = "easyLabel1";
             // 
             // easyLabel1
@@ -562,7 +562,7 @@ namespace QuanLyGiay
             this.easyLabel1.Size = new System.Drawing.Size(200, 50);
             this.easyLabel1.StringFormat = null;
             this.easyLabel1.TabIndex = 1;
-            this.easyLabel1.TagPath = "Local Station/ChannelServer/Device/SoLuongCat";
+            this.easyLabel1.TagPath = "Local Station/ChannelCutter/Device/SoLuongCat1";
             this.easyLabel1.Text = "easyLabel1";
             // 
             // easyLabel4
@@ -574,7 +574,7 @@ namespace QuanLyGiay
             this.easyLabel4.Size = new System.Drawing.Size(200, 50);
             this.easyLabel4.StringFormat = null;
             this.easyLabel4.TabIndex = 1;
-            this.easyLabel4.TagPath = "Local Station/ChannelServer/Device/SoLuongLoi";
+            this.easyLabel4.TagPath = "Local Station/ChannelCutter/Device/Pallet1";
             this.easyLabel4.Text = "easyLabel1";
             // 
             // easyLabel3
@@ -586,7 +586,7 @@ namespace QuanLyGiay
             this.easyLabel3.Size = new System.Drawing.Size(200, 50);
             this.easyLabel3.StringFormat = null;
             this.easyLabel3.TabIndex = 1;
-            this.easyLabel3.TagPath = "Local Station/ChannelServer/Device/SoLuongLoi";
+            this.easyLabel3.TagPath = "Local Station/ChannelCutter/Device/SoLuongLoi";
             this.easyLabel3.Text = "easyLabel1";
             // 
             // elabSlDat
@@ -598,7 +598,7 @@ namespace QuanLyGiay
             this.elabSlDat.Size = new System.Drawing.Size(200, 50);
             this.elabSlDat.StringFormat = null;
             this.elabSlDat.TabIndex = 1;
-            this.elabSlDat.TagPath = "Local Station/ChannelServer/Device/SoLuongDat";
+            this.elabSlDat.TagPath = "Local Station/ChannelCutter/Device/SoLuongDat";
             this.elabSlDat.Text = "easyLabel1";
             // 
             // label6
