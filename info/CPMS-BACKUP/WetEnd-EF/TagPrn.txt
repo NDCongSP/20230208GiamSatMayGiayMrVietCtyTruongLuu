@@ -1,0 +1,14 @@
+@60(0230)@61(0400)@62(0024)@70(0050)@71(0010)
+
+             DM Cintainer Co., ltd
+
+      ID#: @05 @70(0030)
+ CUSTOMER: @03         @5030 Date: @26
+    PAPER: @07
+SIZE(mm.): @15 x @12   @5025Stack Code: @04
+  (inch.): @16 x @13   @5030 Outs: @10
+Order Qty: @19         @5030FLUTE: @09
+   SCORER: @20         @5029PALLET: @23/@24
+Stack Qty: @21x@10=@34 @5030  LOT: @11
+
+

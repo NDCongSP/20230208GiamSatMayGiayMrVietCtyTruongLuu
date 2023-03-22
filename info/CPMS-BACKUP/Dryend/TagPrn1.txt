@@ -1,0 +1,37 @@
+TO MR CHI,
+
+We select the tag as below,
+
+@26
+CSTMR:@03
+JO#    :@05
+PO#    :@04
+FLT      :@09
+SIZE    :@30*@15
+POQTY:@18
+Q'TY    :
+           :@19
+           :@23
+           :@24
+RMK    :DEL
+
+Please inform how to set in system.
+
+
+@60(0260)@61(0060)@62(0028)@70(0040)@71(0008)
+
+    DM Cintainer Co.,ltd
+ID#: @05 @70(0030)
+     Date: @26 @62(0024)
+ CUSTOMER: @03         
+    PAPER: @09 @28
+     SIZE: @15x@12 (@16x@13)    
+Order Qty: @18          
+   SCORER: @20
+     OUTS: @10
+StackCode: @04   
+Stack Qty: @21 
+   PALLET: @23/@24
+      LOT: @11
+
+

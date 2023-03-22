@@ -1,0 +1,18 @@
+@60(0185)@61(0200)@62(0026)@70(0040)@71(0011)
+
+      @02
+    SO: @38
+    MC: @39  @70(0025)@71(0007)
+  W/Order : @05
+Production: @26
+     MODEL: @03
+    PALLET: @23/@24 
+PALLET OTY: @34
+ TOTAL QTY: @19
+  DELIVERY: @04
+    SO QTY: @37
+    SCORER: @20  
+      SIZE: @15 L x @30 W  
+@27  @09F
+ NEXT STEP: @40     
+     

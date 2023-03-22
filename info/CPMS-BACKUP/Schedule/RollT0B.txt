@@ -1,0 +1,18 @@
+Width
+80
+Paper
+88
+DB Facer
+85
+ Medium
+85
+ Linear
+85
+ Medium
+85
+ Linear
+85
+ Medium
+85
+ Linear
+85

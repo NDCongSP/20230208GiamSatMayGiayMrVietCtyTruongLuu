@@ -1,0 +1,15 @@
+\\IPADDRS\Temp\OfficeH.TXT
+\Temp\FINISH.TXT
+\\IPADDRS\Temp\
+\Temp\OpenLink.TXT
+\Temp\CpmsStatus.TXT
+\Temp\OfficeH2.TXT
+\Temp\CpmsLog.TXT
+TagPrn.txt
+\Temp
+
+
+
+
+
+

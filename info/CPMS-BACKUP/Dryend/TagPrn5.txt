@@ -1,0 +1,15 @@
+@60(0250)@61(0420)@62(0026)@70(0040)@71(0010)
+
+
+     CUST: @03 
+     JOB#: @05 @70(0020) @71(0006)
+    FLUTE: @09
+    PAPER: @07
+     SIZE: @15 x @30
+    WIDTH: @12
+   SCORER: @20
+     NOTE: @11
+Order Qty: @19
+Stack Qty: @21x@10=@34
+   PALLET: @23/@24
+    SHIFT: @29     DATE: @26

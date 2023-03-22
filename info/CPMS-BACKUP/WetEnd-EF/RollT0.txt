@@ -1,0 +1,22 @@
+Seq#
+50
+Width
+80
+Flute
+50
+Paper
+88
+DB Facer
+100
+ Medium
+100
+ Linear
+85
+ Medium
+85
+ Linear
+85
+ Medium
+85
+ Linear
+85

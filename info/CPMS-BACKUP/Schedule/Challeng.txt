@@ -1,0 +1,24 @@
+Currgater Production Control System (DryEnd)
+2.8M Production Status
+2.8M Order Schedule
+**Length List**
+2.8M Corrugater Order Schedule
+Seq# ID#_______ Customer#_______ DB______ BFM_____ BFL_____ CFM_____ CFL_____ EFM_____ EFL_____ Width Length Cuts_ Bdl Out Sc1_ Sc2_ Sc3_  Total
+2.8M Product Report
+Seq# ID#       Customer Paper   Width  Length  Cuts Goods Scrap  Total Weight Start Finish
+2.8M Product Month Report
+Date RunTime  Stop   Cuts Total(M)  Square  Weight Speed    DB%    EF%    BF%    AF%  Loss%
+ID#       Customer Paper   Width  Length  Cuts Goods Scrap  Total Square  Stop  Time
+ID#       Customer             DB____ BF_M   BF_L   CF_M   CF_L   Width Length  Cuts Goods Scrap  Total Square  Stop  Time FLUTE ORD_QTY
+ID#       Customer          DB      BF M    BF L    CF M    CF L    Width Length  Cuts Out  Sc1  Sc2  Sc3 Goods  Bads  Total Square  Stop  Time Weight Trim FLUTE
+ID#      Customer     PO       DB____ BF_M   BF_L   CF_M   CF_L   Width Length  Cuts Out  Sc1  Sc2  Sc3 Goods Scrap  Total Square Note        Weight
+Seq# ID#      Customer FLUTE DB____ BF_M   BF_L   CF_M   CF_L   AF_M   AF_L   Width  Length   Cuts Bdl Out  Sc1   Sc2   Sc3   Total
+ID#       Customer             DB____ BF_M   BF_L   CF_M   CF_L   AF_M   AF_L   Width Length  Cuts Out  Sc1  Sc2  Sc3 Goods Scrap  Total Square  Stop  Time
+              DB        EF        BF        AF      Total
+Seq# ID#      Customer   DB____ BF_M   BF_L   CF_M   CF_L   AF_M   AF_L   Width  Length   Cuts DELIVERY NOTES                Total
+ID#       Customer             DB____ BF_M   BF_L   CF_M   CF_L   Width Length  Cuts Goods Scrap  Total Square  Stop  Time Run_Tm Target
+Seq# ID#        Customer             DB     BF M   BF L   CF M   CF L    Width Length  Cuts PRINT  Bdl Out  Sc1   Sc2   Sc3   Total
+Seq# ID#      Customer           Flute PAPER  Width Length   Cuts Out Sc1   Sc2   Sc3   Total
+Seq# ID#      Customer  Flute PAPER  Width Length Cuts Out Sc1  Sc2  Sc3  Sc4  Sc5 Remark               Total
+Seq# Job Order Del Date Customer M/C# Flute DB____ B/EF_M B/EF_L A/BF_M A/BF_L Roll Width S/Length Bd Oty L/Meter
+                              Model     Out  Sc1 x Sc2 x Sc3 x Sc4 x Sc5 = S/Width  S/Type        Note

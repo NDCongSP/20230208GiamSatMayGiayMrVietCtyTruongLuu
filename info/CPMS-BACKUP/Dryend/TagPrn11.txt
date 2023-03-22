@@ -1,0 +1,14 @@
+@60(0080)@61(0040)@62(0025)@70(0015)@71(0010)
+JOB ORDER: @05
+ CUSTOMER: @02
+    MODEL: @35
+    FLUTE: @09 F
+     SIZE: @15x@30/@12
+   SCORER: @20
+     NOTE: @11
+      QTY: <@18 x @10=@19>
+    STACK: @23/@24  <@21 x @10=@34>
+     DATE: @26
+NEXT PROCESS: @36
+           
+

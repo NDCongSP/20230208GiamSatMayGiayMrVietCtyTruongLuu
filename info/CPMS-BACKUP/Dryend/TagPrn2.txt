@@ -1,0 +1,15 @@
+S&D INDUSTRIES
+
+Customer:
+Job No.:
+Paper Grade:
+
+Size:
+Scoring:
+Order Quantity:
+Actual Quantity:
+Stack:
+Date:
+Machine: C2
+Shift:
+Remark:

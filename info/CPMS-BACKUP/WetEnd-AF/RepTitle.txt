@@ -1,0 +1,64 @@
+Seq#
+52
+ID#
+112
+Customer
+140
+Paper
+64
+Flute
+26
+DB
+66
+CM
+66
+CL
+66
+CM
+0
+CL
+0
+Width
+44
+Length
+56
+Cuts
+57
+Good
+57
+Scrap
+57
+Start
+74
+Running
+74
+Finish
+74
+Stop Count
+60
+Stop Time
+60
+Shift
+30
+Bdl
+40
+Note
+80
+Sc1
+50
+Sc2
+50
+Sc3
+50
+Out
+30
+Sctype
+40
+Total
+96
+DB Run
+96
+CF Run
+96
+CF Run
+0

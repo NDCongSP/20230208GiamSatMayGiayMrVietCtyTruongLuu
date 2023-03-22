@@ -1,0 +1,18 @@
+
+70
+Total
+80
+Last
+80
+Est Time
+100
+Scrap
+80
+Speed
+70
+Run Time
+100
+Stop Time
+100
+Stop Cnt
+100

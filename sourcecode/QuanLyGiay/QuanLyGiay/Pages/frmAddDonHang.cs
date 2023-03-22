@@ -50,7 +50,7 @@ namespace QuanLyGiay
                 TextBox t = (TextBox)s;
                 if (!string.IsNullOrEmpty(t.Text))
                 {
-                    _donHang.Kho = t.Text;
+                    _donHang.Kho = int.TryParse(t.Text, out int value) ? value : 0;
                 }
                 else
                 {
@@ -62,7 +62,7 @@ namespace QuanLyGiay
                 TextBox t = (TextBox)s;
                 if (!string.IsNullOrEmpty(t.Text))
                 {
-                    _donHang.ChieuDai = t.Text;
+                    _donHang.ChieuDai = int.TryParse(t.Text, out int value) ? value : 0;
                 }
                 else
                 {
@@ -74,7 +74,7 @@ namespace QuanLyGiay
                 TextBox t = (TextBox)s;
                 if (!string.IsNullOrEmpty(t.Text))
                 {
-                    _donHang.SoLuong = t.Text;
+                    _donHang.SoLuong = int.TryParse(t.Text, out int value) ? value : 0;
                 }
                 else
                 {
@@ -86,7 +86,7 @@ namespace QuanLyGiay
                 TextBox t = (TextBox)s;
                 if (!string.IsNullOrEmpty(t.Text))
                 {
-                    _donHang.Pallet = t.Text;
+                    _donHang.Pallet = int.TryParse(t.Text, out int value) ? value : 0;
                 }
                 else
                 {
@@ -98,7 +98,7 @@ namespace QuanLyGiay
                 TextBox t = (TextBox)s;
                 if (!string.IsNullOrEmpty(t.Text))
                 {
-                    _donHang.Xa = t.Text;
+                    _donHang.Xa = int.TryParse(t.Text, out int value) ? value : 0;
                 }
                 else
                 {
@@ -110,7 +110,7 @@ namespace QuanLyGiay
                 TextBox t = (TextBox)s;
                 if (!string.IsNullOrEmpty(t.Text))
                 {
-                    _donHang.Rong = t.Text;
+                    _donHang.Rong = int.TryParse(t.Text, out int value) ? value : 0;
                 }
                 else
                 {
@@ -122,7 +122,7 @@ namespace QuanLyGiay
                 TextBox t = (TextBox)s;
                 if (!string.IsNullOrEmpty(t.Text))
                 {
-                    _donHang.Canh = t.Text;
+                    _donHang.Canh = int.TryParse(t.Text, out int value) ? value : 0;
                 }
                 else
                 {
@@ -134,7 +134,7 @@ namespace QuanLyGiay
                 TextBox t = (TextBox)s;
                 if (!string.IsNullOrEmpty(t.Text))
                 {
-                    _donHang.Cao = t.Text;
+                    _donHang.Cao = int.TryParse(t.Text, out int value) ? value : 0;
                 }
                 else
                 {
@@ -146,7 +146,7 @@ namespace QuanLyGiay
                 TextBox t = (TextBox)s;
                 if (!string.IsNullOrEmpty(t.Text))
                 {
-                    _donHang.Lang = t.Text;
+                    _donHang.Lang = int.TryParse(t.Text, out int value) ? value : 0;
                 }
                 else
                 {

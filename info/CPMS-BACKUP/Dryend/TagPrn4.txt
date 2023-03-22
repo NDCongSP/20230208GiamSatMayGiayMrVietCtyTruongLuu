@@ -1,0 +1,16 @@
+@60(0300)@61(0030)@62(0024)@70(0020)@71(0003)
+S&D INDUSTRIES
+
+Customer:@03
+Job No.:@05
+เกรดกระดาษ:
+@70(0032)@71(0006)@28@62(0040)@70(0020)@71(0003)
+Size:@12x@15@62(0026)
+Scoring:@20
+Order Quantity:@18
+Actual Quantity:
+Stack:@23/@24
+Date:@26
+Machine: C2
+Shift:@29
+Remark:

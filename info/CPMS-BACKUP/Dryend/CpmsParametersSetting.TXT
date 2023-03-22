@@ -1,0 +1,512 @@
+The parameters setting for the CPMS english version  date: 2005-9-26
+
+ 1. some parameters is no use now
+
+ 2. some parameters have to exit & run the program after change values
+-----------------------------------------------------------------------
+
+ 1. Schedule Computer
+
+    1-1  mouse click the "Parameters"
+
+    1-2  Input Password:
+
+    1-3  mouse click the "System Parameters"
+
+    "System Parameters" column as following
+
+       NO# SETTING  SPECIFICATION
+         1   1.55   AFlute           => the A flute rate.
+	 2   1.40   BFlute           => the A flute rate.
+	 3   1.45   CFlute           => the A flute rate.
+	 4   1.30   EFlute           => the A flute rate.
+	 5  10.00   WidthSizeRate    = 10 paper width is MM, = 254 paper width is INCH.
+	 6  10.00   CutterSizeRate   = 10 cut length is MM, = 254 cut length is INCH.
+	 7  10.00   SliscoSizeRate   xxx
+         8   0.00   Flute_Check      = 1 check the input column of the FLUTE & RUN_PAPER
+         9   0.00   DATE_TYPE        = 0 YYYYMMDD, = 1 DDMMYYYY
+        10   1.00   AutoRdReport     = 1 compare date & update day report from dryend computer
+        11  10.00   WorkSpace        default number for input seq# column add to the last order
+        12   0.00   DISABLE_THREAD   = 8 NO THREAD MODE, ONLY USE LITTLE CPU TIME.
+	13   5.00   FluteControl     &= 1, the Single Facer Name show on the screen, depend on the flute input.
+                                     &= 4, the flute input should be CB instead of BC. 
+        14   0.00   Check_Trim       = 0 no check trim. (unit mm)
+                                     > 0 if trim > this setting value, will show warnning.
+        15 1000.00  PassWord         the password for setting
+        16   0.00   WeightRoll       = 0 show meters in paper roll, = 1 show weight                              = 0 count from the first day of this month.
+        17   0.00   CHARSET          = 0 ANSI_CHARSET
+                                     = 1 DEFAULT_CHARSET
+                                     = 134 GB2312_CHARSET, Simplified Chinese characters (mainland china).
+                                     = 136 CHINESEBIG5_CHARSET, Traditional Chinese characters (Taiwanese).
+                                     = 222 THAI_CHARSET, Thai characters.
+        18   0.00   FONT_SIZE1       the font size of order show in the monitor screen
+        19   2.00   REPORT_TYPE      = the format for day report list (0, 1, 2, 3)
+                                     = 1 short paper report list
+                                     = 4 for ISOPACK //2006-1-3
+                                     = 5 for S&D //2006-4-22
+                                     = 6 for InterState Tailand 2008-4-4
+        20   1.00   spare
+        21   1.00   SHOW_ORD_MODE    = the format for order show in screen (0, 1, 2)
+                                     = 3 DAZUN show trim  2005-12-23
+                                     = 4 S&D double medium for C2 CF  2006-6-2
+                                     = 6 column PRINT (Jarkadar James) 2008-11-29
+                                     = 9 Trim & Sctype 祐欣 Thailand 2009-11-18
+        22   1.00   EDIT_EXPORT      = 0 use control to send next schedule order to dryend computer
+                                     = 1 use file transfer to send next schedule
+        23   0.00   AVR_SPD          = a target time (base of 120m/min speed) for InterState Tailand 2008-3-3
+        24   1.00   SHOW_ROLL_MODE   = 0 show paper roll use short run paper code
+                                     = 1 show paper roll (meters) use long run paper code
+                                     = 2 show paper roll (weight) use long run paper code
+                                     = 3 show paper roll use short run paper code (weight)
+        25   1.00   HOST_READ_TYPE   = 0 use control to read day report from dryend computer
+                                     = 1 use file transfer to read day report from dryend computer
+                                       the file path define in third line of the ImportPath.txt
+        26  15.00   INPUT_CONTROL    the default of input order contreol (*have to re-execute the program*)
+                                     = 1 enable add order
+                                     = 2 enable edit order
+                                     = 4 enable delete order
+                                     = 8 enable move order
+        27   0.00   IMPORT_TYPE      copy the file from the name 4th to 5th line of the IMPORTPATH.TXT (if the 4th line file exist)
+                                     import from the file name 5th line of the IMPORTPATH.TXT
+                                     = 0 KKM (in schedule computer)
+                                     = 2 ASADA  2007-12-12
+        28   0.00   Report_Control   = 0 work time is sum form every order start to finish.
+                                     = 1 work time is count form the first order start to the last order finish.
+                                     = 2 平均車速 計算時減去停車時間 2009-8-31 永錦達
+                                     &= 0x80 (128)佑塋2層見坑沒有 WetEnd 統計  2008-9-2
+        29   0.00   Machine_LINE     the corrugator #, example 0 = Line #1, 1 = Line #2  //2004-10-11
+        30   0.00   MAX_LINE         how many corrugator line in the factory.
+        31   0.00   NEXT_MONTH_DAY   the month statistics count form the day from last month
+                                     = 0 count from the first day of this month.
+        32   0.00   PRN_SCHE_TYPE    = 0, the type for print schedule
+                                     = 1 Jhome Philippine 2007-8-14
+                                     = 2 MEGAPACK  2006-1-4
+                                     = 3 column PRINT (Jarkadar James) 2008-11-29
+                                     = 4 short paper list DM 2008-12-25
+                                     = 5 short paper list 和達 2009-1-16
+                                     = 6 S pack  2009-4-23
+                                     = 7 short paper list 明暐杜拜 20100211
+        33   0.00   PAPER_Control    &= 1, input double medium for CF  //2006-6-2 S&D
+        34   0.00   PRINT_SIZE1      the font size of printer list for the daily report
+        35   0.00   REPORT_SHOW      = 0, 5 layer report
+                                     &= 1, Center Package Cust='B' box 2007-11-7
+                                     &= 2, 7 layer report  // JHOME TCY 2006-10-17
+-------------------------------------------------------------------------------
+
+ 2. Dryend computer
+
+    2-1. mouse click the "Parameter[F8]".
+
+    2-2. Passwoprd:
+
+    2-3. mouse click the "PLC parameter" or the other.
+
+    2-4. input the new value in the setting column.
+
+    2-5. mouse click the "Save".
+
+    2-6. mouse click the "Write To PLC".
+
+
+
+    1. "System Parameter"
+
+       NO# SETTING  SPECIFICATION
+         1   1.55   AFlute           => the A flute rate.
+	 2   1.40   BFlute           => the A flute rate.
+	 3   1.45   CFlute           => the A flute rate.
+	 4   1.30   EFlute           => the A flute rate.
+	 5  10.00   WidthSizeRate    = 10 paper width is MM, = 254 paper width is INCH.
+	 6  10.00   CutterSizeRate   = 10 cut length is MM, = 254 cut length is INCH.
+	 7  10.00   SliscoSizeRate   xxx
+         8   0.00   DryEnd_TYPE      = 0 challenge slitter (TOW LINE)
+                                     = 1 Protocal-slitter-V2.2
+                                     = 2 Marguip Decc    (9600,8,N,1)
+                                     = 3 K&H slitter
+                                     = 4 Jhome dryend
+                                     = 6 Kardar-Phillipine for DataNet(2007-6-22)
+                                     = 7 challenge slitter (ONE LINE) 2010-01-19
+                                     = 8 佑欣 Thailand  2009-11-14
+                                     = 20 Marquip  //update for S&D C-2 (9600,8,N,1)
+                                     = 23 Marguip Decc & K&H slitter   (9600,7,O,1)
+                                     = 24 Marguip Federal //2007-5-13  (9600,7,O,1)
+                                     = 25 Marquip Master Pack (9600,7,O,1) 2007-11-17
+                                     = 33 MegaPack, 仟將 SLITTER //2005-5-1
+                                     = 34 JHome dryend (有大小剖, or 壓線大小 5 條) 2007-8-8 南非迪林
+                                     = 36 ASADA FLUTE 3 CHARS for 誠瑄  2008-4-5
+                                     = 52 Marquip MCS TCP/IP  2008-12-18
+         9   0.00   HOST_APP_TYPE    = 1 always append to the last (MIS A cmd)
+        10   0.00   SAME_ORDERNO     = 1 accept same orderno input schedule computer
+                                     = 2 check the customer name for two continous order, if same then change second
+        11  10.00   WorkSpace        default number for input seq# column add to the last order
+	12 100.00   AVERAGE_SPEED    default average speed
+        13   6.00   ImportEcho       = 1 Echo (0=OK, 1=no OK)
+                                     = 2 Echo    OK = 0 + ID
+                                     = 4 Echo no OK = 1 + ID
+        14   0.00   MarquipTest      send the CPMS first to the marquip order location
+                                     normal = 0, for test 50 < MarquipTest < 100
+                                     &= 128 no send the column of the Customer name to DECC  //2006-10-31 S&D
+        15 1000.00  PassWord         the password for setting
+	16  50.00   AUTOIMPORT       how long to read the MIS transfer text file, unit 0.1 second
+	17   1.00   AUTOEXPORT       export day report text file for MIS read
+                                     &= 2, good sheet = out * good cut
+                                     &= 4, column separate by ','
+                                     &= 8, OrderID no left adjust Cheng 2010-01-21
+	18  10.00   OrderSaveTime    how long to check the work order have modify & save it.
+                                     = 0 no save work order.
+        19  15.00   INPUT_CONTROL    the default of input order contreol (*have to re-execute the program*)
+                                     = 1 enable add order
+                                     = 2 enable edit order
+                                     = 4 enable delete order
+                                     = 8 enable move order
+        20   0.00   DATE_TYPE        = 0 YYYYMMDD, = 1 DDMMYYYY
+        21 500.00   SHIFTMINCNT      how many cuts to split current work order when shift changed.
+        22   0.00   Flute_Check      = 1 check the input column of the FLUTE & RUN_PAPER
+        23   1.00   SHOW_ORD_MODE    = the format for order show in screen (0, 1, 2)
+                                     = 3 DAZUN show trim  2005-12-23
+                                     = 4 S&D double medium for C2 CF  2006-6-2
+                                     = 5 SUNNY PACK 2007-5-2
+                                     = 6 column PRINT (Jarkadar James) 2008-11-29
+                                     = 9 Trim & Sctype 祐欣 Thailand 2009-11-18
+                                     = 10 Trim 和達 20100322
+                                     = 7 和達 sc4 .. sc5  2009-1-14
+        24   0.00   IMPORT_TYPE         0: protocal_Cheong Meng
+                                        1: protocal_ASA   //2004-10-7
+                                        2: protocal_ABC
+                                        3: KYM  2006-1-11
+                                        4: S&D always mm for width & length 2006-6-2
+                                        5: SUNNY PACKS 2007-3-16
+                                        6: Surindo 2008-3-21
+                                        7: IP Thailand  2009-12-07
+        25   2.00   REPORT_TYPE      = the format for day report list (0, 1, 2, 3)
+                                     = 4 for ISOPACK //2006-1-3
+                                     = 5 for S&D //2006-4-22
+        26   1.00   SHOW_ROLL_MODE   = 0 show paper roll use short run paper code
+                                     = 1 show paper roll (meters) use long run paper code
+                                     = 2 show paper roll (weight) use long run paper code
+                                     = 3 show paper roll use short run paper code (weight)
+        27   1.00   HOST_READ_TYPE   = 0 use control to read day report from dryend computer
+                                     = 1 use file transfer to read day report from dryend computer
+                                       the file path define in third line of the ImportPath.txt
+        28   1.00   PLC_PORT         serial port (com1, com2 ..) on line with PLC  (*have to re-execute the program*)
+        29   0.00   SLITTER_PORT     serial port on line with dryend controller   (*have to re-execute the program*)
+        30  30.00   SLITTER_DELAY    how many second delay TX order to dryend controller after oc
+                                     the unit is 0.1 second
+        31   0.00   CPMS_STATUS      the time for refresh CpmsStatus.TXT, the unit is 0.1 second.
+                                     the 5 line of the ImportPath.txt is the path name of the file CpmsStatus.TXT.
+                                     use for S&D dryend on line.
+        32   1.00   SHOW_BALANCE     = 0 show the up count for the stacker loading.
+                                     = 1 how the balance count of the sheet.
+        33   2.00   DryEnd_Control   &= 1 read good & bad sheet from dryend controller (Jhome)
+                                     &= 2 Slitter ON LINE when power on
+                                     &= 4 read speed from  DB or DryEnd (Marquip)
+                                     &= 8 read good & bad sheet from dryend controller & OC follow (Marquip)
+                                     &= 16 enter main screen after power on
+        34   0.00   Report_Control   = 0 work time is sum form every order start to finish.
+                                     = 1 work time is count form the first order start to the last order finish.
+                                     = 2 平均車速 計算時減去停車時間 2009-8-31 永錦達
+        35   6.00   Com_Show         = 1 show PLC TX & RX
+                                     = 2 show dryend controller TX & RX
+                                     = 4 show slitter TX & RX
+                                     = 8 show stacker TX & RX
+        36   0.00   SLITTER2_PORT    serial port on line with slitter or dryend controller   (*have to re-execute the program*)
+                                     port for fosber stacker
+        37   0.00   CPMS_LOG         = 8 record TX & RD to the file CpmsSioLog.txt.
+        38   0.00   AUTO_PRN_TAG     print tag label how many order before running.
+                                     = -1 print tag after order finish.
+                                     = -2 FOR CHENG ASADA STACKER 卸載時列印標簽  2007-12-9
+                                     >= 100 則換單後印 總數 & 不良品  2009-11-18  祐欣 泰國
+        39   0.00   PLC_TYPE         = 0 Facon, = 2 FX-2N  //2004-8-5
+                                     = 1 Facon for Fosber  //2005-3-21
+        40   0.00   DIS_FUNCTION     = 0 normal function.
+                                     = 1 can not input order from dryend. (S&D)
+        41   0.00   Machine_LINE     the corrugator #, example 0 = Line #1, 1 = Line #2  //2004-10-11
+        42    420   MORNING_HOUR     = 0 the RUN DATE input by operator when power on.
+                                     = 420 minute, the product report before 7 clock (420=60x7) record to yesterday.
+        43   0.00   NEXT_MONTH_DAY   the month statistics count form the day from last month
+                                     = 0 count from the first day of this month.
+        44   0.00   CHARSET          = 0 ANSI_CHARSET
+                                     = 1 DEFAULT_CHARSET
+                                     = 134 GB2312_CHARSET, Simplified Chinese characters (mainland china).
+                                     = 136 CHINESEBIG5_CHARSET, Traditional Chinese characters (Taiwanese).
+                                     = 222 THAI_CHARSET, Thai characters.
+        45   0.00   PAPER_Control    &= 1, input double medium for CF  //2006-6-2 S&D
+                                     &= 2, short paper transfer to long paper DM 2008-12-24
+        46   0.00   FONT_SIZE1       the font size of order show in the monitor screen
+        47   0.00   PRINT_SIZE1      the font size of printer list for the daily report
+	48   5.00   FluteControl     &= 1, the Single Facer Name show on the screen, depend on the flute input.
+                                     &= 4, the flute input should be CB instead of BC.
+        49   0.00   Check_Trim       = 0 no check trim. (unit mm)
+                                     > 0 if trim > this setting value, will show warnning.
+        50   0.00   REPORT_SHOW      = 0, 5 layer report 
+                                     &= 1, Center Package Cust='B' box 2007-11-7
+                                     &= 2, 7 layer report  // JHOME TCY 2006-10-17
+        51  30.00   Stacker_Last_Minimum  The minimum sheet of the last stacker split into two stacker.
+                                          if the setting=0, then no split.  2007-3-19 for Sunny Packs
+        52   1.00   Double_Tag       Print Label TAG how many copy, 1 one copy, 2 two copy, Sunny Packs 2007-5-2
+                                     = 0, 標簽數量 依剖數列印 2009-10-14 Federal
+        53   5.00   TryNum           how many times tx order to DryEnd if no responce
+        54   0.00   WECC             =0, no send WECC datas to MARQUIP
+                                     =1, send WECC datas to MARQUIP
+        55   0.00   Marquip_Level    =0, Upper Level  2007-11-17
+                                     =1, Middle Level
+                                     =2, Lower Level
+        56  6980    TCP_PORT
+        57  0.00    STACKER_TYPE     STACKER TYPE
+                                     = 4 Fosber (InterState Thailand 2008-02-24)
+                                     = 5 Fatek PLC for Jhome 明暐奈及利亞 slitter 2009-9-8
+        58  0.00    Slow_TX_ORD      Federal slowly tx order to wetend & schedule computer 2008-6-16
+        59  0.00    DISABLE_TX_ORD   =1, No Tx Order
+                                     =2, No Tx Status
+        60  0.00    CHECK_ORDER      &= 1, column(31) CPMS_STATUS 為祐欣格式
+                                     &= 2, 訂單更新後, 存在 ORDERS.TXT  //2009-11-10 祐欣
+------------------------------------------------------------------------------------------------------------
+
+ 3. WetEnd Computer:
+
+
+    1. "System Parameter"
+
+       NO# SETTING  SPECIFICATION
+         1   1.55   AFlute           => the A flute rate.
+	 2   1.40   BFlute           => the A flute rate.
+	 3   1.45   CFlute           => the A flute rate.
+	 4   1.30   EFlute           => the A flute rate.
+	 5  10.00   WidthSizeRate    = 10 paper width is MM, = 254 paper width is INCH.
+	 6  10.00   CutterSizeRate   = 10 cut length is MM, = 254 cut length is INCH.
+	 7  10.00   SliscoSizeRate   xxx
+         8   0.00   CHARSET          = 0 ANSI_CHARSET
+                                     = 1 DEFAULT_CHARSET
+                                     = 134 GB2312_CHARSET, Simplified Chinese characters (mainland china).
+                                     = 136 CHINESEBIG5_CHARSET, Traditional Chinese characters (Taiwanese).
+                                     = 222 THAI_CHARSET, Thai characters.
+         8   0.00   PAPER_Control    &= 1, input double medium for CF
+         9   0.00   FONT_SIZE1       the font size of order show in the monitor screen
+        10   0.00   spare            xxx
+	11   5.00   FluteControl     &= 1, the Single Facer Name show on the screen, depend on the flute input.
+                                     &= 4, the flute input should be CB instead of BC.
+        12   0.00   spare            xxx
+        13   1.00   ShowNoRunFlute   =1, the last meters will show 0, if the single facer is no use for this order.
+        14   0.00   spare            xxx
+	15   1.00   STATION          => 0=DB, 1=BF, 2=CF, 3=3F   (*have to re-execute the program*)
+        16   0.00   spare            xxx
+        17   0.00   spare            xxx
+        18   0.00   SHOW_CONTROL     &= 16 Show remainning meters of the running roller. 2007-12-14 ASADA
+                                     &= 32 Show remainning diameters of the running roller.
+        19   0.00   spare            xxx
+        20   0.00   spare            xxx
+	21   0.00   DAM-RATE         the glue dam encoder ratio.
+	22 300.00   WARN1-LEN        the last meters to OC & WARNNING 1 lamp ON.
+	23  10.00   WARN2-LEN        the last meters to OC & WARNNING 2 lamp ON.
+	24   0.00   DSP-TIME         the Display Panel show time , unit 0.1 second.
+	25   0.00   spare            xxx
+	26   1000   PASSWORD         the password for setting
+	27   0.00   DspMode          the Display Panel
+                                     = 1, KYM,  1->Total LM, 2->Average Speed, 3->Stop Cnt, 4->Down Time
+                                     = 2, Ming Wei Tailand, Curr Speed
+                                     = 3, Chong Ming, OrderLastLength, TotalMakeLength, DB_Speed;
+                                     = 4, S&D DB_Speed, SpeedAvg, StopDayTm/60, DryEndStatus.StopDayCnt, TotalMakeLength
+                                     = 5, Hsieh Hsu Vietnam, DB_Speed, SpeedAvg
+                                     = 6, InterState Johor
+                                     = 7, S&D C3 
+                                     = 71, DataNet Philippine same with S&D C3  2009-6-15 
+                                     = 8, KKM-Cikarang 1200,8,N,1  2008-10-23
+                                     = 10 JHOME 肯亞  2006-10-14
+                                     = 12, DM speed  
+                                     = 16, InterState Tailand 2008-2-25  
+                                          DM 2009-10-05  (Speed, Total)
+                                     = 20 ASADA RC_01A  明暐奈及利亞 2008-7-8
+                                     = 22 天弘-RC01A 和達  2009-1-15
+                                     = 42 K&H 2400,8,N,1 2009-4-27
+                                     = 43 祐欣 Thailand 2009-11-17
+                                     = 98 RC_01A  test
+                                     = 101 Mitsubishi 60H  (ACC 2008-02-15)
+       	28   0.00   GUIDE-LEN        the last meters to change bridge guide before OC.
+	29   6.00   LINEAR SPLICE    the last meters to splice linear paper beforen OC.
+	30   1.00   MEDIUM SPLICE    the last meters to splice medium paper beforen OC.
+        31   0.00   WET_SHOW         = 1, the splice meters will control by the parameters column 53 & 54 (Bridge_ADD1 & ADD2)
+        32   0.00   spare            xxx
+        33   0.00   GLUE_CONTROL     = 1 auto glue gap control.
+        34   0.00   GUIDE_CONTROL    = 1 auto glue dam control.
+        35   0.00   FRATE_CONTROL    = 1 show the flute rate.
+        36   1.00   SHOW_ORD_MODE    = the format for order show in screen (0, 1, 2)
+                                     = 3 DAZUN show trim  2005-12-23
+                                     = 4 S&D double medium for C2 CF  2006-6-2
+                                     = 6 column PRINT (Jarkadar James) 2008-11-29   
+                                     = 9 Trim & Sctype 祐欣 Thailand 2009-11-18
+        37   0.00   SHOW_ROLL_LAST   = 1 show the last meters for this paper roll.
+        38   1.00   PLC_PORT         the serial port for connect to PLC.
+        39   0.00   DPS_PORT         the serial port for display panel.
+        40   1.00   SHOW_ROLL_MODE   = 0 show prepare paper with the short paper code as A=B.
+                                     = 1 show prepare paper with the slong paper code as M115.
+                                     = 2 show weight.
+                                     = 3 show paper roll use short run paper code (weight)
+        41   0.00   spare            xxx
+        42   0.00   DB_SPEED_DOWN    the last meters to DB speed down before single facer OC.
+        43   0.00   spare            xxx
+        44   0.00   Core_Size        THE CORE SIZE OF THE PAPER ROLL, UNIT MM 2007-12-08
+        45   0.00   WetEnd_Control   =1, X15 input no change screen
+        46   0.40   SPEED-DIF-METER-AMP   => the meters ratio for splicing single facer speed down, unit 0.1€
+                                             the meters for speed down = WARN2_LEN + ((current speed - splicing speed) * SPD-DIF-METER-AMP)
+        47   0.00   BRIDGE_ADJUST         => the bridge meters adjustment.
+                                             DB meters = BRIDGE_ADJUST
+                                             single facer bridge meters = BRIDGE_ADJUST + PLC bridge meters.
+                                             DB=40, BF=10, CF=25
+        48   0.00   PLC_TYPE              =>  0=Facon, 2=FX-2N (DATANET)
+                                              3=FX2N-32MR & NEW 16MR for Jhome //2006-3-31
+        49   0.00   spare            xxx
+        50   0.00   spare            xxx
+        51   0.00   spare            xxx
+        52   0.00   spare            xxx
+        53   0.00   Bridge_ADD1      bridge meters adjustment for push buttom 1.
+        54   0.00   Bridge_ADD2      bridge meters adjustment for push buttom 1.
+        55   0.00   Machine_LINE     the corrugator #, example 0 = Line #1, 1 = Line #2  //2004-10-11
+        56   1.00   Default_Screen   default screen show for wetend power on.
+
+
+ 4. PLC參數編輯:
+
+	 與 PLC 有關的一些控制設定.
+
+	 編號 設定值      參數說明
+	   1     3	  AF-STOP, 3 PULSE              =>上糊馬達預停
+	   2	 3	  BF-STOP, 3 PULSE              =>下糊馬達預停
+	   3	 3	  DAM-STOP, 3 PULSE             =>隔糊馬達預停
+	   4	 0	  AF-BACK, 0 PULSE             =>上糊馬達齒隙
+	   5	 0	  BF-BACK, 0 PULSE             =>下糊馬達齒隙
+	   6	10 	  SPD-PHOTO-L1, 6 MPM          =>低限電眼加速差
+	   7	12	  SPD-PHOTO-L2, 10 MPM          =>本機 > 糊車 5 - 8 MPM
+	   8	 1	  SPD-PHOTO-N1, 1 MPM           =>積紙正常速度差
+	   9	 3	  SPD-PHOTO-N2, 3 MPM           =>本機與糊車速度差 0 - 1
+          10    -3	  SPD-PHOTO-H1, -3 MPM          =>高限電眼減速差
+          11	-1	  SPD-PHOTO-H2, -1 MPM          =>本機 < 糊車 -1 - 0 MPM
+          12  1000	  SPD-CYCLE, 1000 MS            =>每 1000 ms 調速 1 次.
+          13  	 4	  SPD-AMP+, 4 RATE              =>加速差乘率.
+          14  	60	  SPD-BASE+, 60 MS              =>加速基準時間, 0.1 秒.
+          15	 3	  SPD-AMP-, 3 RATE              =>減速差乘率.
+          16	40	  SPD-BASE-, 40 MS              =>減速基準時間, 0.1 秒.
+	  17	15	  BRIDGE-MIN, 40 METER          =>乾部與接紙機直線米數.
+	  18	20	  BRIDGE-PH-L-ON, 50 METER      =>低限電眼動作積紙米數.
+	  19    21	  BRIDGE-PH-L-OFF, 55 METER     =>低限電眼不動作積紙米數.
+	  20    30	  BRIDGE-PH-H-ON, 60 METER      =>高限電眼動作積紙米數.
+	  21    31	  BRIDGE-PH-H-OFF, 65 METER     =>高限電眼不動作積紙米數.
+	  22   300	  BRIDGE-MAX, 300 METER         =>天橋積紙最大米數.
+	  23	30	  PH-L-ON-DELAY, 5 (0.1 SEC)    =>低限電眼動作延遲.
+	  24	30	  PH-L-OFF-DELAY, 30 (0.1 SEC)  =>低限電眼不動作延遲.
+	  25	30	  PH-H-ON-DELAY, 5 (0.1 SEC)    =>高限電眼動作延遲.
+	  26	30	  PH-H-OFF-DELAY, 53 (0.1 SEC)  =>高限電眼不動作延遲.
+	  27	 3	  GAP-SPD-BAND, 3 MPM           =>糊間隙速度變化馬達動作.
+	  28	20	  SPEED-LO-LMT, 20 MPM          =>車速基速設定.
+	  29   300	  SPEED-HI-LMT, 300 MPM         =>車速最高速度設定.
+	  30	15	  SPEED-OUT-LO, 15 MPM          =>雙瓦部最低速,車速加速設定.
+	  31    25	  BRIDGE-KEEP-LEN, 70 METER     =>天橋積紙定速米數=5+BRIDGE-PH-H-OFF
+	  32   350	  OUT-SENSOR-MM, 350            => 出紙(雙面機) SENSOR 檢測的圓周, 單位 MM
+	  33   350	  IN-SENSOR-MM, 350             => 入紙(本機) SENSOR 檢測的圓周, 單位 MM
+	  34   150	  D/A BASE SPEED, 150 (150/2048)
+	  35   150	  SPLICE SPEED, 150             =>接紙機最高接紙速度
+          36    20        SPD-BASE-TM, 20
+          37    10        ACC-RATE, 10
+          38    10        DEC-RATE, 10
+          39     0        OUT-FACTOR                    (DB-SPD-DN KYM)
+          40     0        IN-FACTOR                     (BF-MONITOR)
+          41     0        BRIDGE-SPD-LEVEL1, 0  (mpm)
+          42     0        BRIDGE-SPD-LEVEL2, 0  (mpm)
+          43     0        BRIDGE-SPD-METER1, 0  METER
+                          面紙殘捲接紙最高速度
+          44     0        BRIDGE-SPD-METER2, 0  METER
+                          芯紙殘捲接紙最高速度
+          45    12        HI-OFF-SPEED-DOWN, 20 MPM     =>天橋紙多時, 降 10 MPM 速度
+          46     0        IN-SPEED-LO
+          47    20        SPLICE-TM                     =>接紙機信號時間 2 秒
+          48    10        WARN1-SPEED-UP, 10 MPM        =>換單前加速 10 MPM 速度
+          49    10        WARN1-SPEED-DN, 15 MPM        =>重估到電眼低限時, 降 5 MPM 速度
+          50    40        BRIDGE-TOO-MUCH               =>天橋紙太多需重估, 10 + BRIDGE-PH-H-OFF
+          51   600        MAX+SPD-CYCLE                 =>每次加速最大時間 600 ms //2004-6-17
+          52   600        MAX-SPD-CYCLE                 =>每次減速最大時間 600 ms
+          53     0        MARK-ON-TM                    =>噴墨時間 2.0 秒
+          54     0        AF SHIFT LEN                  =>A 組不良品移位暫存器, 單位 0.1 METERS
+          55     0        BF SHIFT LEN                  =>B 組不良品移位暫存器, 單位 0.1 METERS
+          56     0        ROLL-SPD-UP                   殘捲開始加速的圓周長, 單位 mm (直徑 X 3.1416)
+          57     0        ROLL-SPD-DOWN                 殘捲開始降速的圓周長, 單位 mm (直徑 X 3.1416)
+          58     0        L-ROLL-SPLICE                 面紙自動接紙的圓周長, 單位 mm (直徑 X 3.1416)
+          59     0        M-ROLL-SPLICE                 芯紙自動接紙的圓周長, 單位 mm (直徑 X 3.1416)
+          60   150        MEDIUM SPLICE SPEED           =>接紙機最高接紙速度 (芯紙)
+          61  1000        OUT/IN RATE                   =>出紙/進紙 倍率調整  2007-01-30
+
+  -----------------------------------------------------------------------------------------------------
+
+ ImportPath.TXT     2005-8-17
+
+   \Temp\OfficeH.TXT               ;the #1 line is the file for schedule (MIS & Schedule & Dryend)
+   \Temp\FINISH.TXT                ;the #2 line is the file for report  (MIS & Dryend)
+   \\DryEnd\DryEnd\                ;the #3 line is the path for binary data (Schedule)
+   \Temp\                          ;the #4 line no use, KKM copy DFB source 2007/7/6
+   \Temp\CpmsStatus.TXT            ;the #5 line is the status file(MIS & Dryend), KKM copy DFB destination 2007/7/6
+   \Temp\                          ;the #6 line no use
+   \Temp\                          ;the #7 line no use
+   PrnTag.TXT                      ;the #8 line is the format file for label print
+   \Temp                           ;the #9 line is the folder for the binary data & CpmsSioLog.txt (Schedule & Dryend)
+   Courier New                     ;the #10 line is font name for some display coloumn as customer
+                                   ;have to set the font name to CordiaUPC for Thai Charset.
+   192.168.0.1                     ;the #11 line is the dryend computer IP addrs setting in the schedule (Schedule)
+   
+   191.168.0.2                     ;the #13 line is the Marquip MCS TCP/IP addrs
+
+--------------------------------------------------------------------------------
+ the format for label print 2004-9-9
+
+ PRNTAG.TXT is the format file for label print
+
+1. replace the column to @##
+
+@01  =>  SEQ#
+@02  =>  CUST#
+@03  =>  CUSTOMER
+@04  =>  DELIVERY
+@05  =>  ID#
+@07  =>  PAPER
+@08  =>  RUN_PAPER
+@09  =>  FLUTE
+@10  =>  OUTS
+@11  =>  NOTE
+@12  =>  WIDTH (mm)
+@13  =>  WIDTH (inch)
+@14  =>  WIDTH (taiwan unit)
+@15  =>  CUT LENGTH (mm)
+@16  =>  CUT LENGTH (inch)
+@17  =>  CUT LENGTH (taiwan unit)
+@18  =>  CUTS
+@19  =>  (CUTS x OUTS)
+@20  =>  SCORER
+@21  =>  SHEET/THIS STACK
+@22  =>  SHEET/PER STACK
+@23  =>  STACK COUNT
+@24  =>  STACK TOTAL
+@25  =>  DATE
+@26  =>  DATE-TIME
+@27  =>  RUN PAPER  (L/M/L)
+@28  =>  LINEAR/MEDIUM
+@29  =>  SHIFT
+@30  =>  SLIT
+@31  =>  DD/MM/YY HH:MM     DATE-TIME S&D  //2005-6-7 
+@32  =>  日期               DATE (MM/DD)
+@33  =>  小紙捆數           (BDL x CNT1 + CNT2)
+@34  =>  Stack Qty = @21x@10
+@50xx  =  xx cahrs X_POS
+
+
+      
+
+
+2. replaced the command to @##
+
+ ####  =>  4 digits number.
+
+@60(####)  =>  start Y position of page (pixels)
+@61(####)  =>  start X position of page (pixels)
+@62(####)  =>  LINE SPACE (pixels)
+
+
+@70(####)  =>  FONT SIZE
+@71(####)  =>  PAN SIZE
+
