@@ -29,7 +29,6 @@ namespace QuanLyGiay
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel39 = new System.Windows.Forms.Panel();
             this.panel38 = new System.Windows.Forms.Panel();
             this.panel37 = new System.Windows.Forms.Panel();
@@ -60,7 +59,6 @@ namespace QuanLyGiay
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel20 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
@@ -77,12 +75,6 @@ namespace QuanLyGiay
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this._easyLabTocDo = new EasyScada.Winforms.Controls.EasyLabel();
-            this._easyLabDaiCat = new EasyScada.Winforms.Controls.EasyLabel();
-            this._easyLabSLCat = new EasyScada.Winforms.Controls.EasyLabel();
-            this._easyLabPallet = new EasyScada.Winforms.Controls.EasyLabel();
-            this._easLabSLLoi = new EasyScada.Winforms.Controls.EasyLabel();
-            this._easyLabSLDat = new EasyScada.Winforms.Controls.EasyLabel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -92,10 +84,20 @@ namespace QuanLyGiay
             this._labSlConLai = new System.Windows.Forms.Label();
             this._labDonHang = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.easyDriverConnector1 = new EasyScada.Winforms.Controls.EasyDriverConnector(this.components);
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this._labPo = new System.Windows.Forms.Label();
+            this._labKhachHang = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this._panelSongCStatus = new System.Windows.Forms.Panel();
+            this._panelSongBStatus = new System.Windows.Forms.Panel();
+            this._panelSongEStatus = new System.Windows.Forms.Panel();
+            this._panelMayMenStatus = new System.Windows.Forms.Panel();
+            this._panelMayXaStatus = new System.Windows.Forms.Panel();
+            this._panelCutterStatus = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.grvDH = new System.Windows.Forms.DataGridView();
             this.btnOrder = new System.Windows.Forms.Button();
@@ -107,34 +109,13 @@ namespace QuanLyGiay
             this.button7 = new System.Windows.Forms.Button();
             this.labDateTime = new System.Windows.Forms.Label();
             this._labDriverStatus = new System.Windows.Forms.Label();
-            this._labKhachHang = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this._labPo = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this._panelCutterStatus = new System.Windows.Forms.Panel();
-            this._easyLabTocDoCutter = new EasyScada.Winforms.Controls.EasyLabel();
-            this._easyLabTocDoMayXa = new EasyScada.Winforms.Controls.EasyLabel();
-            this._panelMayXaStatus = new System.Windows.Forms.Panel();
-            this._panelMayMenStatus = new System.Windows.Forms.Panel();
-            this._panelSongEStatus = new System.Windows.Forms.Panel();
-            this._panelSongBStatus = new System.Windows.Forms.Panel();
-            this._panelSongCStatus = new System.Windows.Forms.Panel();
             this.panel24.SuspendLayout();
             this.panel21.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._easyLabTocDo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._easyLabDaiCat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._easyLabSLCat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._easyLabPallet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._easLabSLLoi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._easyLabSLDat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.easyDriverConnector1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvDH)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._easyLabTocDoCutter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._easyLabTocDoMayXa)).BeginInit();
             this.SuspendLayout();
             // 
             // panel39
@@ -404,14 +385,6 @@ namespace QuanLyGiay
             this.label7.TabIndex = 0;
             this.label7.Text = "Trạm";
             // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.Black;
-            this.panel20.Location = new System.Drawing.Point(1202, 43);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(1, 404);
-            this.panel20.TabIndex = 2;
-            // 
             // panel19
             // 
             this.panel19.BackColor = System.Drawing.Color.Black;
@@ -544,78 +517,6 @@ namespace QuanLyGiay
             this.panel3.Size = new System.Drawing.Size(1185, 1);
             this.panel3.TabIndex = 2;
             // 
-            // _easyLabTocDo
-            // 
-            this._easyLabTocDo.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
-            this._easyLabTocDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this._easyLabTocDo.Location = new System.Drawing.Point(610, 391);
-            this._easyLabTocDo.Name = "_easyLabTocDo";
-            this._easyLabTocDo.Size = new System.Drawing.Size(200, 50);
-            this._easyLabTocDo.StringFormat = null;
-            this._easyLabTocDo.TabIndex = 1;
-            this._easyLabTocDo.TagPath = "Local Station/ChannelServer/DeviceCutter/TocDo";
-            this._easyLabTocDo.Text = "easyLabel1";
-            // 
-            // _easyLabDaiCat
-            // 
-            this._easyLabDaiCat.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
-            this._easyLabDaiCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this._easyLabDaiCat.Location = new System.Drawing.Point(610, 49);
-            this._easyLabDaiCat.Name = "_easyLabDaiCat";
-            this._easyLabDaiCat.Size = new System.Drawing.Size(200, 50);
-            this._easyLabDaiCat.StringFormat = null;
-            this._easyLabDaiCat.TabIndex = 1;
-            this._easyLabDaiCat.TagPath = "Local Station/ChannelServer/DeviceCutter/ChieuDaiCat1";
-            this._easyLabDaiCat.Text = "easyLabel1";
-            // 
-            // _easyLabSLCat
-            // 
-            this._easyLabSLCat.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
-            this._easyLabSLCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this._easyLabSLCat.Location = new System.Drawing.Point(610, 114);
-            this._easyLabSLCat.Name = "_easyLabSLCat";
-            this._easyLabSLCat.Size = new System.Drawing.Size(200, 50);
-            this._easyLabSLCat.StringFormat = null;
-            this._easyLabSLCat.TabIndex = 1;
-            this._easyLabSLCat.TagPath = "Local Station/ChannelServer/DeviceCutter/SoLuongCat1";
-            this._easyLabSLCat.Text = "easyLabel1";
-            // 
-            // _easyLabPallet
-            // 
-            this._easyLabPallet.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
-            this._easyLabPallet.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this._easyLabPallet.Location = new System.Drawing.Point(610, 324);
-            this._easyLabPallet.Name = "_easyLabPallet";
-            this._easyLabPallet.Size = new System.Drawing.Size(200, 50);
-            this._easyLabPallet.StringFormat = null;
-            this._easyLabPallet.TabIndex = 1;
-            this._easyLabPallet.TagPath = "Local Station/ChannelServer/DeviceCutter/Pallet1";
-            this._easyLabPallet.Text = "easyLabel1";
-            // 
-            // _easLabSLLoi
-            // 
-            this._easLabSLLoi.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
-            this._easLabSLLoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this._easLabSLLoi.Location = new System.Drawing.Point(610, 253);
-            this._easLabSLLoi.Name = "_easLabSLLoi";
-            this._easLabSLLoi.Size = new System.Drawing.Size(200, 50);
-            this._easLabSLLoi.StringFormat = null;
-            this._easLabSLLoi.TabIndex = 1;
-            this._easLabSLLoi.TagPath = "Local Station/ChannelServer/DeviceCutter/SoLuongLoi";
-            this._easLabSLLoi.Text = "easyLabel1";
-            // 
-            // _easyLabSLDat
-            // 
-            this._easyLabSLDat.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
-            this._easyLabSLDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this._easyLabSLDat.Location = new System.Drawing.Point(610, 184);
-            this._easyLabSLDat.Name = "_easyLabSLDat";
-            this._easyLabSLDat.Size = new System.Drawing.Size(200, 50);
-            this._easyLabSLDat.StringFormat = null;
-            this._easyLabSLDat.TabIndex = 1;
-            this._easyLabSLDat.TagPath = "Local Station/ChannelServer/DeviceCutter/SoLuongDat";
-            this._easyLabSLDat.Text = "easyLabel1";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -706,19 +607,6 @@ namespace QuanLyGiay
             this.label1.TabIndex = 0;
             this.label1.Text = "Đơn Hàng";
             // 
-            // easyDriverConnector1
-            // 
-            this.easyDriverConnector1.CollectionName = null;
-            this.easyDriverConnector1.CommunicationMode = EasyScada.Core.CommunicationMode.ReceiveFromServer;
-            this.easyDriverConnector1.DatabaseName = null;
-            this.easyDriverConnector1.MongoDb_ConnectionString = null;
-            this.easyDriverConnector1.Port = ((ushort)(8800));
-            this.easyDriverConnector1.RefreshRate = 1000;
-            this.easyDriverConnector1.ServerAddress = "127.0.0.1";
-            this.easyDriverConnector1.StationName = null;
-            this.easyDriverConnector1.Timeout = 30;
-            this.easyDriverConnector1.UseMongoDb = false;
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -734,23 +622,17 @@ namespace QuanLyGiay
             this.groupBox1.Controls.Add(this.panel20);
             this.groupBox1.Controls.Add(this.panel5);
             this.groupBox1.Controls.Add(this.panel11);
-            this.groupBox1.Controls.Add(this._easyLabSLCat);
             this.groupBox1.Controls.Add(this.panel19);
-            this.groupBox1.Controls.Add(this._easyLabDaiCat);
             this.groupBox1.Controls.Add(this.label23);
             this.groupBox1.Controls.Add(this.label21);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this._easyLabPallet);
             this.groupBox1.Controls.Add(this._labPo);
             this.groupBox1.Controls.Add(this.panel18);
             this.groupBox1.Controls.Add(this._labKhachHang);
-            this.groupBox1.Controls.Add(this._easyLabTocDo);
             this.groupBox1.Controls.Add(this._labDonHang);
-            this.groupBox1.Controls.Add(this._easLabSLLoi);
             this.groupBox1.Controls.Add(this.panel17);
             this.groupBox1.Controls.Add(this.panel3);
             this.groupBox1.Controls.Add(this._labSlConLai);
-            this.groupBox1.Controls.Add(this._easyLabSLDat);
             this.groupBox1.Controls.Add(this.panel14);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label2);
@@ -771,6 +653,55 @@ namespace QuanLyGiay
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đơn Hàng đang chạy";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.Black;
+            this.panel20.Location = new System.Drawing.Point(1202, 43);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(1, 404);
+            this.panel20.TabIndex = 2;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label23.Location = new System.Drawing.Point(41, 203);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(41, 25);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "PO";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label21.Location = new System.Drawing.Point(41, 127);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(121, 25);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "Khách Hàng";
+            // 
+            // _labPo
+            // 
+            this._labPo.AutoSize = true;
+            this._labPo.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this._labPo.Location = new System.Drawing.Point(202, 197);
+            this._labPo.Name = "_labPo";
+            this._labPo.Size = new System.Drawing.Size(74, 39);
+            this._labPo.TabIndex = 0;
+            this._labPo.Text = "aaa";
+            // 
+            // _labKhachHang
+            // 
+            this._labKhachHang.AutoSize = true;
+            this._labKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this._labKhachHang.Location = new System.Drawing.Point(202, 121);
+            this._labKhachHang.Name = "_labKhachHang";
+            this._labKhachHang.Size = new System.Drawing.Size(74, 39);
+            this._labKhachHang.TabIndex = 0;
+            this._labKhachHang.Text = "aaa";
             // 
             // groupBox2
             // 
@@ -792,8 +723,6 @@ namespace QuanLyGiay
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this._easyLabTocDoMayXa);
-            this.groupBox2.Controls.Add(this._easyLabTocDoCutter);
             this.groupBox2.Controls.Add(this.panel36);
             this.groupBox2.Controls.Add(this.panel27);
             this.groupBox2.Controls.Add(this.label15);
@@ -814,6 +743,54 @@ namespace QuanLyGiay
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin trạm";
+            // 
+            // _panelSongCStatus
+            // 
+            this._panelSongCStatus.BackColor = System.Drawing.Color.Gray;
+            this._panelSongCStatus.Location = new System.Drawing.Point(587, 420);
+            this._panelSongCStatus.Name = "_panelSongCStatus";
+            this._panelSongCStatus.Size = new System.Drawing.Size(40, 30);
+            this._panelSongCStatus.TabIndex = 7;
+            // 
+            // _panelSongBStatus
+            // 
+            this._panelSongBStatus.BackColor = System.Drawing.Color.Gray;
+            this._panelSongBStatus.Location = new System.Drawing.Point(587, 358);
+            this._panelSongBStatus.Name = "_panelSongBStatus";
+            this._panelSongBStatus.Size = new System.Drawing.Size(40, 30);
+            this._panelSongBStatus.TabIndex = 7;
+            // 
+            // _panelSongEStatus
+            // 
+            this._panelSongEStatus.BackColor = System.Drawing.Color.Gray;
+            this._panelSongEStatus.Location = new System.Drawing.Point(587, 289);
+            this._panelSongEStatus.Name = "_panelSongEStatus";
+            this._panelSongEStatus.Size = new System.Drawing.Size(40, 30);
+            this._panelSongEStatus.TabIndex = 7;
+            // 
+            // _panelMayMenStatus
+            // 
+            this._panelMayMenStatus.BackColor = System.Drawing.Color.Gray;
+            this._panelMayMenStatus.Location = new System.Drawing.Point(587, 222);
+            this._panelMayMenStatus.Name = "_panelMayMenStatus";
+            this._panelMayMenStatus.Size = new System.Drawing.Size(40, 30);
+            this._panelMayMenStatus.TabIndex = 7;
+            // 
+            // _panelMayXaStatus
+            // 
+            this._panelMayXaStatus.BackColor = System.Drawing.Color.Gray;
+            this._panelMayXaStatus.Location = new System.Drawing.Point(587, 154);
+            this._panelMayXaStatus.Name = "_panelMayXaStatus";
+            this._panelMayXaStatus.Size = new System.Drawing.Size(40, 30);
+            this._panelMayXaStatus.TabIndex = 7;
+            // 
+            // _panelCutterStatus
+            // 
+            this._panelCutterStatus.BackColor = System.Drawing.Color.Gray;
+            this._panelCutterStatus.Location = new System.Drawing.Point(587, 97);
+            this._panelCutterStatus.Name = "_panelCutterStatus";
+            this._panelCutterStatus.Size = new System.Drawing.Size(40, 30);
+            this._panelCutterStatus.TabIndex = 7;
             // 
             // groupBox3
             // 
@@ -934,118 +911,6 @@ namespace QuanLyGiay
             this._labDriverStatus.TabIndex = 0;
             this._labDriverStatus.Text = "DriverStatus";
             // 
-            // _labKhachHang
-            // 
-            this._labKhachHang.AutoSize = true;
-            this._labKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this._labKhachHang.Location = new System.Drawing.Point(202, 121);
-            this._labKhachHang.Name = "_labKhachHang";
-            this._labKhachHang.Size = new System.Drawing.Size(74, 39);
-            this._labKhachHang.TabIndex = 0;
-            this._labKhachHang.Text = "aaa";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label21.Location = new System.Drawing.Point(41, 127);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(121, 25);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "Khách Hàng";
-            // 
-            // _labPo
-            // 
-            this._labPo.AutoSize = true;
-            this._labPo.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this._labPo.Location = new System.Drawing.Point(202, 197);
-            this._labPo.Name = "_labPo";
-            this._labPo.Size = new System.Drawing.Size(74, 39);
-            this._labPo.TabIndex = 0;
-            this._labPo.Text = "aaa";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label23.Location = new System.Drawing.Point(41, 203);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(41, 25);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "PO";
-            // 
-            // _panelCutterStatus
-            // 
-            this._panelCutterStatus.BackColor = System.Drawing.Color.Gray;
-            this._panelCutterStatus.Location = new System.Drawing.Point(587, 97);
-            this._panelCutterStatus.Name = "_panelCutterStatus";
-            this._panelCutterStatus.Size = new System.Drawing.Size(40, 30);
-            this._panelCutterStatus.TabIndex = 7;
-            // 
-            // _easyLabTocDoCutter
-            // 
-            this._easyLabTocDoCutter.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
-            this._easyLabTocDoCutter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this._easyLabTocDoCutter.Location = new System.Drawing.Point(135, 92);
-            this._easyLabTocDoCutter.Name = "_easyLabTocDoCutter";
-            this._easyLabTocDoCutter.Size = new System.Drawing.Size(119, 40);
-            this._easyLabTocDoCutter.StringFormat = null;
-            this._easyLabTocDoCutter.TabIndex = 1;
-            this._easyLabTocDoCutter.TagPath = "Local Station/ChannelServer/DeviceCutter/TocDo";
-            this._easyLabTocDoCutter.Text = "easyLabel1";
-            // 
-            // _easyLabTocDoMayXa
-            // 
-            this._easyLabTocDoMayXa.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
-            this._easyLabTocDoMayXa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this._easyLabTocDoMayXa.Location = new System.Drawing.Point(135, 154);
-            this._easyLabTocDoMayXa.Name = "_easyLabTocDoMayXa";
-            this._easyLabTocDoMayXa.Size = new System.Drawing.Size(119, 40);
-            this._easyLabTocDoMayXa.StringFormat = null;
-            this._easyLabTocDoMayXa.TabIndex = 1;
-            this._easyLabTocDoMayXa.TagPath = "Local Station/ChannelXa/Device/TocDo";
-            this._easyLabTocDoMayXa.Text = "easyLabel1";
-            // 
-            // _panelMayXaStatus
-            // 
-            this._panelMayXaStatus.BackColor = System.Drawing.Color.Gray;
-            this._panelMayXaStatus.Location = new System.Drawing.Point(587, 154);
-            this._panelMayXaStatus.Name = "_panelMayXaStatus";
-            this._panelMayXaStatus.Size = new System.Drawing.Size(40, 30);
-            this._panelMayXaStatus.TabIndex = 7;
-            // 
-            // _panelMayMenStatus
-            // 
-            this._panelMayMenStatus.BackColor = System.Drawing.Color.Gray;
-            this._panelMayMenStatus.Location = new System.Drawing.Point(587, 222);
-            this._panelMayMenStatus.Name = "_panelMayMenStatus";
-            this._panelMayMenStatus.Size = new System.Drawing.Size(40, 30);
-            this._panelMayMenStatus.TabIndex = 7;
-            // 
-            // _panelSongEStatus
-            // 
-            this._panelSongEStatus.BackColor = System.Drawing.Color.Gray;
-            this._panelSongEStatus.Location = new System.Drawing.Point(587, 289);
-            this._panelSongEStatus.Name = "_panelSongEStatus";
-            this._panelSongEStatus.Size = new System.Drawing.Size(40, 30);
-            this._panelSongEStatus.TabIndex = 7;
-            // 
-            // _panelSongBStatus
-            // 
-            this._panelSongBStatus.BackColor = System.Drawing.Color.Gray;
-            this._panelSongBStatus.Location = new System.Drawing.Point(587, 358);
-            this._panelSongBStatus.Name = "_panelSongBStatus";
-            this._panelSongBStatus.Size = new System.Drawing.Size(40, 30);
-            this._panelSongBStatus.TabIndex = 7;
-            // 
-            // _panelSongCStatus
-            // 
-            this._panelSongCStatus.BackColor = System.Drawing.Color.Gray;
-            this._panelSongCStatus.Location = new System.Drawing.Point(587, 420);
-            this._panelSongCStatus.Name = "_panelSongCStatus";
-            this._panelSongCStatus.Size = new System.Drawing.Size(40, 30);
-            this._panelSongCStatus.TabIndex = 7;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1071,32 +936,18 @@ namespace QuanLyGiay
             this.panel24.ResumeLayout(false);
             this.panel21.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this._easyLabTocDo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._easyLabDaiCat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._easyLabSLCat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._easyLabPallet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._easLabSLLoi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._easyLabSLDat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.easyDriverConnector1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grvDH)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._easyLabTocDoCutter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._easyLabTocDoMayXa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private EasyScada.Winforms.Controls.EasyLabel _easyLabDaiCat;
-        private EasyScada.Winforms.Controls.EasyLabel _easyLabSLCat;
-        private EasyScada.Winforms.Controls.EasyLabel _easyLabPallet;
-        private EasyScada.Winforms.Controls.EasyLabel _easLabSLLoi;
-        private EasyScada.Winforms.Controls.EasyLabel _easyLabSLDat;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -1105,7 +956,6 @@ namespace QuanLyGiay
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label _labDonHang;
         private System.Windows.Forms.Label label1;
-        private EasyScada.Winforms.Controls.EasyDriverConnector easyDriverConnector1;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
@@ -1115,10 +965,8 @@ namespace QuanLyGiay
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel3;
-        private EasyScada.Winforms.Controls.EasyLabel _easyLabTocDo;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label _labSlConLai;
-        private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel17;
@@ -1179,8 +1027,7 @@ namespace QuanLyGiay
         private System.Windows.Forms.Panel _panelSongEStatus;
         private System.Windows.Forms.Panel _panelMayMenStatus;
         private System.Windows.Forms.Panel _panelMayXaStatus;
-        private EasyScada.Winforms.Controls.EasyLabel _easyLabTocDoMayXa;
-        private EasyScada.Winforms.Controls.EasyLabel _easyLabTocDoCutter;
+        private System.Windows.Forms.Panel panel20;
     }
 }
 

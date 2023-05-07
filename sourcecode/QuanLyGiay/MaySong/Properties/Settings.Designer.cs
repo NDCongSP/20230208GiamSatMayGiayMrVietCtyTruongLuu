@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CommonControl.Properties {
+namespace MaySong.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

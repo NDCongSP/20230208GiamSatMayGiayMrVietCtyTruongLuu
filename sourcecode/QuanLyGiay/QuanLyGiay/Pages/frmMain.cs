@@ -130,7 +130,7 @@ namespace QuanLyGiay
             easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/Run").ValueChanged += RunCutter_ValueChanged;
 
             //may xa
-            easyDriverConnector1.GetTag("Local Station/ChannelXa/Device/Run").ValueChanged += RunMayXa_ValueChanged;
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Run").ValueChanged += RunMayXa1_ValueChanged;
 
 
             LenhChuyenDonCutter_ValueChanged(easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/LenhChuyenDon"),
@@ -141,9 +141,9 @@ namespace QuanLyGiay
                               new TagValueChangedEventArgs(easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/Run")
                               , "", easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/Run").Value));
 
-            RunMayXa_ValueChanged(easyDriverConnector1.GetTag("Local Station/ChannelXa/Device/Run"),
-                              new TagValueChangedEventArgs(easyDriverConnector1.GetTag("Local Station/ChannelXa/Device/Run")
-                              , "", easyDriverConnector1.GetTag("Local Station/ChannelXa/Device/Run").Value));
+            RunMayXa1_ValueChanged(easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Run"),
+                              new TagValueChangedEventArgs(easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Run")
+                              , "", easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Run").Value));
 
             if (easyDriverConnector1.ConnectionStatus == ConnectionStatus.Connected)
             {
@@ -155,7 +155,7 @@ namespace QuanLyGiay
             }
         }
 
-        private void RunMayXa_ValueChanged(object sender, TagValueChangedEventArgs e)
+        private void RunMayXa1_ValueChanged(object sender, TagValueChangedEventArgs e)
         {
             if (e.NewValue == "1")
             {
@@ -344,5 +344,10 @@ namespace QuanLyGiay
             easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/DoiDon").WriteAsync("1", WritePiority.High);
         }
         #endregion
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

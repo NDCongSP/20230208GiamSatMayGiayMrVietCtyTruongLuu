@@ -103,11 +103,17 @@ namespace CommonControl
             get { return (double)(ChieuDai * SoLuong) / 1000; }
         }
         public int Pallet { get; set; }
-        public int Xa { get; set; }
+        public int Xa { get; set; }//chon xả mấy tấm 1-2-3-4 ==> 0-1-2-3-4
+        /// <summary>
+        /// Nap1
+        /// </summary>
         public int Rong { get; set; }
+        //Nap2
         public int Canh { get; set; }
         public int Cao { get; set; }
+        //Kiểu lằng
         public int Lang { get; set; }
+
         public string GiaySongE { get; set; }
         public string GiayMatE { get; set; }
         public string GiaySongB { get; set; }

@@ -24,15 +24,26 @@ namespace CommonControl
         [DisplayName("SL")]
         public int SoLuong { get; set; }
         public int Pallet { get; set; }
+
+        #region phần cài đặt cho máy xẩ splitter
         [DisplayName("Xả")]
         public int Xa { get; set; }
+
+        /// <summary>
+        /// Nap1
+        /// </summary>
         [DisplayName("Rộng")]
         public int Rong { get; set; }
+        /// <summary>
+        /// Nap2
+        /// </summary>
         [DisplayName("Cánh")]
         public int Canh { get; set; }
         [DisplayName("Cao")]
         public int Cao { get; set; }
         [DisplayName("Lằng")]
+        #endregion
+
         public int Lang { get; set; }
         [DisplayName("Giấy Sóng E")]
         public string GiaySongE { get; set; }

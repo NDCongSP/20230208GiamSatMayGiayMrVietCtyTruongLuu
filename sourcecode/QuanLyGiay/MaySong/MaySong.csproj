@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E116C7A5-8A8D-4D83-B84B-2EF10AB04089}</ProjectGuid>
+    <ProjectGuid>{858E9974-654C-4633-9871-A702DA76340E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CommonControl</RootNamespace>
-    <AssemblyName>CommonControl</AssemblyName>
+    <RootNamespace>MaySong</RootNamespace>
+    <AssemblyName>MaySong</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,21 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomeEvents.cs" />
-    <Compile Include="Enums\StatusDHEnum.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\ChuyenDonModdel.cs" />
-    <Compile Include="Models\DonHangModel.cs" />
-    <Compile Include="Models\GiayMenModel.cs" />
-    <Compile Include="Models\GiaySongModel.cs" />
-    <Compile Include="Models\SongModel.cs" />
-    <Compile Include="Models\MaModel.cs" />
-    <Compile Include="Models\tblDonHangModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
