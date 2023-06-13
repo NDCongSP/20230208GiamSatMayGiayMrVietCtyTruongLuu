@@ -11,7 +11,7 @@
   "IsReadOnly": true,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:42:59.5967265+07:00",
-  "ModifiedDate": "2023-05-04T13:05:11.6073384+07:00",
+  "ModifiedDate": "2023-06-13T17:40:17.1405538+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -31,7 +31,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:43:27.6047728+07:00",
-  "ModifiedDate": "2023-05-04T13:05:11.6073384+07:00",
+  "ModifiedDate": "2023-06-13T17:40:17.1405538+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -51,7 +51,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:43:42.3323097+07:00",
-  "ModifiedDate": "2023-05-04T13:05:11.6073384+07:00",
+  "ModifiedDate": "2023-06-13T17:40:17.1405538+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -322,7 +322,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:53:37.4671924+07:00",
-  "ModifiedDate": "2023-05-04T13:05:11.6073384+07:00",
+  "ModifiedDate": "2023-06-13T17:40:17.1405538+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -342,7 +342,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:53:42.0554424+07:00",
-  "ModifiedDate": "2023-05-04T13:05:11.6073384+07:00",
+  "ModifiedDate": "2023-06-13T17:40:17.1405538+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -1093,7 +1093,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2023-01-03T08:12:43.1645774+07:00",
-  "ModifiedDate": "2023-05-04T13:05:11.6073384+07:00",
+  "ModifiedDate": "2023-06-13T17:40:17.1405538+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -1113,7 +1113,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2023-01-03T08:12:49.0831984+07:00",
-  "ModifiedDate": "2023-05-04T13:05:11.6073384+07:00",
+  "ModifiedDate": "2023-06-13T17:40:17.1405538+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -1765,7 +1765,7 @@
 },
     {
   "Name": "Dao1_PV",
-  "Description": "Vi tri dao hien tai",
+  "Description": "Vi tri dao hien tai. PLC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -1795,7 +1795,7 @@
 },
     {
   "Name": "Dao1_SV",
-  "Description": "Vi tri dao cai dat",
+  "Description": "Vi tri dao cai dat. PC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -1825,7 +1825,7 @@
 },
     {
   "Name": "Dao1_U",
-  "Description": "On/Off dao",
+  "Description": "On/Off dao. PC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -2215,7 +2215,7 @@
 },
     {
   "Name": "Hut_PV",
-  "Description": "Vi tri dau hut giay thua hien tai (giay thua o ria 2 ben)",
+  "Description": "Vi tri dau hut giay thua hien tai (giay thua o ria 2 ben). PLC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -2245,7 +2245,7 @@
 },
     {
   "Name": "Hut_SV",
-  "Description": "Vi tri dau hut giay thua cai dat (giay thua o ria 2 ben)",
+  "Description": "Vi tri dau hut giay thua cai dat (giay thua o ria 2 ben). PC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -2275,7 +2275,7 @@
 },
     {
   "Name": "Lang1_PV",
-  "Description": "Vi tri lang hien tai",
+  "Description": "Vi tri lang hien tai. PLC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -2305,7 +2305,7 @@
 },
     {
   "Name": "Lang1_SV",
-  "Description": "Vi tri lang cai dat",
+  "Description": "Vi tri lang cai dat. PC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -2335,7 +2335,7 @@
 },
     {
   "Name": "Lang1_U",
-  "Description": "On/Off lang",
+  "Description": "On/Off lang. PC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -5492,7 +5492,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2023-04-22T11:22:35.8080852+07:00",
-  "ModifiedDate": "2023-05-04T13:05:11.6073384+07:00",
+  "ModifiedDate": "2023-06-13T17:40:17.1405538+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,

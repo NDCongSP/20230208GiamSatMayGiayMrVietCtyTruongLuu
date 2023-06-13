@@ -31,6 +31,10 @@ namespace QuanLyGiay
             _btnThem.Click += _btnThem_Click;
             _btnLuu.Click += _btnLuu_Click;
             _btnXoa.Click += _btnXoa_Click;
+            _btnSua.Click += _btnSua_Click;
+            _grvDH.Click += _grvDH_Click;
+            _grvDH.CellClick += _grvDH_CellClick;
+
 
             _txtSTT.TextChanged += (s, o) =>
             {
@@ -208,6 +212,7 @@ namespace QuanLyGiay
                 _donHang.GiayMatC = c.Text;
             };
             #endregion
+
             using (var connection = GlobalVariable.GetDbConnection())
             {
                 var ma = connection.Query<MaModel>("Select * from tblmasettings").ToList();
@@ -263,21 +268,40 @@ namespace QuanLyGiay
                 //get don hang
                 _listDonHang = connection.Query<tblDonHangModel>("sp_tblDonHangGetAll").ToList();
 
-                grvDH.DataSource = _listDonHang;
-                grvDH.Columns["CreatedDate"].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
+                _grvDH.DataSource = _listDonHang;
+                _grvDH.Columns["CreatedDate"].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
 
                 //lay ra STT đơn hàng lớn nhất
                 var maxSTT = _listDonHang.Max(x => x.STT);
                 maxSTT += 1;
                 _txtSTT.Text = maxSTT.ToString();
             }
+        }
 
+        private void _grvDH_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView sen = (DataGridView)sender;
 
+            DataGridViewRow s =  sen.Rows[e.RowIndex];
+
+            this.Invoke((MethodInvoker)delegate { 
+            //_txtSTT.Text=
+            });
+        }
+
+        private void _grvDH_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void _btnSua_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void _btnXoa_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            
         }
 
         private void _btnLuu_Click(object sender, EventArgs e)
@@ -331,9 +355,9 @@ namespace QuanLyGiay
 
                 this.Invoke((MethodInvoker)delegate
                 {
-                    grvDH.DataSource = null;
-                    grvDH.DataSource = _listDonHang;
-                    grvDH.Columns["CreatedDate"].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
+                    _grvDH.DataSource = null;
+                    _grvDH.DataSource = _listDonHang;
+                    _grvDH.Columns["CreatedDate"].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
                 });
 
                 ResetControl();

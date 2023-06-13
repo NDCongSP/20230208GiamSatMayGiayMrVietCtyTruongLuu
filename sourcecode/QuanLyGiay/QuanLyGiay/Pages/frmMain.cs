@@ -344,10 +344,5 @@ namespace QuanLyGiay
             easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/DoiDon").WriteAsync("1", WritePiority.High);
         }
         #endregion
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }

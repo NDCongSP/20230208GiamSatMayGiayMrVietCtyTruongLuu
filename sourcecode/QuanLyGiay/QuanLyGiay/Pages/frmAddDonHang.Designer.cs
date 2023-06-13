@@ -29,8 +29,9 @@ namespace QuanLyGiay
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddDonHang));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.grvDH = new System.Windows.Forms.DataGridView();
+            this._grvDH = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this._btnLuu = new System.Windows.Forms.Button();
             this._btnXoa = new System.Windows.Forms.Button();
@@ -83,13 +84,13 @@ namespace QuanLyGiay
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grvDH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._grvDH)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.grvDH);
+            this.groupBox3.Controls.Add(this._grvDH);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.groupBox3.Location = new System.Drawing.Point(12, 383);
             this.groupBox3.Name = "groupBox3";
@@ -98,16 +99,17 @@ namespace QuanLyGiay
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách đơn hàng chờ sản xuất";
             // 
-            // grvDH
+            // _grvDH
             // 
-            this.grvDH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.grvDH.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.grvDH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grvDH.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grvDH.Location = new System.Drawing.Point(3, 26);
-            this.grvDH.Name = "grvDH";
-            this.grvDH.Size = new System.Drawing.Size(978, 311);
-            this.grvDH.TabIndex = 0;
+            this._grvDH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this._grvDH.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this._grvDH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this._grvDH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._grvDH.Location = new System.Drawing.Point(3, 26);
+            this._grvDH.Name = "_grvDH";
+            this._grvDH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this._grvDH.Size = new System.Drawing.Size(978, 311);
+            this._grvDH.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -658,13 +660,14 @@ namespace QuanLyGiay
             this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAddDonHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đơn Hàng";
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grvDH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._grvDH)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -674,7 +677,7 @@ namespace QuanLyGiay
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView grvDH;
+        private System.Windows.Forms.DataGridView _grvDH;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox _txtSTT;
         private System.Windows.Forms.Label label1;
