@@ -98,7 +98,6 @@ namespace QuanLyGiay
             this.btnPrintOrder = new System.Windows.Forms.Button();
             this.btnNapMayXa = new System.Windows.Forms.Button();
             this.btnReviceError = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.labDateTime = new System.Windows.Forms.Label();
             this._labDriverStatus = new System.Windows.Forms.Label();
             this.easyDriverConnector1 = new EasyScada.Winforms.Controls.EasyDriverConnector(this.components);
@@ -448,7 +447,7 @@ namespace QuanLyGiay
             // 
             this._labSlConLai.AutoSize = true;
             this._labSlConLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F);
-            this._labSlConLai.Location = new System.Drawing.Point(59, 370);
+            this._labSlConLai.Location = new System.Drawing.Point(11, 359);
             this._labSlConLai.Name = "_labSlConLai";
             this._labSlConLai.Size = new System.Drawing.Size(127, 54);
             this._labSlConLai.TabIndex = 0;
@@ -478,7 +477,7 @@ namespace QuanLyGiay
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label20.Location = new System.Drawing.Point(67, 324);
+            this.label20.Location = new System.Drawing.Point(19, 313);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(116, 25);
             this.label20.TabIndex = 0;
@@ -577,7 +576,7 @@ namespace QuanLyGiay
             this.easyLabel1.Size = new System.Drawing.Size(100, 23);
             this.easyLabel1.StringFormat = null;
             this.easyLabel1.TabIndex = 3;
-            this.easyLabel1.TagPath = "Local Station/ChannelServer/DeviceCutter/ChieuDaiCat1";
+            this.easyLabel1.TagPath = "Local Station/ChannelServer/DeviceCutter/STT1";
             this.easyLabel1.Text = "easyLabel1";
             // 
             // label23
@@ -806,17 +805,6 @@ namespace QuanLyGiay
             this.btnReviceError.Text = "+/- Lỗi (F6)";
             this.btnReviceError.UseVisualStyleBackColor = false;
             // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.SpringGreen;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.button7.Location = new System.Drawing.Point(1075, 951);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(170, 25);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Driver Server Status";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
             // labDateTime
             // 
             this.labDateTime.AutoSize = true;
@@ -856,7 +844,6 @@ namespace QuanLyGiay
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 985);
             this.Controls.Add(this.labDateTime);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.btnReviceError);
             this.Controls.Add(this.btnNapMayXa);
             this.Controls.Add(this.btnPrintOrder);
@@ -944,7 +931,6 @@ namespace QuanLyGiay
         private System.Windows.Forms.Button btnPrintOrder;
         private System.Windows.Forms.Button btnNapMayXa;
         private System.Windows.Forms.Button btnReviceError;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label labDateTime;
         private System.Windows.Forms.Label _labDriverStatus;
         private System.Windows.Forms.Label label23;

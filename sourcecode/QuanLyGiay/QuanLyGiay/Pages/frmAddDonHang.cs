@@ -14,9 +14,9 @@ namespace QuanLyGiay
 {
     public partial class frmAddDonHang : Form
     {
-        private List<tblDonHangModel> _listDonHang = new List<tblDonHangModel>();
-        private List<tblDonHangModel> _listDonHangNew = new List<tblDonHangModel>();
-        private tblDonHangModel _donHang = new tblDonHangModel();
+        private List<DonHangModel> _listDonHang = new List<DonHangModel>();
+        private List<DonHangModel> _listDonHangNew = new List<DonHangModel>();
+        private DonHangModel _donHang = new DonHangModel();
 
         public frmAddDonHang()
         {
@@ -27,6 +27,8 @@ namespace QuanLyGiay
 
         private void FrmAddDonHang_Load(object sender, EventArgs e)
         {
+            _txtCanh.ReadOnly = true;
+
             #region Đăng ký sự kiện
             _btnThem.Click += _btnThem_Click;
             _btnLuu.Click += _btnLuu_Click;
@@ -54,7 +56,7 @@ namespace QuanLyGiay
                 TextBox t = (TextBox)s;
                 if (!string.IsNullOrEmpty(t.Text))
                 {
-                    _donHang.Kho = int.TryParse(t.Text, out int value) ? value : 0;
+                    _donHang.Kho = double.TryParse(t.Text, out double value) ? value : 0;
                 }
                 else
                 {
@@ -66,7 +68,7 @@ namespace QuanLyGiay
                 TextBox t = (TextBox)s;
                 if (!string.IsNullOrEmpty(t.Text))
                 {
-                    _donHang.ChieuDai = int.TryParse(t.Text, out int value) ? value : 0;
+                    _donHang.DaiCat = double.TryParse(t.Text, out double value) ? value : 0;
                 }
                 else
                 {
@@ -78,7 +80,7 @@ namespace QuanLyGiay
                 TextBox t = (TextBox)s;
                 if (!string.IsNullOrEmpty(t.Text))
                 {
-                    _donHang.SoLuong = int.TryParse(t.Text, out int value) ? value : 0;
+                    _donHang.SLCatTam = int.TryParse(t.Text, out int value) ? value : 0;
                 }
                 else
                 {
@@ -114,19 +116,31 @@ namespace QuanLyGiay
                 TextBox t = (TextBox)s;
                 if (!string.IsNullOrEmpty(t.Text))
                 {
-                    _donHang.Rong = int.TryParse(t.Text, out int value) ? value : 0;
+                    _donHang.Rong = double.TryParse(t.Text, out double value) ? value : 0;
+                    _donHang.Canh = Math.Round((double)_donHang.Rong / 2, 2);
+
+                    if (this.InvokeRequired)
+                    {
+                        this.Invoke(new Action(()=> {
+                            _txtCanh.Text = _donHang.Canh.ToString();
+                        }));
+                    }
+                    else
+                    {
+                        _txtCanh.Text = _donHang.Canh.ToString();
+                    }
                 }
                 else
                 {
                     MessageBox.Show($"Không được để trống 'Rộng'.", $"CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             };
-            _txtCanh.TextChanged += (s, o) =>
+            _txtDoSauLang.TextChanged += (s, o) =>
             {
                 TextBox t = (TextBox)s;
                 if (!string.IsNullOrEmpty(t.Text))
                 {
-                    _donHang.Canh = int.TryParse(t.Text, out int value) ? value : 0;
+                    _donHang.DoSauLan = double.TryParse(t.Text, out double value) ? value : 0;
                 }
                 else
                 {
@@ -138,7 +152,7 @@ namespace QuanLyGiay
                 TextBox t = (TextBox)s;
                 if (!string.IsNullOrEmpty(t.Text))
                 {
-                    _donHang.Cao = int.TryParse(t.Text, out int value) ? value : 0;
+                    _donHang.Cao = double.TryParse(t.Text, out double value) ? value : 0;
                 }
                 else
                 {
@@ -175,6 +189,11 @@ namespace QuanLyGiay
             {
                 ComboBox c = (ComboBox)s;
                 _donHang.Song = c.Text;
+            };
+            _cbSoLop.SelectedValueChanged += (s, o) =>
+            {
+                ComboBox c = (ComboBox)s;
+                _donHang.SoLop = c.Text;
             };
             _cbGiayMen.SelectedValueChanged += (s, o) =>
             {
@@ -229,6 +248,13 @@ namespace QuanLyGiay
                     _cbSong.Items.Add(item.Name);
                 }
 
+                var soLop = connection.Query<SoLopModel>("Select * from tblSoLop").ToList();
+
+                foreach (var item in soLop)
+                {
+                    _cbSoLop.Items.Add(item.TenLop);
+                }
+
                 var giayMen = connection.Query<GiayMenModel>("Select * from tblgiaymensettings").ToList();
 
                 foreach (var item in giayMen)
@@ -257,6 +283,7 @@ namespace QuanLyGiay
 
                 _cbMa.SelectedIndex = 0;
                 _cbSong.SelectedIndex = 0;
+                _cbSoLop.SelectedIndex = 0;
                 _cbGiayMen.SelectedIndex = 0;
                 _cbGiaySongE.SelectedIndex = 0;
                 _cbGiayMatE.SelectedIndex = 0;
@@ -266,7 +293,7 @@ namespace QuanLyGiay
                 _cbGiayMatC.SelectedIndex = 0;
 
                 //get don hang
-                _listDonHang = connection.Query<tblDonHangModel>("sp_tblDonHangGetAll").ToList();
+                _listDonHang = connection.Query<DonHangModel>("sp_tblDonHangGetAll").ToList();
 
                 _grvDH.DataSource = _listDonHang;
                 _grvDH.Columns["CreatedDate"].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
@@ -282,26 +309,27 @@ namespace QuanLyGiay
         {
             DataGridView sen = (DataGridView)sender;
 
-            DataGridViewRow s =  sen.Rows[e.RowIndex];
+            DataGridViewRow s = sen.Rows[e.RowIndex];
 
-            this.Invoke((MethodInvoker)delegate { 
-            //_txtSTT.Text=
+            this.Invoke((MethodInvoker)delegate
+            {
+                //_txtSTT.Text=
             });
         }
 
         private void _grvDH_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void _btnSua_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void _btnXoa_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void _btnLuu_Click(object sender, EventArgs e)
@@ -311,9 +339,9 @@ namespace QuanLyGiay
             {
                 using (var connection = GlobalVariable.GetDbConnection())
                 {
-                    var result = connection.Execute($"INSERT INTO tbldonhang (Stt,Status,Ma,Song,Kho,ChieuDai,SoLuong,Xa,Rong,Canh,Cao,Lang,GiaySongE,GiayMatE," +
+                    var result = connection.Execute($"INSERT INTO tbldonhang (Stt,Status,Ma,Song,SoLop,CongThem,Kho,DaiCat,SLCatTam,SoMetCaiDat,Xa,Rong,Canh,Cao,Lang,DoSauLan,GiaySongE,GiayMatE," +
                          $"GiaySongB,GiayMatB,GiaySongC,GiayMatC,GiayMen,GhiChu,MayXa,Line,KhachHang,DaiKH,RongKH,CaoKH,DonHang,PO,MayIn,ChapBe,GhimDan) " +
-                         $"VALUES (@Stt,@Status,@Ma,@Song,@Kho,@ChieuDai,@SoLuong,@Xa,@Rong,@Canh,@Cao,@Lang,@GiaySongE,@GiayMatE," +
+                         $"VALUES (@Stt,@Status,@Ma,@Song,@SoLop,@CongThem,@Kho,@DaiCat,@SLCatTam,@SoMetCaiDat,@Xa,@Rong,@Canh,@Cao,@Lang,@DoSauLan,@GiaySongE,@GiayMatE," +
                          $"@GiaySongB,@GiayMatB,@GiaySongC,@GiayMatC,@GiayMen,@GhiChu,@MayXa,@Line,@KhachHang,@DaiKH,@RongKH,@CaoKH,@DonHang,@PO,@MayIn,@ChapBe,@GhimDan)", _listDonHangNew);
                 }
             }
@@ -323,14 +351,15 @@ namespace QuanLyGiay
         {
             if (_donHang.STT != 0)
             {
-                var donHang = new tblDonHangModel()
+                var donHang = new DonHangModel()
                 {
                     STT = _donHang.STT,
                     Ma = _donHang.Ma,
                     Song = _donHang.Song,
+                    SoLop=_donHang.SoLop,
                     Kho = _donHang.Kho,
-                    ChieuDai = _donHang.ChieuDai,
-                    SoLuong = _donHang.SoLuong,
+                    DaiCat = _donHang.DaiCat,
+                    SLCatTam = _donHang.SLCatTam,
                     Pallet = _donHang.Pallet,
                     Xa = _donHang.Xa,
                     Rong = _donHang.Rong,
@@ -346,7 +375,8 @@ namespace QuanLyGiay
                     GiayMatC = _donHang.GiayMatC,
                     KhachHang = _donHang.KhachHang,
                     DonHang = _donHang.DonHang,
-                    PO = _donHang.PO
+                    PO = _donHang.PO,
+                    DoSauLan = _donHang.DoSauLan
                 };
 
                 _listDonHangNew.Add(donHang);
@@ -377,7 +407,7 @@ namespace QuanLyGiay
                 _txtSTT.Text = _txtChieuDai.Text = _txtSoLuong.Text = _txtPallet.Text = _txtXa.Text = _txtRong.Text = _txtCanh.Text = _txtCao.Text = _txtLang.Text = "0";
                 _txtKho.Text = _txtKhachHang.Text = _txtDonHang.Text = _txtPO.Text = string.Empty;
 
-                _cbMa.SelectedIndex = _cbSong.SelectedIndex = _cbGiayMen.SelectedIndex = _cbGiaySongE.SelectedIndex = _cbGiaySongB.SelectedIndex = _cbGiaySongC.SelectedIndex
+                _cbMa.SelectedIndex = _cbSong.SelectedIndex = _cbSoLop.SelectedIndex = _cbGiayMen.SelectedIndex = _cbGiaySongE.SelectedIndex = _cbGiaySongB.SelectedIndex = _cbGiaySongC.SelectedIndex
                 = _cbGiayMatE.SelectedIndex = _cbGiayMatB.SelectedIndex = _cbGiayMatC.SelectedIndex = 0;
             });
         }

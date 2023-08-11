@@ -112,6 +112,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StaticClass\GlobalVariable.cs" />
+    <Compile Include="TinhToan.cs" />
     <EmbeddedResource Include="Pages\frmAddDonHang.resx">
       <DependentUpon>frmAddDonHang.cs</DependentUpon>
     </EmbeddedResource>

@@ -20,5 +20,7 @@ namespace QuanLyGiay
         }
 
         public static CustomeEvents MyEvents { get; set; } = new CustomeEvents();
+
+        public static DaoLangPositionModel DaoLangPosition = new DaoLangPositionModel();
     }
 }
