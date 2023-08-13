@@ -117,7 +117,7 @@ namespace CommonControl
 
         public double ConLai
         {
-            get { return Tong - SoMetDat; }
+            get { return SoMetCaiDat - SoMetDat; }
         }
 
         public string PhanTramLoi
@@ -160,10 +160,6 @@ namespace CommonControl
             get { return Kho * SoMetLoi / 1000; }
         }
         public string TrangThaiTruocDo { get; set; }
-        public double Tong
-        {
-            get { return (double)(DaiCat * SLCatTam) / 1000; }
-        }
 
         public int HoanTatCutter { get; set; }
         public int HoanTatSongE { get; set; }

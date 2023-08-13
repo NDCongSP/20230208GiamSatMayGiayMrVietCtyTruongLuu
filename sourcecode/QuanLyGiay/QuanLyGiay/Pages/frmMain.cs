@@ -37,6 +37,61 @@ namespace QuanLyGiay
 
         private async void Form1_Load(object sender, EventArgs e)
         {
+            _txtKhachHang.ReadOnly = true;
+            _txtDonHang.ReadOnly = true;
+            _txtPO.ReadOnly = true;
+            _txtDaiCat.ReadOnly = true;
+            _txtSLCat.ReadOnly = true;
+            _txtTongSoMetCD.ReadOnly = true;
+            _txtSLDat.ReadOnly = true;
+            _txtSLLoi.ReadOnly = true;
+            _txtSLConlai.ReadOnly = true;
+            _txtTocDo.ReadOnly = true;
+
+            using (var connection = GlobalVariable.GetDbConnection())
+            {
+                var resultData = connection.Query<DonHangModel>("sp_tblDonHangGetOnProcess").ToList();
+
+                if (resultData.Count > 0)
+                {
+                    var c = resultData.Where(u => u.Status == StatusDHEnum.Processing).FirstOrDefault();
+
+                    if (c != null)
+                    {
+                        //add thong tin don hang moi vao donHangDangChay
+                        _donHangDangChay = null;
+                        _donHangDangChay = new DonHangChayModel()
+                        {
+                            IdDonHang = c.Id,
+                            STT = c.STT,
+                            Ma = c.Ma,
+                            Song = c.Song,
+                            Kho = c.Kho,
+                            DaiCat = c.DaiCat,
+                            SLCatTam = c.SLCatTam,
+                            Pallet = c.Pallet,
+                            Xa = c.Xa,
+                            Rong = c.Rong,
+                            Canh = c.Canh,
+                            Cao = c.Cao,
+                            Lang = c.Lang,
+                            GiayMen = c.GiayMen,
+                            GiaySongE = c.GiaySongE,
+                            GiayMatE = c.GiayMatE,
+                            GiaySongB = c.GiaySongB,
+                            GiayMatB = c.GiayMatB,
+                            GiaySongC = c.GiaySongC,
+                            GiayMatC = c.GiayMatC,
+                            Line = c.Line,
+                            GhiChu = c.GhiChu,
+                            KhachHang=c.KhachHang,
+                            DonHang=c.DonHang,
+                            PO=c.PO
+                        };
+                    }
+                }
+            }
+
             _t.Interval = 100;
             _t.Enabled = true;
             _t.Tick += (s, o) =>
@@ -44,7 +99,39 @@ namespace QuanLyGiay
                 Timer t = (Timer)s;
                 t.Enabled = false;
 
-                this.Invoke((MethodInvoker)delegate { labDateTime.Text = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss"); });
+                if (this.InvokeRequired)
+                {
+                    this.Invoke(new Action(() =>
+                    {
+                        labDateTime.Text = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss");
+
+                        _txtKhachHang.Text = _donHangDangChay.KhachHang;
+                        _txtDonHang.Text = _donHangDangChay.DonHang;
+                        _txtPO.Text = _donHangDangChay.PO;
+                        _txtDaiCat.Text = _donHangDangChay.DaiCat.ToString();
+                        _txtSLCat.Text = _donHangDangChay.SLCatTam.ToString();
+                        _txtTongSoMetCD.Text = _donHangDangChay.SoMetCaiDat.ToString();
+                        _txtSLDat.Text = _donHangDangChay.SLDat.ToString();
+                        _txtSLLoi.Text = _donHangDangChay.SLLoi.ToString();
+                        _txtSLConlai.Text = _donHangDangChay.SLConLai.ToString();
+                        _txtTocDo.Text = _donHangDangChay.TocDo.ToString();
+                    }));
+                }
+                else
+                {
+                    labDateTime.Text = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss");
+
+                    _txtKhachHang.Text = _donHangDangChay.KhachHang;
+                    _txtDonHang.Text = _donHangDangChay.DonHang;
+                    _txtPO.Text = _donHangDangChay.PO;
+                    _txtDaiCat.Text = _donHangDangChay.DaiCat.ToString();
+                    _txtSLCat.Text = _donHangDangChay.SLCatTam.ToString();
+                    _txtTongSoMetCD.Text = _donHangDangChay.SoMetCaiDat.ToString();
+                    _txtSLDat.Text = _donHangDangChay.SLDat.ToString();
+                    _txtSLLoi.Text = _donHangDangChay.SLLoi.ToString();
+                    _txtSLConlai.Text = _donHangDangChay.SLConLai.ToString();
+                    _txtTocDo.Text = _donHangDangChay.TocDo.ToString();
+                }
 
                 _countRefesh += 1;
 
@@ -142,7 +229,7 @@ namespace QuanLyGiay
 
                 if (resultData.Count > 0)
                 {
-                    var c = resultData.Where(u => u.Status == 0).ToList();
+                    var c = resultData.Where(u => u.Status == StatusDHEnum.NewOrder).ToList();
                     _donHangDoiDon = c.FirstOrDefault(x => x.STT == c.Min(u => u.STT));
 
                     //add thong tin don hang moi vao donHangDangChay
@@ -520,101 +607,6 @@ namespace QuanLyGiay
             GlobalVariable.DaoLangPosition.HutPv = int.TryParse(e.NewValue, out int value) ? value : 0;
         }
 
-        /// <summary>
-        /// khi tag này bật lên 1 thì PC biết là PLC đã chạy xong đơn cũ và bắt đầu đổi đơn.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void LenhChuyenDonMayXa1_ValueChanged(object sender, TagValueChangedEventArgs e)
-        {
-            if (e.NewValue == "1")
-            {
-                Debug.WriteLine("Chuyen don");
-
-                //move _donHangDangChay sang _donHangHoanThanh
-                if (_donHangDangChay.STT != 0)
-                {
-                    var donhang = new DonHangChayModel()
-                    {
-                        IdDonHang = _donHangDangChay.IdDonHang,
-                        STT = _donHangDangChay.STT,
-                        Ma = _donHangDangChay.Ma,
-                        Song = _donHangDangChay.Song,
-                        Kho = _donHangDangChay.Kho,
-                        DaiCat = _donHangDangChay.DaiCat,
-                        SLCatTam = _donHangDangChay.SLCatTam,
-                        Pallet = _donHangDangChay.Pallet,
-                        Xa = _donHangDangChay.Xa,
-                        Rong = _donHangDangChay.Rong,
-                        Canh = _donHangDangChay.Canh,
-                        Cao = _donHangDangChay.Cao,
-                        Lang = _donHangDangChay.Lang,
-                        GiayMen = _donHangDangChay.GiayMen,
-                        GiaySongE = _donHangDangChay.GiaySongE,
-                        GiayMatE = _donHangDangChay.GiayMatE,
-                        GiaySongB = _donHangDangChay.GiaySongB,
-                        GiayMatB = _donHangDangChay.GiayMatB,
-                        GiaySongC = _donHangDangChay.GiaySongC,
-                        GiayMatC = _donHangDangChay.GiayMatC,
-                        KhachHang = _donHangDangChay.KhachHang,
-                        DonHang = _donHangDangChay.DonHang,
-                        PO = _donHangDangChay.PO,
-                        Line = _donHangDangChay.Line,
-                        GhiChu = _donHangDangChay.GhiChu
-                    };
-
-                    _donHangHoanThanh = null;
-                    _donHangHoanThanh = new DonHangChayModel();
-                    _donHangHoanThanh = donhang;
-                }
-
-                using (var connection = GlobalVariable.GetDbConnection())
-                {
-                    var resultData = connection.Query<DonHangModel>("sp_tblDonHangGetOnProcess").ToList();
-
-                    if (resultData.Count > 0)
-                    {
-                        var c = resultData.Where(u => u.Status == 0).ToList();
-                        _donHangDoiDon = c.FirstOrDefault(x => x.STT == c.Min(u => u.STT));
-
-                        //add thong tin don hang moi vao donHangDangChay
-                        _donHangDangChay = null;
-                        _donHangDangChay = new DonHangChayModel()
-                        {
-                            IdDonHang = _donHangDoiDon.Id,
-                            STT = _donHangDoiDon.STT,
-                            Ma = _donHangDoiDon.Ma,
-                            Song = _donHangDoiDon.Song,
-                            Kho = _donHangDoiDon.Kho,
-                            DaiCat = _donHangDoiDon.DaiCat,
-                            SLCatTam = _donHangDoiDon.SLCatTam,
-                            Pallet = _donHangDoiDon.Pallet,
-                            Xa = _donHangDoiDon.Xa,
-                            Rong = _donHangDoiDon.Rong,
-                            Canh = _donHangDoiDon.Canh,
-                            Cao = _donHangDoiDon.Cao,
-                            Lang = _donHangDoiDon.Lang,
-                            GiayMen = _donHangDoiDon.GiayMen,
-                            GiaySongE = _donHangDoiDon.GiaySongE,
-                            GiayMatE = _donHangDoiDon.GiayMatE,
-                            GiaySongB = _donHangDoiDon.GiaySongB,
-                            GiayMatB = _donHangDoiDon.GiayMatB,
-                            GiaySongC = _donHangDoiDon.GiaySongC,
-                            GiayMatC = _donHangDoiDon.GiayMatC,
-                            Line = _donHangDoiDon.Line,
-                            GhiChu = _donHangDoiDon.GhiChu
-                        };
-
-                        TinhToan.TinhToanGiaTri(_donHangDangChay);
-
-                        DoiDonMayXa(_donHangDoiDon);
-                    }
-                }
-
-                easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/LenhChuyenDon").WriteAsync("0", WritePiority.High);
-            }
-        }
-
         private void RunMayXa1_ValueChanged(object sender, TagValueChangedEventArgs e)
         {
             if (e.NewValue == "1")
@@ -643,7 +635,8 @@ namespace QuanLyGiay
 
         private void TocDo_ValueChanged(object sender, TagValueChangedEventArgs e)
         {
-            _donHangDangChay.TocDo = double.TryParse(e.NewValue, out double value) ? Math.Round(value / 10 ): 0;
+            _donHangDangChay.TocDo = Convert.ToDouble(e.NewValue) / 10;
+            Debug.WriteLine($"Speed: {_donHangDangChay.TocDo}");
         }
 
         private void SoLuongLoi_ValueChanged(object sender, TagValueChangedEventArgs e)
@@ -861,24 +854,6 @@ namespace QuanLyGiay
             easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/ChieuDaiCat").WriteAsync(((int)(donHangDangChay.DaiCat * 10 * 10)).ToString(), WritePiority.High);
             easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/SoLuongCat").WriteAsync(donHangDangChay.SLCatTam.ToString(), WritePiority.High);
             easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/Pallet").WriteAsync(donHangDangChay.Pallet.ToString(), WritePiority.High);
-
-            if (this.InvokeRequired)
-            {
-                this.Invoke(new Action(() =>
-                {
-                    _labDonHang.Text = _donHangDangChay.DonHang;
-                    _labKhachHang.Text = _donHangDangChay.KhachHang;
-                    _labPo.Text = _donHangDangChay.PO;
-                    _labSlConLai.Text = _donHangDangChay.SLConLai.ToString();
-                }));
-            }
-            else
-            {
-                _labDonHang.Text = _donHangDangChay.DonHang;
-                _labKhachHang.Text = _donHangDangChay.KhachHang;
-                _labPo.Text = _donHangDangChay.PO;
-                _labSlConLai.Text = _donHangDangChay.SLConLai.ToString();
-            }
 
             //baos cho PLC biet là đã truyền thông số đơn mới xuống xong.
             easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/DoiDon").WriteAsync("1", WritePiority.High);

@@ -102,7 +102,6 @@ namespace CommonControl
         [DisplayName("Ngày tạo")]
         public DateTime? CreatedDate { get; set; }
 
-        [Browsable(false)]
         public string KhachHang { get; set; }
         [Browsable(false)]
         public int DaiKH { get; set; } = 0;
@@ -110,10 +109,10 @@ namespace CommonControl
         public int RongKH { get; set; } = 0;
         [Browsable(false)]
         public int CaoKH { get; set; } = 0;
-        [Browsable(false)]
+
         public string DonHang { get; set; }
-        [Browsable(false)]
         public string PO { get; set; }
+
         [Browsable(false)]
         public string MayIn { get; set; }
         [Browsable(false)]

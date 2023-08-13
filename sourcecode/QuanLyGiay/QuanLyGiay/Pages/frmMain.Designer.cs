@@ -61,21 +61,20 @@ namespace QuanLyGiay
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this._labSlConLai = new System.Windows.Forms.Label();
-            this._labDonHang = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this._txtDaiCat = new System.Windows.Forms.TextBox();
+            this._txtPO = new System.Windows.Forms.TextBox();
+            this._txtKhachHang = new System.Windows.Forms.TextBox();
+            this._txtDonHang = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this._labPo = new System.Windows.Forms.Label();
-            this._labKhachHang = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this._panelSongCStatus = new System.Windows.Forms.Panel();
             this._panelSongBStatus = new System.Windows.Forms.Panel();
@@ -84,6 +83,7 @@ namespace QuanLyGiay
             this._panelMayXaStatus = new System.Windows.Forms.Panel();
             this._panelCutterStatus = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.easyAcountManager1 = new EasyScada.Winforms.Controls.EasyAcountManager();
             this.grvDH = new System.Windows.Forms.DataGridView();
             this.btnOrder = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
@@ -93,26 +93,20 @@ namespace QuanLyGiay
             this.btnReviceError = new System.Windows.Forms.Button();
             this.labDateTime = new System.Windows.Forms.Label();
             this._labDriverStatus = new System.Windows.Forms.Label();
-            this.easyAcountManager1 = new EasyScada.Winforms.Controls.EasyAcountManager();
-            this.easyLabel2 = new EasyScada.Winforms.Controls.EasyLabel();
-            this.easyLabel6 = new EasyScada.Winforms.Controls.EasyLabel();
-            this.easyLabel5 = new EasyScada.Winforms.Controls.EasyLabel();
-            this.easyLabel4 = new EasyScada.Winforms.Controls.EasyLabel();
-            this.easyLabel3 = new EasyScada.Winforms.Controls.EasyLabel();
-            this.easyLabel1 = new EasyScada.Winforms.Controls.EasyLabel();
             this.easyDriverConnector1 = new EasyScada.Winforms.Controls.EasyDriverConnector(this.components);
+            this._txtSLCat = new System.Windows.Forms.TextBox();
+            this._txtSLConlai = new System.Windows.Forms.TextBox();
+            this._txtSLDat = new System.Windows.Forms.TextBox();
+            this._txtSLLoi = new System.Windows.Forms.TextBox();
+            this._txtTocDo = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this._txtTongSoMetCD = new System.Windows.Forms.TextBox();
             this.panel24.SuspendLayout();
             this.panel21.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvDH)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.easyLabel2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.easyLabel6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.easyLabel5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.easyLabel4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.easyLabel3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.easyLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyDriverConnector1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -383,16 +377,6 @@ namespace QuanLyGiay
             this.label7.TabIndex = 0;
             this.label7.Text = "Trạm";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label6.Location = new System.Drawing.Point(312, 154);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 25);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Pallet:";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -417,7 +401,7 @@ namespace QuanLyGiay
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label9.Location = new System.Drawing.Point(312, 212);
+            this.label9.Location = new System.Drawing.Point(312, 204);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(82, 25);
             this.label9.TabIndex = 0;
@@ -443,26 +427,6 @@ namespace QuanLyGiay
             this.label2.TabIndex = 0;
             this.label2.Text = "Dài Cắt:";
             // 
-            // _labSlConLai
-            // 
-            this._labSlConLai.AutoSize = true;
-            this._labSlConLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F);
-            this._labSlConLai.Location = new System.Drawing.Point(11, 359);
-            this._labSlConLai.Name = "_labSlConLai";
-            this._labSlConLai.Size = new System.Drawing.Size(127, 54);
-            this._labSlConLai.TabIndex = 0;
-            this._labSlConLai.Text = "0000";
-            // 
-            // _labDonHang
-            // 
-            this._labDonHang.AutoSize = true;
-            this._labDonHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this._labDonHang.Location = new System.Drawing.Point(167, 31);
-            this._labDonHang.Name = "_labDonHang";
-            this._labDonHang.Size = new System.Drawing.Size(74, 39);
-            this._labDonHang.TabIndex = 0;
-            this._labDonHang.Text = "aaa";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -477,7 +441,7 @@ namespace QuanLyGiay
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label20.Location = new System.Drawing.Point(19, 313);
+            this.label20.Location = new System.Drawing.Point(285, 152);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(116, 25);
             this.label20.TabIndex = 0;
@@ -485,19 +449,19 @@ namespace QuanLyGiay
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.easyLabel2);
-            this.groupBox1.Controls.Add(this.easyLabel6);
-            this.groupBox1.Controls.Add(this.easyLabel5);
-            this.groupBox1.Controls.Add(this.easyLabel4);
-            this.groupBox1.Controls.Add(this.easyLabel3);
-            this.groupBox1.Controls.Add(this.easyLabel1);
+            this.groupBox1.Controls.Add(this._txtTocDo);
+            this.groupBox1.Controls.Add(this._txtSLLoi);
+            this.groupBox1.Controls.Add(this._txtSLDat);
+            this.groupBox1.Controls.Add(this._txtSLConlai);
+            this.groupBox1.Controls.Add(this._txtTongSoMetCD);
+            this.groupBox1.Controls.Add(this._txtSLCat);
+            this.groupBox1.Controls.Add(this._txtDaiCat);
+            this.groupBox1.Controls.Add(this._txtPO);
+            this.groupBox1.Controls.Add(this._txtKhachHang);
+            this.groupBox1.Controls.Add(this._txtDonHang);
             this.groupBox1.Controls.Add(this.label23);
             this.groupBox1.Controls.Add(this.label21);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this._labPo);
-            this.groupBox1.Controls.Add(this._labKhachHang);
-            this.groupBox1.Controls.Add(this._labDonHang);
-            this.groupBox1.Controls.Add(this._labSlConLai);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
@@ -512,6 +476,36 @@ namespace QuanLyGiay
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đơn Hàng đang chạy";
+            // 
+            // _txtDaiCat
+            // 
+            this._txtDaiCat.Location = new System.Drawing.Point(150, 209);
+            this._txtDaiCat.Name = "_txtDaiCat";
+            this._txtDaiCat.Size = new System.Drawing.Size(100, 30);
+            this._txtDaiCat.TabIndex = 1;
+            this._txtDaiCat.Text = "0";
+            this._txtDaiCat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // _txtPO
+            // 
+            this._txtPO.Location = new System.Drawing.Point(150, 151);
+            this._txtPO.Name = "_txtPO";
+            this._txtPO.Size = new System.Drawing.Size(100, 30);
+            this._txtPO.TabIndex = 1;
+            // 
+            // _txtKhachHang
+            // 
+            this._txtKhachHang.Location = new System.Drawing.Point(150, 91);
+            this._txtKhachHang.Name = "_txtKhachHang";
+            this._txtKhachHang.Size = new System.Drawing.Size(100, 30);
+            this._txtKhachHang.TabIndex = 1;
+            // 
+            // _txtDonHang
+            // 
+            this._txtDonHang.Location = new System.Drawing.Point(150, 33);
+            this._txtDonHang.Name = "_txtDonHang";
+            this._txtDonHang.Size = new System.Drawing.Size(100, 30);
+            this._txtDonHang.TabIndex = 1;
             // 
             // label23
             // 
@@ -532,26 +526,6 @@ namespace QuanLyGiay
             this.label21.Size = new System.Drawing.Size(127, 25);
             this.label21.TabIndex = 0;
             this.label21.Text = "Khách Hàng:";
-            // 
-            // _labPo
-            // 
-            this._labPo.AutoSize = true;
-            this._labPo.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this._labPo.Location = new System.Drawing.Point(167, 147);
-            this._labPo.Name = "_labPo";
-            this._labPo.Size = new System.Drawing.Size(74, 39);
-            this._labPo.TabIndex = 0;
-            this._labPo.Text = "aaa";
-            // 
-            // _labKhachHang
-            // 
-            this._labKhachHang.AutoSize = true;
-            this._labKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this._labKhachHang.Location = new System.Drawing.Point(167, 89);
-            this._labKhachHang.Name = "_labKhachHang";
-            this._labKhachHang.Size = new System.Drawing.Size(74, 39);
-            this._labKhachHang.TabIndex = 0;
-            this._labKhachHang.Text = "aaa";
             // 
             // groupBox2
             // 
@@ -654,6 +628,14 @@ namespace QuanLyGiay
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách đơn hàng chờ sản xuất";
             // 
+            // easyAcountManager1
+            // 
+            this.easyAcountManager1.Location = new System.Drawing.Point(629, 148);
+            this.easyAcountManager1.Margin = new System.Windows.Forms.Padding(6);
+            this.easyAcountManager1.Name = "easyAcountManager1";
+            this.easyAcountManager1.Size = new System.Drawing.Size(8, 8);
+            this.easyAcountManager1.TabIndex = 1;
+            // 
             // grvDH
             // 
             this.grvDH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
@@ -751,80 +733,6 @@ namespace QuanLyGiay
             this._labDriverStatus.TabIndex = 0;
             this._labDriverStatus.Text = "DriverStatus";
             // 
-            // easyAcountManager1
-            // 
-            this.easyAcountManager1.Location = new System.Drawing.Point(629, 148);
-            this.easyAcountManager1.Margin = new System.Windows.Forms.Padding(6);
-            this.easyAcountManager1.Name = "easyAcountManager1";
-            this.easyAcountManager1.Size = new System.Drawing.Size(8, 8);
-            this.easyAcountManager1.TabIndex = 1;
-            // 
-            // easyLabel2
-            // 
-            this.easyLabel2.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
-            this.easyLabel2.Location = new System.Drawing.Point(141, 271);
-            this.easyLabel2.Name = "easyLabel2";
-            this.easyLabel2.Size = new System.Drawing.Size(100, 23);
-            this.easyLabel2.StringFormat = null;
-            this.easyLabel2.TabIndex = 3;
-            this.easyLabel2.TagPath = "Local Station/ChannelServer/DeviceCutter/SoLuongCat";
-            this.easyLabel2.Text = "easyLabel1";
-            // 
-            // easyLabel6
-            // 
-            this.easyLabel6.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
-            this.easyLabel6.Location = new System.Drawing.Point(423, 213);
-            this.easyLabel6.Name = "easyLabel6";
-            this.easyLabel6.Size = new System.Drawing.Size(100, 23);
-            this.easyLabel6.StringFormat = null;
-            this.easyLabel6.TabIndex = 3;
-            this.easyLabel6.TagPath = "Local Station/ChannelServer/DeviceCutter/TocDo_FB";
-            this.easyLabel6.Text = "easyLabel1";
-            // 
-            // easyLabel5
-            // 
-            this.easyLabel5.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
-            this.easyLabel5.Location = new System.Drawing.Point(423, 155);
-            this.easyLabel5.Name = "easyLabel5";
-            this.easyLabel5.Size = new System.Drawing.Size(100, 23);
-            this.easyLabel5.StringFormat = null;
-            this.easyLabel5.TabIndex = 3;
-            this.easyLabel5.TagPath = "Local Station/ChannelServer/DeviceCutter/Pallet";
-            this.easyLabel5.Text = "easyLabel1";
-            // 
-            // easyLabel4
-            // 
-            this.easyLabel4.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
-            this.easyLabel4.Location = new System.Drawing.Point(423, 97);
-            this.easyLabel4.Name = "easyLabel4";
-            this.easyLabel4.Size = new System.Drawing.Size(100, 23);
-            this.easyLabel4.StringFormat = null;
-            this.easyLabel4.TabIndex = 3;
-            this.easyLabel4.TagPath = "Local Station/ChannelServer/DeviceCutter/SoLuongLoi_FB";
-            this.easyLabel4.Text = "easyLabel1";
-            // 
-            // easyLabel3
-            // 
-            this.easyLabel3.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
-            this.easyLabel3.Location = new System.Drawing.Point(423, 39);
-            this.easyLabel3.Name = "easyLabel3";
-            this.easyLabel3.Size = new System.Drawing.Size(100, 23);
-            this.easyLabel3.StringFormat = null;
-            this.easyLabel3.TabIndex = 3;
-            this.easyLabel3.TagPath = "Local Station/ChannelServer/DeviceCutter/SoLuongDat_FB";
-            this.easyLabel3.Text = "easyLabel1";
-            // 
-            // easyLabel1
-            // 
-            this.easyLabel1.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
-            this.easyLabel1.Location = new System.Drawing.Point(141, 213);
-            this.easyLabel1.Name = "easyLabel1";
-            this.easyLabel1.Size = new System.Drawing.Size(100, 23);
-            this.easyLabel1.StringFormat = null;
-            this.easyLabel1.TabIndex = 3;
-            this.easyLabel1.TagPath = "Local Station/ChannelServer/DeviceCutter/ChieuDaiCat";
-            this.easyLabel1.Text = "easyLabel1";
-            // 
             // easyDriverConnector1
             // 
             this.easyDriverConnector1.CollectionName = null;
@@ -837,6 +745,70 @@ namespace QuanLyGiay
             this.easyDriverConnector1.StationName = null;
             this.easyDriverConnector1.Timeout = 30;
             this.easyDriverConnector1.UseMongoDb = false;
+            // 
+            // _txtSLCat
+            // 
+            this._txtSLCat.Location = new System.Drawing.Point(150, 267);
+            this._txtSLCat.Name = "_txtSLCat";
+            this._txtSLCat.Size = new System.Drawing.Size(100, 30);
+            this._txtSLCat.TabIndex = 1;
+            this._txtSLCat.Text = "0";
+            this._txtSLCat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // _txtSLConlai
+            // 
+            this._txtSLConlai.Location = new System.Drawing.Point(416, 149);
+            this._txtSLConlai.Name = "_txtSLConlai";
+            this._txtSLConlai.Size = new System.Drawing.Size(100, 30);
+            this._txtSLConlai.TabIndex = 1;
+            this._txtSLConlai.Text = "0";
+            this._txtSLConlai.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // _txtSLDat
+            // 
+            this._txtSLDat.Location = new System.Drawing.Point(416, 35);
+            this._txtSLDat.Name = "_txtSLDat";
+            this._txtSLDat.Size = new System.Drawing.Size(100, 30);
+            this._txtSLDat.TabIndex = 1;
+            this._txtSLDat.Text = "0";
+            this._txtSLDat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // _txtSLLoi
+            // 
+            this._txtSLLoi.Location = new System.Drawing.Point(416, 93);
+            this._txtSLLoi.Name = "_txtSLLoi";
+            this._txtSLLoi.Size = new System.Drawing.Size(100, 30);
+            this._txtSLLoi.TabIndex = 1;
+            this._txtSLLoi.Text = "0";
+            this._txtSLLoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // _txtTocDo
+            // 
+            this._txtTocDo.Location = new System.Drawing.Point(416, 201);
+            this._txtTocDo.Name = "_txtTocDo";
+            this._txtTocDo.Size = new System.Drawing.Size(100, 30);
+            this._txtTocDo.TabIndex = 1;
+            this._txtTocDo.Text = "0";
+            this._txtTocDo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label6.Location = new System.Drawing.Point(11, 311);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(127, 25);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Tổng số mét:";
+            // 
+            // _txtTongSoMetCD
+            // 
+            this._txtTongSoMetCD.Location = new System.Drawing.Point(150, 308);
+            this._txtTongSoMetCD.Name = "_txtTongSoMetCD";
+            this._txtTongSoMetCD.Size = new System.Drawing.Size(100, 30);
+            this._txtTongSoMetCD.TabIndex = 1;
+            this._txtTongSoMetCD.Text = "0";
+            this._txtTongSoMetCD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // frmMain
             // 
@@ -868,12 +840,6 @@ namespace QuanLyGiay
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grvDH)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.easyLabel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.easyLabel6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.easyLabel5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.easyLabel4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.easyLabel3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.easyLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyDriverConnector1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -882,15 +848,12 @@ namespace QuanLyGiay
 
         #endregion
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label _labDonHang;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label _labSlConLai;
         private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.Panel panel31;
         private System.Windows.Forms.Panel panel30;
@@ -935,8 +898,6 @@ namespace QuanLyGiay
         private System.Windows.Forms.Label _labDriverStatus;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label _labPo;
-        private System.Windows.Forms.Label _labKhachHang;
         private System.Windows.Forms.Panel _panelCutterStatus;
         private System.Windows.Forms.Panel _panelSongCStatus;
         private System.Windows.Forms.Panel _panelSongBStatus;
@@ -944,13 +905,18 @@ namespace QuanLyGiay
         private System.Windows.Forms.Panel _panelMayMenStatus;
         private System.Windows.Forms.Panel _panelMayXaStatus;
         private EasyScada.Winforms.Controls.EasyDriverConnector easyDriverConnector1;
-        private EasyScada.Winforms.Controls.EasyLabel easyLabel1;
         private EasyScada.Winforms.Controls.EasyAcountManager easyAcountManager1;
-        private EasyScada.Winforms.Controls.EasyLabel easyLabel2;
-        private EasyScada.Winforms.Controls.EasyLabel easyLabel6;
-        private EasyScada.Winforms.Controls.EasyLabel easyLabel5;
-        private EasyScada.Winforms.Controls.EasyLabel easyLabel4;
-        private EasyScada.Winforms.Controls.EasyLabel easyLabel3;
+        private System.Windows.Forms.TextBox _txtPO;
+        private System.Windows.Forms.TextBox _txtKhachHang;
+        private System.Windows.Forms.TextBox _txtDonHang;
+        private System.Windows.Forms.TextBox _txtDaiCat;
+        private System.Windows.Forms.TextBox _txtTocDo;
+        private System.Windows.Forms.TextBox _txtSLLoi;
+        private System.Windows.Forms.TextBox _txtSLDat;
+        private System.Windows.Forms.TextBox _txtSLConlai;
+        private System.Windows.Forms.TextBox _txtTongSoMetCD;
+        private System.Windows.Forms.TextBox _txtSLCat;
+        private System.Windows.Forms.Label label6;
     }
 }
 
