@@ -72,12 +72,6 @@ namespace QuanLyGiay
             this.label1 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.easyLabel2 = new EasyScada.Winforms.Controls.EasyLabel();
-            this.easyLabel6 = new EasyScada.Winforms.Controls.EasyLabel();
-            this.easyLabel5 = new EasyScada.Winforms.Controls.EasyLabel();
-            this.easyLabel4 = new EasyScada.Winforms.Controls.EasyLabel();
-            this.easyLabel3 = new EasyScada.Winforms.Controls.EasyLabel();
-            this.easyLabel1 = new EasyScada.Winforms.Controls.EasyLabel();
             this.label23 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this._labPo = new System.Windows.Forms.Label();
@@ -90,7 +84,6 @@ namespace QuanLyGiay
             this._panelMayXaStatus = new System.Windows.Forms.Panel();
             this._panelCutterStatus = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.easyAcountManager1 = new EasyScada.Winforms.Controls.EasyAcountManager();
             this.grvDH = new System.Windows.Forms.DataGridView();
             this.btnOrder = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
@@ -100,19 +93,26 @@ namespace QuanLyGiay
             this.btnReviceError = new System.Windows.Forms.Button();
             this.labDateTime = new System.Windows.Forms.Label();
             this._labDriverStatus = new System.Windows.Forms.Label();
+            this.easyAcountManager1 = new EasyScada.Winforms.Controls.EasyAcountManager();
+            this.easyLabel2 = new EasyScada.Winforms.Controls.EasyLabel();
+            this.easyLabel6 = new EasyScada.Winforms.Controls.EasyLabel();
+            this.easyLabel5 = new EasyScada.Winforms.Controls.EasyLabel();
+            this.easyLabel4 = new EasyScada.Winforms.Controls.EasyLabel();
+            this.easyLabel3 = new EasyScada.Winforms.Controls.EasyLabel();
+            this.easyLabel1 = new EasyScada.Winforms.Controls.EasyLabel();
             this.easyDriverConnector1 = new EasyScada.Winforms.Controls.EasyDriverConnector(this.components);
             this.panel24.SuspendLayout();
             this.panel21.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grvDH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel1)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grvDH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyDriverConnector1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -513,72 +513,6 @@ namespace QuanLyGiay
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đơn Hàng đang chạy";
             // 
-            // easyLabel2
-            // 
-            this.easyLabel2.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
-            this.easyLabel2.Location = new System.Drawing.Point(141, 271);
-            this.easyLabel2.Name = "easyLabel2";
-            this.easyLabel2.Size = new System.Drawing.Size(100, 23);
-            this.easyLabel2.StringFormat = null;
-            this.easyLabel2.TabIndex = 3;
-            this.easyLabel2.TagPath = "Local Station/ChannelServer/DeviceCutter/SoLuongCat1";
-            this.easyLabel2.Text = "easyLabel1";
-            // 
-            // easyLabel6
-            // 
-            this.easyLabel6.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
-            this.easyLabel6.Location = new System.Drawing.Point(423, 213);
-            this.easyLabel6.Name = "easyLabel6";
-            this.easyLabel6.Size = new System.Drawing.Size(100, 23);
-            this.easyLabel6.StringFormat = null;
-            this.easyLabel6.TabIndex = 3;
-            this.easyLabel6.TagPath = "Local Station/ChannelServer/DeviceCutter/TocDo";
-            this.easyLabel6.Text = "easyLabel1";
-            // 
-            // easyLabel5
-            // 
-            this.easyLabel5.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
-            this.easyLabel5.Location = new System.Drawing.Point(423, 155);
-            this.easyLabel5.Name = "easyLabel5";
-            this.easyLabel5.Size = new System.Drawing.Size(100, 23);
-            this.easyLabel5.StringFormat = null;
-            this.easyLabel5.TabIndex = 3;
-            this.easyLabel5.TagPath = "Local Station/ChannelServer/DeviceCutter/Pallet1";
-            this.easyLabel5.Text = "easyLabel1";
-            // 
-            // easyLabel4
-            // 
-            this.easyLabel4.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
-            this.easyLabel4.Location = new System.Drawing.Point(423, 97);
-            this.easyLabel4.Name = "easyLabel4";
-            this.easyLabel4.Size = new System.Drawing.Size(100, 23);
-            this.easyLabel4.StringFormat = null;
-            this.easyLabel4.TabIndex = 3;
-            this.easyLabel4.TagPath = "Local Station/ChannelServer/DeviceCutter/SoLuongLoi";
-            this.easyLabel4.Text = "easyLabel1";
-            // 
-            // easyLabel3
-            // 
-            this.easyLabel3.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
-            this.easyLabel3.Location = new System.Drawing.Point(423, 39);
-            this.easyLabel3.Name = "easyLabel3";
-            this.easyLabel3.Size = new System.Drawing.Size(100, 23);
-            this.easyLabel3.StringFormat = null;
-            this.easyLabel3.TabIndex = 3;
-            this.easyLabel3.TagPath = "Local Station/ChannelServer/DeviceCutter/SoLuongDat";
-            this.easyLabel3.Text = "easyLabel1";
-            // 
-            // easyLabel1
-            // 
-            this.easyLabel1.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
-            this.easyLabel1.Location = new System.Drawing.Point(141, 213);
-            this.easyLabel1.Name = "easyLabel1";
-            this.easyLabel1.Size = new System.Drawing.Size(100, 23);
-            this.easyLabel1.StringFormat = null;
-            this.easyLabel1.TabIndex = 3;
-            this.easyLabel1.TagPath = "Local Station/ChannelServer/DeviceCutter/STT1";
-            this.easyLabel1.Text = "easyLabel1";
-            // 
             // label23
             // 
             this.label23.AutoSize = true;
@@ -720,14 +654,6 @@ namespace QuanLyGiay
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách đơn hàng chờ sản xuất";
             // 
-            // easyAcountManager1
-            // 
-            this.easyAcountManager1.Location = new System.Drawing.Point(629, 148);
-            this.easyAcountManager1.Margin = new System.Windows.Forms.Padding(6);
-            this.easyAcountManager1.Name = "easyAcountManager1";
-            this.easyAcountManager1.Size = new System.Drawing.Size(8, 8);
-            this.easyAcountManager1.TabIndex = 1;
-            // 
             // grvDH
             // 
             this.grvDH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
@@ -825,6 +751,80 @@ namespace QuanLyGiay
             this._labDriverStatus.TabIndex = 0;
             this._labDriverStatus.Text = "DriverStatus";
             // 
+            // easyAcountManager1
+            // 
+            this.easyAcountManager1.Location = new System.Drawing.Point(629, 148);
+            this.easyAcountManager1.Margin = new System.Windows.Forms.Padding(6);
+            this.easyAcountManager1.Name = "easyAcountManager1";
+            this.easyAcountManager1.Size = new System.Drawing.Size(8, 8);
+            this.easyAcountManager1.TabIndex = 1;
+            // 
+            // easyLabel2
+            // 
+            this.easyLabel2.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
+            this.easyLabel2.Location = new System.Drawing.Point(141, 271);
+            this.easyLabel2.Name = "easyLabel2";
+            this.easyLabel2.Size = new System.Drawing.Size(100, 23);
+            this.easyLabel2.StringFormat = null;
+            this.easyLabel2.TabIndex = 3;
+            this.easyLabel2.TagPath = "Local Station/ChannelServer/DeviceCutter/SoLuongCat";
+            this.easyLabel2.Text = "easyLabel1";
+            // 
+            // easyLabel6
+            // 
+            this.easyLabel6.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
+            this.easyLabel6.Location = new System.Drawing.Point(423, 213);
+            this.easyLabel6.Name = "easyLabel6";
+            this.easyLabel6.Size = new System.Drawing.Size(100, 23);
+            this.easyLabel6.StringFormat = null;
+            this.easyLabel6.TabIndex = 3;
+            this.easyLabel6.TagPath = "Local Station/ChannelServer/DeviceCutter/TocDo_FB";
+            this.easyLabel6.Text = "easyLabel1";
+            // 
+            // easyLabel5
+            // 
+            this.easyLabel5.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
+            this.easyLabel5.Location = new System.Drawing.Point(423, 155);
+            this.easyLabel5.Name = "easyLabel5";
+            this.easyLabel5.Size = new System.Drawing.Size(100, 23);
+            this.easyLabel5.StringFormat = null;
+            this.easyLabel5.TabIndex = 3;
+            this.easyLabel5.TagPath = "Local Station/ChannelServer/DeviceCutter/Pallet";
+            this.easyLabel5.Text = "easyLabel1";
+            // 
+            // easyLabel4
+            // 
+            this.easyLabel4.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
+            this.easyLabel4.Location = new System.Drawing.Point(423, 97);
+            this.easyLabel4.Name = "easyLabel4";
+            this.easyLabel4.Size = new System.Drawing.Size(100, 23);
+            this.easyLabel4.StringFormat = null;
+            this.easyLabel4.TabIndex = 3;
+            this.easyLabel4.TagPath = "Local Station/ChannelServer/DeviceCutter/SoLuongLoi_FB";
+            this.easyLabel4.Text = "easyLabel1";
+            // 
+            // easyLabel3
+            // 
+            this.easyLabel3.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
+            this.easyLabel3.Location = new System.Drawing.Point(423, 39);
+            this.easyLabel3.Name = "easyLabel3";
+            this.easyLabel3.Size = new System.Drawing.Size(100, 23);
+            this.easyLabel3.StringFormat = null;
+            this.easyLabel3.TabIndex = 3;
+            this.easyLabel3.TagPath = "Local Station/ChannelServer/DeviceCutter/SoLuongDat_FB";
+            this.easyLabel3.Text = "easyLabel1";
+            // 
+            // easyLabel1
+            // 
+            this.easyLabel1.DisplayMode = EasyScada.Winforms.Controls.DisplayMode.Value;
+            this.easyLabel1.Location = new System.Drawing.Point(141, 213);
+            this.easyLabel1.Name = "easyLabel1";
+            this.easyLabel1.Size = new System.Drawing.Size(100, 23);
+            this.easyLabel1.StringFormat = null;
+            this.easyLabel1.TabIndex = 3;
+            this.easyLabel1.TagPath = "Local Station/ChannelServer/DeviceCutter/ChieuDaiCat";
+            this.easyLabel1.Text = "easyLabel1";
+            // 
             // easyDriverConnector1
             // 
             this.easyDriverConnector1.CollectionName = null;
@@ -864,16 +864,16 @@ namespace QuanLyGiay
             this.panel21.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grvDH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyLabel1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grvDH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyDriverConnector1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -49,7 +49,9 @@ namespace QuanLyGiay
             this.label24 = new System.Windows.Forms.Label();
             this._cbMa = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this._txtDoSauLang = new System.Windows.Forms.TextBox();
             this._txtLang = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             this._txtRong = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this._txtSoLuong = new System.Windows.Forms.TextBox();
@@ -85,8 +87,6 @@ namespace QuanLyGiay
             this.label13 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this._txtDoSauLang = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._grvDH)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -182,7 +182,7 @@ namespace QuanLyGiay
             // _btnLuu
             // 
             this._btnLuu.BackColor = System.Drawing.Color.Cyan;
-            this._btnLuu.Location = new System.Drawing.Point(849, 302);
+            this._btnLuu.Location = new System.Drawing.Point(849, 202);
             this._btnLuu.Name = "_btnLuu";
             this._btnLuu.Size = new System.Drawing.Size(124, 46);
             this._btnLuu.TabIndex = 27;
@@ -192,7 +192,7 @@ namespace QuanLyGiay
             // _btnXoa
             // 
             this._btnXoa.BackColor = System.Drawing.Color.Red;
-            this._btnXoa.Location = new System.Drawing.Point(711, 302);
+            this._btnXoa.Location = new System.Drawing.Point(849, 143);
             this._btnXoa.Name = "_btnXoa";
             this._btnXoa.Size = new System.Drawing.Size(124, 46);
             this._btnXoa.TabIndex = 26;
@@ -202,7 +202,7 @@ namespace QuanLyGiay
             // _btnSua
             // 
             this._btnSua.BackColor = System.Drawing.Color.GreenYellow;
-            this._btnSua.Location = new System.Drawing.Point(573, 302);
+            this._btnSua.Location = new System.Drawing.Point(849, 81);
             this._btnSua.Name = "_btnSua";
             this._btnSua.Size = new System.Drawing.Size(124, 46);
             this._btnSua.TabIndex = 25;
@@ -212,7 +212,7 @@ namespace QuanLyGiay
             // _btnThem
             // 
             this._btnThem.BackColor = System.Drawing.Color.Green;
-            this._btnThem.Location = new System.Drawing.Point(435, 302);
+            this._btnThem.Location = new System.Drawing.Point(849, 22);
             this._btnThem.Name = "_btnThem";
             this._btnThem.Size = new System.Drawing.Size(124, 46);
             this._btnThem.TabIndex = 24;
@@ -223,7 +223,7 @@ namespace QuanLyGiay
             // 
             this._cbSoLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this._cbSoLop.FormattingEnabled = true;
-            this._cbSoLop.Location = new System.Drawing.Point(78, 126);
+            this._cbSoLop.Location = new System.Drawing.Point(104, 127);
             this._cbSoLop.Name = "_cbSoLop";
             this._cbSoLop.Size = new System.Drawing.Size(101, 24);
             this._cbSoLop.TabIndex = 3;
@@ -232,7 +232,7 @@ namespace QuanLyGiay
             // 
             this._cbSong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this._cbSong.FormattingEnabled = true;
-            this._cbSong.Location = new System.Drawing.Point(78, 96);
+            this._cbSong.Location = new System.Drawing.Point(104, 97);
             this._cbSong.Name = "_cbSong";
             this._cbSong.Size = new System.Drawing.Size(101, 24);
             this._cbSong.TabIndex = 3;
@@ -241,7 +241,7 @@ namespace QuanLyGiay
             // 
             this._cbGiayMatB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this._cbGiayMatB.FormattingEnabled = true;
-            this._cbGiayMatB.Location = new System.Drawing.Point(289, 216);
+            this._cbGiayMatB.Location = new System.Drawing.Point(356, 216);
             this._cbGiayMatB.Name = "_cbGiayMatB";
             this._cbGiayMatB.Size = new System.Drawing.Size(101, 24);
             this._cbGiayMatB.TabIndex = 17;
@@ -250,7 +250,7 @@ namespace QuanLyGiay
             // 
             this._cbGiayMatC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this._cbGiayMatC.FormattingEnabled = true;
-            this._cbGiayMatC.Location = new System.Drawing.Point(289, 276);
+            this._cbGiayMatC.Location = new System.Drawing.Point(356, 276);
             this._cbGiayMatC.Name = "_cbGiayMatC";
             this._cbGiayMatC.Size = new System.Drawing.Size(101, 24);
             this._cbGiayMatC.TabIndex = 19;
@@ -259,7 +259,7 @@ namespace QuanLyGiay
             // 
             this._cbGiaySongB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this._cbGiaySongB.FormattingEnabled = true;
-            this._cbGiaySongB.Location = new System.Drawing.Point(289, 187);
+            this._cbGiaySongB.Location = new System.Drawing.Point(356, 187);
             this._cbGiaySongB.Name = "_cbGiaySongB";
             this._cbGiaySongB.Size = new System.Drawing.Size(101, 24);
             this._cbGiaySongB.TabIndex = 16;
@@ -268,7 +268,7 @@ namespace QuanLyGiay
             // 
             this._cbGiaySongC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this._cbGiaySongC.FormattingEnabled = true;
-            this._cbGiaySongC.Location = new System.Drawing.Point(289, 247);
+            this._cbGiaySongC.Location = new System.Drawing.Point(356, 247);
             this._cbGiaySongC.Name = "_cbGiaySongC";
             this._cbGiaySongC.Size = new System.Drawing.Size(101, 24);
             this._cbGiaySongC.TabIndex = 18;
@@ -277,7 +277,7 @@ namespace QuanLyGiay
             // 
             this._cbGiayMatE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this._cbGiayMatE.FormattingEnabled = true;
-            this._cbGiayMatE.Location = new System.Drawing.Point(289, 158);
+            this._cbGiayMatE.Location = new System.Drawing.Point(356, 158);
             this._cbGiayMatE.Name = "_cbGiayMatE";
             this._cbGiayMatE.Size = new System.Drawing.Size(101, 24);
             this._cbGiayMatE.TabIndex = 15;
@@ -286,7 +286,7 @@ namespace QuanLyGiay
             // 
             this._cbGiaySongE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this._cbGiaySongE.FormattingEnabled = true;
-            this._cbGiaySongE.Location = new System.Drawing.Point(289, 125);
+            this._cbGiaySongE.Location = new System.Drawing.Point(356, 125);
             this._cbGiaySongE.Name = "_cbGiaySongE";
             this._cbGiaySongE.Size = new System.Drawing.Size(101, 24);
             this._cbGiaySongE.TabIndex = 14;
@@ -295,7 +295,7 @@ namespace QuanLyGiay
             // 
             this._cbGiayMen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this._cbGiayMen.FormattingEnabled = true;
-            this._cbGiayMen.Location = new System.Drawing.Point(289, 95);
+            this._cbGiayMen.Location = new System.Drawing.Point(356, 95);
             this._cbGiayMen.Name = "_cbGiayMen";
             this._cbGiayMen.Size = new System.Drawing.Size(101, 24);
             this._cbGiayMen.TabIndex = 13;
@@ -304,7 +304,7 @@ namespace QuanLyGiay
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label24.Location = new System.Drawing.Point(11, 128);
+            this.label24.Location = new System.Drawing.Point(45, 128);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(53, 17);
             this.label24.TabIndex = 0;
@@ -314,7 +314,7 @@ namespace QuanLyGiay
             // 
             this._cbMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this._cbMa.FormattingEnabled = true;
-            this._cbMa.Location = new System.Drawing.Point(78, 66);
+            this._cbMa.Location = new System.Drawing.Point(104, 67);
             this._cbMa.Name = "_cbMa";
             this._cbMa.Size = new System.Drawing.Size(101, 24);
             this._cbMa.TabIndex = 2;
@@ -323,26 +323,46 @@ namespace QuanLyGiay
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(11, 98);
+            this.label2.Location = new System.Drawing.Point(57, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Sóng";
             // 
+            // _txtDoSauLang
+            // 
+            this._txtDoSauLang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this._txtDoSauLang.Location = new System.Drawing.Point(356, 65);
+            this._txtDoSauLang.Name = "_txtDoSauLang";
+            this._txtDoSauLang.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this._txtDoSauLang.Size = new System.Drawing.Size(101, 23);
+            this._txtDoSauLang.TabIndex = 12;
+            this._txtDoSauLang.Text = "0";
+            // 
             // _txtLang
             // 
             this._txtLang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this._txtLang.Location = new System.Drawing.Point(289, 37);
+            this._txtLang.Location = new System.Drawing.Point(356, 37);
             this._txtLang.Name = "_txtLang";
             this._txtLang.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._txtLang.Size = new System.Drawing.Size(101, 23);
             this._txtLang.TabIndex = 12;
             this._txtLang.Text = "0";
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label25.Location = new System.Drawing.Point(237, 68);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(115, 17);
+            this.label25.TabIndex = 0;
+            this.label25.Text = "Độ Sâu Lằn (cm)";
+            // 
             // _txtRong
             // 
             this._txtRong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this._txtRong.Location = new System.Drawing.Point(78, 271);
+            this._txtRong.Location = new System.Drawing.Point(104, 272);
             this._txtRong.Name = "_txtRong";
             this._txtRong.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._txtRong.Size = new System.Drawing.Size(101, 23);
@@ -353,7 +373,7 @@ namespace QuanLyGiay
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label12.Location = new System.Drawing.Point(199, 40);
+            this.label12.Location = new System.Drawing.Point(320, 40);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(32, 17);
             this.label12.TabIndex = 0;
@@ -362,7 +382,7 @@ namespace QuanLyGiay
             // _txtSoLuong
             // 
             this._txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this._txtSoLuong.Location = new System.Drawing.Point(78, 214);
+            this._txtSoLuong.Location = new System.Drawing.Point(104, 215);
             this._txtSoLuong.Name = "_txtSoLuong";
             this._txtSoLuong.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._txtSoLuong.Size = new System.Drawing.Size(101, 23);
@@ -373,16 +393,16 @@ namespace QuanLyGiay
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label9.Location = new System.Drawing.Point(11, 278);
+            this.label9.Location = new System.Drawing.Point(24, 278);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 17);
+            this.label9.Size = new System.Drawing.Size(74, 17);
             this.label9.TabIndex = 0;
-            this.label9.Text = "Rộng";
+            this.label9.Text = "Rộng (cm)";
             // 
             // _txtCao
             // 
             this._txtCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this._txtCao.Location = new System.Drawing.Point(78, 329);
+            this._txtCao.Location = new System.Drawing.Point(104, 330);
             this._txtCao.Name = "_txtCao";
             this._txtCao.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._txtCao.Size = new System.Drawing.Size(101, 23);
@@ -393,7 +413,7 @@ namespace QuanLyGiay
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label6.Location = new System.Drawing.Point(11, 219);
+            this.label6.Location = new System.Drawing.Point(37, 219);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 17);
             this.label6.TabIndex = 0;
@@ -402,7 +422,7 @@ namespace QuanLyGiay
             // _txtGhiChu
             // 
             this._txtGhiChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this._txtGhiChu.Location = new System.Drawing.Point(511, 154);
+            this._txtGhiChu.Location = new System.Drawing.Point(623, 151);
             this._txtGhiChu.Multiline = true;
             this._txtGhiChu.Name = "_txtGhiChu";
             this._txtGhiChu.Size = new System.Drawing.Size(195, 115);
@@ -411,7 +431,7 @@ namespace QuanLyGiay
             // _txtPO
             // 
             this._txtPO.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this._txtPO.Location = new System.Drawing.Point(602, 95);
+            this._txtPO.Location = new System.Drawing.Point(656, 92);
             this._txtPO.Name = "_txtPO";
             this._txtPO.Size = new System.Drawing.Size(101, 23);
             this._txtPO.TabIndex = 22;
@@ -419,7 +439,7 @@ namespace QuanLyGiay
             // _txtDonHang
             // 
             this._txtDonHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this._txtDonHang.Location = new System.Drawing.Point(602, 65);
+            this._txtDonHang.Location = new System.Drawing.Point(656, 62);
             this._txtDonHang.Name = "_txtDonHang";
             this._txtDonHang.Size = new System.Drawing.Size(101, 23);
             this._txtDonHang.TabIndex = 21;
@@ -428,7 +448,7 @@ namespace QuanLyGiay
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label23.Location = new System.Drawing.Point(510, 134);
+            this.label23.Location = new System.Drawing.Point(622, 131);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(59, 17);
             this.label23.TabIndex = 0;
@@ -437,7 +457,7 @@ namespace QuanLyGiay
             // _txtKhachHang
             // 
             this._txtKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this._txtKhachHang.Location = new System.Drawing.Point(602, 37);
+            this._txtKhachHang.Location = new System.Drawing.Point(656, 34);
             this._txtKhachHang.Name = "_txtKhachHang";
             this._txtKhachHang.Size = new System.Drawing.Size(101, 23);
             this._txtKhachHang.TabIndex = 20;
@@ -446,7 +466,7 @@ namespace QuanLyGiay
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label22.Location = new System.Drawing.Point(510, 98);
+            this.label22.Location = new System.Drawing.Point(622, 95);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(28, 17);
             this.label22.TabIndex = 0;
@@ -455,7 +475,7 @@ namespace QuanLyGiay
             // _txtXa
             // 
             this._txtXa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this._txtXa.Location = new System.Drawing.Point(78, 242);
+            this._txtXa.Location = new System.Drawing.Point(104, 243);
             this._txtXa.Name = "_txtXa";
             this._txtXa.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._txtXa.Size = new System.Drawing.Size(101, 23);
@@ -466,7 +486,7 @@ namespace QuanLyGiay
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label21.Location = new System.Drawing.Point(510, 68);
+            this.label21.Location = new System.Drawing.Point(578, 65);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(72, 17);
             this.label21.TabIndex = 0;
@@ -476,17 +496,17 @@ namespace QuanLyGiay
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label11.Location = new System.Drawing.Point(11, 336);
+            this.label11.Location = new System.Drawing.Point(33, 336);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(33, 17);
+            this.label11.Size = new System.Drawing.Size(65, 17);
             this.label11.TabIndex = 0;
-            this.label11.Text = "Cao";
+            this.label11.Text = "Cao (cm)";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label20.Location = new System.Drawing.Point(510, 40);
+            this.label20.Location = new System.Drawing.Point(564, 37);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(86, 17);
             this.label20.TabIndex = 0;
@@ -495,7 +515,7 @@ namespace QuanLyGiay
             // _txtChieuDai
             // 
             this._txtChieuDai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this._txtChieuDai.Location = new System.Drawing.Point(78, 185);
+            this._txtChieuDai.Location = new System.Drawing.Point(104, 186);
             this._txtChieuDai.Name = "_txtChieuDai";
             this._txtChieuDai.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._txtChieuDai.Size = new System.Drawing.Size(101, 23);
@@ -506,7 +526,7 @@ namespace QuanLyGiay
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label8.Location = new System.Drawing.Point(11, 249);
+            this.label8.Location = new System.Drawing.Point(73, 249);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(25, 17);
             this.label8.TabIndex = 0;
@@ -515,7 +535,7 @@ namespace QuanLyGiay
             // _txtCanh
             // 
             this._txtCanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this._txtCanh.Location = new System.Drawing.Point(78, 300);
+            this._txtCanh.Location = new System.Drawing.Point(104, 301);
             this._txtCanh.Name = "_txtCanh";
             this._txtCanh.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._txtCanh.Size = new System.Drawing.Size(101, 23);
@@ -526,26 +546,26 @@ namespace QuanLyGiay
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label5.Location = new System.Drawing.Point(11, 190);
+            this.label5.Location = new System.Drawing.Point(12, 190);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 17);
+            this.label5.Size = new System.Drawing.Size(86, 17);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Dài Cắt";
+            this.label5.Text = "Dài Cắt (cm)";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label10.Location = new System.Drawing.Point(11, 307);
+            this.label10.Location = new System.Drawing.Point(25, 307);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 17);
+            this.label10.Size = new System.Drawing.Size(73, 17);
             this.label10.TabIndex = 0;
-            this.label10.Text = "Cánh";
+            this.label10.Text = "Cánh (cm)";
             // 
             // _txtPallet
             // 
             this._txtPallet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this._txtPallet.Location = new System.Drawing.Point(289, 306);
+            this._txtPallet.Location = new System.Drawing.Point(356, 306);
             this._txtPallet.Name = "_txtPallet";
             this._txtPallet.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._txtPallet.Size = new System.Drawing.Size(101, 23);
@@ -556,7 +576,7 @@ namespace QuanLyGiay
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label19.Location = new System.Drawing.Point(199, 220);
+            this.label19.Location = new System.Drawing.Point(275, 220);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(77, 17);
             this.label19.TabIndex = 0;
@@ -566,7 +586,7 @@ namespace QuanLyGiay
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label7.Location = new System.Drawing.Point(222, 313);
+            this.label7.Location = new System.Drawing.Point(309, 313);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(43, 17);
             this.label7.TabIndex = 0;
@@ -576,7 +596,7 @@ namespace QuanLyGiay
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label17.Location = new System.Drawing.Point(199, 280);
+            this.label17.Location = new System.Drawing.Point(275, 277);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(77, 17);
             this.label17.TabIndex = 0;
@@ -585,7 +605,7 @@ namespace QuanLyGiay
             // _txtKho
             // 
             this._txtKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this._txtKho.Location = new System.Drawing.Point(78, 156);
+            this._txtKho.Location = new System.Drawing.Point(104, 157);
             this._txtKho.Name = "_txtKho";
             this._txtKho.Size = new System.Drawing.Size(101, 23);
             this._txtKho.TabIndex = 4;
@@ -594,7 +614,7 @@ namespace QuanLyGiay
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label18.Location = new System.Drawing.Point(199, 191);
+            this.label18.Location = new System.Drawing.Point(265, 191);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(87, 17);
             this.label18.TabIndex = 0;
@@ -604,7 +624,7 @@ namespace QuanLyGiay
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label15.Location = new System.Drawing.Point(199, 162);
+            this.label15.Location = new System.Drawing.Point(275, 162);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(77, 17);
             this.label15.TabIndex = 0;
@@ -614,7 +634,7 @@ namespace QuanLyGiay
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label16.Location = new System.Drawing.Point(199, 251);
+            this.label16.Location = new System.Drawing.Point(265, 251);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(87, 17);
             this.label16.TabIndex = 0;
@@ -624,17 +644,17 @@ namespace QuanLyGiay
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.Location = new System.Drawing.Point(11, 161);
+            this.label4.Location = new System.Drawing.Point(33, 161);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 17);
+            this.label4.Size = new System.Drawing.Size(65, 17);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Khổ";
+            this.label4.Text = "Khổ (cm)";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label14.Location = new System.Drawing.Point(199, 129);
+            this.label14.Location = new System.Drawing.Point(265, 129);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(87, 17);
             this.label14.TabIndex = 0;
@@ -643,7 +663,7 @@ namespace QuanLyGiay
             // _txtSTT
             // 
             this._txtSTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this._txtSTT.Location = new System.Drawing.Point(78, 37);
+            this._txtSTT.Location = new System.Drawing.Point(104, 38);
             this._txtSTT.Name = "_txtSTT";
             this._txtSTT.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this._txtSTT.Size = new System.Drawing.Size(101, 23);
@@ -654,7 +674,7 @@ namespace QuanLyGiay
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label13.Location = new System.Drawing.Point(199, 99);
+            this.label13.Location = new System.Drawing.Point(284, 99);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(68, 17);
             this.label13.TabIndex = 0;
@@ -664,7 +684,7 @@ namespace QuanLyGiay
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(11, 40);
+            this.label3.Location = new System.Drawing.Point(63, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 17);
             this.label3.TabIndex = 0;
@@ -674,31 +694,11 @@ namespace QuanLyGiay
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(11, 68);
+            this.label1.Location = new System.Drawing.Point(71, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(27, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label25.Location = new System.Drawing.Point(199, 68);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(83, 17);
-            this.label25.TabIndex = 0;
-            this.label25.Text = "Độ Sâu Lằn";
-            // 
-            // _txtDoSauLang
-            // 
-            this._txtDoSauLang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this._txtDoSauLang.Location = new System.Drawing.Point(289, 65);
-            this._txtDoSauLang.Name = "_txtDoSauLang";
-            this._txtDoSauLang.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this._txtDoSauLang.Size = new System.Drawing.Size(101, 23);
-            this._txtDoSauLang.TabIndex = 12;
-            this._txtDoSauLang.Text = "0";
             // 
             // frmAddDonHang
             // 

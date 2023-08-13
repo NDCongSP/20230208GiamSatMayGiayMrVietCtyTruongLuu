@@ -11,7 +11,7 @@
   "IsReadOnly": true,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:42:59.5967265+07:00",
-  "ModifiedDate": "2023-08-13T09:51:35.4326425+07:00",
+  "ModifiedDate": "2023-08-13T15:06:14.950797+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -25,304 +25,13 @@
   "RefreshRate": 0,
   "Childs": [
     {
-  "Name": "ChannelServer1",
-  "Description": null,
-  "ItemType": "Channel",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T13:43:27.6047728+07:00",
-  "ModifiedDate": "2023-08-13T09:51:35.4326425+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "IpAddress": "192.168.19.208",
-    "Port": "502",
-    "DelayBetweenPool": "5",
-    "ScanRate": "1000"
-  }
-},
-  "DriverPath": "ModbusTCP",
-  "Childs": [
-    {
-  "Name": "Device",
-  "Description": null,
-  "ItemType": "Device",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T13:43:42.3323097+07:00",
-  "ModifiedDate": "2023-08-13T09:51:35.4326425+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "UnitId": "1",
-    "Timeout": "1000",
-    "TryReadWriteTimes": "3",
-    "ReadMode": "Block",
-    "InputContactReadBlockSettings": "[]",
-    "OutputCoilsReadBlockSettings": "[]",
-    "InputRegisterReadBlockSettings": "[]",
-    "HoldingRegisterReadBlockSettings": "[\r\n  {\r\n    \"AddressType\": 4,\r\n    \"Enabled\": true,\r\n    \"StartAddress\": \"400006\",\r\n    \"EndAddress\": \"400104\"\r\n  },\r\n  {\r\n    \"AddressType\": 4,\r\n    \"Enabled\": true,\r\n    \"StartAddress\": \"400208\",\r\n    \"EndAddress\": \"400209\"\r\n  }\r\n]",
-    "MaxWritesCount": "10"
-  }
-},
-  "ByteOrder": "ABCD",
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": [
-    {
-  "Name": "ChieuDaiCat",
-  "Description": null,
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T13:45:16.2724755+07:00",
-  "ModifiedDate": "2022-12-06T13:45:16.2724755+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "400209"
-  }
-},
-  "Address": "400209",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "SoLuongCat",
-  "Description": null,
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T13:45:27.0264741+07:00",
-  "ModifiedDate": "2022-12-06T13:45:27.0264741+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "400208"
-  }
-},
-  "Address": "400208",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "SoLuongDat",
-  "Description": null,
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T13:46:23.0041582+07:00",
-  "ModifiedDate": "2022-12-06T13:46:23.0041582+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "400102"
-  }
-},
-  "Address": "400102",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "SoLuongLoi",
-  "Description": null,
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T13:46:31.0951064+07:00",
-  "ModifiedDate": "2022-12-06T13:46:31.0951064+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "400104"
-  }
-},
-  "Address": "400104",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "TocDo",
-  "Description": null,
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T13:46:45.380522+07:00",
-  "ModifiedDate": "2022-12-06T13:46:45.380522+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "400075"
-  }
-},
-  "Address": "400075",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "DoiDon",
-  "Description": "Đổi đơn",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T13:47:08.91484+07:00",
-  "ModifiedDate": "2022-12-06T13:47:08.91484+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "400006"
-  }
-},
-  "Address": "400006",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "Run",
-  "Description": null,
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T13:47:39.7717262+07:00",
-  "ModifiedDate": "2022-12-06T13:47:39.7717262+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "400007"
-  }
-},
-  "Address": "400007",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "Stop",
-  "Description": null,
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T13:47:49.4574326+07:00",
-  "ModifiedDate": "2022-12-06T13:47:49.4574326+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "400008"
-  }
-},
-  "Address": "400008",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-}
-  ]
-}
-  ]
-},
-    {
   "Name": "ChannelServer",
   "Description": null,
   "ItemType": "Channel",
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:53:37.4671924+07:00",
-  "ModifiedDate": "2023-08-13T09:51:35.4326425+07:00",
+  "ModifiedDate": "2023-08-13T15:06:14.950797+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -342,7 +51,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:53:42.0554424+07:00",
-  "ModifiedDate": "2023-08-13T09:51:35.4326425+07:00",
+  "ModifiedDate": "2023-08-13T16:26:56.4742711+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -354,7 +63,7 @@
     "InputContactReadBlockSettings": "[]",
     "OutputCoilsReadBlockSettings": "[]",
     "InputRegisterReadBlockSettings": "[]",
-    "HoldingRegisterReadBlockSettings": "[\r\n  {\r\n    \"AddressType\": 4,\r\n    \"Enabled\": true,\r\n    \"StartAddress\": \"400020\",\r\n    \"EndAddress\": \"400108\"\r\n  },\r\n  {\r\n    \"AddressType\": 4,\r\n    \"Enabled\": true,\r\n    \"StartAddress\": \"406101\",\r\n    \"EndAddress\": \"406118\"\r\n  }\r\n]",
+    "HoldingRegisterReadBlockSettings": "[\r\n  {\r\n    \"AddressType\": 4,\r\n    \"Enabled\": true,\r\n    \"StartAddress\": \"400020\",\r\n    \"EndAddress\": \"400104\"\r\n  },\r\n  {\r\n    \"AddressType\": 4,\r\n    \"Enabled\": true,\r\n    \"StartAddress\": \"406102\",\r\n    \"EndAddress\": \"406104\"\r\n  }\r\n]",
     "MaxWritesCount": "10"
   }
 },
@@ -363,8 +72,8 @@
   "HaveTags": true,
   "Tags": [
     {
-  "Name": "ChieuDaiCat1",
-  "Description": "Cai dat don hang dang chay",
+  "Name": "ChieuDaiCat",
+  "Description": "Cai dat don hang dang chay. PC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -393,68 +102,8 @@
   "Tags": []
 },
     {
-  "Name": "ChieuDaiCat2",
-  "Description": "Cai dat don hang cho 1",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T13:55:01.5853695+07:00",
-  "ModifiedDate": "2022-12-06T13:55:01.5853695+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "406109"
-  }
-},
-  "Address": "406109",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "ChieuDaiCat3",
-  "Description": "Cai dat don hang cho 2",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T13:55:01.5853695+07:00",
-  "ModifiedDate": "2022-12-06T13:55:01.5853695+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "406115"
-  }
-},
-  "Address": "406115",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "SoLuongCat1",
-  "Description": "Cai dat don hang dang chay",
+  "Name": "SoLuongCat",
+  "Description": "Cai dat don hang dang chay. PC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -483,68 +132,8 @@
   "Tags": []
 },
     {
-  "Name": "SoLuongCat2",
-  "Description": "Cai dat don hang cho 1",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T13:55:16.613578+07:00",
-  "ModifiedDate": "2022-12-06T13:55:16.613578+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "406108"
-  }
-},
-  "Address": "406108",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "SoLuongCat3",
-  "Description": "Cai dat don hang cho 2",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T13:55:16.613578+07:00",
-  "ModifiedDate": "2022-12-06T13:55:16.613578+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "406114"
-  }
-},
-  "Address": "406114",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "Pallet1",
-  "Description": "Cai dat don hang dang chay",
+  "Name": "Pallet",
+  "Description": "Cai dat don hang dang chay. PC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -573,248 +162,8 @@
   "Tags": []
 },
     {
-  "Name": "Pallet2",
-  "Description": "Cai dat don hang cho 1",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T13:55:37.4645536+07:00",
-  "ModifiedDate": "2022-12-06T13:55:37.4645536+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "406110"
-  }
-},
-  "Address": "406110",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "Pallet3",
-  "Description": "Cai dat don hang cho",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T13:55:37.4645536+07:00",
-  "ModifiedDate": "2022-12-06T13:55:37.4645536+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "406116"
-  }
-},
-  "Address": "406116",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "STT1",
-  "Description": "Cai dat don hang dang chay",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T13:55:49.9163231+07:00",
-  "ModifiedDate": "2022-12-06T13:55:49.9163231+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "406101"
-  }
-},
-  "Address": "406101",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "STT2",
-  "Description": "Cai dat don hang cho 1",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T13:55:49.9163231+07:00",
-  "ModifiedDate": "2022-12-06T13:55:49.9163231+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "406107"
-  }
-},
-  "Address": "406107",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "STT3",
-  "Description": "Cai dat don hang cho 2",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T13:55:49.9163231+07:00",
-  "ModifiedDate": "2022-12-06T13:55:49.9163231+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "406113"
-  }
-},
-  "Address": "406113",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "STTXa1",
-  "Description": "Cai dat don hang dang chay",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T14:04:39.3448187+07:00",
-  "ModifiedDate": "2022-12-06T14:04:39.3448187+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "406106"
-  }
-},
-  "Address": "406106",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "STTXa2",
-  "Description": "Cai dat don hang cho 1",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T14:04:39.3448187+07:00",
-  "ModifiedDate": "2022-12-06T14:04:39.3448187+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "406112"
-  }
-},
-  "Address": "406112",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "STTXa3",
-  "Description": "Cai dat don hang cho 2",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T14:04:39.3448187+07:00",
-  "ModifiedDate": "2022-12-06T14:04:39.3448187+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "406118"
-  }
-},
-  "Address": "406118",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "SoLuongDat",
-  "Description": "So luong may cat dat",
+  "Name": "SoLuongDat_FB",
+  "Description": "So luong may cat dat. PLC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -843,8 +192,8 @@
   "Tags": []
 },
     {
-  "Name": "SoLuongLoi",
-  "Description": "so luong may cat loi",
+  "Name": "SoLuongLoi_FB",
+  "Description": "so luong may cat loi. PLC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -873,8 +222,8 @@
   "Tags": []
 },
     {
-  "Name": "TocDo",
-  "Description": "toc do may cat",
+  "Name": "TocDo_FB",
+  "Description": "toc do may cat. PLC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -933,36 +282,6 @@
   "Tags": []
 },
     {
-  "Name": "Run",
-  "Description": "PLC bao cho PC biet la PLC da chuyen don moi, va chay",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T14:05:08.2479669+07:00",
-  "ModifiedDate": "2022-12-06T14:05:08.2479669+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "400021"
-  }
-},
-  "Address": "400021",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
   "Name": "LenhChuyenDon",
   "Description": "PLC bao cho PC biet don hien tai da chay xong va yeu cau doi don. PLC set 1 - PC set 0",
   "ItemType": "Tag",
@@ -993,82 +312,22 @@
   "Tags": []
 },
     {
-  "Name": "STTChot",
-  "Description": "STT chot khi PLC bao chuyen don. truoc khi set LenhChuyeDon, thi PLC move STT1-->STTChot",
+  "Name": "Run",
+  "Description": "PLC set. Bao may chay/dung",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
-  "CreatedDate": "2022-12-06T14:05:08.2479669+07:00",
-  "ModifiedDate": "2022-12-06T14:05:08.2479669+07:00",
+  "CreatedDate": "2023-08-13T11:36:56.3531701+07:00",
+  "ModifiedDate": "2023-08-13T11:36:56.3531701+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
   "Parameters": {
     "DataType": "Word",
-    "Address": "400108"
+    "Address": "400021"
   }
 },
-  "Address": "400108",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "SLDatChot",
-  "Description": "Tuong tu STTChot",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T14:05:08.2479669+07:00",
-  "ModifiedDate": "2022-12-06T14:05:08.2479669+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "400102"
-  }
-},
-  "Address": "400102",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "SLLoiChot",
-  "Description": "Tuong tu STTChot",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2022-12-06T14:05:08.2479669+07:00",
-  "ModifiedDate": "2022-12-06T14:05:08.2479669+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "400104"
-  }
-},
-  "Address": "400104",
+  "Address": "400021",
   "DataTypeName": "Word",
   "RefreshRate": 100,
   "ByteOrder": 0,
@@ -1093,7 +352,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2023-01-03T08:12:43.1645774+07:00",
-  "ModifiedDate": "2023-08-13T09:51:35.4326425+07:00",
+  "ModifiedDate": "2023-08-13T15:06:14.950797+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -1113,7 +372,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2023-01-03T08:12:49.0831984+07:00",
-  "ModifiedDate": "2023-08-13T09:51:35.4326425+07:00",
+  "ModifiedDate": "2023-08-13T15:06:14.950797+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -1125,7 +384,7 @@
     "InputContactReadBlockSettings": "[]",
     "OutputCoilsReadBlockSettings": "[]",
     "InputRegisterReadBlockSettings": "[]",
-    "HoldingRegisterReadBlockSettings": "[\r\n  {\r\n    \"AddressType\": 4,\r\n    \"Enabled\": true,\r\n    \"StartAddress\": \"400001\",\r\n    \"EndAddress\": \"400100\"\r\n  }\r\n]",
+    "HoldingRegisterReadBlockSettings": "[\r\n  {\r\n    \"AddressType\": 4,\r\n    \"Enabled\": true,\r\n    \"StartAddress\": \"400002\",\r\n    \"EndAddress\": \"400102\"\r\n  }\r\n]",
     "MaxWritesCount": "10"
   }
 },
@@ -1134,38 +393,8 @@
   "HaveTags": true,
   "Tags": [
     {
-  "Name": "STT1",
-  "Description": "Don hang chay",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2023-07-25T14:38:10.3441297+07:00",
-  "ModifiedDate": "2023-07-25T14:38:10.3441297+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "400001"
-  }
-},
-  "Address": "400001",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "Xa1",
-  "Description": "doc tu cai dat don hang (order)",
+  "Name": "Xa",
+  "Description": "chon xa bao nhieu tam 1 luc. PC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -1194,8 +423,8 @@
   "Tags": []
 },
     {
-  "Name": "Nap11",
-  "Description": "doc tu cai dat don hang (order) = Rong/2",
+  "Name": "Rong",
+  "Description": "Rong. PC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -1224,8 +453,8 @@
   "Tags": []
 },
     {
-  "Name": "Cao1",
-  "Description": "doc tu cai dat don hang (order)",
+  "Name": "Cao",
+  "Description": "doc tu cai dat don hang (order). PC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -1254,8 +483,8 @@
   "Tags": []
 },
     {
-  "Name": "Nap12",
-  "Description": "doc tu cai dat don hang (order) = Rong/2",
+  "Name": "Canh",
+  "Description": "= Rong/2. PC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -1284,8 +513,8 @@
   "Tags": []
 },
     {
-  "Name": "Lang1",
-  "Description": "doc tu cai dat don hang (order)",
+  "Name": "Lan",
+  "Description": "Kieu lan. PC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -1314,8 +543,8 @@
   "Tags": []
 },
     {
-  "Name": "Song1",
-  "Description": "doc tu cai dat don hang (order), khoi luong cong them.",
+  "Name": "Song",
+  "Description": "doc tu cai dat don hang (order). Chieu dai cong them. phu thuoc vao kieu song va so lop. PC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -1335,217 +564,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "STT2",
-  "Description": "Don hang cho",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2023-07-25T14:38:10.3441297+07:00",
-  "ModifiedDate": "2023-07-25T14:38:10.3441297+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "400009"
-  }
-},
-  "Address": "400009",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
   "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "Xa2",
-  "Description": "",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2023-07-25T14:38:10.3441297+07:00",
-  "ModifiedDate": "2023-07-25T14:38:10.3441297+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "400010"
-  }
-},
-  "Address": "400010",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "Nap21",
-  "Description": "",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2023-07-25T14:38:10.3441297+07:00",
-  "ModifiedDate": "2023-07-25T14:38:10.3441297+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "400011"
-  }
-},
-  "Address": "400011",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "Cao2",
-  "Description": "",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2023-07-25T14:38:10.3441297+07:00",
-  "ModifiedDate": "2023-07-25T14:38:10.3441297+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "400012"
-  }
-},
-  "Address": "400012",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "Nap22",
-  "Description": "",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2023-07-25T14:38:10.3441297+07:00",
-  "ModifiedDate": "2023-07-25T14:38:10.3441297+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "400013"
-  }
-},
-  "Address": "400013",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "Lang2",
-  "Description": "",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2023-07-25T14:38:10.3441297+07:00",
-  "ModifiedDate": "2023-07-25T14:38:10.3441297+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "400014"
-  }
-},
-  "Address": "400014",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "Song2",
-  "Description": "",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2023-07-25T14:38:10.3441297+07:00",
-  "ModifiedDate": "2023-07-25T14:38:10.3441297+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "400015"
-  }
-},
-  "Address": "400015",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 0.1,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -1584,38 +603,8 @@
   "Tags": []
 },
     {
-  "Name": "DoiDonFT",
-  "Description": "PLC feedback da doi don xong",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2023-07-25T14:38:10.3441297+07:00",
-  "ModifiedDate": "2023-07-25T14:38:10.3441297+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "400021"
-  }
-},
-  "Address": "400021",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
   "Name": "TocDo",
-  "Description": "",
+  "Description": "PLC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -1635,7 +624,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -1665,7 +654,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -1695,7 +684,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -1725,7 +714,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -1755,7 +744,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -1785,7 +774,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -1875,7 +864,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -1905,7 +894,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -1935,7 +924,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -1965,7 +954,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -1995,7 +984,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -2025,7 +1014,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -2055,7 +1044,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -2085,7 +1074,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -2095,7 +1084,7 @@
 },
     {
   "Name": "DoiDon",
-  "Description": "PC bao cho PLC biet da ghi chuyen don xong",
+  "Description": "PC bao cho PLC biet da ghi chuyen don xong. PC set 1 - PLC set ve 0",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -2145,7 +1134,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -2175,7 +1164,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -2205,7 +1194,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -2235,7 +1224,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -2265,7 +1254,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -2295,36 +1284,6 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "LoaiLan_SV",
-  "Description": "",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2023-07-25T14:38:10.3451294+07:00",
-  "ModifiedDate": "2023-07-25T14:38:10.3451294+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "400046"
-  }
-},
-  "Address": "400046",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
   "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
@@ -2334,38 +1293,8 @@
   "Tags": []
 },
     {
-  "Name": "DoSauLan_SV",
-  "Description": "",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2023-07-25T14:38:10.3451294+07:00",
-  "ModifiedDate": "2023-07-25T14:38:10.3451294+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "400047"
-  }
-},
-  "Address": "400047",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "Lang1_SV",
-  "Description": "Vi tri lang cai dat. PC set",
+  "Name": "Lan1_SV",
+  "Description": "Vi tri lan cai dat. PC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -2385,7 +1314,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -2394,8 +1323,8 @@
   "Tags": []
 },
     {
-  "Name": "Lang2_SV",
-  "Description": "",
+  "Name": "Lan2_SV",
+  "Description": "Vi tri lan cai dat. PC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -2415,7 +1344,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -2424,8 +1353,8 @@
   "Tags": []
 },
     {
-  "Name": "Lang3_SV",
-  "Description": "",
+  "Name": "Lan3_SV",
+  "Description": "Vi tri lan cai dat. PC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -2445,7 +1374,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -2454,8 +1383,8 @@
   "Tags": []
 },
     {
-  "Name": "Lang4_SV",
-  "Description": "",
+  "Name": "Lan4_SV",
+  "Description": "Vi tri lan cai dat. PC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -2475,7 +1404,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -2484,8 +1413,8 @@
   "Tags": []
 },
     {
-  "Name": "Lang5_SV",
-  "Description": "",
+  "Name": "Lan5_SV",
+  "Description": "Vi tri lan cai dat. PC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -2505,7 +1434,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -2514,8 +1443,8 @@
   "Tags": []
 },
     {
-  "Name": "Lang6_SV",
-  "Description": "",
+  "Name": "Lan6_SV",
+  "Description": "Vi tri lan cai dat. PC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -2535,7 +1464,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -2544,8 +1473,8 @@
   "Tags": []
 },
     {
-  "Name": "Lang7_SV",
-  "Description": "",
+  "Name": "Lan7_SV",
+  "Description": "Vi tri lan cai dat. PC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -2565,7 +1494,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -2574,8 +1503,8 @@
   "Tags": []
 },
     {
-  "Name": "Lang8_SV",
-  "Description": "",
+  "Name": "Lan8_SV",
+  "Description": "Vi tri lan cai dat. PC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -2595,7 +1524,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -2754,7 +1683,7 @@
   "Tags": []
 },
     {
-  "Name": "Lang1_U",
+  "Name": "Lan1_U",
   "Description": "On/Off lang. PC set",
   "ItemType": "Tag",
   "IsReadOnly": false,
@@ -2784,7 +1713,7 @@
   "Tags": []
 },
     {
-  "Name": "Lang2_U",
+  "Name": "Lan2_U",
   "Description": "",
   "ItemType": "Tag",
   "IsReadOnly": false,
@@ -2814,7 +1743,7 @@
   "Tags": []
 },
     {
-  "Name": "Lang3_U",
+  "Name": "Lan3_U",
   "Description": "",
   "ItemType": "Tag",
   "IsReadOnly": false,
@@ -2844,7 +1773,7 @@
   "Tags": []
 },
     {
-  "Name": "Lang4_U",
+  "Name": "Lan4_U",
   "Description": "",
   "ItemType": "Tag",
   "IsReadOnly": false,
@@ -2874,7 +1803,7 @@
   "Tags": []
 },
     {
-  "Name": "Lang5_U",
+  "Name": "Lan5_U",
   "Description": "",
   "ItemType": "Tag",
   "IsReadOnly": false,
@@ -2904,7 +1833,7 @@
   "Tags": []
 },
     {
-  "Name": "Lang6_U",
+  "Name": "Lan6_U",
   "Description": "",
   "ItemType": "Tag",
   "IsReadOnly": false,
@@ -2925,7 +1854,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -2934,7 +1863,7 @@
   "Tags": []
 },
     {
-  "Name": "Lang7_U",
+  "Name": "Lan7_U",
   "Description": "",
   "ItemType": "Tag",
   "IsReadOnly": false,
@@ -2964,7 +1893,7 @@
   "Tags": []
 },
     {
-  "Name": "Lang8_U",
+  "Name": "Lan8_U",
   "Description": "",
   "ItemType": "Tag",
   "IsReadOnly": false,
@@ -3015,7 +1944,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -3045,7 +1974,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -3075,7 +2004,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -3105,7 +2034,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -3135,7 +2064,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -3165,7 +2094,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -3195,7 +2124,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -3225,7 +2154,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -3255,7 +2184,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -3264,7 +2193,7 @@
   "Tags": []
 },
     {
-  "Name": "Lang_Lang",
+  "Name": "Lan_Lan",
   "Description": "Khoang cach toi thieu de 2 lang khong dung nhau",
   "ItemType": "Tag",
   "IsReadOnly": false,
@@ -3285,7 +2214,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -3294,7 +2223,7 @@
   "Tags": []
 },
     {
-  "Name": "Lang1_Min",
+  "Name": "Lan1_Min",
   "Description": "vi tri min lang 1 co the di chuyen",
   "ItemType": "Tag",
   "IsReadOnly": false,
@@ -3315,7 +2244,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -3324,7 +2253,7 @@
   "Tags": []
 },
     {
-  "Name": "Lang1_Max",
+  "Name": "Lan1_Max",
   "Description": "",
   "ItemType": "Tag",
   "IsReadOnly": false,
@@ -3345,7 +2274,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -3354,7 +2283,7 @@
   "Tags": []
 },
     {
-  "Name": "Lang2_Min",
+  "Name": "Lan2_Min",
   "Description": "",
   "ItemType": "Tag",
   "IsReadOnly": false,
@@ -3366,7 +2295,7 @@
   "DisplayParameters": null,
   "Parameters": {
     "DataType": "Word",
-    "Address": "400070"
+    "Address": "400081"
   }
 },
   "Address": "400081",
@@ -3375,7 +2304,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -3384,7 +2313,7 @@
   "Tags": []
 },
     {
-  "Name": "Lang2_Max",
+  "Name": "Lan2_Max",
   "Description": "",
   "ItemType": "Tag",
   "IsReadOnly": false,
@@ -3396,7 +2325,7 @@
   "DisplayParameters": null,
   "Parameters": {
     "DataType": "Word",
-    "Address": "400071"
+    "Address": "400082"
   }
 },
   "Address": "400082",
@@ -3405,7 +2334,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -3414,7 +2343,7 @@
   "Tags": []
 },
     {
-  "Name": "Lang3_Min",
+  "Name": "Lan3_Min",
   "Description": "",
   "ItemType": "Tag",
   "IsReadOnly": false,
@@ -3426,7 +2355,7 @@
   "DisplayParameters": null,
   "Parameters": {
     "DataType": "Word",
-    "Address": "400072"
+    "Address": "400083"
   }
 },
   "Address": "400083",
@@ -3435,7 +2364,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -3444,7 +2373,7 @@
   "Tags": []
 },
     {
-  "Name": "Lang3_Max",
+  "Name": "Lan3_Max",
   "Description": "",
   "ItemType": "Tag",
   "IsReadOnly": false,
@@ -3456,7 +2385,7 @@
   "DisplayParameters": null,
   "Parameters": {
     "DataType": "Word",
-    "Address": "400073"
+    "Address": "400084"
   }
 },
   "Address": "400084",
@@ -3465,7 +2394,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -3474,7 +2403,7 @@
   "Tags": []
 },
     {
-  "Name": "Lang4_Min",
+  "Name": "Lan4_Min",
   "Description": "",
   "ItemType": "Tag",
   "IsReadOnly": false,
@@ -3486,7 +2415,7 @@
   "DisplayParameters": null,
   "Parameters": {
     "DataType": "Word",
-    "Address": "400074"
+    "Address": "400085"
   }
 },
   "Address": "400085",
@@ -3495,7 +2424,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -3504,7 +2433,7 @@
   "Tags": []
 },
     {
-  "Name": "Lang4_Max",
+  "Name": "Lan4_Max",
   "Description": "",
   "ItemType": "Tag",
   "IsReadOnly": false,
@@ -3516,7 +2445,7 @@
   "DisplayParameters": null,
   "Parameters": {
     "DataType": "Word",
-    "Address": "400075"
+    "Address": "400086"
   }
 },
   "Address": "400086",
@@ -3525,7 +2454,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -3555,7 +2484,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -3564,8 +2493,8 @@
   "Tags": []
 },
     {
-  "Name": "MetToiKeHoach1",
-  "Description": "PC Set",
+  "Name": "MetToiKeHoach",
+  "Description": "PLC Set.Tong so met theo don hang. (ChieuDaiCat*SoLuongCat)/100. Don vi met.",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -3580,36 +2509,6 @@
   }
 },
   "Address": "400096",
-  "DataTypeName": "Word",
-  "RefreshRate": 100,
-  "ByteOrder": 0,
-  "AccessPermission": "ReadAndWrite",
-  "Offset": 0.0,
-  "Gain": 1.0,
-  "IsInternalTag": false,
-  "GUID": null,
-  "Retain": false,
-  "Childs": [],
-  "HaveTags": true,
-  "Tags": []
-},
-    {
-  "Name": "MetToiKeHoach2",
-  "Description": "PC Set",
-  "ItemType": "Tag",
-  "IsReadOnly": false,
-  "Enabled": true,
-  "CreatedDate": "2023-07-25T14:38:10.3461283+07:00",
-  "ModifiedDate": "2023-07-25T14:38:10.3461283+07:00",
-  "ParameterContainer": {
-  "DisplayName": null,
-  "DisplayParameters": null,
-  "Parameters": {
-    "DataType": "Word",
-    "Address": "400097"
-  }
-},
-  "Address": "400097",
   "DataTypeName": "Word",
   "RefreshRate": 100,
   "ByteOrder": 0,
@@ -3645,7 +2544,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -3675,7 +2574,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -3705,7 +2604,7 @@
   "ByteOrder": 0,
   "AccessPermission": "ReadAndWrite",
   "Offset": 0.0,
-  "Gain": 0.1,
+  "Gain": 1.0,
   "IsInternalTag": false,
   "GUID": null,
   "Retain": false,
@@ -3730,6 +2629,36 @@
   }
 },
   "Address": "400101",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "DoSauLan",
+  "Description": "PC set",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-08-13T12:20:52.9351162+07:00",
+  "ModifiedDate": "2023-08-13T12:20:52.9351162+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400102"
+  }
+},
+  "Address": "400102",
   "DataTypeName": "Word",
   "RefreshRate": 100,
   "ByteOrder": 0,

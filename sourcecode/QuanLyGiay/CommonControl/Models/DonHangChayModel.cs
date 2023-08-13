@@ -44,6 +44,15 @@ namespace CommonControl
                 return Math.Round(SLCatTam * DaiCat / 100, 2);
             }
         }
+        public int TongSoThung
+        {
+            set { }
+            get
+            {
+                return SLCatTam * Xa;
+            }
+        }
+
         public int Pallet { get; set; }
 
         #region phần cài đặt cho máy xẩ splitter
@@ -52,7 +61,7 @@ namespace CommonControl
         public int Xa { get; set; }//quy định 1 lần bao nhiêu con --> 1 khổ xả ra 1 lần bao nhiêu tấm
 
         /// <summary>
-        /// Nap1
+        /// Rộng, cm.
         /// </summary>
         [DisplayName("Rộng")]
         public double Rong { get; set; }
@@ -127,7 +136,8 @@ namespace CommonControl
                 catch { return ""; }
             }
         }
-        public int TocDoTB
+        public double TocDo { get; set; }
+        public double TocDoTB
         {
             get
             {
@@ -154,7 +164,7 @@ namespace CommonControl
         {
             get { return (double)(DaiCat * SLCatTam) / 1000; }
         }
-        
+
         public int HoanTatCutter { get; set; }
         public int HoanTatSongE { get; set; }
         public int HoanTatGiaySongE { get; set; }
@@ -173,5 +183,10 @@ namespace CommonControl
         public double PhanTramLe { get => (Le / Kho) * 100.0f; }
         public DateTime CreatedDate { get; set; }
         public int IsActived { get; set; }
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
+        }
     }
 }

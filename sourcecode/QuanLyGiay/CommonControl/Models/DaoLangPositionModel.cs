@@ -24,7 +24,7 @@ namespace CommonControl
         public int Lang8U { get; set; } = 0;
 
         //vị trí cài đặt
-        public int Dao1SV { get; set; } = 0;
+        public int Dao1SV { get; set; } = 0;//mm
         public int Dao2SV { get; set; } = 0;
         public int Dao3SV { get; set; } = 0;
         public int Dao4SV { get; set; } = 0;
@@ -82,7 +82,7 @@ namespace CommonControl
         public int Lang_Lang { get; set; } = 0;//Khoảng cách tối thiểu để 2 lằng không đụng nhau
         public int KieuLang { get; set; }
         public int Xa { get; set; }//so lượng tấm cho 1 lan xa
-        public int Song { get; set; }// chính là phần cộng thêm theo kiểu sóng và số lớp
+        //public int Song { get; set; }// chính là phần cộng thêm theo kiểu sóng và số lớp
         public int KhoMay { get; set; }//chiều rộng của máy xả
         public int MinSize //chiều rộng tối thiểu mà máy xả có thể cắt được
         {

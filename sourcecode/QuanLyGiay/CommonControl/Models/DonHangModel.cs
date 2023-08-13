@@ -37,10 +37,20 @@ namespace CommonControl
                 return Math.Round(SLCatTam * DaiCat / 100, 2);
             }
         }
-       
+
+        public int TongSoThung
+        {
+            set { }
+            get
+            {
+                return SLCatTam * Xa;
+            }
+        }
+
 
         #region phần cài đặt cho máy xẩ splitter
         //chiều rộng của khổ xả = Rộng/2 + Cao + Rong/2
+
         [DisplayName("Xả")]
         public int Xa { get; set; }//quy định 1 lần bao nhiêu con --> 1 khổ xả ra 1 lần bao nhiêu tấm
 
@@ -112,7 +122,12 @@ namespace CommonControl
         public string GhimDan { get; set; }
         [Browsable(false)]
         public int? IsActived { get; set; }
-        
+
         public int Pallet { get; set; }
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
+        }
     }
 }

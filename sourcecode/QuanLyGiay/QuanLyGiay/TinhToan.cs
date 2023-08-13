@@ -30,7 +30,7 @@ namespace QuanLyGiay
         {
             GlobalVariable.DaoLangPosition.KieuLang = donHang.Lang;//chon kiểu lằng
             GlobalVariable.DaoLangPosition.Xa = donHang.Xa;//xả bao nhiêu tấm, cái này quy định dao
-            GlobalVariable.DaoLangPosition.Song = (int)(donHang.CongThem * 10);//xả bao nhiêu tấm, cái này quy định dao
+            //GlobalVariable.DaoLangPosition.Song = (int)(donHang.CongThem * 10);//xả bao nhiêu tấm, cái này quy định dao
 
             double RongTotal = 0;
 
@@ -41,31 +41,33 @@ namespace QuanLyGiay
             A3 - Nắp chồm + thùng gói sườn+thùng gói giữa  : (Rộng / cao / Rộng) - 3 loại này cán lằn như nhau/
                  hàng bế: cái này dựa theo thông số bên thiết kế khuôn bế cung cấp
             các số 0.3,0.2 là phần cộng thêm theo sóng là lớp giấy
+            tất cả các thông sô khi cài đặt đơn hàng đơn vị là cm, chỉ ngoại trừ tổng số mét cắt đơn vị là met
+            chuyeernr đổi về đơn vị mm.
             */
-            double Rong = donHang.Rong;
-            double Cao = donHang.Cao;
-            double Nap1 = Rong / 2;
-            double Nap2 = Rong / 2;
+            double Rong = donHang.Rong * 10;
+            double Cao = donHang.Cao * 10;
+            double Nap1 = Rong / 2 * 10;
+            double Nap2 = Rong / 2 * 10;
 
-            double CaoA = donHang.Cao;
+            double CaoA = donHang.Cao * 10;
             double Nap1A = Nap1;
             double Nap2A = Nap2;
-            double RongA = Nap1A + CaoA + Nap2A + GlobalVariable.DaoLangPosition.Song;
+            double RongA = Nap1A + CaoA + Nap2A + donHang.CongThem*10;
 
-            double CaoB = donHang.Cao;
+            double CaoB = donHang.Cao * 10;
             double Nap1B = Nap1;
             double Nap2B = Nap2;
-            double RongB = Nap1B + CaoB + Nap2B + GlobalVariable.DaoLangPosition.Song;
+            double RongB = Nap1B + CaoB + Nap2B + donHang.CongThem * 10;
 
-            double CaoC = donHang.Cao;
+            double CaoC = donHang.Cao * 10;
             double Nap1C = Nap1;
             double Nap2C = Nap2;
-            double RongC = Nap1C + CaoC + Nap2C + GlobalVariable.DaoLangPosition.Song;
+            double RongC = Nap1C + CaoC + Nap2C + donHang.CongThem * 10;
 
-            double CaoD = donHang.Cao;
+            double CaoD = donHang.Cao * 10;
             double Nap1D = Nap1;
             double Nap2D = Nap2;
-            double RongD = Nap1D + CaoD + Nap2D + GlobalVariable.DaoLangPosition.Song;
+            double RongD = Nap1D + CaoD + Nap2D + donHang.CongThem * 10;
 
             //tắt hết tất cả các dao và lằng trước khi vào set position, khi set xong vị trí thì sẽ bật dao và lằng tương ứng.
             GlobalVariable.DaoLangPosition.Dao1U = 0;
