@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,137 +9,110 @@ namespace CommonControl
 {
     public class DonHangModel
     {
-        public DonHangModel()
-        {
-            Chay = TimeSpan.FromMilliseconds(0);
-            Dung = TimeSpan.FromMilliseconds(0);
-        }
-
-        public string KhachHang { get; set; }
-        public int GiayDai { get; set; }
-        public int GiayRong { get; set; }
-        public int GiayCao { get; set; }
-        public string DonHang { get; set; }
-        public string PO { get; set; }
-        public string MayIn { get; set; }
-        public string Chap_Be { get; set; }
-        public string Ghim_Dan { get; set; }
-
-        public int Ca { get; set; }
-        public long DonHangId { get; set; }
-        public DateTime CreatedDateDonHang { get; set; }
-        public long STT { get; set; }
+        [Browsable(false)]
+        public int Id { get; set; }
+        public StatusDHEnum Status { get; set; } = StatusDHEnum.NewOrder;
+        public int STT { get; set; }
+        [DisplayName("Mã")]
         public string Ma { get; set; }
+        [DisplayName("Sóng")]
         public string Song { get; set; }
-        public int Kho { get; set; }
-        public double ChieuDai { get; set; }
-        public int SoLuong { get; set; }
-        public int SLDat { get; set; }
-        public int SLDatTruocDo { get; set; } = -1;
-        public double SoMetDatTruocDo { get; set; }
-        public int SLLoi { get; set; }
-        public int MayXa { get; set; } = 1;
-        public string Line { get; set; }
-        public int SLConLai
+        public string SoLop { get; set; }//quy định số lớp giấy
+        public double CongThem //tuy vao số lớp mà cọng thêm số tương ứng.
         {
-            get { return SoLuong - SLDat; }
-        }
-        public double SoMetDat
-        {
-            get { return (double)(ChieuDai * SLDat) / 1000; }
-        }
-        public double SoMetDatSF { get; set; }
-
-        public double SoMetLoi
-        {
-            get { return (double)(ChieuDai * SLLoi) / 1000; }
+            get; set;
         }
 
-        public double ConLai
+        [DisplayName("Khổ")]
+        public double Kho { get; set; }
+        [DisplayName("Dài Cắt")]
+        public double DaiCat { get; set; }//don vi cm
+        [DisplayName("SL Cắt Tấm")]
+        public int SLCatTam { get; set; }//dung cho máy cắt
+        public double SoMetCaiDat//don vi met
         {
-            get { return Tong - SoMetDat; }
-        }
-
-        public string PhanTramLoi
-        {
+            set { }
             get
             {
-                try
-                {
-                    if (SoMetDat == 0.0 && SoMetLoi == 0.0)
-                        return "0";
-                    else
-                    {
-                        return (SoMetLoi * 100 / (SoMetLoi + SoMetDat)).ToString("f1");
-                    }
-                }
-                catch { return ""; }
+                return Math.Round(SLCatTam * DaiCat / 100, 2);
             }
         }
-        public int TocDoTB
-        {
-            get
-            {
-                if (Chay.TotalSeconds == 0)
-                    return 0;
-                return (int)(SoMetDat / Chay.TotalSeconds * 60);
-            }
-        }
-        public TimeSpan Chay { get; set; }
-        public DateTime TGBatDau { get; set; }
-        public DateTime TGKetThuc { get; set; }
-        public TimeSpan Dung { get; set; }
-        public int SoDung { get; set; }
-        public double M2Dat
-        {
-            get { return Kho * SoMetDat / 1000; }
-        }
-        public double M2Loi
-        {
-            get { return Kho * SoMetLoi / 1000; }
-        }
-        public string TrangThaiTruocDo { get; set; }
-        public double Tong
-        {
-            get { return (double)(ChieuDai * SoLuong) / 1000; }
-        }
-        public int Pallet { get; set; }
-        public int Xa { get; set; }//chon xả mấy tấm 1-2-3-4 ==> 0-1-2-3-4
+       
+
+        #region phần cài đặt cho máy xẩ splitter
+        //chiều rộng của khổ xả = Rộng/2 + Cao + Rong/2
+        [DisplayName("Xả")]
+        public int Xa { get; set; }//quy định 1 lần bao nhiêu con --> 1 khổ xả ra 1 lần bao nhiêu tấm
+
         /// <summary>
         /// Nap1
         /// </summary>
-        public int Rong { get; set; }
-        //Nap2
-        public int Canh { get; set; }
-        public int Cao { get; set; }
-        //Kiểu lằng
-        public int Lang { get; set; }
+        [DisplayName("Rộng")]
+        public double Rong { get; set; }
+        /// <summary>
+        /// Rong/2.
+        /// </summary>
+        [DisplayName("Cánh")]
+        public double Canh
+        {
+            set { }
+            get
+            {
+                return Math.Round((double)Rong / 2, 2);
+            }
+        }
+        [DisplayName("Cao")]
+        public double Cao { get; set; }
+        [DisplayName("Lằn")]
+        public int Lang { get; set; }//quy định kiểu lần có giá trị 1 đến 4
+        [DisplayName("Độ Sau Lằn")]
+        public double DoSauLan { get; set; }
+        #endregion
 
+        [DisplayName("Giấy Sóng E")]
         public string GiaySongE { get; set; }
+        [DisplayName("Giấy Mặt E")]
         public string GiayMatE { get; set; }
+        [DisplayName("Giấy Sóng B")]
         public string GiaySongB { get; set; }
+        [DisplayName("Giấy Mặt B")]
         public string GiayMatB { get; set; }
+        [DisplayName("GiấySóng C")]
         public string GiaySongC { get; set; }
+        [DisplayName("Giấy Mặt C")]
         public string GiayMatC { get; set; }
-        public string GhiChu { get; set; }
+        [DisplayName("Giấy Mền")]
         public string GiayMen { get; set; }
-        public int HoanTatCutter { get; set; }
-        public int HoanTatSongE { get; set; }
-        public int HoanTatGiaySongE { get; set; }
-        public int HoanTatGiayMatE { get; set; }
-        public int HoanTatSongB { get; set; }
-        public int HoanTatGiaySongB { get; set; }
-        public int HoanTatGiayMatB { get; set; }
-        public int HoanTatSongC { get; set; }
-        public int HoanTatGiaySongC { get; set; }
-        public int HoanTatGiayMatC { get; set; }
-        public int HoanTatSpliter { get; set; }
-        public int HoanTatMayMen { get; set; }
-        public int FirstRow { get; set; }
+        [DisplayName("Ghi chú")]
+        public string GhiChu { get; set; }
 
-        public double Le { get => Kho - (Xa * Rong); }
-        public double PhanTramLe { get => (Le / Kho) * 100.0f; }
-        public DateTime CreatedDate { get; set; }
-        public int IsActived { get; set; }
+        [DisplayName("Máy xả")]
+        public string MayXa { get; set; }
+        public string Line { get; set; }
+        [DisplayName("Ngày tạo")]
+        public DateTime? CreatedDate { get; set; }
+
+        [Browsable(false)]
+        public string KhachHang { get; set; }
+        [Browsable(false)]
+        public int DaiKH { get; set; } = 0;
+        [Browsable(false)]
+        public int RongKH { get; set; } = 0;
+        [Browsable(false)]
+        public int CaoKH { get; set; } = 0;
+        [Browsable(false)]
+        public string DonHang { get; set; }
+        [Browsable(false)]
+        public string PO { get; set; }
+        [Browsable(false)]
+        public string MayIn { get; set; }
+        [Browsable(false)]
+        public string ChapBe { get; set; }
+        [Browsable(false)]
+        public string GhimDan { get; set; }
+        [Browsable(false)]
+        public int? IsActived { get; set; }
+        
+        public int Pallet { get; set; }
     }
 }

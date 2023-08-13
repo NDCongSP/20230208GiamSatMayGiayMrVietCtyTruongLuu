@@ -56,12 +56,14 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\ChuyenDonModdel.cs" />
-    <Compile Include="Models\DonHangModel.cs" />
+    <Compile Include="Models\DaoLangPositionModel.cs" />
+    <Compile Include="Models\DonHangChayModel.cs" />
     <Compile Include="Models\GiayMenModel.cs" />
     <Compile Include="Models\GiaySongModel.cs" />
+    <Compile Include="Models\SoLopModel.cs" />
     <Compile Include="Models\SongModel.cs" />
     <Compile Include="Models\MaModel.cs" />
-    <Compile Include="Models\tblDonHangModel.cs" />
+    <Compile Include="Models\DonHangModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
