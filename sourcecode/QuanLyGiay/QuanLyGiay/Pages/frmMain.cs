@@ -84,9 +84,9 @@ namespace QuanLyGiay
                             GiayMatC = c.GiayMatC,
                             Line = c.Line,
                             GhiChu = c.GhiChu,
-                            KhachHang=c.KhachHang,
-                            DonHang=c.DonHang,
-                            PO=c.PO
+                            KhachHang = c.KhachHang,
+                            DonHang = c.DonHang,
+                            PO = c.PO
                         };
                     }
                 }
@@ -257,7 +257,10 @@ namespace QuanLyGiay
                         GiaySongC = _donHangDoiDon.GiaySongC,
                         GiayMatC = _donHangDoiDon.GiayMatC,
                         Line = _donHangDoiDon.Line,
-                        GhiChu = _donHangDoiDon.GhiChu
+                        GhiChu = _donHangDoiDon.GhiChu,
+                        KhachHang = _donHangDoiDon.KhachHang,
+                        DonHang = _donHangDoiDon.DonHang,
+                        PO = _donHangDoiDon.PO,
                     };
 
                     DoiDonCutter(_donHangDoiDon);
@@ -715,38 +718,40 @@ namespace QuanLyGiay
                 //move _donHangDangChay sang _donHangHoanThanh
                 if (_donHangDangChay.STT != 0)
                 {
-                    var donhang = new DonHangChayModel()
-                    {
-                        IdDonHang = _donHangDangChay.IdDonHang,
-                        STT = _donHangDangChay.STT,
-                        Ma = _donHangDangChay.Ma,
-                        Song = _donHangDangChay.Song,
-                        Kho = _donHangDangChay.Kho,
-                        DaiCat = _donHangDangChay.DaiCat,
-                        SLCatTam = _donHangDangChay.SLCatTam,
-                        Pallet = _donHangDangChay.Pallet,
-                        Xa = _donHangDangChay.Xa,
-                        Rong = _donHangDangChay.Rong,
-                        Canh = _donHangDangChay.Canh,
-                        Cao = _donHangDangChay.Cao,
-                        Lang = _donHangDangChay.Lang,
-                        GiayMen = _donHangDangChay.GiayMen,
-                        GiaySongE = _donHangDangChay.GiaySongE,
-                        GiayMatE = _donHangDangChay.GiayMatE,
-                        GiaySongB = _donHangDangChay.GiaySongB,
-                        GiayMatB = _donHangDangChay.GiayMatB,
-                        GiaySongC = _donHangDangChay.GiaySongC,
-                        GiayMatC = _donHangDangChay.GiayMatC,
-                        KhachHang = _donHangDangChay.KhachHang,
-                        DonHang = _donHangDangChay.DonHang,
-                        PO = _donHangDangChay.PO,
-                        Line = _donHangDangChay.Line,
-                        GhiChu = _donHangDangChay.GhiChu
-                    };
+                    //var donhang = new DonHangChayModel()
+                    //{
+                    //    IdDonHang = _donHangDangChay.IdDonHang,
+                    //    STT = _donHangDangChay.STT,
+                    //    Ma = _donHangDangChay.Ma,
+                    //    Song = _donHangDangChay.Song,
+                    //    Kho = _donHangDangChay.Kho,
+                    //    DaiCat = _donHangDangChay.DaiCat,
+                    //    SLCatTam = _donHangDangChay.SLCatTam,
+                    //    Pallet = _donHangDangChay.Pallet,
+                    //    Xa = _donHangDangChay.Xa,
+                    //    Rong = _donHangDangChay.Rong,
+                    //    Canh = _donHangDangChay.Canh,
+                    //    Cao = _donHangDangChay.Cao,
+                    //    Lang = _donHangDangChay.Lang,
+                    //    GiayMen = _donHangDangChay.GiayMen,
+                    //    GiaySongE = _donHangDangChay.GiaySongE,
+                    //    GiayMatE = _donHangDangChay.GiayMatE,
+                    //    GiaySongB = _donHangDangChay.GiaySongB,
+                    //    GiayMatB = _donHangDangChay.GiayMatB,
+                    //    GiaySongC = _donHangDangChay.GiaySongC,
+                    //    GiayMatC = _donHangDangChay.GiayMatC,
+                    //    KhachHang = _donHangDangChay.KhachHang,
+                    //    DonHang = _donHangDangChay.DonHang,
+                    //    PO = _donHangDangChay.PO,
+                    //    Line = _donHangDangChay.Line,
+                    //    GhiChu = _donHangDangChay.GhiChu
+                    //};
 
-                    _donHangHoanThanh = null;
-                    _donHangHoanThanh = new DonHangChayModel();
-                    _donHangHoanThanh = donhang;
+                    //_donHangHoanThanh = null;
+                    //_donHangHoanThanh = new DonHangChayModel();
+                    //_donHangHoanThanh = donhang;
+
+                    _donHangHoanThanh = (DonHangChayModel)_donHangDangChay.Clone();
                 }
 
                 using (var connection = GlobalVariable.GetDbConnection())
@@ -783,7 +788,10 @@ namespace QuanLyGiay
                             GiaySongC = _donHangDoiDon.GiaySongC,
                             GiayMatC = _donHangDoiDon.GiayMatC,
                             Line = _donHangDoiDon.Line,
-                            GhiChu = _donHangDoiDon.GhiChu
+                            GhiChu = _donHangDoiDon.GhiChu,
+                            KhachHang = _donHangDoiDon.KhachHang,
+                            DonHang = _donHangDoiDon.DonHang,
+                            PO = _donHangDoiDon.PO,
                         };
 
                         DoiDonCutter(_donHangDoiDon);
@@ -811,7 +819,7 @@ namespace QuanLyGiay
             easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Lan").WriteAsync(donHangDangChay.Lang.ToString(), WritePiority.High);
             easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Song").WriteAsync(((int)(donHangDangChay.CongThem * 10 * 10)).ToString(), WritePiority.High);
             easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/DoSauLan").WriteAsync(((int)(donHangDangChay.DoSauLan * 10 * 10)).ToString(), WritePiority.High);
-            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/MetToiKeHoach").WriteAsync((donHangDangChay.SoMetCaiDat * 100 * 10).ToString(), WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/MetToiKeHoach").WriteAsync(((int)((donHangDangChay.SoMetCaiDat * 10))).ToString(), WritePiority.High);
 
             easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Dao1_SV").WriteAsync(GlobalVariable.DaoLangPosition.Dao1SV.ToString(), WritePiority.High);
             easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Dao2_SV").WriteAsync(GlobalVariable.DaoLangPosition.Dao2SV.ToString(), WritePiority.High);

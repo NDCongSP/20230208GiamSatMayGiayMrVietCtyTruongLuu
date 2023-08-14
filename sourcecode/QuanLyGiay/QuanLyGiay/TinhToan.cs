@@ -32,7 +32,7 @@ namespace QuanLyGiay
             GlobalVariable.DaoLangPosition.Xa = donHang.Xa;//xả bao nhiêu tấm, cái này quy định dao
             //GlobalVariable.DaoLangPosition.Song = (int)(donHang.CongThem * 10);//xả bao nhiêu tấm, cái này quy định dao
 
-            double RongTotal = 0;
+            double rongTotal = 0;
 
             /*Cán sóng(lằn cán) : 
             7 lớp: (Rộng / 2 + 0.3) / cao / (Rộng / 2 + 0.3)
@@ -44,30 +44,25 @@ namespace QuanLyGiay
             tất cả các thông sô khi cài đặt đơn hàng đơn vị là cm, chỉ ngoại trừ tổng số mét cắt đơn vị là met
             chuyeernr đổi về đơn vị mm.
             */
-            double Rong = donHang.Rong * 10;
-            double Cao = donHang.Cao * 10;
-            double Nap1 = Rong / 2 * 10;
-            double Nap2 = Rong / 2 * 10;
+            double rong = donHang.Rong * 10;
+            double cao = donHang.Cao * 10;
+            double canh = rong / 2;
 
-            double CaoA = donHang.Cao * 10;
-            double Nap1A = Nap1;
-            double Nap2A = Nap2;
-            double RongA = Nap1A + CaoA + Nap2A + donHang.CongThem*10;
+            double caoA = cao;
+            double canhA = canh;
+            double rongA = canhA + caoA + canhA + donHang.CongThem * 10;
 
-            double CaoB = donHang.Cao * 10;
-            double Nap1B = Nap1;
-            double Nap2B = Nap2;
-            double RongB = Nap1B + CaoB + Nap2B + donHang.CongThem * 10;
+            double caoB = cao;
+            double canhB = canh;
+            double rongB = canhB + caoB + canhB + donHang.CongThem * 10;
 
-            double CaoC = donHang.Cao * 10;
-            double Nap1C = Nap1;
-            double Nap2C = Nap2;
-            double RongC = Nap1C + CaoC + Nap2C + donHang.CongThem * 10;
+            double caoC = cao;
+            double canhC = canh;
+            double rongC = canhC + caoC + canhC + donHang.CongThem * 10;
 
-            double CaoD = donHang.Cao * 10;
-            double Nap1D = Nap1;
-            double Nap2D = Nap2;
-            double RongD = Nap1D + CaoD + Nap2D + donHang.CongThem * 10;
+            double caoD = cao;
+            double canhD = canh;
+            double rongD = canhD + caoD + canhD + donHang.CongThem * 10;
 
             //tắt hết tất cả các dao và lằng trước khi vào set position, khi set xong vị trí thì sẽ bật dao và lằng tương ứng.
             GlobalVariable.DaoLangPosition.Dao1U = 0;
@@ -86,13 +81,13 @@ namespace QuanLyGiay
             GlobalVariable.DaoLangPosition.Lang8U = 0;
 
             if (donHang.Xa == 1)
-                RongTotal = RongA;
+                rongTotal = rongA;
             if (donHang.Xa == 2)
-                RongTotal = RongA + RongB;
+                rongTotal = rongA + rongB;
             if (donHang.Xa == 3)
-                RongTotal = RongA + RongB + RongC;
+                rongTotal = rongA + rongB + rongC;
             if (donHang.Xa == 4)
-                RongTotal = RongA + RongB + RongC + RongD;
+                rongTotal = rongA + rongB + rongC + rongD;
 
             //int Rongchia2 = Rong / 2;
             //int Rongx3chia2 = (Rong * 3) / 2;
@@ -112,13 +107,13 @@ namespace QuanLyGiay
             // Xả = 1
             if (donHang.Xa == 1)
             {
-                double rongChia2 = RongTotal / 2;
+                double rongChia2 = rongTotal / 2 * 10;
 
                 #region Dao
                 // Xả 1 - Dao 1,5
                 if (GlobalVariable.DaoLangPosition.Dao2Max >= rongChia2 && GlobalVariable.DaoLangPosition.Dao2Max > GlobalVariable.DaoLangPosition.Dao2Min)
                 {
-                    GlobalVariable.DaoLangPosition.Dao2SV = (int)(rongChia2 * 10);
+                    GlobalVariable.DaoLangPosition.Dao2SV = (int)(rongChia2);
                     GlobalVariable.DaoLangPosition.Dao2U = 1;//bat dao
 
                     GlobalVariable.DaoLangPosition.Dao1SV = GlobalVariable.DaoLangPosition.Dao1Min + GlobalVariable.DaoLangPosition.Dao_Dao;//cho dao về vị trí trung tâm của nó
@@ -126,7 +121,7 @@ namespace QuanLyGiay
                 // Xả 1 - Dao 2,4
                 else if (GlobalVariable.DaoLangPosition.Dao2Max < rongChia2 && GlobalVariable.DaoLangPosition.Dao1Max >= rongChia2 && GlobalVariable.DaoLangPosition.Dao1Max > GlobalVariable.DaoLangPosition.Dao2Min)
                 {
-                    GlobalVariable.DaoLangPosition.Dao1SV = (int)(rongChia2 * 10);
+                    GlobalVariable.DaoLangPosition.Dao1SV = (int)(rongChia2);
                     GlobalVariable.DaoLangPosition.Dao1U = 1;
 
                     GlobalVariable.DaoLangPosition.Dao2SV = GlobalVariable.DaoLangPosition.Dao2Min + GlobalVariable.DaoLangPosition.Dao_Dao;//cho dao về vị trí trung tâm của nó
@@ -135,7 +130,7 @@ namespace QuanLyGiay
                 // Xả 1 - Dao 1,5
                 if (GlobalVariable.DaoLangPosition.Dao4Max >= rongChia2 && GlobalVariable.DaoLangPosition.Dao4Max > GlobalVariable.DaoLangPosition.Dao4Min)
                 {
-                    GlobalVariable.DaoLangPosition.Dao4SV = (int)(rongChia2 * 10);
+                    GlobalVariable.DaoLangPosition.Dao4SV = (int)(rongChia2);
                     GlobalVariable.DaoLangPosition.Dao4U = 1;//bat dao
 
                     GlobalVariable.DaoLangPosition.Dao5SV = GlobalVariable.DaoLangPosition.Dao5Min + GlobalVariable.DaoLangPosition.Dao_Dao;//cho dao về vị trí trung tâm của nó
@@ -143,7 +138,7 @@ namespace QuanLyGiay
                 // Xả 1 - Dao 2,4
                 else if (GlobalVariable.DaoLangPosition.Dao4Max < rongChia2 && GlobalVariable.DaoLangPosition.Dao5Max >= rongChia2 && GlobalVariable.DaoLangPosition.Dao5Max > GlobalVariable.DaoLangPosition.Dao5Min)
                 {
-                    GlobalVariable.DaoLangPosition.Dao5SV = (int)(rongChia2 * 10);
+                    GlobalVariable.DaoLangPosition.Dao5SV = (int)(rongChia2);
                     GlobalVariable.DaoLangPosition.Dao5U = 1;
 
                     GlobalVariable.DaoLangPosition.Dao4SV = GlobalVariable.DaoLangPosition.Dao4Min + GlobalVariable.DaoLangPosition.Dao_Dao;//cho dao về vị trí trung tâm của nó
@@ -151,49 +146,49 @@ namespace QuanLyGiay
                 #endregion
 
                 #region Lang
-                if (rongChia2 <= GlobalVariable.DaoLangPosition.Lang4Max)
-                {
-                    GlobalVariable.DaoLangPosition.Lang4Sv = GlobalVariable.DaoLangPosition.Lang5Sv = (int)(CaoA / 2 * 10);
-                    GlobalVariable.DaoLangPosition.Lang4U = GlobalVariable.DaoLangPosition.Lang5U = 1;
+                //if (rongChia2 <= GlobalVariable.DaoLangPosition.Lang4Max)
+                //{
+                //    GlobalVariable.DaoLangPosition.Lang4Sv = GlobalVariable.DaoLangPosition.Lang5Sv = (int)(CaoA / 2 * 10);
+                //    GlobalVariable.DaoLangPosition.Lang4U = GlobalVariable.DaoLangPosition.Lang5U = 1;
 
-                    GlobalVariable.DaoLangPosition.Lang3Sv = GlobalVariable.DaoLangPosition.Lang6Sv = GlobalVariable.DaoLangPosition.Lang3Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                    GlobalVariable.DaoLangPosition.Lang2Sv = GlobalVariable.DaoLangPosition.Lang7Sv = GlobalVariable.DaoLangPosition.Lang2Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                    GlobalVariable.DaoLangPosition.Lang1Sv = GlobalVariable.DaoLangPosition.Lang8Sv = GlobalVariable.DaoLangPosition.Lang1Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                }
-                else if (rongChia2 > GlobalVariable.DaoLangPosition.Lang4Max && rongChia2 <= GlobalVariable.DaoLangPosition.Lang3Max)
-                {
-                    GlobalVariable.DaoLangPosition.Lang3Sv = GlobalVariable.DaoLangPosition.Lang6Sv = (int)(CaoA / 2 * 10);
-                    GlobalVariable.DaoLangPosition.Lang3U = GlobalVariable.DaoLangPosition.Lang6U = 1;
+                //    GlobalVariable.DaoLangPosition.Lang3Sv = GlobalVariable.DaoLangPosition.Lang6Sv = GlobalVariable.DaoLangPosition.Lang3Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                //    GlobalVariable.DaoLangPosition.Lang2Sv = GlobalVariable.DaoLangPosition.Lang7Sv = GlobalVariable.DaoLangPosition.Lang2Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                //    GlobalVariable.DaoLangPosition.Lang1Sv = GlobalVariable.DaoLangPosition.Lang8Sv = GlobalVariable.DaoLangPosition.Lang1Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                //}
+                //else if (rongChia2 > GlobalVariable.DaoLangPosition.Lang4Max && rongChia2 <= GlobalVariable.DaoLangPosition.Lang3Max)
+                //{
+                //    GlobalVariable.DaoLangPosition.Lang3Sv = GlobalVariable.DaoLangPosition.Lang6Sv = (int)(CaoA / 2 * 10);
+                //    GlobalVariable.DaoLangPosition.Lang3U = GlobalVariable.DaoLangPosition.Lang6U = 1;
 
-                    GlobalVariable.DaoLangPosition.Lang4Sv = GlobalVariable.DaoLangPosition.Lang5Sv = GlobalVariable.DaoLangPosition.Lang4Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                    GlobalVariable.DaoLangPosition.Lang2Sv = GlobalVariable.DaoLangPosition.Lang7Sv = GlobalVariable.DaoLangPosition.Lang2Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                    GlobalVariable.DaoLangPosition.Lang1Sv = GlobalVariable.DaoLangPosition.Lang8Sv = GlobalVariable.DaoLangPosition.Lang1Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                }
-                else if (rongChia2 > GlobalVariable.DaoLangPosition.Lang3Max && CaoA / 2 <= GlobalVariable.DaoLangPosition.Lang2Max)
-                {
-                    GlobalVariable.DaoLangPosition.Lang2Sv = GlobalVariable.DaoLangPosition.Lang7Sv = (int)(CaoA / 2 * 10);
-                    GlobalVariable.DaoLangPosition.Lang2U = GlobalVariable.DaoLangPosition.Lang7U = 1;
+                //    GlobalVariable.DaoLangPosition.Lang4Sv = GlobalVariable.DaoLangPosition.Lang5Sv = GlobalVariable.DaoLangPosition.Lang4Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                //    GlobalVariable.DaoLangPosition.Lang2Sv = GlobalVariable.DaoLangPosition.Lang7Sv = GlobalVariable.DaoLangPosition.Lang2Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                //    GlobalVariable.DaoLangPosition.Lang1Sv = GlobalVariable.DaoLangPosition.Lang8Sv = GlobalVariable.DaoLangPosition.Lang1Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                //}
+                //else if (rongChia2 > GlobalVariable.DaoLangPosition.Lang3Max && CaoA / 2 <= GlobalVariable.DaoLangPosition.Lang2Max)
+                //{
+                //    GlobalVariable.DaoLangPosition.Lang2Sv = GlobalVariable.DaoLangPosition.Lang7Sv = (int)(CaoA / 2 * 10);
+                //    GlobalVariable.DaoLangPosition.Lang2U = GlobalVariable.DaoLangPosition.Lang7U = 1;
 
-                    GlobalVariable.DaoLangPosition.Lang4Sv = GlobalVariable.DaoLangPosition.Lang5Sv = GlobalVariable.DaoLangPosition.Lang4Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                    GlobalVariable.DaoLangPosition.Lang3Sv = GlobalVariable.DaoLangPosition.Lang6Sv = GlobalVariable.DaoLangPosition.Lang3Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                    GlobalVariable.DaoLangPosition.Lang1Sv = GlobalVariable.DaoLangPosition.Lang8Sv = GlobalVariable.DaoLangPosition.Lang1Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                }
-                else if (CaoA / 2 > GlobalVariable.DaoLangPosition.Lang2Max && CaoA / 2 <= GlobalVariable.DaoLangPosition.Lang1Max)
-                {
-                    GlobalVariable.DaoLangPosition.Lang1Sv = GlobalVariable.DaoLangPosition.Lang8Sv = (int)(CaoA / 2 * 10);
-                    GlobalVariable.DaoLangPosition.Lang1U = GlobalVariable.DaoLangPosition.Lang8U = 1;
+                //    GlobalVariable.DaoLangPosition.Lang4Sv = GlobalVariable.DaoLangPosition.Lang5Sv = GlobalVariable.DaoLangPosition.Lang4Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                //    GlobalVariable.DaoLangPosition.Lang3Sv = GlobalVariable.DaoLangPosition.Lang6Sv = GlobalVariable.DaoLangPosition.Lang3Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                //    GlobalVariable.DaoLangPosition.Lang1Sv = GlobalVariable.DaoLangPosition.Lang8Sv = GlobalVariable.DaoLangPosition.Lang1Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                //}
+                //else if (CaoA / 2 > GlobalVariable.DaoLangPosition.Lang2Max && CaoA / 2 <= GlobalVariable.DaoLangPosition.Lang1Max)
+                //{
+                //    GlobalVariable.DaoLangPosition.Lang1Sv = GlobalVariable.DaoLangPosition.Lang8Sv = (int)(CaoA / 2 * 10);
+                //    GlobalVariable.DaoLangPosition.Lang1U = GlobalVariable.DaoLangPosition.Lang8U = 1;
 
-                    GlobalVariable.DaoLangPosition.Lang4Sv = GlobalVariable.DaoLangPosition.Lang5Sv = GlobalVariable.DaoLangPosition.Lang4Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                    GlobalVariable.DaoLangPosition.Lang2Sv = GlobalVariable.DaoLangPosition.Lang7Sv = GlobalVariable.DaoLangPosition.Lang2Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                    GlobalVariable.DaoLangPosition.Lang3Sv = GlobalVariable.DaoLangPosition.Lang6Sv = GlobalVariable.DaoLangPosition.Lang3Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                }
+                //    GlobalVariable.DaoLangPosition.Lang4Sv = GlobalVariable.DaoLangPosition.Lang5Sv = GlobalVariable.DaoLangPosition.Lang4Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                //    GlobalVariable.DaoLangPosition.Lang2Sv = GlobalVariable.DaoLangPosition.Lang7Sv = GlobalVariable.DaoLangPosition.Lang2Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                //    GlobalVariable.DaoLangPosition.Lang3Sv = GlobalVariable.DaoLangPosition.Lang6Sv = GlobalVariable.DaoLangPosition.Lang3Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                //}
                 #endregion
             }
 
             // Xả = 2 --luôn bật dao 3 tại vị trí 0
             else if (donHang.Xa == 2)
             {
-                double rongChia2 = RongTotal / 2;
+                double rongChia2 = rongTotal / 2;
                 GlobalVariable.DaoLangPosition.Dao3U = 1;
 
                 // Xả 1 - Dao 1,5
@@ -222,7 +217,7 @@ namespace QuanLyGiay
                 #region Lang
                 if (rongChia2 < GlobalVariable.DaoLangPosition.Lang2Max)
                 {
-                    GlobalVariable.DaoLangPosition.Lang2Sv = GlobalVariable.DaoLangPosition.Lang5Sv = (int)(Cao / 2 * 10);
+                    GlobalVariable.DaoLangPosition.Lang2Sv = GlobalVariable.DaoLangPosition.Lang5Sv = (int)(cao / 2 * 10);
                     GlobalVariable.DaoLangPosition.Lang2U = GlobalVariable.DaoLangPosition.Lang5U = 1;
                 }
                 #endregion
@@ -230,25 +225,25 @@ namespace QuanLyGiay
             // Xả = 3
             else if (donHang.Xa == 3)
             {
-                double rongChia2 = RongTotal / 2;
+                double rongChia2 = rongTotal / 2;
 
                 GlobalVariable.DaoLangPosition.Dao1SV = GlobalVariable.DaoLangPosition.Dao5SV = (int)(rongChia2 * 10);
                 GlobalVariable.DaoLangPosition.Dao1U = GlobalVariable.DaoLangPosition.Dao5U = 1;
 
-                GlobalVariable.DaoLangPosition.Dao2SV = GlobalVariable.DaoLangPosition.Dao4SV = (int)((rongChia2 - (RongA / 2)) * 10);
+                GlobalVariable.DaoLangPosition.Dao2SV = GlobalVariable.DaoLangPosition.Dao4SV = (int)((rongChia2 - (rongA / 2)) * 10);
                 GlobalVariable.DaoLangPosition.Dao2U = GlobalVariable.DaoLangPosition.Dao4U = 1;
             }
 
             else if (donHang.Xa == 4)
             {
-                double rongChia2 = RongTotal / 2;
+                double rongChia2 = rongTotal / 2;
 
                 GlobalVariable.DaoLangPosition.Dao3U = 1;
 
                 GlobalVariable.DaoLangPosition.Dao1SV = GlobalVariable.DaoLangPosition.Dao5SV = (int)(rongChia2 * 10);
                 GlobalVariable.DaoLangPosition.Dao1U = GlobalVariable.DaoLangPosition.Dao5U = 1;
 
-                GlobalVariable.DaoLangPosition.Dao2SV = GlobalVariable.DaoLangPosition.Dao4SV = (int)((rongChia2 - RongA) * 10);
+                GlobalVariable.DaoLangPosition.Dao2SV = GlobalVariable.DaoLangPosition.Dao4SV = (int)((rongChia2 - rongA) * 10);
                 GlobalVariable.DaoLangPosition.Dao2U = GlobalVariable.DaoLangPosition.Dao4U = 1;
             }
         }

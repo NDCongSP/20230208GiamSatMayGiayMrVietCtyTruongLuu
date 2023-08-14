@@ -73,7 +73,7 @@
   "Tags": [
     {
   "Name": "ChieuDaiCat",
-  "Description": "Cai dat don hang dang chay. PC set",
+  "Description": "Cai dat don hang dang chay. PC set. PLC doc /10",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
@@ -223,7 +223,7 @@
 },
     {
   "Name": "TocDo_FB",
-  "Description": "toc do may cat. PLC set",
+  "Description": "toc do may cat. PLC set. PC doc len /10.",
   "ItemType": "Tag",
   "IsReadOnly": false,
   "Enabled": true,
