@@ -90,20 +90,14 @@ namespace QuanLyGiay
             if (donHang.Xa == 4)
                 rongTotal = rongA + rongB + rongC + rongD;
 
-            //int Rongchia2 = Rong / 2;
-            //int Rongx3chia2 = (Rong * 3) / 2;
-            //int Cutline1 = 0, Cutline2 = 0, Cutline3 = 0, Cutline4 = 0, Cutline5 = 0;
-            //int[] Cutline = { Cutline1, Cutline2, Cutline3, Cutline4, Cutline5 };
-            //int[] D_Max = { Dao1_Max, Dao2_Max, Dao3_Max, Dao4_Max, Dao5_Max };
-            //int[] Dao = { dao1_sv, dao2_sv, dao3_sv, dao4_sv, dao5_sv };
-
             // Xả = 1
             if (donHang.Xa == 1)
             {
                 double rongChia2 = rongTotal / 2 * 10;//đang là đơn vị mm, x10 để loại bỏ số lẻ
+                double lanPosition = rongChia2 - canh * 10;//vi trí lằn
 
                 #region Dao
-                // Xả 1 - Dao 1 hoac 2
+                //Dao 1 hoac 2
                 if (GlobalVariable.DaoLangPosition.Dao2Max > GlobalVariable.DaoLangPosition.Dao2Min && GlobalVariable.DaoLangPosition.Dao1Max > GlobalVariable.DaoLangPosition.Dao1Min)
                 {
                     if (GlobalVariable.DaoLangPosition.Dao2Max >= rongChia2)
@@ -177,43 +171,42 @@ namespace QuanLyGiay
                 GlobalVariable.DaoLangPosition.HutSv = (int)rongChia2;
 
                 #region Lang
-                //if (rongChia2 <= GlobalVariable.DaoLangPosition.Lang4Max)
-                //{
-                //    GlobalVariable.DaoLangPosition.Lang4Sv = GlobalVariable.DaoLangPosition.Lang5Sv = (int)(CaoA / 2 * 10);
-                //    GlobalVariable.DaoLangPosition.Lang4U = GlobalVariable.DaoLangPosition.Lang5U = 1;
+                if (GlobalVariable.DaoLangPosition.Lang4Max >=  lanPosition)
+                {
+                    GlobalVariable.DaoLangPosition.Lang4U = GlobalVariable.DaoLangPosition.Dao5U = 1;
+                    GlobalVariable.DaoLangPosition.Lang4Sv = GlobalVariable.DaoLangPosition.Lang5Sv = (int)(lanPosition);
 
-                //    GlobalVariable.DaoLangPosition.Lang3Sv = GlobalVariable.DaoLangPosition.Lang6Sv = GlobalVariable.DaoLangPosition.Lang3Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                //    GlobalVariable.DaoLangPosition.Lang2Sv = GlobalVariable.DaoLangPosition.Lang7Sv = GlobalVariable.DaoLangPosition.Lang2Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                //    GlobalVariable.DaoLangPosition.Lang1Sv = GlobalVariable.DaoLangPosition.Lang8Sv = GlobalVariable.DaoLangPosition.Lang1Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                //}
-                //else if (rongChia2 > GlobalVariable.DaoLangPosition.Lang4Max && rongChia2 <= GlobalVariable.DaoLangPosition.Lang3Max)
-                //{
-                //    GlobalVariable.DaoLangPosition.Lang3Sv = GlobalVariable.DaoLangPosition.Lang6Sv = (int)(CaoA / 2 * 10);
-                //    GlobalVariable.DaoLangPosition.Lang3U = GlobalVariable.DaoLangPosition.Lang6U = 1;
+                    GlobalVariable.DaoLangPosition.Lang3Sv = GlobalVariable.DaoLangPosition.Lang6Sv = GlobalVariable.DaoLangPosition.Lang3Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                    GlobalVariable.DaoLangPosition.Lang2Sv = GlobalVariable.DaoLangPosition.Lang7Sv = GlobalVariable.DaoLangPosition.Lang2Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                    GlobalVariable.DaoLangPosition.Lang1Sv = GlobalVariable.DaoLangPosition.Lang8Sv = GlobalVariable.DaoLangPosition.Lang1Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                }
+                else if (GlobalVariable.DaoLangPosition.Lang3Max >= lanPosition)
+                {
+                    GlobalVariable.DaoLangPosition.Lang3U = GlobalVariable.DaoLangPosition.Lang6U = 1;
+                    GlobalVariable.DaoLangPosition.Lang3Sv = GlobalVariable.DaoLangPosition.Lang6Sv = (int)(lanPosition);
 
-                //    GlobalVariable.DaoLangPosition.Lang4Sv = GlobalVariable.DaoLangPosition.Lang5Sv = GlobalVariable.DaoLangPosition.Lang4Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                //    GlobalVariable.DaoLangPosition.Lang2Sv = GlobalVariable.DaoLangPosition.Lang7Sv = GlobalVariable.DaoLangPosition.Lang2Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                //    GlobalVariable.DaoLangPosition.Lang1Sv = GlobalVariable.DaoLangPosition.Lang8Sv = GlobalVariable.DaoLangPosition.Lang1Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                //}
-                //else if (rongChia2 > GlobalVariable.DaoLangPosition.Lang3Max && CaoA / 2 <= GlobalVariable.DaoLangPosition.Lang2Max)
-                //{
-                //    GlobalVariable.DaoLangPosition.Lang2Sv = GlobalVariable.DaoLangPosition.Lang7Sv = (int)(CaoA / 2 * 10);
-                //    GlobalVariable.DaoLangPosition.Lang2U = GlobalVariable.DaoLangPosition.Lang7U = 1;
+                    GlobalVariable.DaoLangPosition.Lang4Sv = GlobalVariable.DaoLangPosition.Lang5Sv = GlobalVariable.DaoLangPosition.Lang4Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                    GlobalVariable.DaoLangPosition.Lang2Sv = GlobalVariable.DaoLangPosition.Lang7Sv = GlobalVariable.DaoLangPosition.Lang2Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                    GlobalVariable.DaoLangPosition.Lang1Sv = GlobalVariable.DaoLangPosition.Lang8Sv = GlobalVariable.DaoLangPosition.Lang1Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                }
+                else if (GlobalVariable.DaoLangPosition.Lang2Max >= lanPosition)
+                {
+                    GlobalVariable.DaoLangPosition.Lang2U = GlobalVariable.DaoLangPosition.Lang7U = 1;
+                    GlobalVariable.DaoLangPosition.Lang2Sv = GlobalVariable.DaoLangPosition.Lang7Sv = (int)(lanPosition);
 
-                //    GlobalVariable.DaoLangPosition.Lang4Sv = GlobalVariable.DaoLangPosition.Lang5Sv = GlobalVariable.DaoLangPosition.Lang4Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                //    GlobalVariable.DaoLangPosition.Lang3Sv = GlobalVariable.DaoLangPosition.Lang6Sv = GlobalVariable.DaoLangPosition.Lang3Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                //    GlobalVariable.DaoLangPosition.Lang1Sv = GlobalVariable.DaoLangPosition.Lang8Sv = GlobalVariable.DaoLangPosition.Lang1Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                //}
-                //else if (CaoA / 2 > GlobalVariable.DaoLangPosition.Lang2Max && CaoA / 2 <= GlobalVariable.DaoLangPosition.Lang1Max)
-                //{
-                //    GlobalVariable.DaoLangPosition.Lang1Sv = GlobalVariable.DaoLangPosition.Lang8Sv = (int)(CaoA / 2 * 10);
-                //    GlobalVariable.DaoLangPosition.Lang1U = GlobalVariable.DaoLangPosition.Lang8U = 1;
+                    GlobalVariable.DaoLangPosition.Lang4Sv = GlobalVariable.DaoLangPosition.Lang5Sv = GlobalVariable.DaoLangPosition.Lang4Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                    GlobalVariable.DaoLangPosition.Lang3Sv = GlobalVariable.DaoLangPosition.Lang6Sv = GlobalVariable.DaoLangPosition.Lang3Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                    GlobalVariable.DaoLangPosition.Lang1Sv = GlobalVariable.DaoLangPosition.Lang8Sv = GlobalVariable.DaoLangPosition.Lang1Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                }
+                else if (GlobalVariable.DaoLangPosition.Lang1Max >= lanPosition)
+                {
+                    GlobalVariable.DaoLangPosition.Lang1U = GlobalVariable.DaoLangPosition.Lang8U = 1;
+                    GlobalVariable.DaoLangPosition.Lang1Sv = GlobalVariable.DaoLangPosition.Lang8Sv = (int)(lanPosition);
 
-                //    GlobalVariable.DaoLangPosition.Lang4Sv = GlobalVariable.DaoLangPosition.Lang5Sv = GlobalVariable.DaoLangPosition.Lang4Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                //    GlobalVariable.DaoLangPosition.Lang2Sv = GlobalVariable.DaoLangPosition.Lang7Sv = GlobalVariable.DaoLangPosition.Lang2Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                //    GlobalVariable.DaoLangPosition.Lang3Sv = GlobalVariable.DaoLangPosition.Lang6Sv = GlobalVariable.DaoLangPosition.Lang3Min + GlobalVariable.DaoLangPosition.Lang_Lang;
-                //}
-
+                    GlobalVariable.DaoLangPosition.Lang4Sv = GlobalVariable.DaoLangPosition.Lang5Sv = GlobalVariable.DaoLangPosition.Lang4Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                    GlobalVariable.DaoLangPosition.Lang3Sv = GlobalVariable.DaoLangPosition.Lang6Sv = GlobalVariable.DaoLangPosition.Lang3Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                    GlobalVariable.DaoLangPosition.Lang2Sv = GlobalVariable.DaoLangPosition.Lang7Sv = GlobalVariable.DaoLangPosition.Lang2Min + GlobalVariable.DaoLangPosition.Lang_Lang;
+                }
                 #endregion
             }
 

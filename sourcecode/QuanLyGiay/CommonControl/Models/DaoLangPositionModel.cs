@@ -30,14 +30,14 @@ namespace CommonControl
         public int Dao4SV { get; set; } = 0;
         public int Dao5SV { get; set; } = 0;
 
-        public int Lang1Sv { get; set; } = 850;
-        public int Lang2Sv { get; set; } = 650;
-        public int Lang3Sv { get; set; } = 450;
-        public int Lang4Sv { get; set; } = 150;
-        public int Lang5Sv { get; set; } = 150;
-        public int Lang6Sv { get; set; } = 450;
-        public int Lang7Sv { get; set; } = 650;
-        public int Lang8Sv { get; set; } = 850;
+        public int Lang1Sv { get; set; } = 0;
+        public int Lang2Sv { get; set; } = 0;
+        public int Lang3Sv { get; set; } = 0;
+        public int Lang4Sv { get; set; } = 0;
+        public int Lang5Sv { get; set; } = 0;
+        public int Lang6Sv { get; set; } = 0;
+        public int Lang7Sv { get; set; } = 0;
+        public int Lang8Sv { get; set; } = 0;
 
         public int HutSv { get; set; } = 0;
 
