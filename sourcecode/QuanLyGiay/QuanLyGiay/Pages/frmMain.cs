@@ -99,9 +99,27 @@ namespace QuanLyGiay
                 Timer t = (Timer)s;
                 t.Enabled = false;
 
-                if (this.InvokeRequired)
+                if (_donHangDangChay.STT != 0)
                 {
-                    this.Invoke(new Action(() =>
+                    if (this.InvokeRequired)
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            labDateTime.Text = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss");
+
+                            _txtKhachHang.Text = _donHangDangChay.KhachHang;
+                            _txtDonHang.Text = _donHangDangChay.DonHang;
+                            _txtPO.Text = _donHangDangChay.PO;
+                            _txtDaiCat.Text = _donHangDangChay.DaiCat.ToString();
+                            _txtSLCat.Text = _donHangDangChay.SLCatTam.ToString();
+                            _txtTongSoMetCD.Text = _donHangDangChay.SoMetCaiDat.ToString();
+                            _txtSLDat.Text = _donHangDangChay.SLDat.ToString();
+                            _txtSLLoi.Text = _donHangDangChay.SLLoi.ToString();
+                            _txtSLConlai.Text = _donHangDangChay.SLConLai.ToString();
+                            _txtTocDo.Text = _donHangDangChay.TocDo.ToString();
+                        }));
+                    }
+                    else
                     {
                         labDateTime.Text = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss");
 
@@ -115,22 +133,7 @@ namespace QuanLyGiay
                         _txtSLLoi.Text = _donHangDangChay.SLLoi.ToString();
                         _txtSLConlai.Text = _donHangDangChay.SLConLai.ToString();
                         _txtTocDo.Text = _donHangDangChay.TocDo.ToString();
-                    }));
-                }
-                else
-                {
-                    labDateTime.Text = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss");
-
-                    _txtKhachHang.Text = _donHangDangChay.KhachHang;
-                    _txtDonHang.Text = _donHangDangChay.DonHang;
-                    _txtPO.Text = _donHangDangChay.PO;
-                    _txtDaiCat.Text = _donHangDangChay.DaiCat.ToString();
-                    _txtSLCat.Text = _donHangDangChay.SLCatTam.ToString();
-                    _txtTongSoMetCD.Text = _donHangDangChay.SoMetCaiDat.ToString();
-                    _txtSLDat.Text = _donHangDangChay.SLDat.ToString();
-                    _txtSLLoi.Text = _donHangDangChay.SLLoi.ToString();
-                    _txtSLConlai.Text = _donHangDangChay.SLConLai.ToString();
-                    _txtTocDo.Text = _donHangDangChay.TocDo.ToString();
+                    }
                 }
 
                 _countRefesh += 1;
@@ -797,9 +800,9 @@ namespace QuanLyGiay
                         DoiDonCutter(_donHangDoiDon);
 
                         //chuyen don may xa
-                        TinhToan.TinhToanGiaTri(_donHangDangChay);
+                        //TinhToan.TinhToanGiaTri(_donHangDangChay);
 
-                        DoiDonMayXa(_donHangDoiDon);
+                        //DoiDonMayXa(_donHangDoiDon);
                     }
                 }
             }

@@ -96,30 +96,40 @@ namespace QuanLyGiay
             //int[] D_Max = { Dao1_Max, Dao2_Max, Dao3_Max, Dao4_Max, Dao5_Max };
             //int[] Dao = { dao1_sv, dao2_sv, dao3_sv, dao4_sv, dao5_sv };
 
-            //if (donHang.Xa == 0)
-            //{
-            //    GlobalVariable.DaoLangPosition.Dao1U = 0;
-            //    GlobalVariable.DaoLangPosition.Dao2U = 0;
-            //    GlobalVariable.DaoLangPosition.Dao3U = 0;
-            //    GlobalVariable.DaoLangPosition.Dao4U = 0;
-            //    GlobalVariable.DaoLangPosition.Dao5U = 0;
-            //}
             // Xả = 1
             if (donHang.Xa == 1)
             {
-                double rongChia2 = rongTotal / 2 * 10;
+                double rongChia2 = rongTotal / 2 * 10;//đang là đơn vị mm, x10 để loại bỏ số lẻ
 
                 #region Dao
-                // Xả 1 - Dao 1,5
-                if (GlobalVariable.DaoLangPosition.Dao2Max >= rongChia2 && GlobalVariable.DaoLangPosition.Dao2Max > GlobalVariable.DaoLangPosition.Dao2Min)
+                // Xả 1 - Dao 1 hoac 2
+                if (GlobalVariable.DaoLangPosition.Dao2Max > GlobalVariable.DaoLangPosition.Dao2Min && GlobalVariable.DaoLangPosition.Dao1Max > GlobalVariable.DaoLangPosition.Dao1Min)
                 {
-                    GlobalVariable.DaoLangPosition.Dao2SV = (int)(rongChia2);
-                    GlobalVariable.DaoLangPosition.Dao2U = 1;//bat dao
+                    if (GlobalVariable.DaoLangPosition.Dao2Max >= rongChia2)
+                    {
+                        GlobalVariable.DaoLangPosition.Dao2SV = (int)(rongChia2);
+                        GlobalVariable.DaoLangPosition.Dao2U = 1;//bat dao
 
-                    GlobalVariable.DaoLangPosition.Dao1SV = GlobalVariable.DaoLangPosition.Dao1Min + GlobalVariable.DaoLangPosition.Dao_Dao;//cho dao về vị trí trung tâm của nó
+                        GlobalVariable.DaoLangPosition.Dao1SV = GlobalVariable.DaoLangPosition.Dao1Min + GlobalVariable.DaoLangPosition.Dao_Dao;//cho dao về vị trí trung tâm của nó
+                    }
+                    else
+                    {
+                        GlobalVariable.DaoLangPosition.Dao1SV = (int)(rongChia2);
+                        GlobalVariable.DaoLangPosition.Dao1U = 1;
+
+                        GlobalVariable.DaoLangPosition.Dao2SV = GlobalVariable.DaoLangPosition.Dao2Min + GlobalVariable.DaoLangPosition.Dao_Dao;//cho dao về vị trí trung tâm của nó
+                    }
                 }
-                // Xả 1 - Dao 2,4
-                else if (GlobalVariable.DaoLangPosition.Dao2Max < rongChia2 && GlobalVariable.DaoLangPosition.Dao1Max >= rongChia2 && GlobalVariable.DaoLangPosition.Dao1Max > GlobalVariable.DaoLangPosition.Dao2Min)
+                // Xả 1 - Dao 1
+                else if (GlobalVariable.DaoLangPosition.Dao1Max > GlobalVariable.DaoLangPosition.Dao1Min && GlobalVariable.DaoLangPosition.Dao2Max == GlobalVariable.DaoLangPosition.Dao2Min)
+                {
+                    GlobalVariable.DaoLangPosition.Dao1SV = (int)(rongChia2);
+                    GlobalVariable.DaoLangPosition.Dao1U = 1;
+
+                    GlobalVariable.DaoLangPosition.Dao2SV = GlobalVariable.DaoLangPosition.Dao2Min + GlobalVariable.DaoLangPosition.Dao_Dao;//cho dao về vị trí trung tâm của nó
+                }
+                // Xả 1 - Dao 2
+                else if (GlobalVariable.DaoLangPosition.Dao2Max > GlobalVariable.DaoLangPosition.Dao2Min && GlobalVariable.DaoLangPosition.Dao1Max == GlobalVariable.DaoLangPosition.Dao1Min)
                 {
                     GlobalVariable.DaoLangPosition.Dao1SV = (int)(rongChia2);
                     GlobalVariable.DaoLangPosition.Dao1U = 1;
@@ -127,21 +137,39 @@ namespace QuanLyGiay
                     GlobalVariable.DaoLangPosition.Dao2SV = GlobalVariable.DaoLangPosition.Dao2Min + GlobalVariable.DaoLangPosition.Dao_Dao;//cho dao về vị trí trung tâm của nó
                 }
 
-                // Xả 1 - Dao 1,5
-                if (GlobalVariable.DaoLangPosition.Dao4Max >= rongChia2 && GlobalVariable.DaoLangPosition.Dao4Max > GlobalVariable.DaoLangPosition.Dao4Min)
+                // Xả 1 - Dao 4 hoac 5
+                if (GlobalVariable.DaoLangPosition.Dao5Max > GlobalVariable.DaoLangPosition.Dao5Min && GlobalVariable.DaoLangPosition.Dao4Max > GlobalVariable.DaoLangPosition.Dao4Min)
                 {
-                    GlobalVariable.DaoLangPosition.Dao4SV = (int)(rongChia2);
-                    GlobalVariable.DaoLangPosition.Dao4U = 1;//bat dao
+                    if (GlobalVariable.DaoLangPosition.Dao4Max >= rongChia2)
+                    {
+                        GlobalVariable.DaoLangPosition.Dao4SV = (int)(rongChia2);
+                        GlobalVariable.DaoLangPosition.Dao4U = 1;//bat dao
 
-                    GlobalVariable.DaoLangPosition.Dao5SV = GlobalVariable.DaoLangPosition.Dao5Min + GlobalVariable.DaoLangPosition.Dao_Dao;//cho dao về vị trí trung tâm của nó
+                        GlobalVariable.DaoLangPosition.Dao5SV = GlobalVariable.DaoLangPosition.Dao5Min + GlobalVariable.DaoLangPosition.Dao_Dao;//cho dao về vị trí trung tâm của nó
+                    }
+                    else
+                    {
+                        GlobalVariable.DaoLangPosition.Dao5SV = (int)(rongChia2);
+                        GlobalVariable.DaoLangPosition.Dao5U = 1;
+
+                        GlobalVariable.DaoLangPosition.Dao4SV = GlobalVariable.DaoLangPosition.Dao4Min + GlobalVariable.DaoLangPosition.Dao_Dao;//cho dao về vị trí trung tâm của nó
+                    }
                 }
-                // Xả 1 - Dao 2,4
-                else if (GlobalVariable.DaoLangPosition.Dao4Max < rongChia2 && GlobalVariable.DaoLangPosition.Dao5Max >= rongChia2 && GlobalVariable.DaoLangPosition.Dao5Max > GlobalVariable.DaoLangPosition.Dao5Min)
+                // Xả 1 - Dao 5
+                else if (GlobalVariable.DaoLangPosition.Dao5Max > GlobalVariable.DaoLangPosition.Dao5Min && GlobalVariable.DaoLangPosition.Dao4Max == GlobalVariable.DaoLangPosition.Dao4Min)
                 {
                     GlobalVariable.DaoLangPosition.Dao5SV = (int)(rongChia2);
                     GlobalVariable.DaoLangPosition.Dao5U = 1;
 
                     GlobalVariable.DaoLangPosition.Dao4SV = GlobalVariable.DaoLangPosition.Dao4Min + GlobalVariable.DaoLangPosition.Dao_Dao;//cho dao về vị trí trung tâm của nó
+                }
+                // Xả 1 - Dao 4
+                else if (GlobalVariable.DaoLangPosition.Dao4Max > GlobalVariable.DaoLangPosition.Dao4Min && GlobalVariable.DaoLangPosition.Dao5Max == GlobalVariable.DaoLangPosition.Dao5Min)
+                {
+                    GlobalVariable.DaoLangPosition.Dao4SV = (int)(rongChia2);
+                    GlobalVariable.DaoLangPosition.Dao4U = 1;
+
+                    GlobalVariable.DaoLangPosition.Dao5SV = GlobalVariable.DaoLangPosition.Dao5Min + GlobalVariable.DaoLangPosition.Dao_Dao;//cho dao về vị trí trung tâm của nó
                 }
                 #endregion
 
@@ -182,6 +210,7 @@ namespace QuanLyGiay
                 //    GlobalVariable.DaoLangPosition.Lang2Sv = GlobalVariable.DaoLangPosition.Lang7Sv = GlobalVariable.DaoLangPosition.Lang2Min + GlobalVariable.DaoLangPosition.Lang_Lang;
                 //    GlobalVariable.DaoLangPosition.Lang3Sv = GlobalVariable.DaoLangPosition.Lang6Sv = GlobalVariable.DaoLangPosition.Lang3Min + GlobalVariable.DaoLangPosition.Lang_Lang;
                 //}
+
                 #endregion
             }
 
