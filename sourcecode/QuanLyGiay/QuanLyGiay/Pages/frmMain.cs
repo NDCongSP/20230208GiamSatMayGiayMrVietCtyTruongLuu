@@ -161,11 +161,16 @@ namespace QuanLyGiay
                 {
                     BtnNapMayXa_Click(null, null);
                 }
+                else if (o.KeyCode == Keys.F2)
+                {
+                    _btnSettings_Click(null, null);
+                }
             };
             #endregion
 
             btnOrder.Click += BtnOrder_Click;
             btnNapMayXa.Click += BtnNapMayXa_Click;
+            _btnSettings.Click += _btnSettings_Click;
 
             easyDriverConnector1.Started += EasyDriverConnector1_Started;
 
@@ -183,6 +188,14 @@ namespace QuanLyGiay
             GlobalVariable.MyEvents.Refresh = true;
             //_taskLoadOrder = new Task(LoadOrder);
             //_taskLoadOrder.Start();
+        }
+
+        private void _btnSettings_Click(object sender, EventArgs e)
+        {
+            using (var nf = new frmSettings())
+            {
+                nf.ShowDialog();
+            }
         }
 
         private void BtnNapMayXa_Click(object sender, EventArgs e)

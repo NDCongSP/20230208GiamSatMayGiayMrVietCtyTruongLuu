@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QuanLyGiay
 {
@@ -173,6 +174,8 @@ namespace QuanLyGiay
                 }
                 #endregion
 
+                GlobalVariable.DaoLangPosition.HutSv = (int)rongChia2;
+
                 #region Lang
                 //if (rongChia2 <= GlobalVariable.DaoLangPosition.Lang4Max)
                 //{
@@ -212,70 +215,135 @@ namespace QuanLyGiay
                 //}
 
                 #endregion
-
-                GlobalVariable.DaoLangPosition.HutSv = (int)rongChia2;
             }
 
             // Xả = 2 --luôn bật dao 3 tại vị trí 0
             else if (donHang.Xa == 2)
             {
-                double rongChia2 = rongTotal / 2;
                 GlobalVariable.DaoLangPosition.Dao3U = 1;
 
-                // Xả 1 - Dao 1,5
-                if (GlobalVariable.DaoLangPosition.Dao2Max < rongChia2)
-                {
-                    GlobalVariable.DaoLangPosition.Dao1SV = GlobalVariable.DaoLangPosition.Dao5SV = (int)(rongChia2 * 10);
-                    GlobalVariable.DaoLangPosition.Dao1U = GlobalVariable.DaoLangPosition.Dao5U = 1;//bat dao
+                double rongChia2 = rongTotal / 2 * 10;//đang là đơn vị mm, x10 để loại bỏ số lẻ
 
-                    //kiểm tra xem vị trí cảu dao 1 mới set trừ khoảng cách tối thiểu để 2 sao không đụng nhau, mà nó lớn hơn vị trí hiện tại của dao 2, thì set lại vị trí cho dao 2
-                    //if ((GlobalVariable.DaoLangPosition.Dao1SV - Dao_Dao) > (GlobalVariable.DaoLangPosition.Dao2PV))
-                    //    dao2_sv = dao1_sv - Dao_Dao;
-                    GlobalVariable.DaoLangPosition.Dao2SV = GlobalVariable.DaoLangPosition.Dao4SV = GlobalVariable.DaoLangPosition.Dao2Max - GlobalVariable.DaoLangPosition.Dao_Dao;//cho dao về vị trí min cua no
-                }
-                // Xả 1 - Dao 2,4
-                else if (GlobalVariable.DaoLangPosition.Dao2Max > rongChia2)
+                #region Dao
+                // Dao 1 hoac 2
+                if (GlobalVariable.DaoLangPosition.Dao2Max > GlobalVariable.DaoLangPosition.Dao2Min && GlobalVariable.DaoLangPosition.Dao1Max > GlobalVariable.DaoLangPosition.Dao1Min)
                 {
-                    GlobalVariable.DaoLangPosition.Dao2SV = GlobalVariable.DaoLangPosition.Dao4SV = (int)(rongChia2 * 10);
-                    GlobalVariable.DaoLangPosition.Dao2U = GlobalVariable.DaoLangPosition.Dao4U = 1;
+                    if (GlobalVariable.DaoLangPosition.Dao2Max >= rongChia2)
+                    {
+                        GlobalVariable.DaoLangPosition.Dao2SV = (int)(rongChia2);
+                        GlobalVariable.DaoLangPosition.Dao2U = 1;//bat dao
 
-                    //kiểm tra xem vị trí cảu dao 1 mới set trừ khoảng cách tối thiểu để 2 sao không đụng nhau, mà nó lớn hơn vị trí hiện tại của dao 2, thì set lại vị trí cho dao 2
-                    //if ((dao2_sv - Dao_Dao) < (Dao1_PV))
-                    //    dao1_sv = dao2_sv - Dao_Dao;
-                    GlobalVariable.DaoLangPosition.Dao1SV = GlobalVariable.DaoLangPosition.Dao5SV = GlobalVariable.DaoLangPosition.Dao1Max;//cho dao về vị trí max của nó
+                        GlobalVariable.DaoLangPosition.Dao1SV = GlobalVariable.DaoLangPosition.Dao1Min + GlobalVariable.DaoLangPosition.Dao_Dao;//cho dao về vị trí trung tâm của nó
+                    }
+                    else
+                    {
+                        GlobalVariable.DaoLangPosition.Dao1SV = (int)(rongChia2);
+                        GlobalVariable.DaoLangPosition.Dao1U = 1;
+
+                        GlobalVariable.DaoLangPosition.Dao2SV = GlobalVariable.DaoLangPosition.Dao2Min + GlobalVariable.DaoLangPosition.Dao_Dao;//cho dao về vị trí trung tâm của nó
+                    }
                 }
+                //Dao 1
+                else if (GlobalVariable.DaoLangPosition.Dao1Max > GlobalVariable.DaoLangPosition.Dao1Min && GlobalVariable.DaoLangPosition.Dao2Max == GlobalVariable.DaoLangPosition.Dao2Min)
+                {
+                    GlobalVariable.DaoLangPosition.Dao1SV = (int)(rongChia2);
+                    GlobalVariable.DaoLangPosition.Dao1U = 1;
+
+                    GlobalVariable.DaoLangPosition.Dao2SV = GlobalVariable.DaoLangPosition.Dao2Min + GlobalVariable.DaoLangPosition.Dao_Dao;//cho dao về vị trí trung tâm của nó
+                }
+                //Dao 2
+                else if (GlobalVariable.DaoLangPosition.Dao2Max > GlobalVariable.DaoLangPosition.Dao2Min && GlobalVariable.DaoLangPosition.Dao1Max == GlobalVariable.DaoLangPosition.Dao1Min)
+                {
+                    GlobalVariable.DaoLangPosition.Dao1SV = (int)(rongChia2);
+                    GlobalVariable.DaoLangPosition.Dao1U = 1;
+
+                    GlobalVariable.DaoLangPosition.Dao2SV = GlobalVariable.DaoLangPosition.Dao2Min + GlobalVariable.DaoLangPosition.Dao_Dao;//cho dao về vị trí trung tâm của nó
+                }
+
+                //Dao 4 hoac 5
+                if (GlobalVariable.DaoLangPosition.Dao5Max > GlobalVariable.DaoLangPosition.Dao5Min && GlobalVariable.DaoLangPosition.Dao4Max > GlobalVariable.DaoLangPosition.Dao4Min)
+                {
+                    if (GlobalVariable.DaoLangPosition.Dao4Max >= rongChia2)
+                    {
+                        GlobalVariable.DaoLangPosition.Dao4SV = (int)(rongChia2);
+                        GlobalVariable.DaoLangPosition.Dao4U = 1;//bat dao
+
+                        GlobalVariable.DaoLangPosition.Dao5SV = GlobalVariable.DaoLangPosition.Dao5Min + GlobalVariable.DaoLangPosition.Dao_Dao;//cho dao về vị trí trung tâm của nó
+                    }
+                    else
+                    {
+                        GlobalVariable.DaoLangPosition.Dao5SV = (int)(rongChia2);
+                        GlobalVariable.DaoLangPosition.Dao5U = 1;
+
+                        GlobalVariable.DaoLangPosition.Dao4SV = GlobalVariable.DaoLangPosition.Dao4Min + GlobalVariable.DaoLangPosition.Dao_Dao;//cho dao về vị trí trung tâm của nó
+                    }
+                }
+                //Dao 5
+                else if (GlobalVariable.DaoLangPosition.Dao5Max > GlobalVariable.DaoLangPosition.Dao5Min && GlobalVariable.DaoLangPosition.Dao4Max == GlobalVariable.DaoLangPosition.Dao4Min)
+                {
+                    GlobalVariable.DaoLangPosition.Dao5SV = (int)(rongChia2);
+                    GlobalVariable.DaoLangPosition.Dao5U = 1;
+
+                    GlobalVariable.DaoLangPosition.Dao4SV = GlobalVariable.DaoLangPosition.Dao4Min + GlobalVariable.DaoLangPosition.Dao_Dao;//cho dao về vị trí trung tâm của nó
+                }
+                //Dao 4
+                else if (GlobalVariable.DaoLangPosition.Dao4Max > GlobalVariable.DaoLangPosition.Dao4Min && GlobalVariable.DaoLangPosition.Dao5Max == GlobalVariable.DaoLangPosition.Dao5Min)
+                {
+                    GlobalVariable.DaoLangPosition.Dao4SV = (int)(rongChia2);
+                    GlobalVariable.DaoLangPosition.Dao4U = 1;
+
+                    GlobalVariable.DaoLangPosition.Dao5SV = GlobalVariable.DaoLangPosition.Dao5Min + GlobalVariable.DaoLangPosition.Dao_Dao;//cho dao về vị trí trung tâm của nó
+                }
+                #endregion
+
+                GlobalVariable.DaoLangPosition.HutSv = (int)rongChia2;
 
                 #region Lang
-                if (rongChia2 < GlobalVariable.DaoLangPosition.Lang2Max)
-                {
-                    GlobalVariable.DaoLangPosition.Lang2Sv = GlobalVariable.DaoLangPosition.Lang5Sv = (int)(cao / 2 * 10);
-                    GlobalVariable.DaoLangPosition.Lang2U = GlobalVariable.DaoLangPosition.Lang5U = 1;
-                }
+
                 #endregion
             }
             // Xả = 3
             else if (donHang.Xa == 3)
             {
-                double rongChia2 = rongTotal / 2;
+                double rongChia2 = rongTotal / 2 * 10;//đang là đơn vị mm, x10 để loại bỏ số lẻ
 
-                GlobalVariable.DaoLangPosition.Dao1SV = GlobalVariable.DaoLangPosition.Dao5SV = (int)(rongChia2 * 10);
-                GlobalVariable.DaoLangPosition.Dao1U = GlobalVariable.DaoLangPosition.Dao5U = 1;
+                if (GlobalVariable.DaoLangPosition.Dao2Max > GlobalVariable.DaoLangPosition.Dao2Min && GlobalVariable.DaoLangPosition.Dao1Max > GlobalVariable.DaoLangPosition.Dao1Min)
+                {
+                    GlobalVariable.DaoLangPosition.Dao1SV = GlobalVariable.DaoLangPosition.Dao5SV = (int)rongChia2;
+                    GlobalVariable.DaoLangPosition.Dao1U = GlobalVariable.DaoLangPosition.Dao5U = 1;
 
-                GlobalVariable.DaoLangPosition.Dao2SV = GlobalVariable.DaoLangPosition.Dao4SV = (int)((rongChia2 - (rongA / 2)) * 10);
-                GlobalVariable.DaoLangPosition.Dao2U = GlobalVariable.DaoLangPosition.Dao4U = 1;
+                    GlobalVariable.DaoLangPosition.Dao2SV = GlobalVariable.DaoLangPosition.Dao4SV = (int)(rongChia2 - rongA * 10);
+                    GlobalVariable.DaoLangPosition.Dao2U = GlobalVariable.DaoLangPosition.Dao4U = 1;
+
+                    GlobalVariable.DaoLangPosition.HutSv = (int)rongChia2;
+                }
+                else
+                {
+                    MessageBox.Show($"Xả 3 yêu cầu tất cả các dao phải hoạt động.\rKiểm tra lại các dao.", "CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+
             }
 
             else if (donHang.Xa == 4)
             {
-                double rongChia2 = rongTotal / 2;
-
                 GlobalVariable.DaoLangPosition.Dao3U = 1;
+                double rongChia2 = rongTotal / 2 * 10;//đang là đơn vị mm, x10 để loại bỏ số lẻ
 
-                GlobalVariable.DaoLangPosition.Dao1SV = GlobalVariable.DaoLangPosition.Dao5SV = (int)(rongChia2 * 10);
-                GlobalVariable.DaoLangPosition.Dao1U = GlobalVariable.DaoLangPosition.Dao5U = 1;
+                if (GlobalVariable.DaoLangPosition.Dao2Max > GlobalVariable.DaoLangPosition.Dao2Min && GlobalVariable.DaoLangPosition.Dao1Max > GlobalVariable.DaoLangPosition.Dao1Min)
+                {
+                    GlobalVariable.DaoLangPosition.Dao1SV = GlobalVariable.DaoLangPosition.Dao5SV = (int)rongChia2;
+                    GlobalVariable.DaoLangPosition.Dao1U = GlobalVariable.DaoLangPosition.Dao5U = 1;
 
-                GlobalVariable.DaoLangPosition.Dao2SV = GlobalVariable.DaoLangPosition.Dao4SV = (int)((rongChia2 - rongA) * 10);
-                GlobalVariable.DaoLangPosition.Dao2U = GlobalVariable.DaoLangPosition.Dao4U = 1;
+                    GlobalVariable.DaoLangPosition.Dao2SV = GlobalVariable.DaoLangPosition.Dao4SV = (int)(rongChia2 - rongA * 10);
+                    GlobalVariable.DaoLangPosition.Dao2U = GlobalVariable.DaoLangPosition.Dao4U = 1;
+
+                    GlobalVariable.DaoLangPosition.HutSv = (int)rongChia2;
+                }
+                else
+                {
+                    MessageBox.Show($"Xả 3 yêu cầu tất cả các dao phải hoạt động.\rKiểm tra lại các dao.", "CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
     }

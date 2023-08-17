@@ -69,12 +69,19 @@ namespace QuanLyGiay
             this.label1 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this._txtTocDo = new System.Windows.Forms.TextBox();
+            this._txtSLLoi = new System.Windows.Forms.TextBox();
+            this._txtSLDat = new System.Windows.Forms.TextBox();
+            this._txtSLConlai = new System.Windows.Forms.TextBox();
+            this._txtTongSoMetCD = new System.Windows.Forms.TextBox();
+            this._txtSLCat = new System.Windows.Forms.TextBox();
             this._txtDaiCat = new System.Windows.Forms.TextBox();
             this._txtPO = new System.Windows.Forms.TextBox();
             this._txtKhachHang = new System.Windows.Forms.TextBox();
             this._txtDonHang = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this._panelSongCStatus = new System.Windows.Forms.Panel();
             this._panelSongBStatus = new System.Windows.Forms.Panel();
@@ -86,7 +93,7 @@ namespace QuanLyGiay
             this.easyAcountManager1 = new EasyScada.Winforms.Controls.EasyAcountManager();
             this.grvDH = new System.Windows.Forms.DataGridView();
             this.btnOrder = new System.Windows.Forms.Button();
-            this.btnSettings = new System.Windows.Forms.Button();
+            this._btnSettings = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
             this.btnPrintOrder = new System.Windows.Forms.Button();
             this.btnNapMayXa = new System.Windows.Forms.Button();
@@ -94,13 +101,6 @@ namespace QuanLyGiay
             this.labDateTime = new System.Windows.Forms.Label();
             this._labDriverStatus = new System.Windows.Forms.Label();
             this.easyDriverConnector1 = new EasyScada.Winforms.Controls.EasyDriverConnector(this.components);
-            this._txtSLCat = new System.Windows.Forms.TextBox();
-            this._txtSLConlai = new System.Windows.Forms.TextBox();
-            this._txtSLDat = new System.Windows.Forms.TextBox();
-            this._txtSLLoi = new System.Windows.Forms.TextBox();
-            this._txtTocDo = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this._txtTongSoMetCD = new System.Windows.Forms.TextBox();
             this.panel24.SuspendLayout();
             this.panel21.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -477,6 +477,60 @@ namespace QuanLyGiay
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đơn Hàng đang chạy";
             // 
+            // _txtTocDo
+            // 
+            this._txtTocDo.Location = new System.Drawing.Point(416, 201);
+            this._txtTocDo.Name = "_txtTocDo";
+            this._txtTocDo.Size = new System.Drawing.Size(100, 30);
+            this._txtTocDo.TabIndex = 1;
+            this._txtTocDo.Text = "0";
+            this._txtTocDo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // _txtSLLoi
+            // 
+            this._txtSLLoi.Location = new System.Drawing.Point(416, 93);
+            this._txtSLLoi.Name = "_txtSLLoi";
+            this._txtSLLoi.Size = new System.Drawing.Size(100, 30);
+            this._txtSLLoi.TabIndex = 1;
+            this._txtSLLoi.Text = "0";
+            this._txtSLLoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // _txtSLDat
+            // 
+            this._txtSLDat.Location = new System.Drawing.Point(416, 35);
+            this._txtSLDat.Name = "_txtSLDat";
+            this._txtSLDat.Size = new System.Drawing.Size(100, 30);
+            this._txtSLDat.TabIndex = 1;
+            this._txtSLDat.Text = "0";
+            this._txtSLDat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // _txtSLConlai
+            // 
+            this._txtSLConlai.Location = new System.Drawing.Point(416, 149);
+            this._txtSLConlai.Name = "_txtSLConlai";
+            this._txtSLConlai.Size = new System.Drawing.Size(100, 30);
+            this._txtSLConlai.TabIndex = 1;
+            this._txtSLConlai.Text = "0";
+            this._txtSLConlai.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // _txtTongSoMetCD
+            // 
+            this._txtTongSoMetCD.Location = new System.Drawing.Point(150, 308);
+            this._txtTongSoMetCD.Name = "_txtTongSoMetCD";
+            this._txtTongSoMetCD.Size = new System.Drawing.Size(100, 30);
+            this._txtTongSoMetCD.TabIndex = 1;
+            this._txtTongSoMetCD.Text = "0";
+            this._txtTongSoMetCD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // _txtSLCat
+            // 
+            this._txtSLCat.Location = new System.Drawing.Point(150, 267);
+            this._txtSLCat.Name = "_txtSLCat";
+            this._txtSLCat.Size = new System.Drawing.Size(100, 30);
+            this._txtSLCat.TabIndex = 1;
+            this._txtSLCat.Text = "0";
+            this._txtSLCat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // _txtDaiCat
             // 
             this._txtDaiCat.Location = new System.Drawing.Point(150, 209);
@@ -526,6 +580,16 @@ namespace QuanLyGiay
             this.label21.Size = new System.Drawing.Size(127, 25);
             this.label21.TabIndex = 0;
             this.label21.Text = "Khách Hàng:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label6.Location = new System.Drawing.Point(11, 311);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(127, 25);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Tổng số mét:";
             // 
             // groupBox2
             // 
@@ -658,16 +722,16 @@ namespace QuanLyGiay
             this.btnOrder.Text = "Đơn Hàng (F1)";
             this.btnOrder.UseVisualStyleBackColor = false;
             // 
-            // btnSettings
+            // _btnSettings
             // 
-            this.btnSettings.BackColor = System.Drawing.Color.SpringGreen;
-            this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.btnSettings.Location = new System.Drawing.Point(227, 871);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(170, 63);
-            this.btnSettings.TabIndex = 6;
-            this.btnSettings.Text = "Cài Đặt (F2)";
-            this.btnSettings.UseVisualStyleBackColor = false;
+            this._btnSettings.BackColor = System.Drawing.Color.SpringGreen;
+            this._btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this._btnSettings.Location = new System.Drawing.Point(227, 871);
+            this._btnSettings.Name = "_btnSettings";
+            this._btnSettings.Size = new System.Drawing.Size(170, 63);
+            this._btnSettings.TabIndex = 6;
+            this._btnSettings.Text = "Cài Đặt (F2)";
+            this._btnSettings.UseVisualStyleBackColor = false;
             // 
             // btnReport
             // 
@@ -746,70 +810,6 @@ namespace QuanLyGiay
             this.easyDriverConnector1.Timeout = 30;
             this.easyDriverConnector1.UseMongoDb = false;
             // 
-            // _txtSLCat
-            // 
-            this._txtSLCat.Location = new System.Drawing.Point(150, 267);
-            this._txtSLCat.Name = "_txtSLCat";
-            this._txtSLCat.Size = new System.Drawing.Size(100, 30);
-            this._txtSLCat.TabIndex = 1;
-            this._txtSLCat.Text = "0";
-            this._txtSLCat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // _txtSLConlai
-            // 
-            this._txtSLConlai.Location = new System.Drawing.Point(416, 149);
-            this._txtSLConlai.Name = "_txtSLConlai";
-            this._txtSLConlai.Size = new System.Drawing.Size(100, 30);
-            this._txtSLConlai.TabIndex = 1;
-            this._txtSLConlai.Text = "0";
-            this._txtSLConlai.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // _txtSLDat
-            // 
-            this._txtSLDat.Location = new System.Drawing.Point(416, 35);
-            this._txtSLDat.Name = "_txtSLDat";
-            this._txtSLDat.Size = new System.Drawing.Size(100, 30);
-            this._txtSLDat.TabIndex = 1;
-            this._txtSLDat.Text = "0";
-            this._txtSLDat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // _txtSLLoi
-            // 
-            this._txtSLLoi.Location = new System.Drawing.Point(416, 93);
-            this._txtSLLoi.Name = "_txtSLLoi";
-            this._txtSLLoi.Size = new System.Drawing.Size(100, 30);
-            this._txtSLLoi.TabIndex = 1;
-            this._txtSLLoi.Text = "0";
-            this._txtSLLoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // _txtTocDo
-            // 
-            this._txtTocDo.Location = new System.Drawing.Point(416, 201);
-            this._txtTocDo.Name = "_txtTocDo";
-            this._txtTocDo.Size = new System.Drawing.Size(100, 30);
-            this._txtTocDo.TabIndex = 1;
-            this._txtTocDo.Text = "0";
-            this._txtTocDo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label6.Location = new System.Drawing.Point(11, 311);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(127, 25);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Tổng số mét:";
-            // 
-            // _txtTongSoMetCD
-            // 
-            this._txtTongSoMetCD.Location = new System.Drawing.Point(150, 308);
-            this._txtTongSoMetCD.Name = "_txtTongSoMetCD";
-            this._txtTongSoMetCD.Size = new System.Drawing.Size(100, 30);
-            this._txtTongSoMetCD.TabIndex = 1;
-            this._txtTongSoMetCD.Text = "0";
-            this._txtTongSoMetCD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -820,7 +820,7 @@ namespace QuanLyGiay
             this.Controls.Add(this.btnNapMayXa);
             this.Controls.Add(this.btnPrintOrder);
             this.Controls.Add(this.btnReport);
-            this.Controls.Add(this.btnSettings);
+            this.Controls.Add(this._btnSettings);
             this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -889,7 +889,7 @@ namespace QuanLyGiay
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView grvDH;
         private System.Windows.Forms.Button btnOrder;
-        private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Button _btnSettings;
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnPrintOrder;
         private System.Windows.Forms.Button btnNapMayXa;
