@@ -99,7 +99,7 @@ namespace QuanLyGiay
                 Timer t = (Timer)s;
                 t.Enabled = false;
 
-                if (_donHangDangChay.STT != 0)
+                //if (_donHangDangChay.STT != 0)
                 {
                     if (this.InvokeRequired)
                     {
@@ -800,9 +800,9 @@ namespace QuanLyGiay
                         DoiDonCutter(_donHangDoiDon);
 
                         //chuyen don may xa
-                        //TinhToan.TinhToanGiaTri(_donHangDangChay);
+                        TinhToan.TinhToanGiaTri(_donHangDangChay);
 
-                        //DoiDonMayXa(_donHangDoiDon);
+                        DoiDonMayXa(_donHangDoiDon);
                     }
                 }
             }
@@ -814,15 +814,16 @@ namespace QuanLyGiay
         #region Methods
         private void DoiDonMayXa(DonHangModel donHangDangChay)
         {
+            var s = ((donHangDangChay.DoSauLan * 10 * 10)).ToString("#");
             easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Xa").WriteAsync(donHangDangChay.Xa.ToString(), WritePiority.High);
             //Nhan 10 hai lần là vì, 1 lần chuyển từ cm->mm, lần 2 là để bỏ số lẻ ghi xuống driver.
-            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Rong").WriteAsync(((int)(donHangDangChay.Rong * 10 * 10)).ToString(), WritePiority.High);
-            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Cao").WriteAsync(((int)(donHangDangChay.Cao * 10 * 10)).ToString(), WritePiority.High);
-            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Canh").WriteAsync(((int)(donHangDangChay.Canh * 10 * 10)).ToString(), WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Rong").WriteAsync((donHangDangChay.Rong * 10 * 10).ToString("#"), WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Cao").WriteAsync((donHangDangChay.Cao * 10 * 10).ToString("#"), WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Canh").WriteAsync((donHangDangChay.Canh * 10 * 10).ToString("#"), WritePiority.High);
             easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Lan").WriteAsync(donHangDangChay.Lang.ToString(), WritePiority.High);
-            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Song").WriteAsync(((int)(donHangDangChay.CongThem * 10 * 10)).ToString(), WritePiority.High);
-            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/DoSauLan").WriteAsync(((int)(donHangDangChay.DoSauLan * 10 * 10)).ToString(), WritePiority.High);
-            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/MetToiKeHoach").WriteAsync(((int)((donHangDangChay.SoMetCaiDat * 10))).ToString(), WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Song").WriteAsync((donHangDangChay.CongThem * 10 * 10).ToString("#"), WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/DoSauLan").WriteAsync((donHangDangChay.DoSauLan * 10 * 10).ToString("#"), WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/MetToiKeHoach").WriteAsync((donHangDangChay.SoMetCaiDat * 10).ToString("#"), WritePiority.High);
 
             easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Dao1_SV").WriteAsync(GlobalVariable.DaoLangPosition.Dao1SV.ToString(), WritePiority.High);
             easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Dao2_SV").WriteAsync(GlobalVariable.DaoLangPosition.Dao2SV.ToString(), WritePiority.High);

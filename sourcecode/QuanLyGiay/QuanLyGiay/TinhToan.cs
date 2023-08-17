@@ -212,6 +212,8 @@ namespace QuanLyGiay
                 //}
 
                 #endregion
+
+                GlobalVariable.DaoLangPosition.HutSv = (int)rongChia2;
             }
 
             // Xả = 2 --luôn bật dao 3 tại vị trí 0
