@@ -14,13 +14,20 @@ namespace QuanLyGiay
         [STAThread]
         static void Main()
         {
-            #region đọc các giá trị khởi tạo ban đầu
-            GlobalVariable.ConnectionString = Properties.Settings.Default.ConnectionString;
-            #endregion
+            try
+            {
+                #region đọc các giá trị khởi tạo ban đầu
+                GlobalVariable.ConnectionString = Properties.Settings.Default.ConnectionString;
+                #endregion
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new frmMain());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Loi {ex.Message}");
+            }
         }
     }
 }

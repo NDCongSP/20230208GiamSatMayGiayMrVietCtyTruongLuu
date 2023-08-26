@@ -307,11 +307,10 @@ namespace QuanLyGiay
 
                     if (resultData.Count > 0)
                     {
-                        this.Invoke((MethodInvoker)delegate
-                        {
+                        grvDH?.Invoke(new Action(()=> {
                             grvDH.DataSource = resultData;
                             grvDH.Columns["CreatedDate"].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
-                        });
+                        }));
                     }
                 }
                 //Thread.Sleep(2000);
@@ -644,11 +643,11 @@ namespace QuanLyGiay
         {
             if (e.NewValue == "1")
             {
-                this.Invoke((MethodInvoker)delegate { _panelCutterStatus.BackColor = Color.Green; });
+                this?.Invoke((MethodInvoker)delegate { _panelCutterStatus.BackColor = Color.Green; });
             }
             else
             {
-                this.Invoke((MethodInvoker)delegate { _panelCutterStatus.BackColor = Color.Gray; });
+                this?.Invoke((MethodInvoker)delegate { _panelCutterStatus.BackColor = Color.Gray; });
             }
         }
 
