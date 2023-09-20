@@ -179,6 +179,30 @@ namespace QuanLyGiay
                     _donHang.GhiChu = t.Text;
                 }
             };
+            _txtKhachHang.TextChanged += (s, o) =>
+            {
+                TextBox t = (TextBox)s;
+                //if (!string.IsNullOrEmpty(t.Text))
+                {
+                    _donHang.KhachHang = t.Text;
+                }
+            };
+            _txtDonHang.TextChanged += (s, o) =>
+            {
+                TextBox t = (TextBox)s;
+                //if (!string.IsNullOrEmpty(t.Text))
+                {
+                    _donHang.DonHang = t.Text;
+                }
+            };
+            _txtPO.TextChanged += (s, o) =>
+            {
+                TextBox t = (TextBox)s;
+                //if (!string.IsNullOrEmpty(t.Text))
+                {
+                    _donHang.PO = t.Text;
+                }
+            };
 
             _cbMa.SelectedValueChanged += (s, o) =>
             {
