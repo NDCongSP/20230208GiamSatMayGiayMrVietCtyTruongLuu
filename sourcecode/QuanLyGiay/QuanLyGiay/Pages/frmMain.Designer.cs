@@ -381,7 +381,7 @@ namespace QuanLyGiay
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label5.Location = new System.Drawing.Point(312, 96);
+            this.label5.Location = new System.Drawing.Point(320, 96);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 25);
             this.label5.TabIndex = 0;
@@ -391,7 +391,7 @@ namespace QuanLyGiay
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label4.Location = new System.Drawing.Point(307, 38);
+            this.label4.Location = new System.Drawing.Point(316, 38);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 25);
             this.label4.TabIndex = 0;
@@ -441,7 +441,7 @@ namespace QuanLyGiay
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label20.Location = new System.Drawing.Point(285, 152);
+            this.label20.Location = new System.Drawing.Point(278, 152);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(116, 25);
             this.label20.TabIndex = 0;

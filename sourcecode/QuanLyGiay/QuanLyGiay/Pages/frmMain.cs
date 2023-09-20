@@ -58,7 +58,7 @@ namespace QuanLyGiay
 
                     if (c != null)
                     {
-                        //add thong tin don hang moi vao donHangDangChay
+                        //add thong tin don hang danng chay vao donHangDangChay
                         _donHangDangChay = null;
                         _donHangDangChay = new DonHangChayModel()
                         {
@@ -99,11 +99,16 @@ namespace QuanLyGiay
                 Timer t = (Timer)s;
                 t.Enabled = false;
 
+                Debug.WriteLine($"Trạng thái kết nối driver server {easyDriverConnector1.ConnectionStatus}");
+                if (_donHangDangChay != null)
+                {
+                    _donHangDangChay.TGKetThuc = DateTime.Now;
+                }
                 //if (_donHangDangChay.STT != 0)
                 {
                     if (this.InvokeRequired)
                     {
-                        this.Invoke(new Action(() =>
+                        this?.Invoke(new Action(() =>
                         {
                             labDateTime.Text = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss");
 
@@ -165,6 +170,11 @@ namespace QuanLyGiay
                 {
                     _btnSettings_Click(null, null);
                 }
+
+                else if (o.KeyCode == Keys.F3)
+                {
+                    ResetCacGiaTriCaiDat();
+                }
             };
             #endregion
 
@@ -200,93 +210,15 @@ namespace QuanLyGiay
 
         private void BtnNapMayXa_Click(object sender, EventArgs e)
         {
-            Debug.WriteLine("Chuyen don bang tay");
+            Debug.WriteLine("Chuyen don");
 
-            //move _donHangDangChay sang _donHangHoanThanh
-            if (_donHangDangChay.STT != 0)
-            {
-                //var donhang = new DonHangChayModel()
-                //{
-                //    IdDonHang = _donHangDangChay.IdDonHang,
-                //    STT = _donHangDangChay.STT,
-                //    Ma = _donHangDangChay.Ma,
-                //    Song = _donHangDangChay.Song,
-                //    Kho = _donHangDangChay.Kho,
-                //    DaiCat = _donHangDangChay.DaiCat,
-                //    SLCatTam = _donHangDangChay.SLCatTam,
-                //    Pallet = _donHangDangChay.Pallet,
-                //    Xa = _donHangDangChay.Xa,
-                //    Rong = _donHangDangChay.Rong,
-                //    Canh = _donHangDangChay.Canh,
-                //    Cao = _donHangDangChay.Cao,
-                //    Lang = _donHangDangChay.Lang,
-                //    GiayMen = _donHangDangChay.GiayMen,
-                //    GiaySongE = _donHangDangChay.GiaySongE,
-                //    GiayMatE = _donHangDangChay.GiayMatE,
-                //    GiaySongB = _donHangDangChay.GiaySongB,
-                //    GiayMatB = _donHangDangChay.GiayMatB,
-                //    GiaySongC = _donHangDangChay.GiaySongC,
-                //    GiayMatC = _donHangDangChay.GiayMatC,
-                //    KhachHang = _donHangDangChay.KhachHang,
-                //    DonHang = _donHangDangChay.DonHang,
-                //    PO = _donHangDangChay.PO,
-                //    Line = _donHangDangChay.Line,
-                //    GhiChu = _donHangDangChay.GhiChu
-                //};
+            //baos cho PLC biet là đã truyền thông số đơn mới xuống xong.
+            easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/DoiDon").WriteAsync("0", WritePiority.High);
+            //reset lenhChuyenDon
+            easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/LenhChuyenDon").WriteAsync("1", WritePiority.High);
 
-                //_donHangHoanThanh = null;
-                //_donHangHoanThanh = new DonHangChayModel();
-                _donHangHoanThanh = (DonHangChayModel)_donHangDangChay.Clone();
-            }
-
-            using (var connection = GlobalVariable.GetDbConnection())
-            {
-                var resultData = connection.Query<DonHangModel>("sp_tblDonHangGetOnProcess").ToList();
-
-                if (resultData.Count > 0)
-                {
-                    var c = resultData.Where(u => u.Status == StatusDHEnum.NewOrder).ToList();
-                    _donHangDoiDon = c.FirstOrDefault(x => x.STT == c.Min(u => u.STT));
-
-                    //add thong tin don hang moi vao donHangDangChay
-                    _donHangDangChay = null;
-                    _donHangDangChay = new DonHangChayModel()
-                    {
-                        IdDonHang = _donHangDoiDon.Id,
-                        STT = _donHangDoiDon.STT,
-                        Ma = _donHangDoiDon.Ma,
-                        Song = _donHangDoiDon.Song,
-                        Kho = _donHangDoiDon.Kho,
-                        DaiCat = _donHangDoiDon.DaiCat,
-                        SLCatTam = _donHangDoiDon.SLCatTam,
-                        Pallet = _donHangDoiDon.Pallet,
-                        Xa = _donHangDoiDon.Xa,
-                        Rong = _donHangDoiDon.Rong,
-                        Canh = _donHangDoiDon.Canh,
-                        Cao = _donHangDoiDon.Cao,
-                        Lang = _donHangDoiDon.Lang,
-                        GiayMen = _donHangDoiDon.GiayMen,
-                        GiaySongE = _donHangDoiDon.GiaySongE,
-                        GiayMatE = _donHangDoiDon.GiayMatE,
-                        GiaySongB = _donHangDoiDon.GiaySongB,
-                        GiayMatB = _donHangDoiDon.GiayMatB,
-                        GiaySongC = _donHangDoiDon.GiaySongC,
-                        GiayMatC = _donHangDoiDon.GiayMatC,
-                        Line = _donHangDoiDon.Line,
-                        GhiChu = _donHangDoiDon.GhiChu,
-                        KhachHang = _donHangDoiDon.KhachHang,
-                        DonHang = _donHangDoiDon.DonHang,
-                        PO = _donHangDoiDon.PO,
-                    };
-
-                    DoiDonCutter(_donHangDoiDon);
-
-                    //chuyen don may xa
-                    TinhToan.TinhToanGiaTri(_donHangDangChay);
-
-                    DoiDonMayXa(_donHangDoiDon);
-                }
-            }
+            //LuuDonHangChayXong();
+            //ChuyenDon();
         }
 
         private void BtnOrder_Click(object sender, EventArgs e)
@@ -307,10 +239,19 @@ namespace QuanLyGiay
 
                     if (resultData.Count > 0)
                     {
-                        grvDH?.Invoke(new Action(()=> {
+                        if (grvDH.InvokeRequired)
+                        {
+                            grvDH?.Invoke(new Action(() =>
+                            {
+                                grvDH.DataSource = resultData;
+                                grvDH.Columns["CreatedDate"].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
+                            }));
+                        }
+                        else
+                        {
                             grvDH.DataSource = resultData;
                             grvDH.Columns["CreatedDate"].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
-                        }));
+                        }
                     }
                 }
                 //Thread.Sleep(2000);
@@ -674,48 +615,10 @@ namespace QuanLyGiay
         /// <param name="e"></param>
         private void DoiDonCutter_ValueChanged(object sender, TagValueChangedEventArgs e)
         {
+            Debug.WriteLine($"Đổi đơn cutter {e.NewValue}");
             if (e.NewValue == "0")
             {
-                //sau khi nhận tín hiệu PLC báo về đã đổi đơn thành công thì update status đơn hàng thành Processing
-                using (var connection = GlobalVariable.GetDbConnection())
-                {
-                    var para = new DynamicParameters();
-                    //update trạng thái hoàn thành cho đơn hàng vừa chạy xong
 
-                    connection.Execute($"UPDATE tbldonhang set Status = 2 WHERE Id = {_donHangHoanThanh.IdDonHang}");
-                    //update
-                    connection.Execute($"UPDATE tbldonhang set Status = 1 WHERE Id = {_donHangDangChay.IdDonHang}");
-
-                    para = new DynamicParameters();
-                    para.Add("_donHangId", _donHangDangChay.IdDonHang);
-                    para.Add("_ma", _donHangDangChay.Ma);
-                    para.Add("_song", _donHangDangChay.Song);
-                    para.Add("_kho", _donHangDangChay.Kho);
-                    para.Add("_chieuDai", _donHangDangChay.DaiCat);
-                    para.Add("_soLuong", _donHangDangChay.SLCatTam);
-                    para.Add("_slDat", _donHangDangChay.SLDat);
-                    para.Add("_slLoi", _donHangDangChay.SLLoi);
-                    para.Add("_slConLai", _donHangDangChay.SLConLai);
-                    para.Add("_pallet", _donHangDangChay.Pallet);
-                    para.Add("_xa", _donHangDangChay.Xa);
-                    para.Add("_thoiGianBatDau", _donHangDangChay.TGBatDau);
-                    para.Add("_thoiGianKetThuc", _donHangDangChay.TGKetThuc);
-                    para.Add("_thoiGianChay", _donHangDangChay.Chay);
-                    para.Add("_thoiGianDung", _donHangDangChay.Dung);
-                    para.Add("_hoanTatCutter", _donHangDangChay.HoanTatCutter);
-                    para.Add("_hoanTatSpliter", _donHangDangChay.HoanTatSpliter);
-                    para.Add("_hoanTatMayMen", _donHangDangChay.HoanTatMayMen);
-                    para.Add("_hoanTatSongE", _donHangDangChay.HoanTatSongE);
-                    para.Add("_hoanTatGiayMatE", _donHangDangChay.HoanTatGiayMatE);
-                    para.Add("_hoanTatGiaySongE", _donHangDangChay.HoanTatGiaySongE);
-                    para.Add("_hoanTatSongB", _donHangDangChay.HoanTatSongB);
-                    para.Add("_hoanTatGiayMatB", _donHangDangChay.HoanTatGiayMatB);
-                    para.Add("_hoanTatGiaySongB", _donHangDangChay.HoanTatGiaySongB);
-                    para.Add("_hoanTatSongC", _donHangDangChay.HoanTatSongC);
-                    para.Add("_hoanTatGiayMatC", _donHangDangChay.HoanTatGiayMatC);
-                    para.Add("_hoanTatGiaySongC", _donHangDangChay.HoanTatGiaySongC);
-                    connection.Execute($"sp_tblDonHangDangChayInsert", para, commandType: CommandType.StoredProcedure);
-                }
             }
         }
 
@@ -728,95 +631,63 @@ namespace QuanLyGiay
         {
             if (e.NewValue == "1")
             {
-                Debug.WriteLine("Chuyen don");
+                LuuDonHangChayXong();
+                ChuyenDon();
 
-                //move _donHangDangChay sang _donHangHoanThanh
-                if (_donHangDangChay.STT != 0)
-                {
-                    //var donhang = new DonHangChayModel()
-                    //{
-                    //    IdDonHang = _donHangDangChay.IdDonHang,
-                    //    STT = _donHangDangChay.STT,
-                    //    Ma = _donHangDangChay.Ma,
-                    //    Song = _donHangDangChay.Song,
-                    //    Kho = _donHangDangChay.Kho,
-                    //    DaiCat = _donHangDangChay.DaiCat,
-                    //    SLCatTam = _donHangDangChay.SLCatTam,
-                    //    Pallet = _donHangDangChay.Pallet,
-                    //    Xa = _donHangDangChay.Xa,
-                    //    Rong = _donHangDangChay.Rong,
-                    //    Canh = _donHangDangChay.Canh,
-                    //    Cao = _donHangDangChay.Cao,
-                    //    Lang = _donHangDangChay.Lang,
-                    //    GiayMen = _donHangDangChay.GiayMen,
-                    //    GiaySongE = _donHangDangChay.GiaySongE,
-                    //    GiayMatE = _donHangDangChay.GiayMatE,
-                    //    GiaySongB = _donHangDangChay.GiaySongB,
-                    //    GiayMatB = _donHangDangChay.GiayMatB,
-                    //    GiaySongC = _donHangDangChay.GiaySongC,
-                    //    GiayMatC = _donHangDangChay.GiayMatC,
-                    //    KhachHang = _donHangDangChay.KhachHang,
-                    //    DonHang = _donHangDangChay.DonHang,
-                    //    PO = _donHangDangChay.PO,
-                    //    Line = _donHangDangChay.Line,
-                    //    GhiChu = _donHangDangChay.GhiChu
-                    //};
+                ////move _donHangDangChay sang _donHangHoanThanh
+                //if (_donHangDangChay.STT != 0)
+                //{
+                //    _donHangHoanThanh = (DonHangChayModel)_donHangDangChay.Clone();
+                //}
 
-                    //_donHangHoanThanh = null;
-                    //_donHangHoanThanh = new DonHangChayModel();
-                    //_donHangHoanThanh = donhang;
+                //using (var connection = GlobalVariable.GetDbConnection())
+                //{
+                //    var resultData = connection.Query<DonHangModel>("sp_tblDonHangGetOnProcess").ToList();
 
-                    _donHangHoanThanh = (DonHangChayModel)_donHangDangChay.Clone();
-                }
+                //    if (resultData.Count > 0)
+                //    {
+                //        var c = resultData.Where(u => u.Status == 0).ToList();
+                //        _donHangDoiDon = c.FirstOrDefault(x => x.STT == c.Min(u => u.STT));
 
-                using (var connection = GlobalVariable.GetDbConnection())
-                {
-                    var resultData = connection.Query<DonHangModel>("sp_tblDonHangGetOnProcess").ToList();
+                //        //add thong tin don hang moi vao donHangDangChay
+                //        _donHangDangChay = null;
+                //        _donHangDangChay = new DonHangChayModel()
+                //        {
+                //            IdDonHang = _donHangDoiDon.Id,
+                //            STT = _donHangDoiDon.STT,
+                //            Ma = _donHangDoiDon.Ma,
+                //            Song = _donHangDoiDon.Song,
+                //            Kho = _donHangDoiDon.Kho,
+                //            DaiCat = _donHangDoiDon.DaiCat,
+                //            SLCatTam = _donHangDoiDon.SLCatTam,
+                //            Pallet = _donHangDoiDon.Pallet,
+                //            Xa = _donHangDoiDon.Xa,
+                //            Rong = _donHangDoiDon.Rong,
+                //            Canh = _donHangDoiDon.Canh,
+                //            Cao = _donHangDoiDon.Cao,
+                //            Lang = _donHangDoiDon.Lang,
+                //            GiayMen = _donHangDoiDon.GiayMen,
+                //            GiaySongE = _donHangDoiDon.GiaySongE,
+                //            GiayMatE = _donHangDoiDon.GiayMatE,
+                //            GiaySongB = _donHangDoiDon.GiaySongB,
+                //            GiayMatB = _donHangDoiDon.GiayMatB,
+                //            GiaySongC = _donHangDoiDon.GiaySongC,
+                //            GiayMatC = _donHangDoiDon.GiayMatC,
+                //            Line = _donHangDoiDon.Line,
+                //            GhiChu = _donHangDoiDon.GhiChu,
+                //            KhachHang = _donHangDoiDon.KhachHang,
+                //            DonHang = _donHangDoiDon.DonHang,
+                //            PO = _donHangDoiDon.PO,
+                //        };
 
-                    if (resultData.Count > 0)
-                    {
-                        var c = resultData.Where(u => u.Status == 0).ToList();
-                        _donHangDoiDon = c.FirstOrDefault(x => x.STT == c.Min(u => u.STT));
+                //        DoiDonCutter(_donHangDoiDon);
 
-                        //add thong tin don hang moi vao donHangDangChay
-                        _donHangDangChay = null;
-                        _donHangDangChay = new DonHangChayModel()
-                        {
-                            IdDonHang = _donHangDoiDon.Id,
-                            STT = _donHangDoiDon.STT,
-                            Ma = _donHangDoiDon.Ma,
-                            Song = _donHangDoiDon.Song,
-                            Kho = _donHangDoiDon.Kho,
-                            DaiCat = _donHangDoiDon.DaiCat,
-                            SLCatTam = _donHangDoiDon.SLCatTam,
-                            Pallet = _donHangDoiDon.Pallet,
-                            Xa = _donHangDoiDon.Xa,
-                            Rong = _donHangDoiDon.Rong,
-                            Canh = _donHangDoiDon.Canh,
-                            Cao = _donHangDoiDon.Cao,
-                            Lang = _donHangDoiDon.Lang,
-                            GiayMen = _donHangDoiDon.GiayMen,
-                            GiaySongE = _donHangDoiDon.GiaySongE,
-                            GiayMatE = _donHangDoiDon.GiayMatE,
-                            GiaySongB = _donHangDoiDon.GiaySongB,
-                            GiayMatB = _donHangDoiDon.GiayMatB,
-                            GiaySongC = _donHangDoiDon.GiaySongC,
-                            GiayMatC = _donHangDoiDon.GiayMatC,
-                            Line = _donHangDoiDon.Line,
-                            GhiChu = _donHangDoiDon.GhiChu,
-                            KhachHang = _donHangDoiDon.KhachHang,
-                            DonHang = _donHangDoiDon.DonHang,
-                            PO = _donHangDoiDon.PO,
-                        };
+                //        //chuyen don may xa
+                //        TinhToan.TinhToanGiaTri(_donHangDangChay);
 
-                        DoiDonCutter(_donHangDoiDon);
-
-                        //chuyen don may xa
-                        TinhToan.TinhToanGiaTri(_donHangDangChay);
-
-                        DoiDonMayXa(_donHangDoiDon);
-                    }
-                }
+                //        DoiDonMayXa(_donHangDoiDon);
+                //    }
+                //}
             }
         }
         #endregion
@@ -881,6 +752,168 @@ namespace QuanLyGiay
 
             //baos cho PLC biet là đã truyền thông số đơn mới xuống xong.
             easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/DoiDon").WriteAsync("1", WritePiority.High);
+            //reset lenhChuyenDon
+            easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/LenhChuyenDon").WriteAsync("0", WritePiority.High);
+        }
+
+        private void LuuDonHangChayXong()
+        {
+            //move _donHangDangChay sang _donHangHoanThanh
+            if (_donHangDangChay.STT != 0)
+            {
+                _donHangHoanThanh = (DonHangChayModel)_donHangDangChay.Clone();
+
+                using (var connection = GlobalVariable.GetDbConnection())
+                {
+                    var para = new DynamicParameters();
+                    //update trạng thái hoàn thành cho đơn hàng vừa chạy xong
+                    connection.Execute($"UPDATE tbldonhang set Status = 2 WHERE Id = {_donHangHoanThanh.IdDonHang}");
+
+                    para = new DynamicParameters();
+                    para.Add("_donHangId", _donHangHoanThanh.IdDonHang);
+                    para.Add("_ma", _donHangHoanThanh.Ma);
+                    para.Add("_song", _donHangHoanThanh.Song);
+                    para.Add("_kho", _donHangHoanThanh.Kho);
+                    para.Add("_chieuDai", _donHangHoanThanh.DaiCat);
+                    para.Add("_soLuong", _donHangHoanThanh.SLCatTam);
+                    para.Add("_slDat", _donHangHoanThanh.SLDat);
+                    para.Add("_slLoi", _donHangHoanThanh.SLLoi);
+                    para.Add("_slConLai", _donHangHoanThanh.SLConLai);
+                    para.Add("_pallet", _donHangHoanThanh.Pallet);
+                    para.Add("_xa", _donHangHoanThanh.Xa);
+                    para.Add("_thoiGianBatDau", _donHangHoanThanh.TGBatDau);
+                    para.Add("_thoiGianKetThuc", _donHangHoanThanh.TGKetThuc);
+                    para.Add("_thoiGianChay", _donHangHoanThanh.Chay);
+                    para.Add("_thoiGianDung", _donHangHoanThanh.Dung);
+                    para.Add("_hoanTatCutter", _donHangHoanThanh.HoanTatCutter);
+                    para.Add("_hoanTatSpliter", _donHangHoanThanh.HoanTatSpliter);
+                    para.Add("_hoanTatMayMen", _donHangHoanThanh.HoanTatMayMen);
+                    para.Add("_hoanTatSongE", _donHangHoanThanh.HoanTatSongE);
+                    para.Add("_hoanTatGiayMatE", _donHangHoanThanh.HoanTatGiayMatE);
+                    para.Add("_hoanTatGiaySongE", _donHangHoanThanh.HoanTatGiaySongE);
+                    para.Add("_hoanTatSongB", _donHangHoanThanh.HoanTatSongB);
+                    para.Add("_hoanTatGiayMatB", _donHangHoanThanh.HoanTatGiayMatB);
+                    para.Add("_hoanTatGiaySongB", _donHangHoanThanh.HoanTatGiaySongB);
+                    para.Add("_hoanTatSongC", _donHangHoanThanh.HoanTatSongC);
+                    para.Add("_hoanTatGiayMatC", _donHangHoanThanh.HoanTatGiayMatC);
+                    para.Add("_hoanTatGiaySongC", _donHangHoanThanh.HoanTatGiaySongC);
+                    //connection.Execute($"sp_tblDonHangDangChayInsert", para, commandType: CommandType.StoredProcedure);
+                }
+            }
+        }
+        private void ChuyenDon()
+        {
+            using (var connection = GlobalVariable.GetDbConnection())
+            {
+                var para = new DynamicParameters();
+
+                #region lấy đơn hàng mới để chuyển đơn
+                var resultData = connection.Query<DonHangModel>("sp_tblDonHangGetOnProcess").ToList();
+
+                if (resultData.Count > 0)
+                {
+                    var c = resultData.Where(u => u.Status == StatusDHEnum.NewOrder).ToList();
+                    _donHangDoiDon = c.FirstOrDefault(x => x.STT == c.Min(u => u.STT));
+
+                    //add thong tin don hang moi vao donHangDangChay
+                    _donHangDangChay = null;
+                    _donHangDangChay = new DonHangChayModel()
+                    {
+                        IdDonHang = _donHangDoiDon.Id,
+                        STT = _donHangDoiDon.STT,
+                        Ma = _donHangDoiDon.Ma,
+                        Song = _donHangDoiDon.Song,
+                        Kho = _donHangDoiDon.Kho,
+                        DaiCat = _donHangDoiDon.DaiCat,
+                        SLCatTam = _donHangDoiDon.SLCatTam,
+                        Pallet = _donHangDoiDon.Pallet,
+                        Xa = _donHangDoiDon.Xa,
+                        Rong = _donHangDoiDon.Rong,
+                        Canh = _donHangDoiDon.Canh,
+                        Cao = _donHangDoiDon.Cao,
+                        Lang = _donHangDoiDon.Lang,
+                        GiayMen = _donHangDoiDon.GiayMen,
+                        GiaySongE = _donHangDoiDon.GiaySongE,
+                        GiayMatE = _donHangDoiDon.GiayMatE,
+                        GiaySongB = _donHangDoiDon.GiaySongB,
+                        GiayMatB = _donHangDoiDon.GiayMatB,
+                        GiaySongC = _donHangDoiDon.GiaySongC,
+                        GiayMatC = _donHangDoiDon.GiayMatC,
+                        Line = _donHangDoiDon.Line,
+                        GhiChu = _donHangDoiDon.GhiChu,
+                        KhachHang = _donHangDoiDon.KhachHang,
+                        DonHang = _donHangDoiDon.DonHang,
+                        PO = _donHangDoiDon.PO,
+                        TGBatDau = DateTime.Now,
+                    };
+
+                    DoiDonCutter(_donHangDoiDon);
+
+                    //chuyen don may xa
+                    TinhToan.TinhToanGiaTri(_donHangDangChay);
+
+                    DoiDonMayXa(_donHangDoiDon);
+
+                    //update trang thái OnProcess cho đơn hàng mới được ghi xuống chạy
+                    connection.Execute($"UPDATE tbldonhang set Status = 1 WHERE Id = {_donHangDangChay.IdDonHang}");
+                }
+                #endregion
+            }
+        }
+
+        private void ResetCacGiaTriCaiDat()
+        {
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Xa").WriteAsync("0", WritePiority.High);
+            //Nhan 10 hai lần là vì, 1 lần chuyển từ cm->mm, lần 2 là để bỏ số lẻ ghi xuống driver.
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Rong").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Cao").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Canh").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Lan").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Song").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/DoSauLan").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/MetToiKeHoach").WriteAsync("0", WritePiority.High);
+
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Dao1_SV").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Dao2_SV").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Dao3_SV").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Dao4_SV").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Dao5_SV").WriteAsync("0", WritePiority.High);
+
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Dao1_U").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Dao2_U").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Dao3_U").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Dao4_U").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Dao5_U").WriteAsync("0", WritePiority.High);
+
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Lan1_SV").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Lan2_SV").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Lan3_SV").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Lan4_SV").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Lan5_SV").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Lan6_SV").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Lan7_SV").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Lan8_SV").WriteAsync("0", WritePiority.High);
+
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Lan1_U").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Lan2_U").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Lan3_U").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Lan4_U").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Lan5_U").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Lan6_U").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Lan7_U").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Lan8_U").WriteAsync("0", WritePiority.High);
+
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Hut_SV").WriteAsync("0", WritePiority.High);
+
+            //baos cho PLC biet là đã truyền thông số đơn mới xuống xong.
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/DoiDon").WriteAsync("0", WritePiority.High);
+
+            easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/ChieuDaiCat").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/SoLuongCat").WriteAsync("0", WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/Pallet").WriteAsync("0", WritePiority.High);
+
+            //baos cho PLC biet là đã truyền thông số đơn mới xuống xong.
+            easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/DoiDon").WriteAsync("0", WritePiority.High);
             //reset lenhChuyenDon
             easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/LenhChuyenDon").WriteAsync("0", WritePiority.High);
         }

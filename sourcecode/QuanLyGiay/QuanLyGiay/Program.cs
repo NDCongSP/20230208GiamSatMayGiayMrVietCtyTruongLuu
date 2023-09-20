@@ -14,7 +14,7 @@ namespace QuanLyGiay
         [STAThread]
         static void Main()
         {
-            try
+            //try
             {
                 #region đọc các giá trị khởi tạo ban đầu
                 GlobalVariable.ConnectionString = Properties.Settings.Default.ConnectionString;
@@ -24,10 +24,10 @@ namespace QuanLyGiay
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new frmMain());
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Loi {ex.Message}");
-            }
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show($"Loi {ex.Message}");
+            //}
         }
     }
 }
