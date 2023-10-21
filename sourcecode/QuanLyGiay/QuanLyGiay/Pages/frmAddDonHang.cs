@@ -365,7 +365,8 @@ namespace QuanLyGiay
                 #region hiển thị control
                 if (this.InvokeRequired)
                 {
-                    this?.Invoke(new Action(()=> {
+                    this?.Invoke(new Action(() =>
+                    {
                         _txtSTT.Text = dr.STT.ToString();
                         _cbMa.SelectedItem = dr.Ma;
                         _cbSong.SelectedItem = dr.Song;
@@ -525,7 +526,7 @@ namespace QuanLyGiay
         #endregion
     }
 
-    private class DonHangNew
+    public class DonHangNew
     {
         /// <summary>
         /// Chứa thông tin đơn hàng.
