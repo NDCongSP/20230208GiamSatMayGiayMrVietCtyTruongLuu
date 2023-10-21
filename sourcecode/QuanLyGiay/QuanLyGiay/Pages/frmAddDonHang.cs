@@ -456,21 +456,21 @@ namespace QuanLyGiay
                     {
                         if (item.IsNew)
                         {
-                            var result = connection.Execute($"INSERT INTO tbldonhang (Stt,Status,Ma,Song,SoLop,CongThem,Kho,DaiCat,SLCatTam,SoMetCaiDat,Xa,Rong,Canh,Cao,Lang,DoSauLan,GiaySongE,GiayMatE," +
+                            var result = connection.Execute($"INSERT INTO tbldonhang (Status,Stt,Ma,Song,SoLop,CongThem,Kho,DaiCat,SLCatTam,SoMetCaiDat,Xa,Rong,Canh,Cao,Lang,DoSauLan,GiaySongE,GiayMatE," +
                          $"GiaySongB,GiayMatB,GiaySongC,GiayMatC,GiayMen,GhiChu,MayXa,Line,KhachHang,DaiKH,RongKH,CaoKH,DonHang,PO,MayIn,ChapBe,GhimDan) " +
                          $"VALUES (@Stt,@Status,@Ma,@Song,@SoLop,@CongThem,@Kho,@DaiCat,@SLCatTam,@SoMetCaiDat,@Xa,@Rong,@Canh,@Cao,@Lang,@DoSauLan,@GiaySongE,@GiayMatE," +
-                         $"@GiaySongB,@GiayMatB,@GiaySongC,@GiayMatC,@GiayMen,@GhiChu,@MayXa,@Line,@KhachHang,@DaiKH,@RongKH,@CaoKH,@DonHang,@PO,@MayIn,@ChapBe,@GhimDan)", _listDonHangNew);
+                         $"@GiaySongB,@GiayMatB,@GiaySongC,@GiayMatC,@GiayMen,@GhiChu,@MayXa,@Line,@KhachHang,@DaiKH,@RongKH,@CaoKH,@DonHang,@PO,@MayIn,@ChapBe,@GhimDan)", item.DonHangInfo);
                         }
                         else
                         {
-                            string  query=$"UPDATE tbldonhang SET Status = {item.DonHangInfo.Status},Ma = {item.DonHangInfo.Ma},Song = {item.DonHangInfo.Song},SoLop = {item.DonHangInfo.SoLop}," +
+                            string  query=$"UPDATE tbldonhang SET Ma = '{item.DonHangInfo.Ma}',Song = '{item.DonHangInfo.Song}',SoLop = '{item.DonHangInfo.SoLop}'," +
                                 $"CongThem = {item.DonHangInfo.CongThem},Kho = {item.DonHangInfo.Kho},DaiCat = {item.DonHangInfo.DaiCat},SLCatTam = {item.DonHangInfo.SLCatTam},SoMetCaiDat = {item.DonHangInfo.SoMetCaiDat}," +
                                 $"Xa = {item.DonHangInfo.Xa},Rong = {item.DonHangInfo.Rong},Canh = {item.DonHangInfo.Canh},Cao = {item.DonHangInfo.Cao},Lang = {item.DonHangInfo.Lang},DoSauLan = {item.DonHangInfo.DoSauLan}," +
-                                $"GiaySongE = {item.DonHangInfo.GiaySongE},GiayMatE = {item.DonHangInfo.GiayMatE},GiaySongB = {item.DonHangInfo.GiaySongB},GiayMatB = {item.DonHangInfo.GiayMatB}," +
-                                $"GiaySongC = {item.DonHangInfo.GiaySongC},GiayMatC = {item.DonHangInfo.GiayMatC},GiayMen = {item.DonHangInfo.GiayMen},GhiChu = {item.DonHangInfo.GhiChu}," +
-                                $"MayXa = {item.DonHangInfo.MayXa},Line = {item.DonHangInfo.Line},KhachHang = {item.DonHangInfo.DonHang},DaiKH = {item.DonHangInfo.DaiKH},RongKH = {item.DonHangInfo.RongKH}," +
-                                $"CaoKH = {item.DonHangInfo.CaoKH},DonHang = {item.DonHangInfo.DonHang},PO = {item.DonHangInfo.PO},MayIn ={item.DonHangInfo.MayIn},ChapBe ={item.DonHangInfo.ChapBe}," +
-                                $"GhimDan = {item.DonHangInfo.GhimDan},Pallet = {item.DonHangInfo.Pallet}" +
+                                $"GiaySongE = '{item.DonHangInfo.GiaySongE}',GiayMatE = '{item.DonHangInfo.GiayMatE}',GiaySongB = '{item.DonHangInfo.GiaySongB}',GiayMatB = '{item.DonHangInfo.GiayMatB}'," +
+                                $"GiaySongC = '{item.DonHangInfo.GiaySongC}',GiayMatC = '{item.DonHangInfo.GiayMatC}',GiayMen = '{item.DonHangInfo.GiayMen}',GhiChu = '{item.DonHangInfo.GhiChu}'," +
+                                $"MayXa = '{item.DonHangInfo.MayXa}',Line = '{item.DonHangInfo.Line}',KhachHang = '{item.DonHangInfo.DonHang}',DaiKH = {item.DonHangInfo.DaiKH},RongKH = {item.DonHangInfo.RongKH}," +
+                                $"CaoKH = {item.DonHangInfo.CaoKH},DonHang = '{item.DonHangInfo.DonHang}',PO = '{item.DonHangInfo.PO}',MayIn = '{item.DonHangInfo.MayIn}',ChapBe ='{item.DonHangInfo.ChapBe}'," +
+                                $"GhimDan = '{item.DonHangInfo.GhimDan}',Pallet = {item.DonHangInfo.Pallet}" +
                                 $" WHERE STT ={item.DonHangInfo.STT};";
 
                             connection.Execute(query);
