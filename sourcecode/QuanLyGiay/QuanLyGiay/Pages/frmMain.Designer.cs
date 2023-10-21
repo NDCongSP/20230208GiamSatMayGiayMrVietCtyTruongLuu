@@ -73,12 +73,14 @@ namespace QuanLyGiay
             this._txtSLConlai = new System.Windows.Forms.TextBox();
             this._txtTongSoMetCD = new System.Windows.Forms.TextBox();
             this._txtSLCat = new System.Windows.Forms.TextBox();
+            this._txtSoMetCL = new System.Windows.Forms.TextBox();
             this._txtDaiCat = new System.Windows.Forms.TextBox();
             this._txtPO = new System.Windows.Forms.TextBox();
             this._txtKhachHang = new System.Windows.Forms.TextBox();
             this._txtDonHang = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this._panelSongCStatus = new System.Windows.Forms.Panel();
@@ -99,8 +101,6 @@ namespace QuanLyGiay
             this.labDateTime = new System.Windows.Forms.Label();
             this._labDriverStatus = new System.Windows.Forms.Label();
             this.easyDriverConnector1 = new EasyScada.Winforms.Controls.EasyDriverConnector(this.components);
-            this.label8 = new System.Windows.Forms.Label();
-            this._txtSoMetCL = new System.Windows.Forms.TextBox();
             this.panel24.SuspendLayout();
             this.panel21.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -528,6 +528,17 @@ namespace QuanLyGiay
             this._txtSLCat.Text = "0";
             this._txtSLCat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // _txtSoMetCL
+            // 
+            this._txtSoMetCL.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
+            this._txtSoMetCL.ForeColor = System.Drawing.Color.Red;
+            this._txtSoMetCL.Location = new System.Drawing.Point(553, 397);
+            this._txtSoMetCL.Name = "_txtSoMetCL";
+            this._txtSoMetCL.Size = new System.Drawing.Size(201, 83);
+            this._txtSoMetCL.TabIndex = 1;
+            this._txtSoMetCL.Text = "0";
+            this._txtSoMetCL.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // _txtDaiCat
             // 
             this._txtDaiCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
@@ -579,6 +590,16 @@ namespace QuanLyGiay
             this.label21.Size = new System.Drawing.Size(127, 25);
             this.label21.TabIndex = 0;
             this.label21.Text = "Khách Hàng:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(375, 426);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(159, 31);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Số mét CL:";
             // 
             // label6
             // 
@@ -807,32 +828,11 @@ namespace QuanLyGiay
             this.easyDriverConnector1.Timeout = 30;
             this.easyDriverConnector1.UseMongoDb = false;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(375, 426);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(159, 31);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Số mét CL:";
-            // 
-            // _txtSoMetCL
-            // 
-            this._txtSoMetCL.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
-            this._txtSoMetCL.ForeColor = System.Drawing.Color.Red;
-            this._txtSoMetCL.Location = new System.Drawing.Point(553, 397);
-            this._txtSoMetCL.Name = "_txtSoMetCL";
-            this._txtSoMetCL.Size = new System.Drawing.Size(201, 83);
-            this._txtSoMetCL.TabIndex = 1;
-            this._txtSoMetCL.Text = "0";
-            this._txtSoMetCL.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 985);
+            this.ClientSize = new System.Drawing.Size(1274, 985);
             this.Controls.Add(this.labDateTime);
             this.Controls.Add(this.btnReviceError);
             this.Controls.Add(this.btnNapMayXa);
@@ -844,7 +844,7 @@ namespace QuanLyGiay
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this._labDriverStatus);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmMain";

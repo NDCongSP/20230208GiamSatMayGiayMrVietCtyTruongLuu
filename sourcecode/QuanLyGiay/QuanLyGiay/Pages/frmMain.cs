@@ -54,7 +54,7 @@ namespace QuanLyGiay
 
                 if (resultData.Count > 0)
                 {
-                    var c = resultData.Where(u => u.Status == StatusDHEnum.Processing).FirstOrDefault();
+                    var c = resultData.Where(u => u.Status == StatusDHEnum.CHAY).FirstOrDefault();
 
                     if (c != null)
                     {
@@ -812,7 +812,7 @@ namespace QuanLyGiay
 
                 if (resultData.Count > 0)
                 {
-                    var c = resultData.Where(u => u.Status == StatusDHEnum.NewOrder).ToList();
+                    var c = resultData.Where(u => u.Status == StatusDHEnum.MOI).ToList();
                     _donHangDoiDon = c.FirstOrDefault(x => x.STT == c.Min(u => u.STT));
 
                     //add thong tin don hang moi vao donHangDangChay

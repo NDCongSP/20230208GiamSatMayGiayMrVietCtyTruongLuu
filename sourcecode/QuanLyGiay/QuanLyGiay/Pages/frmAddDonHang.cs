@@ -121,7 +121,8 @@ namespace QuanLyGiay
 
                     if (this.InvokeRequired)
                     {
-                        this.Invoke(new Action(()=> {
+                        this.Invoke(new Action(() =>
+                        {
                             _txtCanh.Text = _donHang.Canh.ToString();
                         }));
                     }
@@ -331,19 +332,103 @@ namespace QuanLyGiay
 
         private void _grvDH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView sen = (DataGridView)sender;
-
-            DataGridViewRow s = sen.Rows[e.RowIndex];
-
-            this.Invoke((MethodInvoker)delegate
+            DataGridView dvg = (DataGridView)sender;
+            //Check first if datagridview has data and
+            //Check if you are selecting a valid row
+            if (dvg.Rows.Count > 0 && dvg.CurrentCell.RowIndex > 0)
             {
-                //_txtSTT.Text=
-            });
+                int index = dvg.CurrentCell.RowIndex;
+
+                DataGridViewRow selectedRow = dvg.Rows[index];
+                DonHangModel dr = (DonHangModel)selectedRow.DataBoundItem;
+
+                string mykey = Convert.ToString(selectedRow.Cells["columnName"].Value);
+                //Or you can store the information you've got here to some
+                //Variable you can use to open the form you want.         
+            }
         }
 
         private void _grvDH_Click(object sender, EventArgs e)
         {
+            DataGridView dvg = (DataGridView)sender;
+            //Check first if datagridview has data and
+            //Check if you are selecting a valid row
+            if (dvg.Rows.Count > 0)
+            {
+                int index = dvg.CurrentCell.RowIndex;
 
+                DataGridViewRow selectedRow = dvg.Rows[index];
+                DonHangModel dr = (DonHangModel)selectedRow.DataBoundItem;
+
+                //string mykey = Convert.ToString(selectedRow.Cells["Xa"].Value);
+
+                #region hiển thị control
+                if (this.InvokeRequired)
+                {
+                    this?.Invoke(new Action(()=> {
+                        _txtSTT.Text = dr.STT.ToString();
+                        _cbMa.SelectedItem = dr.Ma;
+                        _cbSong.SelectedItem = dr.Song;
+                        _cbSoLop.SelectedItem = dr.SoLop;
+
+                        _txtKho.Text = dr.Kho.ToString();
+                        _txtChieuDai.Text = dr.DaiCat.ToString();
+                        _txtSoLuong.Text = dr.SLCatTam.ToString();
+                        _txtXa.Text = dr.Xa.ToString();
+                        _txtRong.Text = dr.Rong.ToString();
+                        _txtCanh.Text = dr.Canh.ToString();
+                        _txtCao.Text = dr.Cao.ToString();
+                        _txtLang.Text = dr.Lang.ToString();
+                        _txtDoSauLang.Text = dr.DoSauLan.ToString();
+                        _txtPallet.Text = dr.Pallet.ToString();
+
+                        _txtKhachHang.Text = dr.KhachHang;
+                        _txtDonHang.Text = dr.DonHang;
+                        _txtPO.Text = dr.PO;
+                        _txtGhiChu.Text = dr.GhiChu;
+
+                        _cbGiayMen.SelectedItem = dr.GiayMen;
+                        _cbGiaySongE.SelectedItem = dr.GiaySongE;
+                        _cbGiayMatE.SelectedItem = dr.GiayMatE;
+                        _cbGiaySongB.SelectedItem = dr.GiaySongB;
+                        _cbGiayMatB.SelectedItem = dr.GiayMatB;
+                        _cbGiaySongC.SelectedItem = dr.GiaySongC;
+                        _cbGiayMatC.SelectedItem = dr.GiayMatC;
+                    }));
+                }
+                else
+                {
+                    _txtSTT.Text = dr.STT.ToString();
+                    _cbMa.SelectedItem = dr.Ma;
+                    _cbSong.SelectedItem = dr.Song;
+                    _cbSoLop.SelectedItem = dr.SoLop;
+
+                    _txtKho.Text = dr.Kho.ToString();
+                    _txtChieuDai.Text = dr.DaiCat.ToString();
+                    _txtSoLuong.Text = dr.SLCatTam.ToString();
+                    _txtXa.Text = dr.Xa.ToString();
+                    _txtRong.Text = dr.Rong.ToString();
+                    _txtCanh.Text = dr.Canh.ToString();
+                    _txtCao.Text = dr.Cao.ToString();
+                    _txtLang.Text = dr.Lang.ToString();
+                    _txtDoSauLang.Text = dr.DoSauLan.ToString();
+                    _txtPallet.Text = dr.Pallet.ToString();
+
+                    _txtKhachHang.Text = dr.KhachHang;
+                    _txtDonHang.Text = dr.DonHang;
+                    _txtPO.Text = dr.PO;
+                    _txtGhiChu.Text = dr.GhiChu;
+
+                    _cbGiayMen.SelectedItem = dr.GiayMen;
+                    _cbGiaySongE.SelectedItem = dr.GiaySongE;
+                    _cbGiayMatE.SelectedItem = dr.GiayMatE;
+                    _cbGiaySongB.SelectedItem = dr.GiaySongB;
+                    _cbGiayMatB.SelectedItem = dr.GiayMatB;
+                    _cbGiaySongC.SelectedItem = dr.GiaySongC;
+                    _cbGiayMatC.SelectedItem = dr.GiayMatC;
+                }
+                #endregion
+            }
         }
 
         private void _btnSua_Click(object sender, EventArgs e)
@@ -382,7 +467,7 @@ namespace QuanLyGiay
                     STT = _donHang.STT,
                     Ma = _donHang.Ma,
                     Song = _donHang.Song,
-                    SoLop=_donHang.SoLop,
+                    SoLop = _donHang.SoLop,
                     Kho = _donHang.Kho,
                     DaiCat = _donHang.DaiCat,
                     SLCatTam = _donHang.SLCatTam,
@@ -438,5 +523,18 @@ namespace QuanLyGiay
             });
         }
         #endregion
+    }
+
+    private class DonHangNew
+    {
+        /// <summary>
+        /// Chứa thông tin đơn hàng.
+        /// </summary>
+        public DonHangModel DonHangInfo { get; set; }
+        /// <summary>
+        /// Báo dây là đơn hàng mới, hay đơn hàng chỉnh sủa, để làm tác vụ insert hay update.
+        /// True-New; False-Chỉnh sửa.
+        /// </summary>
+        public bool IsNew { get; set; }
     }
 }

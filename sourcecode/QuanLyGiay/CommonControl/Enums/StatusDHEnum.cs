@@ -8,8 +8,8 @@ namespace CommonControl
 {
     public enum StatusDHEnum
     {
-        NewOrder,
-        Processing,
+        MOI,
+        CHAY,
         Finish,
         Cancel
     }
