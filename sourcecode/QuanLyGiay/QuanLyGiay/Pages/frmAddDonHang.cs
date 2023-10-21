@@ -15,8 +15,9 @@ namespace QuanLyGiay
     public partial class frmAddDonHang : Form
     {
         private List<DonHangModel> _listDonHang = new List<DonHangModel>();
-        private List<DonHangModel> _listDonHangNew = new List<DonHangModel>();
+        private List<DonHangNew> _listDonHangNew = new List<DonHangNew>();
         private DonHangModel _donHang = new DonHangModel();
+        private bool _isNew = true;//báo trạng thái tạo đơn hàng mới hay là update đơn hàng cũ.
 
         public frmAddDonHang()
         {
@@ -35,7 +36,7 @@ namespace QuanLyGiay
             _btnXoa.Click += _btnXoa_Click;
             _btnSua.Click += _btnSua_Click;
             _grvDH.Click += _grvDH_Click;
-            _grvDH.CellClick += _grvDH_CellClick;
+            //_grvDH.CellClick += _grvDH_CellClick;
 
 
             _txtSTT.TextChanged += (s, o) =>
@@ -429,6 +430,8 @@ namespace QuanLyGiay
                     _cbGiayMatC.SelectedItem = dr.GiayMatC;
                 }
                 #endregion
+
+                _isNew = false;
             }
         }
 
@@ -449,10 +452,30 @@ namespace QuanLyGiay
             {
                 using (var connection = GlobalVariable.GetDbConnection())
                 {
-                    var result = connection.Execute($"INSERT INTO tbldonhang (Stt,Status,Ma,Song,SoLop,CongThem,Kho,DaiCat,SLCatTam,SoMetCaiDat,Xa,Rong,Canh,Cao,Lang,DoSauLan,GiaySongE,GiayMatE," +
+                    foreach (var item in _listDonHangNew)
+                    {
+                        if (item.IsNew)
+                        {
+                            var result = connection.Execute($"INSERT INTO tbldonhang (Stt,Status,Ma,Song,SoLop,CongThem,Kho,DaiCat,SLCatTam,SoMetCaiDat,Xa,Rong,Canh,Cao,Lang,DoSauLan,GiaySongE,GiayMatE," +
                          $"GiaySongB,GiayMatB,GiaySongC,GiayMatC,GiayMen,GhiChu,MayXa,Line,KhachHang,DaiKH,RongKH,CaoKH,DonHang,PO,MayIn,ChapBe,GhimDan) " +
                          $"VALUES (@Stt,@Status,@Ma,@Song,@SoLop,@CongThem,@Kho,@DaiCat,@SLCatTam,@SoMetCaiDat,@Xa,@Rong,@Canh,@Cao,@Lang,@DoSauLan,@GiaySongE,@GiayMatE," +
                          $"@GiaySongB,@GiayMatB,@GiaySongC,@GiayMatC,@GiayMen,@GhiChu,@MayXa,@Line,@KhachHang,@DaiKH,@RongKH,@CaoKH,@DonHang,@PO,@MayIn,@ChapBe,@GhimDan)", _listDonHangNew);
+                        }
+                        else
+                        {
+                            string  query=$"UPDATE tbldonhang SET Status = {item.DonHangInfo.Status},Ma = {item.DonHangInfo.Ma},Song = {item.DonHangInfo.Song},SoLop = {item.DonHangInfo.SoLop}," +
+                                $"CongThem = {item.DonHangInfo.CongThem},Kho = {item.DonHangInfo.Kho},DaiCat = {item.DonHangInfo.DaiCat},SLCatTam = {item.DonHangInfo.SLCatTam},SoMetCaiDat = {item.DonHangInfo.SoMetCaiDat}," +
+                                $"Xa = {item.DonHangInfo.Xa},Rong = {item.DonHangInfo.Rong},Canh = {item.DonHangInfo.Canh},Cao = {item.DonHangInfo.Cao},Lang = {item.DonHangInfo.Lang},DoSauLan = {item.DonHangInfo.DoSauLan}," +
+                                $"GiaySongE = {item.DonHangInfo.GiaySongE},GiayMatE = {item.DonHangInfo.GiayMatE},GiaySongB = {item.DonHangInfo.GiaySongB},GiayMatB = {item.DonHangInfo.GiayMatB}," +
+                                $"GiaySongC = {item.DonHangInfo.GiaySongC},GiayMatC = {item.DonHangInfo.GiayMatC},GiayMen = {item.DonHangInfo.GiayMen},GhiChu = {item.DonHangInfo.GhiChu}," +
+                                $"MayXa = {item.DonHangInfo.MayXa},Line = {item.DonHangInfo.Line},KhachHang = {item.DonHangInfo.DonHang},DaiKH = {item.DonHangInfo.DaiKH},RongKH = {item.DonHangInfo.RongKH}," +
+                                $"CaoKH = {item.DonHangInfo.CaoKH},DonHang = {item.DonHangInfo.DonHang},PO = {item.DonHangInfo.PO},MayIn ={item.DonHangInfo.MayIn},ChapBe ={item.DonHangInfo.ChapBe}," +
+                                $"GhimDan = {item.DonHangInfo.GhimDan},Pallet = {item.DonHangInfo.Pallet}" +
+                                $" WHERE STT ={item.DonHangInfo.STT};";
+
+                            connection.Execute(query);
+                        }
+                    }
 
                     GlobalVariable.MyEvents.Refresh = true;
                 }
@@ -491,9 +514,43 @@ namespace QuanLyGiay
                     DoSauLan = _donHang.DoSauLan
                 };
 
-                _listDonHangNew.Add(donHang);
+                if (_isNew)
+                {
+                    _listDonHangNew.Add(new DonHangNew() { DonHangInfo = donHang, IsNew = true });
+                    _listDonHang.Add(donHang);
+                }
+                else
+                {
+                    //nếu trong danh sách đơn hàng mới mà có thông tin của mẻ này thì cái đơn hàng chỉnh sửa này của chỉnh sửa cho đơn mới tạo, nên IsNew =true.
+                    var itemInsert = _listDonHangNew.FirstOrDefault(x => x.DonHangInfo.STT == donHang.STT && x.IsNew == true);
+                    if (itemInsert != null)
+                    {
+                        _listDonHangNew.Remove(itemInsert);
+                        _listDonHangNew.Add(new DonHangNew() { DonHangInfo = donHang, IsNew = true });
+                    }
+                    else//thông tin đơn hàng ko có trong danh sách đơn hàng mới thì đây là chỉnh sửa cho đơn hãng đã được đặt lưu vào DB rồi, nên IsNew= False.
+                    {
+                        donHang.Status = StatusDHEnum.CHAY;
+                        var itemUpdate = _listDonHangNew.FirstOrDefault(x => x.DonHangInfo.STT == donHang.STT && x.IsNew == false);
+                        if (itemUpdate == null)
+                        {
+                            _listDonHangNew.Add(new DonHangNew() { DonHangInfo = donHang, IsNew = false });
+                        }
+                        else
+                        {
+                            _listDonHangNew.Remove(itemUpdate);
+                            _listDonHangNew.Add(new DonHangNew() { DonHangInfo = donHang, IsNew = false });
+                        }
+                    }
 
-                _listDonHang.Add(donHang);
+                    var itemSelect = _listDonHang.FirstOrDefault(x => x.STT == donHang.STT);
+                    if (itemSelect != null)
+                    {
+                        _listDonHang.Remove(itemSelect);
+
+                        _listDonHang.Add(donHang);
+                    }
+                }
 
                 this.Invoke((MethodInvoker)delegate
                 {
@@ -502,6 +559,7 @@ namespace QuanLyGiay
                     _grvDH.Columns["CreatedDate"].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
                 });
 
+                _isNew = true;
                 ResetControl();
             }
             else

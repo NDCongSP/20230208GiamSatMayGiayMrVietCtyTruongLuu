@@ -13,31 +13,15 @@ namespace CommonControl
         public int Id { get; set; }
         public StatusDHEnum Status { get; set; } = StatusDHEnum.MOI;
         public int STT { get; set; }
-
-        [DisplayName("Xả")]
-        public int Xa { get; set; }//quy định 1 lần bao nhiêu con --> 1 khổ xả ra 1 lần bao nhiêu tấm
-
-        /// <summary>
-        /// Nap1
-        /// </summary>
-        [DisplayName("Rộng")]
-        public double Rong { get; set; }
-        /// <summary>
-        /// Rong/2.
-        /// </summary>
-        [DisplayName("Cánh")]
-        public double Canh
+        [DisplayName("Mã")]
+        public string Ma { get; set; }
+        [DisplayName("Sóng")]
+        public string Song { get; set; }
+        public string SoLop { get; set; }//quy định số lớp giấy
+        public double CongThem //tuy vao số lớp mà cọng thêm số tương ứng.
         {
-            set { }
-            get
-            {
-                return Math.Round((double)Rong / 2, 2);
-            }
+            get; set;
         }
-        [DisplayName("Cao")]
-        public double Cao { get; set; }
-        [DisplayName("Lằn")]
-        public int Lang { get; set; }//quy định kiểu lần có giá trị 1 đến 4
 
         [DisplayName("Khổ")]
         public double Kho { get; set; }
@@ -63,22 +47,36 @@ namespace CommonControl
             }
         }
 
-        [DisplayName("Sóng")]
-        public string Song { get; set; }
-        public string SoLop { get; set; }//quy định số lớp giấy
 
         #region phần cài đặt cho máy xẩ splitter
         //chiều rộng của khổ xả = Rộng/2 + Cao + Rong/2
 
-       
-        [DisplayName("Mã")]
-        public string Ma { get; set; }
+        [DisplayName("Xả")]
+        public int Xa { get; set; }//quy định 1 lần bao nhiêu con --> 1 khổ xả ra 1 lần bao nhiêu tấm
+
+        /// <summary>
+        /// Nap1
+        /// </summary>
+        [DisplayName("Rộng")]
+        public double Rong { get; set; }
+        /// <summary>
+        /// Rong/2.
+        /// </summary>
+        [DisplayName("Cánh")]
+        public double Canh
+        {
+            set { }
+            get
+            {
+                return Math.Round((double)Rong / 2, 2);
+            }
+        }
+        [DisplayName("Cao")]
+        public double Cao { get; set; }
+        [DisplayName("Lằn")]
+        public int Lang { get; set; }//quy định kiểu lần có giá trị 1 đến 4
         [DisplayName("Độ Sau Lằn")]
         public double DoSauLan { get; set; }
-        public double CongThem //tuy vao số lớp mà cọng thêm số tương ứng.
-        {
-            get; set;
-        }
         #endregion
 
         [DisplayName("Giấy Sóng E")]

@@ -115,7 +115,7 @@ namespace QuanLyGiay
                             _txtKhachHang.Text = _donHangDangChay.KhachHang;
                             _txtDonHang.Text = _donHangDangChay.DonHang;
                             _txtPO.Text = _donHangDangChay.PO;
-                            _txtDaiCat.Text = _donHangDangChay.DaiCat.ToString();
+                            _txtDaiCat.Text = (_donHangDangChay.DaiCat * 10).ToString();
                             _txtSLCat.Text = _donHangDangChay.SLCatTam.ToString();
                             _txtTongSoMetCD.Text = _donHangDangChay.SoMetCaiDat.ToString();
                             _txtSLDat.Text = _donHangDangChay.SLDat.ToString();
@@ -131,7 +131,7 @@ namespace QuanLyGiay
                         _txtKhachHang.Text = _donHangDangChay.KhachHang;
                         _txtDonHang.Text = _donHangDangChay.DonHang;
                         _txtPO.Text = _donHangDangChay.PO;
-                        _txtDaiCat.Text = _donHangDangChay.DaiCat.ToString();
+                        _txtDaiCat.Text = (_donHangDangChay.DaiCat * 10).ToString();
                         _txtSLCat.Text = _donHangDangChay.SLCatTam.ToString();
                         _txtTongSoMetCD.Text = _donHangDangChay.SoMetCaiDat.ToString();
                         _txtSLDat.Text = _donHangDangChay.SLDat.ToString();
