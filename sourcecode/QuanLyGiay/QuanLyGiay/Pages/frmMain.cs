@@ -389,10 +389,12 @@ namespace QuanLyGiay
             if (easyDriverConnector1.ConnectionStatus == ConnectionStatus.Connected)
             {
                 _labDriverStatus.BackColor = Color.Green;
+                _labDriverStatus.ForeColor = Color.White;
             }
             else
             {
                 _labDriverStatus.BackColor = Color.Red;
+                _labDriverStatus.ForeColor = Color.White;
             }
         }
 

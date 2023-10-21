@@ -371,7 +371,7 @@ namespace QuanLyGiay
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(5, 332);
+            this.label5.Location = new System.Drawing.Point(5, 322);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(107, 31);
             this.label5.TabIndex = 0;
@@ -381,7 +381,7 @@ namespace QuanLyGiay
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(5, 243);
+            this.label4.Location = new System.Drawing.Point(5, 233);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(114, 31);
             this.label4.TabIndex = 0;
@@ -391,7 +391,7 @@ namespace QuanLyGiay
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(388, 240);
+            this.label9.Location = new System.Drawing.Point(388, 230);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(121, 31);
             this.label9.TabIndex = 0;
@@ -401,7 +401,7 @@ namespace QuanLyGiay
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(5, 154);
+            this.label3.Location = new System.Drawing.Point(5, 144);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 31);
             this.label3.TabIndex = 0;
@@ -411,7 +411,7 @@ namespace QuanLyGiay
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(388, 151);
+            this.label2.Location = new System.Drawing.Point(388, 141);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 31);
             this.label2.TabIndex = 0;
@@ -431,7 +431,7 @@ namespace QuanLyGiay
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label20.Location = new System.Drawing.Point(5, 392);
+            this.label20.Location = new System.Drawing.Point(5, 382);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(86, 20);
             this.label20.TabIndex = 0;
@@ -440,6 +440,7 @@ namespace QuanLyGiay
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.labDateTime);
             this.groupBox1.Controls.Add(this._txtTocDo);
             this.groupBox1.Controls.Add(this._txtSLLoi);
             this.groupBox1.Controls.Add(this._txtSLDat);
@@ -450,6 +451,7 @@ namespace QuanLyGiay
             this.groupBox1.Controls.Add(this._txtDaiCat);
             this.groupBox1.Controls.Add(this._txtPO);
             this.groupBox1.Controls.Add(this._txtKhachHang);
+            this.groupBox1.Controls.Add(this._labDriverStatus);
             this.groupBox1.Controls.Add(this._txtDonHang);
             this.groupBox1.Controls.Add(this.label23);
             this.groupBox1.Controls.Add(this.label21);
@@ -482,7 +484,7 @@ namespace QuanLyGiay
             // 
             this._txtTocDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
             this._txtTocDo.ForeColor = System.Drawing.Color.Red;
-            this._txtTocDo.Location = new System.Drawing.Point(558, 214);
+            this._txtTocDo.Location = new System.Drawing.Point(558, 204);
             this._txtTocDo.Name = "_txtTocDo";
             this._txtTocDo.Size = new System.Drawing.Size(201, 83);
             this._txtTocDo.TabIndex = 1;
@@ -493,7 +495,7 @@ namespace QuanLyGiay
             // 
             this._txtSLLoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
             this._txtSLLoi.ForeColor = System.Drawing.Color.Red;
-            this._txtSLLoi.Location = new System.Drawing.Point(149, 303);
+            this._txtSLLoi.Location = new System.Drawing.Point(149, 293);
             this._txtSLLoi.Name = "_txtSLLoi";
             this._txtSLLoi.Size = new System.Drawing.Size(201, 83);
             this._txtSLLoi.TabIndex = 1;
@@ -504,7 +506,7 @@ namespace QuanLyGiay
             // 
             this._txtSLDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
             this._txtSLDat.ForeColor = System.Drawing.Color.Red;
-            this._txtSLDat.Location = new System.Drawing.Point(149, 214);
+            this._txtSLDat.Location = new System.Drawing.Point(149, 204);
             this._txtSLDat.Name = "_txtSLDat";
             this._txtSLDat.Size = new System.Drawing.Size(201, 83);
             this._txtSLDat.TabIndex = 1;
@@ -515,7 +517,7 @@ namespace QuanLyGiay
             // 
             this._txtSLConlai.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
             this._txtSLConlai.ForeColor = System.Drawing.Color.Blue;
-            this._txtSLConlai.Location = new System.Drawing.Point(149, 392);
+            this._txtSLConlai.Location = new System.Drawing.Point(149, 382);
             this._txtSLConlai.Name = "_txtSLConlai";
             this._txtSLConlai.Size = new System.Drawing.Size(201, 83);
             this._txtSLConlai.TabIndex = 1;
@@ -526,7 +528,7 @@ namespace QuanLyGiay
             // 
             this._txtTongSoMetCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
             this._txtTongSoMetCD.ForeColor = System.Drawing.Color.Blue;
-            this._txtTongSoMetCD.Location = new System.Drawing.Point(558, 303);
+            this._txtTongSoMetCD.Location = new System.Drawing.Point(558, 293);
             this._txtTongSoMetCD.Name = "_txtTongSoMetCD";
             this._txtTongSoMetCD.Size = new System.Drawing.Size(201, 83);
             this._txtTongSoMetCD.TabIndex = 1;
@@ -537,7 +539,7 @@ namespace QuanLyGiay
             // 
             this._txtSLCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
             this._txtSLCat.ForeColor = System.Drawing.Color.Blue;
-            this._txtSLCat.Location = new System.Drawing.Point(149, 125);
+            this._txtSLCat.Location = new System.Drawing.Point(149, 115);
             this._txtSLCat.Name = "_txtSLCat";
             this._txtSLCat.Size = new System.Drawing.Size(201, 83);
             this._txtSLCat.TabIndex = 1;
@@ -548,7 +550,7 @@ namespace QuanLyGiay
             // 
             this._txtSoMetCL.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
             this._txtSoMetCL.ForeColor = System.Drawing.Color.Red;
-            this._txtSoMetCL.Location = new System.Drawing.Point(558, 392);
+            this._txtSoMetCL.Location = new System.Drawing.Point(558, 382);
             this._txtSoMetCL.Name = "_txtSoMetCL";
             this._txtSoMetCL.Size = new System.Drawing.Size(201, 83);
             this._txtSoMetCL.TabIndex = 1;
@@ -559,7 +561,7 @@ namespace QuanLyGiay
             // 
             this._txtDaiCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
             this._txtDaiCat.ForeColor = System.Drawing.Color.Blue;
-            this._txtDaiCat.Location = new System.Drawing.Point(558, 125);
+            this._txtDaiCat.Location = new System.Drawing.Point(558, 115);
             this._txtDaiCat.Name = "_txtDaiCat";
             this._txtDaiCat.Size = new System.Drawing.Size(201, 83);
             this._txtDaiCat.TabIndex = 1;
@@ -611,7 +613,7 @@ namespace QuanLyGiay
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(388, 418);
+            this.label8.Location = new System.Drawing.Point(388, 408);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(114, 31);
             this.label8.TabIndex = 0;
@@ -621,7 +623,7 @@ namespace QuanLyGiay
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(388, 329);
+            this.label6.Location = new System.Drawing.Point(388, 319);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(144, 31);
             this.label6.TabIndex = 0;
@@ -721,7 +723,7 @@ namespace QuanLyGiay
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.groupBox3.Location = new System.Drawing.Point(12, 505);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1237, 360);
+            this.groupBox3.Size = new System.Drawing.Size(1237, 421);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách đơn hàng chờ sản xuất";
@@ -742,16 +744,16 @@ namespace QuanLyGiay
             this.grvDH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grvDH.Location = new System.Drawing.Point(3, 26);
             this.grvDH.Name = "grvDH";
-            this.grvDH.Size = new System.Drawing.Size(1231, 331);
+            this.grvDH.Size = new System.Drawing.Size(1231, 392);
             this.grvDH.TabIndex = 0;
             // 
             // btnOrder
             // 
             this.btnOrder.BackColor = System.Drawing.Color.SpringGreen;
             this.btnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.btnOrder.Location = new System.Drawing.Point(15, 871);
+            this.btnOrder.Location = new System.Drawing.Point(15, 932);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(170, 63);
+            this.btnOrder.Size = new System.Drawing.Size(170, 47);
             this.btnOrder.TabIndex = 6;
             this.btnOrder.Text = "Đơn Hàng (F1)";
             this.btnOrder.UseVisualStyleBackColor = false;
@@ -760,9 +762,9 @@ namespace QuanLyGiay
             // 
             this._btnSettings.BackColor = System.Drawing.Color.SpringGreen;
             this._btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this._btnSettings.Location = new System.Drawing.Point(227, 871);
+            this._btnSettings.Location = new System.Drawing.Point(227, 932);
             this._btnSettings.Name = "_btnSettings";
-            this._btnSettings.Size = new System.Drawing.Size(170, 63);
+            this._btnSettings.Size = new System.Drawing.Size(170, 47);
             this._btnSettings.TabIndex = 6;
             this._btnSettings.Text = "Cài Đặt (F2)";
             this._btnSettings.UseVisualStyleBackColor = false;
@@ -771,9 +773,9 @@ namespace QuanLyGiay
             // 
             this.btnReport.BackColor = System.Drawing.Color.SpringGreen;
             this.btnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.btnReport.Location = new System.Drawing.Point(439, 871);
+            this.btnReport.Location = new System.Drawing.Point(439, 932);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(170, 63);
+            this.btnReport.Size = new System.Drawing.Size(170, 47);
             this.btnReport.TabIndex = 6;
             this.btnReport.Text = "Báo Cáo (F3)";
             this.btnReport.UseVisualStyleBackColor = false;
@@ -782,9 +784,9 @@ namespace QuanLyGiay
             // 
             this.btnPrintOrder.BackColor = System.Drawing.Color.SpringGreen;
             this.btnPrintOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.btnPrintOrder.Location = new System.Drawing.Point(651, 871);
+            this.btnPrintOrder.Location = new System.Drawing.Point(651, 932);
             this.btnPrintOrder.Name = "btnPrintOrder";
-            this.btnPrintOrder.Size = new System.Drawing.Size(170, 63);
+            this.btnPrintOrder.Size = new System.Drawing.Size(170, 47);
             this.btnPrintOrder.TabIndex = 6;
             this.btnPrintOrder.Text = "In Đơn (F4)";
             this.btnPrintOrder.UseVisualStyleBackColor = false;
@@ -793,9 +795,9 @@ namespace QuanLyGiay
             // 
             this.btnNapMayXa.BackColor = System.Drawing.Color.SpringGreen;
             this.btnNapMayXa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.btnNapMayXa.Location = new System.Drawing.Point(863, 871);
+            this.btnNapMayXa.Location = new System.Drawing.Point(863, 932);
             this.btnNapMayXa.Name = "btnNapMayXa";
-            this.btnNapMayXa.Size = new System.Drawing.Size(170, 63);
+            this.btnNapMayXa.Size = new System.Drawing.Size(170, 47);
             this.btnNapMayXa.TabIndex = 6;
             this.btnNapMayXa.Text = "Đổi Đơn (F5)";
             this.btnNapMayXa.UseVisualStyleBackColor = false;
@@ -804,9 +806,9 @@ namespace QuanLyGiay
             // 
             this.btnReviceError.BackColor = System.Drawing.Color.SpringGreen;
             this.btnReviceError.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.btnReviceError.Location = new System.Drawing.Point(1075, 871);
+            this.btnReviceError.Location = new System.Drawing.Point(1075, 932);
             this.btnReviceError.Name = "btnReviceError";
-            this.btnReviceError.Size = new System.Drawing.Size(170, 63);
+            this.btnReviceError.Size = new System.Drawing.Size(170, 47);
             this.btnReviceError.TabIndex = 6;
             this.btnReviceError.Text = "+/- Lỗi (F6)";
             this.btnReviceError.UseVisualStyleBackColor = false;
@@ -815,17 +817,17 @@ namespace QuanLyGiay
             // 
             this.labDateTime.AutoSize = true;
             this.labDateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labDateTime.Location = new System.Drawing.Point(105, 955);
+            this.labDateTime.Location = new System.Drawing.Point(626, 13);
             this.labDateTime.Name = "labDateTime";
-            this.labDateTime.Size = new System.Drawing.Size(64, 17);
+            this.labDateTime.Size = new System.Drawing.Size(142, 17);
             this.labDateTime.TabIndex = 7;
-            this.labDateTime.Text = "Datetime";
+            this.labDateTime.Text = "2020-10-21 17:00:00";
             // 
             // _labDriverStatus
             // 
             this._labDriverStatus.AutoSize = true;
             this._labDriverStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this._labDriverStatus.Location = new System.Drawing.Point(12, 955);
+            this._labDriverStatus.Location = new System.Drawing.Point(517, 13);
             this._labDriverStatus.Name = "_labDriverStatus";
             this._labDriverStatus.Size = new System.Drawing.Size(86, 17);
             this._labDriverStatus.TabIndex = 0;
@@ -848,7 +850,7 @@ namespace QuanLyGiay
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(5, 418);
+            this.label11.Location = new System.Drawing.Point(5, 408);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(114, 31);
             this.label11.TabIndex = 0;
@@ -858,7 +860,7 @@ namespace QuanLyGiay
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label22.Location = new System.Drawing.Point(6, 303);
+            this.label22.Location = new System.Drawing.Point(6, 293);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(86, 20);
             this.label22.TabIndex = 0;
@@ -868,7 +870,7 @@ namespace QuanLyGiay
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label24.Location = new System.Drawing.Point(9, 214);
+            this.label24.Location = new System.Drawing.Point(9, 204);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(86, 20);
             this.label24.TabIndex = 0;
@@ -878,7 +880,7 @@ namespace QuanLyGiay
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label25.Location = new System.Drawing.Point(9, 125);
+            this.label25.Location = new System.Drawing.Point(9, 115);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(86, 20);
             this.label25.TabIndex = 0;
@@ -888,7 +890,7 @@ namespace QuanLyGiay
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label26.Location = new System.Drawing.Point(390, 125);
+            this.label26.Location = new System.Drawing.Point(390, 115);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(165, 20);
             this.label26.TabIndex = 0;
@@ -898,7 +900,7 @@ namespace QuanLyGiay
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label27.Location = new System.Drawing.Point(390, 214);
+            this.label27.Location = new System.Drawing.Point(390, 204);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(103, 20);
             this.label27.TabIndex = 0;
@@ -908,7 +910,7 @@ namespace QuanLyGiay
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label28.Location = new System.Drawing.Point(390, 303);
+            this.label28.Location = new System.Drawing.Point(390, 293);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(163, 20);
             this.label28.TabIndex = 0;
@@ -918,7 +920,7 @@ namespace QuanLyGiay
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label29.Location = new System.Drawing.Point(390, 392);
+            this.label29.Location = new System.Drawing.Point(390, 382);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(151, 20);
             this.label29.TabIndex = 0;
@@ -929,7 +931,6 @@ namespace QuanLyGiay
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 985);
-            this.Controls.Add(this.labDateTime);
             this.Controls.Add(this.btnReviceError);
             this.Controls.Add(this.btnNapMayXa);
             this.Controls.Add(this.btnPrintOrder);
@@ -939,7 +940,6 @@ namespace QuanLyGiay
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this._labDriverStatus);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -956,7 +956,6 @@ namespace QuanLyGiay
             ((System.ComponentModel.ISupportInitialize)(this.grvDH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyDriverConnector1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
