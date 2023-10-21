@@ -317,7 +317,7 @@ namespace QuanLyGiay
                 _cbGiayMatC.SelectedIndex = 0;
 
                 //get don hang
-                _listDonHang = connection.Query<DonHangModel>("sp_tblDonHangGetAll").ToList();
+                _listDonHang = connection.Query<DonHangModel>("sp_tblDonHangGetOnProcess").ToList();
 
                 _grvDH.DataSource = _listDonHang;
                 _grvDH.Columns["CreatedDate"].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
@@ -367,6 +367,8 @@ namespace QuanLyGiay
                          $"GiaySongB,GiayMatB,GiaySongC,GiayMatC,GiayMen,GhiChu,MayXa,Line,KhachHang,DaiKH,RongKH,CaoKH,DonHang,PO,MayIn,ChapBe,GhimDan) " +
                          $"VALUES (@Stt,@Status,@Ma,@Song,@SoLop,@CongThem,@Kho,@DaiCat,@SLCatTam,@SoMetCaiDat,@Xa,@Rong,@Canh,@Cao,@Lang,@DoSauLan,@GiaySongE,@GiayMatE," +
                          $"@GiaySongB,@GiayMatB,@GiaySongC,@GiayMatC,@GiayMen,@GhiChu,@MayXa,@Line,@KhachHang,@DaiKH,@RongKH,@CaoKH,@DonHang,@PO,@MayIn,@ChapBe,@GhimDan)", _listDonHangNew);
+
+                    GlobalVariable.MyEvents.Refresh = true;
                 }
             }
         }

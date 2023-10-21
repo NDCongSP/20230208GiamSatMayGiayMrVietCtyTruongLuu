@@ -99,6 +99,8 @@ namespace QuanLyGiay
             this.labDateTime = new System.Windows.Forms.Label();
             this._labDriverStatus = new System.Windows.Forms.Label();
             this.easyDriverConnector1 = new EasyScada.Winforms.Controls.EasyDriverConnector(this.components);
+            this.label8 = new System.Windows.Forms.Label();
+            this._txtSoMetCL = new System.Windows.Forms.TextBox();
             this.panel24.SuspendLayout();
             this.panel21.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -360,50 +362,50 @@ namespace QuanLyGiay
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label5.Location = new System.Drawing.Point(58, 302);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(5, 337);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 25);
+            this.label5.Size = new System.Drawing.Size(105, 31);
             this.label5.TabIndex = 0;
             this.label5.Text = "SL Lỗi:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label4.Location = new System.Drawing.Point(54, 244);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(5, 248);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 25);
+            this.label4.Size = new System.Drawing.Size(112, 31);
             this.label4.TabIndex = 0;
             this.label4.Text = "SL Đạt:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label9.Location = new System.Drawing.Point(50, 410);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(375, 159);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 25);
+            this.label9.Size = new System.Drawing.Size(117, 31);
             this.label9.TabIndex = 0;
             this.label9.Text = "Tốc Độ:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label3.Location = new System.Drawing.Point(63, 153);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(5, 159);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 25);
+            this.label3.Size = new System.Drawing.Size(112, 31);
             this.label3.TabIndex = 0;
             this.label3.Text = "SL Cắt:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label2.Location = new System.Drawing.Point(59, 95);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(375, 337);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 25);
+            this.label2.Size = new System.Drawing.Size(121, 31);
             this.label2.TabIndex = 0;
             this.label2.Text = "Dài Cắt:";
             // 
@@ -411,7 +413,7 @@ namespace QuanLyGiay
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label1.Location = new System.Drawing.Point(36, 40);
+            this.label1.Location = new System.Drawing.Point(12, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 25);
             this.label1.TabIndex = 0;
@@ -420,12 +422,12 @@ namespace QuanLyGiay
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label20.Location = new System.Drawing.Point(16, 358);
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.label20.Location = new System.Drawing.Point(5, 426);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(116, 25);
+            this.label20.Size = new System.Drawing.Size(103, 31);
             this.label20.TabIndex = 0;
-            this.label20.Text = "SL Còn Lại:";
+            this.label20.Text = "SL CL:";
             // 
             // groupBox1
             // 
@@ -436,6 +438,7 @@ namespace QuanLyGiay
             this.groupBox1.Controls.Add(this._txtSLConlai);
             this.groupBox1.Controls.Add(this._txtTongSoMetCD);
             this.groupBox1.Controls.Add(this._txtSLCat);
+            this.groupBox1.Controls.Add(this._txtSoMetCL);
             this.groupBox1.Controls.Add(this._txtDaiCat);
             this.groupBox1.Controls.Add(this._txtPO);
             this.groupBox1.Controls.Add(this._txtKhachHang);
@@ -443,6 +446,7 @@ namespace QuanLyGiay
             this.groupBox1.Controls.Add(this.label23);
             this.groupBox1.Controls.Add(this.label21);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
@@ -460,63 +464,77 @@ namespace QuanLyGiay
             // 
             // _txtTocDo
             // 
-            this._txtTocDo.Location = new System.Drawing.Point(154, 407);
+            this._txtTocDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
+            this._txtTocDo.ForeColor = System.Drawing.Color.Red;
+            this._txtTocDo.Location = new System.Drawing.Point(553, 130);
             this._txtTocDo.Name = "_txtTocDo";
-            this._txtTocDo.Size = new System.Drawing.Size(100, 30);
+            this._txtTocDo.Size = new System.Drawing.Size(201, 83);
             this._txtTocDo.TabIndex = 1;
             this._txtTocDo.Text = "0";
             this._txtTocDo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // _txtSLLoi
             // 
-            this._txtSLLoi.Location = new System.Drawing.Point(154, 299);
+            this._txtSLLoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
+            this._txtSLLoi.ForeColor = System.Drawing.Color.Red;
+            this._txtSLLoi.Location = new System.Drawing.Point(130, 308);
             this._txtSLLoi.Name = "_txtSLLoi";
-            this._txtSLLoi.Size = new System.Drawing.Size(100, 30);
+            this._txtSLLoi.Size = new System.Drawing.Size(201, 83);
             this._txtSLLoi.TabIndex = 1;
             this._txtSLLoi.Text = "0";
             this._txtSLLoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // _txtSLDat
             // 
-            this._txtSLDat.Location = new System.Drawing.Point(154, 241);
+            this._txtSLDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
+            this._txtSLDat.ForeColor = System.Drawing.Color.Red;
+            this._txtSLDat.Location = new System.Drawing.Point(130, 219);
             this._txtSLDat.Name = "_txtSLDat";
-            this._txtSLDat.Size = new System.Drawing.Size(100, 30);
+            this._txtSLDat.Size = new System.Drawing.Size(201, 83);
             this._txtSLDat.TabIndex = 1;
             this._txtSLDat.Text = "0";
             this._txtSLDat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // _txtSLConlai
             // 
-            this._txtSLConlai.Location = new System.Drawing.Point(154, 355);
+            this._txtSLConlai.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
+            this._txtSLConlai.ForeColor = System.Drawing.Color.Blue;
+            this._txtSLConlai.Location = new System.Drawing.Point(130, 397);
             this._txtSLConlai.Name = "_txtSLConlai";
-            this._txtSLConlai.Size = new System.Drawing.Size(100, 30);
+            this._txtSLConlai.Size = new System.Drawing.Size(201, 83);
             this._txtSLConlai.TabIndex = 1;
             this._txtSLConlai.Text = "0";
             this._txtSLConlai.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // _txtTongSoMetCD
             // 
-            this._txtTongSoMetCD.Location = new System.Drawing.Point(154, 191);
+            this._txtTongSoMetCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
+            this._txtTongSoMetCD.ForeColor = System.Drawing.Color.Blue;
+            this._txtTongSoMetCD.Location = new System.Drawing.Point(553, 219);
             this._txtTongSoMetCD.Name = "_txtTongSoMetCD";
-            this._txtTongSoMetCD.Size = new System.Drawing.Size(100, 30);
+            this._txtTongSoMetCD.Size = new System.Drawing.Size(201, 83);
             this._txtTongSoMetCD.TabIndex = 1;
             this._txtTongSoMetCD.Text = "0";
             this._txtTongSoMetCD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // _txtSLCat
             // 
-            this._txtSLCat.Location = new System.Drawing.Point(154, 150);
+            this._txtSLCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
+            this._txtSLCat.ForeColor = System.Drawing.Color.Blue;
+            this._txtSLCat.Location = new System.Drawing.Point(130, 130);
             this._txtSLCat.Name = "_txtSLCat";
-            this._txtSLCat.Size = new System.Drawing.Size(100, 30);
+            this._txtSLCat.Size = new System.Drawing.Size(201, 83);
             this._txtSLCat.TabIndex = 1;
             this._txtSLCat.Text = "0";
             this._txtSLCat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // _txtDaiCat
             // 
-            this._txtDaiCat.Location = new System.Drawing.Point(154, 92);
+            this._txtDaiCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
+            this._txtDaiCat.ForeColor = System.Drawing.Color.Blue;
+            this._txtDaiCat.Location = new System.Drawing.Point(553, 308);
             this._txtDaiCat.Name = "_txtDaiCat";
-            this._txtDaiCat.Size = new System.Drawing.Size(100, 30);
+            this._txtDaiCat.Size = new System.Drawing.Size(201, 83);
             this._txtDaiCat.TabIndex = 1;
             this._txtDaiCat.Text = "0";
             this._txtDaiCat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -537,7 +555,7 @@ namespace QuanLyGiay
             // 
             // _txtDonHang
             // 
-            this._txtDonHang.Location = new System.Drawing.Point(154, 37);
+            this._txtDonHang.Location = new System.Drawing.Point(130, 33);
             this._txtDonHang.Name = "_txtDonHang";
             this._txtDonHang.Size = new System.Drawing.Size(100, 30);
             this._txtDonHang.TabIndex = 1;
@@ -565,10 +583,10 @@ namespace QuanLyGiay
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label6.Location = new System.Drawing.Point(15, 194);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(375, 248);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(127, 25);
+            this.label6.Size = new System.Drawing.Size(184, 31);
             this.label6.TabIndex = 0;
             this.label6.Text = "Tổng số mét:";
             // 
@@ -789,6 +807,27 @@ namespace QuanLyGiay
             this.easyDriverConnector1.Timeout = 30;
             this.easyDriverConnector1.UseMongoDb = false;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(375, 426);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(159, 31);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Số mét CL:";
+            // 
+            // _txtSoMetCL
+            // 
+            this._txtSoMetCL.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
+            this._txtSoMetCL.ForeColor = System.Drawing.Color.Red;
+            this._txtSoMetCL.Location = new System.Drawing.Point(553, 397);
+            this._txtSoMetCL.Name = "_txtSoMetCL";
+            this._txtSoMetCL.Size = new System.Drawing.Size(201, 83);
+            this._txtSoMetCL.TabIndex = 1;
+            this._txtSoMetCL.Text = "0";
+            this._txtSoMetCL.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -894,6 +933,8 @@ namespace QuanLyGiay
         private System.Windows.Forms.TextBox _txtTongSoMetCD;
         private System.Windows.Forms.TextBox _txtSLCat;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox _txtSoMetCL;
+        private System.Windows.Forms.Label label8;
     }
 }
 
