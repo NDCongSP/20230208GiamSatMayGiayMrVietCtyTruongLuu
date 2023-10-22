@@ -18,9 +18,13 @@ namespace CommonControl
         [DisplayName("Sóng")]
         public string Song { get; set; }
         public string SoLop { get; set; }//quy định số lớp giấy
+
+        private double _congThem = 0;
+        [DisplayName("+ Thêm")]
         public double CongThem //tuy vao số lớp mà cọng thêm số tương ứng.
         {
-            get; set;
+            set { _congThem = value; }
+            get { return Math.Round(_congThem, 2); }
         }
 
         [DisplayName("Khổ")]
@@ -75,8 +79,14 @@ namespace CommonControl
         public double Cao { get; set; }
         [DisplayName("Lằn")]
         public int Lang { get; set; }//quy định kiểu lần có giá trị 1 đến 4
+
+        private double _doSauLan = 0;
         [DisplayName("Độ Sau Lằn")]
-        public double DoSauLan { get; set; }
+        public double DoSauLan
+        {
+            set { _doSauLan = value; }
+            get { return Math.Round(_doSauLan,2); }
+        }
         #endregion
 
         [DisplayName("Giấy Sóng E")]

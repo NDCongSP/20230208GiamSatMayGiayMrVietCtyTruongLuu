@@ -68,14 +68,6 @@ namespace QuanLyGiay
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labDateTime = new System.Windows.Forms.Label();
-            this._txtTocDo = new System.Windows.Forms.TextBox();
-            this._txtSLLoi = new System.Windows.Forms.TextBox();
-            this._txtSLDat = new System.Windows.Forms.TextBox();
-            this._txtSLConlai = new System.Windows.Forms.TextBox();
-            this._txtTongSoMetCD = new System.Windows.Forms.TextBox();
-            this._txtSLCat = new System.Windows.Forms.TextBox();
-            this._txtSoMetCL = new System.Windows.Forms.TextBox();
-            this._txtDaiCat = new System.Windows.Forms.TextBox();
             this._txtPO = new System.Windows.Forms.TextBox();
             this._txtKhachHang = new System.Windows.Forms.TextBox();
             this._labDriverStatus = new System.Windows.Forms.Label();
@@ -109,6 +101,14 @@ namespace QuanLyGiay
             this.btnNapMayXa = new System.Windows.Forms.Button();
             this.btnReviceError = new System.Windows.Forms.Button();
             this.easyDriverConnector1 = new EasyScada.Winforms.Controls.EasyDriverConnector(this.components);
+            this._labSLCat = new System.Windows.Forms.Label();
+            this._labSLDat = new System.Windows.Forms.Label();
+            this._labSLLoi = new System.Windows.Forms.Label();
+            this._labSLConlai = new System.Windows.Forms.Label();
+            this._labDaiCat = new System.Windows.Forms.Label();
+            this._labTocDo = new System.Windows.Forms.Label();
+            this._labTongSoMetCD = new System.Windows.Forms.Label();
+            this._labSoMetCL = new System.Windows.Forms.Label();
             this.panel24.SuspendLayout();
             this.panel21.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -440,15 +440,15 @@ namespace QuanLyGiay
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this._labSoMetCL);
+            this.groupBox1.Controls.Add(this._labTongSoMetCD);
+            this.groupBox1.Controls.Add(this._labTocDo);
+            this.groupBox1.Controls.Add(this._labDaiCat);
+            this.groupBox1.Controls.Add(this._labSLConlai);
+            this.groupBox1.Controls.Add(this._labSLLoi);
+            this.groupBox1.Controls.Add(this._labSLDat);
+            this.groupBox1.Controls.Add(this._labSLCat);
             this.groupBox1.Controls.Add(this.labDateTime);
-            this.groupBox1.Controls.Add(this._txtTocDo);
-            this.groupBox1.Controls.Add(this._txtSLLoi);
-            this.groupBox1.Controls.Add(this._txtSLDat);
-            this.groupBox1.Controls.Add(this._txtSLConlai);
-            this.groupBox1.Controls.Add(this._txtTongSoMetCD);
-            this.groupBox1.Controls.Add(this._txtSLCat);
-            this.groupBox1.Controls.Add(this._txtSoMetCL);
-            this.groupBox1.Controls.Add(this._txtDaiCat);
             this.groupBox1.Controls.Add(this._txtPO);
             this.groupBox1.Controls.Add(this._txtKhachHang);
             this.groupBox1.Controls.Add(this._labDriverStatus);
@@ -489,94 +489,6 @@ namespace QuanLyGiay
             this.labDateTime.Size = new System.Drawing.Size(142, 17);
             this.labDateTime.TabIndex = 7;
             this.labDateTime.Text = "2020-10-21 17:00:00";
-            // 
-            // _txtTocDo
-            // 
-            this._txtTocDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
-            this._txtTocDo.ForeColor = System.Drawing.Color.Red;
-            this._txtTocDo.Location = new System.Drawing.Point(565, 204);
-            this._txtTocDo.Name = "_txtTocDo";
-            this._txtTocDo.Size = new System.Drawing.Size(201, 83);
-            this._txtTocDo.TabIndex = 1;
-            this._txtTocDo.Text = "0";
-            this._txtTocDo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // _txtSLLoi
-            // 
-            this._txtSLLoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
-            this._txtSLLoi.ForeColor = System.Drawing.Color.Red;
-            this._txtSLLoi.Location = new System.Drawing.Point(156, 293);
-            this._txtSLLoi.Name = "_txtSLLoi";
-            this._txtSLLoi.Size = new System.Drawing.Size(201, 83);
-            this._txtSLLoi.TabIndex = 1;
-            this._txtSLLoi.Text = "0";
-            this._txtSLLoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // _txtSLDat
-            // 
-            this._txtSLDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
-            this._txtSLDat.ForeColor = System.Drawing.Color.Red;
-            this._txtSLDat.Location = new System.Drawing.Point(156, 204);
-            this._txtSLDat.Name = "_txtSLDat";
-            this._txtSLDat.Size = new System.Drawing.Size(201, 83);
-            this._txtSLDat.TabIndex = 1;
-            this._txtSLDat.Text = "0";
-            this._txtSLDat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // _txtSLConlai
-            // 
-            this._txtSLConlai.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
-            this._txtSLConlai.ForeColor = System.Drawing.Color.Blue;
-            this._txtSLConlai.Location = new System.Drawing.Point(156, 382);
-            this._txtSLConlai.Name = "_txtSLConlai";
-            this._txtSLConlai.Size = new System.Drawing.Size(201, 83);
-            this._txtSLConlai.TabIndex = 1;
-            this._txtSLConlai.Text = "0";
-            this._txtSLConlai.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // _txtTongSoMetCD
-            // 
-            this._txtTongSoMetCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
-            this._txtTongSoMetCD.ForeColor = System.Drawing.Color.Blue;
-            this._txtTongSoMetCD.Location = new System.Drawing.Point(565, 293);
-            this._txtTongSoMetCD.Name = "_txtTongSoMetCD";
-            this._txtTongSoMetCD.Size = new System.Drawing.Size(201, 83);
-            this._txtTongSoMetCD.TabIndex = 1;
-            this._txtTongSoMetCD.Text = "0";
-            this._txtTongSoMetCD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // _txtSLCat
-            // 
-            this._txtSLCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
-            this._txtSLCat.ForeColor = System.Drawing.Color.Blue;
-            this._txtSLCat.Location = new System.Drawing.Point(156, 115);
-            this._txtSLCat.Name = "_txtSLCat";
-            this._txtSLCat.Size = new System.Drawing.Size(201, 83);
-            this._txtSLCat.TabIndex = 1;
-            this._txtSLCat.Text = "0";
-            this._txtSLCat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // _txtSoMetCL
-            // 
-            this._txtSoMetCL.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
-            this._txtSoMetCL.ForeColor = System.Drawing.Color.Red;
-            this._txtSoMetCL.Location = new System.Drawing.Point(565, 382);
-            this._txtSoMetCL.Name = "_txtSoMetCL";
-            this._txtSoMetCL.Size = new System.Drawing.Size(201, 83);
-            this._txtSoMetCL.TabIndex = 1;
-            this._txtSoMetCL.Text = "0";
-            this._txtSoMetCL.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // _txtDaiCat
-            // 
-            this._txtDaiCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
-            this._txtDaiCat.ForeColor = System.Drawing.Color.Blue;
-            this._txtDaiCat.Location = new System.Drawing.Point(565, 115);
-            this._txtDaiCat.Name = "_txtDaiCat";
-            this._txtDaiCat.Size = new System.Drawing.Size(201, 83);
-            this._txtDaiCat.TabIndex = 1;
-            this._txtDaiCat.Text = "0";
-            this._txtDaiCat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // _txtPO
             // 
@@ -926,6 +838,110 @@ namespace QuanLyGiay
             this.easyDriverConnector1.Timeout = 30;
             this.easyDriverConnector1.UseMongoDb = false;
             // 
+            // _labSLCat
+            // 
+            this._labSLCat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._labSLCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold);
+            this._labSLCat.ForeColor = System.Drawing.Color.Blue;
+            this._labSLCat.Location = new System.Drawing.Point(156, 115);
+            this._labSLCat.Name = "_labSLCat";
+            this._labSLCat.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._labSLCat.Size = new System.Drawing.Size(201, 83);
+            this._labSLCat.TabIndex = 8;
+            this._labSLCat.Text = "0";
+            this._labSLCat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // _labSLDat
+            // 
+            this._labSLDat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._labSLDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold);
+            this._labSLDat.ForeColor = System.Drawing.Color.Red;
+            this._labSLDat.Location = new System.Drawing.Point(156, 204);
+            this._labSLDat.Name = "_labSLDat";
+            this._labSLDat.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._labSLDat.Size = new System.Drawing.Size(201, 83);
+            this._labSLDat.TabIndex = 9;
+            this._labSLDat.Text = "0";
+            this._labSLDat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // _labSLLoi
+            // 
+            this._labSLLoi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._labSLLoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold);
+            this._labSLLoi.ForeColor = System.Drawing.Color.Red;
+            this._labSLLoi.Location = new System.Drawing.Point(156, 293);
+            this._labSLLoi.Name = "_labSLLoi";
+            this._labSLLoi.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._labSLLoi.Size = new System.Drawing.Size(201, 83);
+            this._labSLLoi.TabIndex = 10;
+            this._labSLLoi.Text = "0";
+            this._labSLLoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // _labSLConlai
+            // 
+            this._labSLConlai.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._labSLConlai.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold);
+            this._labSLConlai.ForeColor = System.Drawing.Color.Blue;
+            this._labSLConlai.Location = new System.Drawing.Point(156, 382);
+            this._labSLConlai.Name = "_labSLConlai";
+            this._labSLConlai.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._labSLConlai.Size = new System.Drawing.Size(201, 83);
+            this._labSLConlai.TabIndex = 11;
+            this._labSLConlai.Text = "0";
+            this._labSLConlai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // _labDaiCat
+            // 
+            this._labDaiCat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._labDaiCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold);
+            this._labDaiCat.ForeColor = System.Drawing.Color.Blue;
+            this._labDaiCat.Location = new System.Drawing.Point(565, 115);
+            this._labDaiCat.Name = "_labDaiCat";
+            this._labDaiCat.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._labDaiCat.Size = new System.Drawing.Size(201, 83);
+            this._labDaiCat.TabIndex = 12;
+            this._labDaiCat.Text = "0";
+            this._labDaiCat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // _labTocDo
+            // 
+            this._labTocDo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._labTocDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold);
+            this._labTocDo.ForeColor = System.Drawing.Color.Red;
+            this._labTocDo.Location = new System.Drawing.Point(565, 204);
+            this._labTocDo.Name = "_labTocDo";
+            this._labTocDo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._labTocDo.Size = new System.Drawing.Size(201, 83);
+            this._labTocDo.TabIndex = 13;
+            this._labTocDo.Text = "0";
+            this._labTocDo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // _labTongSoMetCD
+            // 
+            this._labTongSoMetCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._labTongSoMetCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold);
+            this._labTongSoMetCD.ForeColor = System.Drawing.Color.Blue;
+            this._labTongSoMetCD.Location = new System.Drawing.Point(565, 293);
+            this._labTongSoMetCD.Name = "_labTongSoMetCD";
+            this._labTongSoMetCD.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._labTongSoMetCD.Size = new System.Drawing.Size(201, 83);
+            this._labTongSoMetCD.TabIndex = 14;
+            this._labTongSoMetCD.Text = "0";
+            this._labTongSoMetCD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // _labSoMetCL
+            // 
+            this._labSoMetCL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._labSoMetCL.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold);
+            this._labSoMetCL.ForeColor = System.Drawing.Color.Red;
+            this._labSoMetCL.Location = new System.Drawing.Point(565, 382);
+            this._labSoMetCL.Name = "_labSoMetCL";
+            this._labSoMetCL.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._labSoMetCL.Size = new System.Drawing.Size(201, 83);
+            this._labSoMetCL.TabIndex = 15;
+            this._labSoMetCL.Text = "0";
+            this._labSoMetCL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1020,15 +1036,7 @@ namespace QuanLyGiay
         private System.Windows.Forms.TextBox _txtPO;
         private System.Windows.Forms.TextBox _txtKhachHang;
         private System.Windows.Forms.TextBox _txtDonHang;
-        private System.Windows.Forms.TextBox _txtDaiCat;
-        private System.Windows.Forms.TextBox _txtTocDo;
-        private System.Windows.Forms.TextBox _txtSLLoi;
-        private System.Windows.Forms.TextBox _txtSLDat;
-        private System.Windows.Forms.TextBox _txtSLConlai;
-        private System.Windows.Forms.TextBox _txtTongSoMetCD;
-        private System.Windows.Forms.TextBox _txtSLCat;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox _txtSoMetCL;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label26;
@@ -1038,6 +1046,14 @@ namespace QuanLyGiay
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label _labSoMetCL;
+        private System.Windows.Forms.Label _labTongSoMetCD;
+        private System.Windows.Forms.Label _labTocDo;
+        private System.Windows.Forms.Label _labDaiCat;
+        private System.Windows.Forms.Label _labSLConlai;
+        private System.Windows.Forms.Label _labSLLoi;
+        private System.Windows.Forms.Label _labSLDat;
+        private System.Windows.Forms.Label _labSLCat;
     }
 }
 

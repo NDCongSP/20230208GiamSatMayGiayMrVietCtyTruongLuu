@@ -40,13 +40,6 @@ namespace QuanLyGiay
             _txtKhachHang.ReadOnly = true;
             _txtDonHang.ReadOnly = true;
             _txtPO.ReadOnly = true;
-            _txtDaiCat.ReadOnly = true;
-            _txtSLCat.ReadOnly = true;
-            _txtTongSoMetCD.ReadOnly = true;
-            _txtSLDat.ReadOnly = true;
-            _txtSLLoi.ReadOnly = true;
-            _txtSLConlai.ReadOnly = true;
-            _txtTocDo.ReadOnly = true;
 
             using (var connection = GlobalVariable.GetDbConnection())
             {
@@ -115,13 +108,14 @@ namespace QuanLyGiay
                             _txtKhachHang.Text = _donHangDangChay.KhachHang;
                             _txtDonHang.Text = _donHangDangChay.DonHang;
                             _txtPO.Text = _donHangDangChay.PO;
-                            _txtDaiCat.Text = (_donHangDangChay.DaiCat * 10).ToString();
-                            _txtSLCat.Text = _donHangDangChay.SLCatTam.ToString();
-                            _txtTongSoMetCD.Text = _donHangDangChay.SoMetCaiDat.ToString();
-                            _txtSLDat.Text = _donHangDangChay.SLDat.ToString();
-                            _txtSLLoi.Text = _donHangDangChay.SLLoi.ToString();
-                            _txtSLConlai.Text = _donHangDangChay.SLConLai.ToString();
-                            _txtTocDo.Text = _donHangDangChay.TocDo.ToString();
+                            _labDaiCat.Text = (_donHangDangChay.DaiCat * 10).ToString();
+                            _labSLCat.Text = _donHangDangChay.SLCatTam.ToString();
+                            _labTongSoMetCD.Text = _donHangDangChay.SoMetCaiDat.ToString();
+                            _labSLDat.Text = _donHangDangChay.SLDat.ToString();
+                            _labSLLoi.Text = _donHangDangChay.SLLoi.ToString();
+                            _labSLConlai.Text = _donHangDangChay.SLConLai.ToString();
+                            _labTocDo.Text = _donHangDangChay.TocDo.ToString();
+                            _labSoMetCL.Text = _donHangDangChay.ConLai.ToString();
                         }));
                     }
                     else
@@ -131,13 +125,14 @@ namespace QuanLyGiay
                         _txtKhachHang.Text = _donHangDangChay.KhachHang;
                         _txtDonHang.Text = _donHangDangChay.DonHang;
                         _txtPO.Text = _donHangDangChay.PO;
-                        _txtDaiCat.Text = (_donHangDangChay.DaiCat * 10).ToString();
-                        _txtSLCat.Text = _donHangDangChay.SLCatTam.ToString();
-                        _txtTongSoMetCD.Text = _donHangDangChay.SoMetCaiDat.ToString();
-                        _txtSLDat.Text = _donHangDangChay.SLDat.ToString();
-                        _txtSLLoi.Text = _donHangDangChay.SLLoi.ToString();
-                        _txtSLConlai.Text = _donHangDangChay.SLConLai.ToString();
-                        _txtTocDo.Text = _donHangDangChay.TocDo.ToString();
+                        _labDaiCat.Text = (_donHangDangChay.DaiCat * 10).ToString();
+                        _labSLCat.Text = _donHangDangChay.SLCatTam.ToString();
+                        _labTongSoMetCD.Text = _donHangDangChay.SoMetCaiDat.ToString();
+                        _labSLDat.Text = _donHangDangChay.SLDat.ToString();
+                        _labSLLoi.Text = _donHangDangChay.SLLoi.ToString();
+                        _labSLConlai.Text = _donHangDangChay.SLConLai.ToString();
+                        _labTocDo.Text = _donHangDangChay.TocDo.ToString();
+                        _labSoMetCL.Text = _donHangDangChay.ConLai.ToString();
                     }
                 }
 
@@ -250,8 +245,27 @@ namespace QuanLyGiay
                         else
                         {
                             grvDH.DataSource = resultData;
+
                             grvDH.Columns["CreatedDate"].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
                         }
+
+                        //grvDH.Columns["CustomerID"].Visible = false;
+                        grvDH.Columns["Status"].DisplayIndex = 0;
+                        grvDH.Columns["STT"].DisplayIndex = 1;
+                        grvDH.Columns["Ma"].DisplayIndex = 2;
+                        grvDH.Columns["Song"].DisplayIndex = 3;
+                        grvDH.Columns["Xa"].DisplayIndex = 4;
+                        grvDH.Columns["Rong"].DisplayIndex = 5;
+                        grvDH.Columns["Cao"].DisplayIndex = 6;
+                        grvDH.Columns["Lang"].DisplayIndex = 7;
+                        grvDH.Columns["Kho"].DisplayIndex = 8;
+                        grvDH.Columns["DaiCat"].DisplayIndex = 9;
+                        grvDH.Columns["SLCatTam"].DisplayIndex = 10;
+                        grvDH.Columns["SoMetCaiDat"].DisplayIndex = 11;
+                        grvDH.Columns["TongSoThung"].DisplayIndex = 12;
+                        grvDH.Columns["DoSauLan"].DisplayIndex = 13;
+                        grvDH.Columns["SoLop"].DisplayIndex = 14;
+                        grvDH.Columns["CongThem"].DisplayIndex = 15;
                     }
                 }
                 //Thread.Sleep(2000);
