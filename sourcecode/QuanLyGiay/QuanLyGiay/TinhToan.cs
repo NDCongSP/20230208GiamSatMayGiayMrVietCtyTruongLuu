@@ -90,9 +90,6 @@ namespace QuanLyGiay
             if (donHang.Xa == 4)
                 rongTotal = rongA + rongB + rongC + rongD;
 
-            //dùng để khóa không cho set vị trí lằng trong các trường hợp xả >1
-            bool khoaLan1 = false, khoaLan2 = false, khoaLan3 = false, khoaLan4 = false;
-
             // Xả = 1
             if (donHang.Xa == 1)
             {

@@ -18,10 +18,10 @@ namespace QuanLyGiay
 {
     public partial class frmMain : Form
     {
-        bool _isLoaded = false;
+        //bool _isLoaded = false;
         int _countRefesh = 0; //100*100=10,000 =10S
         private Timer _t = new Timer();
-        private Task _taskLoadOrder;
+        //private Task _taskLoadOrder;
 
         DonHangModel _donHangDoiDon = new DonHangModel();//chứa thông tin đơn hàng chuẩn bị đổi đơn.
         DonHangChayModel _donHangDangChay = new DonHangChayModel();//chứa thông tin đơn hàng đang chạy

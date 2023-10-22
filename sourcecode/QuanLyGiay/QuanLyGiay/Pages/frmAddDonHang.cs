@@ -456,7 +456,7 @@ namespace QuanLyGiay
                     {
                         if (item.IsNew)
                         {
-                            var result = connection.Execute($"INSERT INTO tbldonhang (Status,Stt,Ma,Song,SoLop,CongThem,Kho,DaiCat,SLCatTam,SoMetCaiDat,Xa,Rong,Canh,Cao,Lang,DoSauLan,GiaySongE,GiayMatE," +
+                            var result = connection.Execute($"INSERT INTO tbldonhang (Stt,Status,Ma,Song,SoLop,CongThem,Kho,DaiCat,SLCatTam,SoMetCaiDat,Xa,Rong,Canh,Cao,Lang,DoSauLan,GiaySongE,GiayMatE," +
                          $"GiaySongB,GiayMatB,GiaySongC,GiayMatC,GiayMen,GhiChu,MayXa,Line,KhachHang,DaiKH,RongKH,CaoKH,DonHang,PO,MayIn,ChapBe,GhimDan) " +
                          $"VALUES (@Stt,@Status,@Ma,@Song,@SoLop,@CongThem,@Kho,@DaiCat,@SLCatTam,@SoMetCaiDat,@Xa,@Rong,@Canh,@Cao,@Lang,@DoSauLan,@GiaySongE,@GiayMatE," +
                          $"@GiaySongB,@GiayMatB,@GiaySongC,@GiayMatC,@GiayMen,@GhiChu,@MayXa,@Line,@KhachHang,@DaiKH,@RongKH,@CaoKH,@DonHang,@PO,@MayIn,@ChapBe,@GhimDan)", item.DonHangInfo);
