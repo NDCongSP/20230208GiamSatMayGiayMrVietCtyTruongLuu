@@ -47,7 +47,7 @@ namespace QuanLyGiay
 
                 if (resultData.Count > 0)
                 {
-                    var c = resultData.Where(u => u.Status == StatusDHEnum.CHAY).FirstOrDefault();
+                    var c = resultData.Where(u => u.Status == StatusDHEnum.Chay).FirstOrDefault();
 
                     if (c != null)
                     {
@@ -165,10 +165,13 @@ namespace QuanLyGiay
                 {
                     _btnSettings_Click(null, null);
                 }
-
                 else if (o.KeyCode == Keys.F3)
                 {
-                    ResetCacGiaTriCaiDat();
+
+                }
+                else if (o.KeyCode == Keys.F6)
+                {
+                    _btnTatMay_Click(null, null);
                 }
             };
             #endregion
@@ -176,6 +179,7 @@ namespace QuanLyGiay
             btnOrder.Click += BtnOrder_Click;
             btnNapMayXa.Click += BtnNapMayXa_Click;
             _btnSettings.Click += _btnSettings_Click;
+            _btnTatMay.Click += _btnTatMay_Click;
 
             easyDriverConnector1.Started += EasyDriverConnector1_Started;
 
@@ -193,6 +197,14 @@ namespace QuanLyGiay
             GlobalVariable.MyEvents.Refresh = true;
             //_taskLoadOrder = new Task(LoadOrder);
             //_taskLoadOrder.Start();
+        }
+
+        private void _btnTatMay_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc chắn muốn tắt máy tính?", "Cảnh Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Process.Start("shutdown.exe", "-s -t 00");
+            }
         }
 
         private void _btnSettings_Click(object sender, EventArgs e)
@@ -828,7 +840,7 @@ namespace QuanLyGiay
 
                 if (resultData.Count > 0)
                 {
-                    var c = resultData.Where(u => u.Status == StatusDHEnum.MOI).ToList();
+                    var c = resultData.Where(u => u.Status == StatusDHEnum.Moi).ToList();
                     _donHangDoiDon = c.FirstOrDefault(x => x.STT == c.Min(u => u.STT));
 
                     //add thong tin don hang moi vao donHangDangChay

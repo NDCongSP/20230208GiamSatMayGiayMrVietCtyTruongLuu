@@ -21,7 +21,7 @@ namespace CommonControl
         public string PO { get; set; }
 
         public int IdDonHang { get; set; }
-        public StatusDHEnum Status { get; set; } = StatusDHEnum.CHAY;
+        public StatusDHEnum Status { get; set; } = StatusDHEnum.Chay;
         public int STT { get; set; }
         [DisplayName("Mã")]
         public string Ma { get; set; }

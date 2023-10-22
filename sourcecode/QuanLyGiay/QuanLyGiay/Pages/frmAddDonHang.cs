@@ -530,7 +530,7 @@ namespace QuanLyGiay
                     }
                     else//thông tin đơn hàng ko có trong danh sách đơn hàng mới thì đây là chỉnh sửa cho đơn hãng đã được đặt lưu vào DB rồi, nên IsNew= False.
                     {
-                        donHang.Status = StatusDHEnum.CHAY;
+                        donHang.Status = StatusDHEnum.Chay;
                         var itemUpdate = _listDonHangNew.FirstOrDefault(x => x.DonHangInfo.STT == donHang.STT && x.IsNew == false);
                         if (itemUpdate == null)
                         {

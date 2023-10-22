@@ -11,7 +11,7 @@ namespace CommonControl
     {
         [Browsable(false)]
         public int Id { get; set; }
-        public StatusDHEnum Status { get; set; } = StatusDHEnum.MOI;
+        public StatusDHEnum Status { get; set; } = StatusDHEnum.Moi;
         public int STT { get; set; }
         [DisplayName("Mã")]
         public string Ma { get; set; }
