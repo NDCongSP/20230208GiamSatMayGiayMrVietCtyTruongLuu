@@ -41,7 +41,7 @@ namespace CommonControl
             set { }
             get
             {
-                return Math.Round(SLCatTam * DaiCat / 100, 2);
+                return Math.Round(SLCatTam * DaiCat / 1000, 2);
             }
         }
         public int TongSoThung

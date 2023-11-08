@@ -76,10 +76,7 @@ namespace QuanLyGiay
             this._labSLDat = new System.Windows.Forms.Label();
             this._labSLCat = new System.Windows.Forms.Label();
             this.labDateTime = new System.Windows.Forms.Label();
-            this._txtPO = new System.Windows.Forms.TextBox();
-            this._txtKhachHang = new System.Windows.Forms.TextBox();
             this._labDriverStatus = new System.Windows.Forms.Label();
-            this._txtDonHang = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -109,6 +106,9 @@ namespace QuanLyGiay
             this.btnNapMayXa = new System.Windows.Forms.Button();
             this.btnReviceError = new System.Windows.Forms.Button();
             this.easyDriverConnector1 = new EasyScada.Winforms.Controls.EasyDriverConnector(this.components);
+            this._labDonHang = new System.Windows.Forms.Label();
+            this._labKhachHang = new System.Windows.Forms.Label();
+            this._labPO = new System.Windows.Forms.Label();
             this.panel24.SuspendLayout();
             this.panel21.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -440,6 +440,9 @@ namespace QuanLyGiay
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this._labPO);
+            this.groupBox1.Controls.Add(this._labKhachHang);
+            this.groupBox1.Controls.Add(this._labDonHang);
             this.groupBox1.Controls.Add(this._labSoMetCL);
             this.groupBox1.Controls.Add(this._labTongSoMetCD);
             this.groupBox1.Controls.Add(this._labTocDo);
@@ -449,10 +452,7 @@ namespace QuanLyGiay
             this.groupBox1.Controls.Add(this._labSLDat);
             this.groupBox1.Controls.Add(this._labSLCat);
             this.groupBox1.Controls.Add(this.labDateTime);
-            this.groupBox1.Controls.Add(this._txtPO);
-            this.groupBox1.Controls.Add(this._txtKhachHang);
             this.groupBox1.Controls.Add(this._labDriverStatus);
-            this.groupBox1.Controls.Add(this._txtDonHang);
             this.groupBox1.Controls.Add(this.label23);
             this.groupBox1.Controls.Add(this.label21);
             this.groupBox1.Controls.Add(this.label1);
@@ -594,20 +594,6 @@ namespace QuanLyGiay
             this.labDateTime.TabIndex = 7;
             this.labDateTime.Text = "2020-10-21 17:00:00";
             // 
-            // _txtPO
-            // 
-            this._txtPO.Location = new System.Drawing.Point(624, 54);
-            this._txtPO.Name = "_txtPO";
-            this._txtPO.Size = new System.Drawing.Size(155, 30);
-            this._txtPO.TabIndex = 1;
-            // 
-            // _txtKhachHang
-            // 
-            this._txtKhachHang.Location = new System.Drawing.Point(413, 54);
-            this._txtKhachHang.Name = "_txtKhachHang";
-            this._txtKhachHang.Size = new System.Drawing.Size(155, 30);
-            this._txtKhachHang.TabIndex = 1;
-            // 
             // _labDriverStatus
             // 
             this._labDriverStatus.AutoSize = true;
@@ -617,13 +603,6 @@ namespace QuanLyGiay
             this._labDriverStatus.Size = new System.Drawing.Size(86, 17);
             this._labDriverStatus.TabIndex = 0;
             this._labDriverStatus.Text = "DriverStatus";
-            // 
-            // _txtDonHang
-            // 
-            this._txtDonHang.Location = new System.Drawing.Point(119, 54);
-            this._txtDonHang.Name = "_txtDonHang";
-            this._txtDonHang.Size = new System.Drawing.Size(155, 30);
-            this._txtDonHang.TabIndex = 1;
             // 
             // label23
             // 
@@ -942,6 +921,33 @@ namespace QuanLyGiay
             this.easyDriverConnector1.Timeout = 30;
             this.easyDriverConnector1.UseMongoDb = false;
             // 
+            // _labDonHang
+            // 
+            this._labDonHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._labDonHang.Location = new System.Drawing.Point(127, 54);
+            this._labDonHang.Name = "_labDonHang";
+            this._labDonHang.Size = new System.Drawing.Size(155, 31);
+            this._labDonHang.TabIndex = 16;
+            this._labDonHang.Text = "ĐH";
+            // 
+            // _labKhachHang
+            // 
+            this._labKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._labKhachHang.Location = new System.Drawing.Point(413, 54);
+            this._labKhachHang.Name = "_labKhachHang";
+            this._labKhachHang.Size = new System.Drawing.Size(155, 31);
+            this._labKhachHang.TabIndex = 16;
+            this._labKhachHang.Text = "KH";
+            // 
+            // _labPO
+            // 
+            this._labPO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._labPO.Location = new System.Drawing.Point(620, 54);
+            this._labPO.Name = "_labPO";
+            this._labPO.Size = new System.Drawing.Size(155, 31);
+            this._labPO.TabIndex = 16;
+            this._labPO.Text = "PO";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1033,9 +1039,6 @@ namespace QuanLyGiay
         private System.Windows.Forms.Panel _panelMayXaStatus;
         private EasyScada.Winforms.Controls.EasyDriverConnector easyDriverConnector1;
         private EasyScada.Winforms.Controls.EasyAcountManager easyAcountManager1;
-        private System.Windows.Forms.TextBox _txtPO;
-        private System.Windows.Forms.TextBox _txtKhachHang;
-        private System.Windows.Forms.TextBox _txtDonHang;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
@@ -1054,6 +1057,9 @@ namespace QuanLyGiay
         private System.Windows.Forms.Label _labSLLoi;
         private System.Windows.Forms.Label _labSLDat;
         private System.Windows.Forms.Label _labSLCat;
+        private System.Windows.Forms.Label _labPO;
+        private System.Windows.Forms.Label _labKhachHang;
+        private System.Windows.Forms.Label _labDonHang;
     }
 }
 

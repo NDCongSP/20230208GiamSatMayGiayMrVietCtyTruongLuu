@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CommonControl
 {
+    /// <summary>
+    /// Đơn vị là mm.
+    /// </summary>
     public class DaoLangPositionModel
     {
         //Bật tắt dao

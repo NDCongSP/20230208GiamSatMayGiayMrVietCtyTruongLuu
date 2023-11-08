@@ -37,10 +37,6 @@ namespace QuanLyGiay
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-            _txtKhachHang.ReadOnly = true;
-            _txtDonHang.ReadOnly = true;
-            _txtPO.ReadOnly = true;
-
             using (var connection = GlobalVariable.GetDbConnection())
             {
                 var resultData = connection.Query<DonHangModel>("sp_tblDonHangGetOnProcess").ToList();
@@ -105,10 +101,10 @@ namespace QuanLyGiay
                         {
                             labDateTime.Text = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss");
 
-                            _txtKhachHang.Text = _donHangDangChay.KhachHang;
-                            _txtDonHang.Text = _donHangDangChay.DonHang;
-                            _txtPO.Text = _donHangDangChay.PO;
-                            _labDaiCat.Text = (_donHangDangChay.DaiCat * 10).ToString();
+                            _labKhachHang.Text = _donHangDangChay.KhachHang;
+                            _labDonHang.Text = _donHangDangChay.DonHang;
+                            _labPO.Text = _donHangDangChay.PO;
+                            _labDaiCat.Text = (_donHangDangChay.DaiCat).ToString();
                             _labSLCat.Text = _donHangDangChay.SLCatTam.ToString();
                             _labTongSoMetCD.Text = _donHangDangChay.SoMetCaiDat.ToString();
                             _labSLDat.Text = _donHangDangChay.SLDat.ToString();
@@ -122,10 +118,10 @@ namespace QuanLyGiay
                     {
                         labDateTime.Text = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss");
 
-                        _txtKhachHang.Text = _donHangDangChay.KhachHang;
-                        _txtDonHang.Text = _donHangDangChay.DonHang;
-                        _txtPO.Text = _donHangDangChay.PO;
-                        _labDaiCat.Text = (_donHangDangChay.DaiCat * 10).ToString();
+                        _labKhachHang.Text = _donHangDangChay.KhachHang;
+                        _labDonHang.Text = _donHangDangChay.DonHang;
+                        _labPO.Text = _donHangDangChay.PO;
+                        _labDaiCat.Text = (_donHangDangChay.DaiCat).ToString();
                         _labSLCat.Text = _donHangDangChay.SLCatTam.ToString();
                         _labTongSoMetCD.Text = _donHangDangChay.SoMetCaiDat.ToString();
                         _labSLDat.Text = _donHangDangChay.SLDat.ToString();
@@ -725,15 +721,15 @@ namespace QuanLyGiay
         #region Methods
         private void DoiDonMayXa(DonHangModel donHangDangChay)
         {
-            var s = ((donHangDangChay.DoSauLan * 10 * 10)).ToString("#");
+            var s = ((donHangDangChay.DoSauLan * 10)).ToString("#");
             easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Xa").WriteAsync(donHangDangChay.Xa.ToString(), WritePiority.High);
             //Nhan 10 hai lần là vì, 1 lần chuyển từ cm->mm, lần 2 là để bỏ số lẻ ghi xuống driver.
-            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Rong").WriteAsync((donHangDangChay.Rong * 10 * 10).ToString("#"), WritePiority.High);
-            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Cao").WriteAsync((donHangDangChay.Cao * 10 * 10).ToString("#"), WritePiority.High);
-            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Canh").WriteAsync((donHangDangChay.Canh * 10 * 10).ToString("#"), WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Rong").WriteAsync((donHangDangChay.Rong * 10).ToString("#"), WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Cao").WriteAsync((donHangDangChay.Cao  * 10).ToString("#"), WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Canh").WriteAsync((donHangDangChay.Canh  * 10).ToString("#"), WritePiority.High);
             easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Lan").WriteAsync(donHangDangChay.Lang.ToString(), WritePiority.High);
-            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Song").WriteAsync((donHangDangChay.CongThem * 10 * 10).ToString("#"), WritePiority.High);
-            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/DoSauLan").WriteAsync((donHangDangChay.DoSauLan * 10 * 10).ToString("#"), WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Song").WriteAsync((donHangDangChay.CongThem  * 10).ToString("#"), WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/DoSauLan").WriteAsync((donHangDangChay.DoSauLan  * 10).ToString("#"), WritePiority.High);
             easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/MetToiKeHoach").WriteAsync((donHangDangChay.SoMetCaiDat * 10).ToString("#"), WritePiority.High);
 
             easyDriverConnector1.GetTag("Local Station/ChannelMayXa/May1/Dao1_SV").WriteAsync(GlobalVariable.DaoLangPosition.Dao1SV.ToString(), WritePiority.High);
@@ -774,7 +770,7 @@ namespace QuanLyGiay
 
         private void DoiDonCutter(DonHangModel donHangDangChay)
         {
-            easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/ChieuDaiCat").WriteAsync(((int)(donHangDangChay.DaiCat * 10 * 10)).ToString(), WritePiority.High);
+            easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/ChieuDaiCat").WriteAsync(((int)(donHangDangChay.DaiCat * 10)).ToString(), WritePiority.High);
             easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/SoLuongCat").WriteAsync(donHangDangChay.SLCatTam.ToString(), WritePiority.High);
             easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/Pallet").WriteAsync(donHangDangChay.Pallet.ToString(), WritePiority.High);
 

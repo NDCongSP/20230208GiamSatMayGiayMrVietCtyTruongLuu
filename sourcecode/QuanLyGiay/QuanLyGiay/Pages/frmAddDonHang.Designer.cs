@@ -355,9 +355,9 @@ namespace QuanLyGiay
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label25.Location = new System.Drawing.Point(237, 68);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(115, 17);
+            this.label25.Size = new System.Drawing.Size(119, 17);
             this.label25.TabIndex = 0;
-            this.label25.Text = "Độ Sâu Lằn (cm)";
+            this.label25.Text = "Độ Sâu Lằn (mm)";
             // 
             // _txtRong
             // 
@@ -395,9 +395,9 @@ namespace QuanLyGiay
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label9.Location = new System.Drawing.Point(24, 278);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(74, 17);
+            this.label9.Size = new System.Drawing.Size(78, 17);
             this.label9.TabIndex = 0;
-            this.label9.Text = "Rộng (cm)";
+            this.label9.Text = "Rộng (mm)";
             // 
             // _txtCao
             // 
@@ -498,9 +498,9 @@ namespace QuanLyGiay
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label11.Location = new System.Drawing.Point(33, 336);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 17);
+            this.label11.Size = new System.Drawing.Size(69, 17);
             this.label11.TabIndex = 0;
-            this.label11.Text = "Cao (cm)";
+            this.label11.Text = "Cao (mm)";
             // 
             // label20
             // 
@@ -548,9 +548,9 @@ namespace QuanLyGiay
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label5.Location = new System.Drawing.Point(12, 190);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 17);
+            this.label5.Size = new System.Drawing.Size(90, 17);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Dài Cắt (cm)";
+            this.label5.Text = "Dài Cắt (mm)";
             // 
             // label10
             // 
@@ -558,9 +558,9 @@ namespace QuanLyGiay
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label10.Location = new System.Drawing.Point(25, 307);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 17);
+            this.label10.Size = new System.Drawing.Size(77, 17);
             this.label10.TabIndex = 0;
-            this.label10.Text = "Cánh (cm)";
+            this.label10.Text = "Cánh (mm)";
             // 
             // _txtPallet
             // 
@@ -646,9 +646,9 @@ namespace QuanLyGiay
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label4.Location = new System.Drawing.Point(33, 161);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 17);
+            this.label4.Size = new System.Drawing.Size(69, 17);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Khổ (cm)";
+            this.label4.Text = "Khổ (mm)";
             // 
             // label14
             // 

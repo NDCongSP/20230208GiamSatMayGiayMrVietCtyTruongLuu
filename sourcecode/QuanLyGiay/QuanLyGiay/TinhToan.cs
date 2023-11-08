@@ -42,28 +42,28 @@ namespace QuanLyGiay
             A3 - Nắp chồm + thùng gói sườn+thùng gói giữa  : (Rộng / cao / Rộng) - 3 loại này cán lằn như nhau/
                  hàng bế: cái này dựa theo thông số bên thiết kế khuôn bế cung cấp
             các số 0.3,0.2 là phần cộng thêm theo sóng là lớp giấy
-            tất cả các thông sô khi cài đặt đơn hàng đơn vị là cm, chỉ ngoại trừ tổng số mét cắt đơn vị là met
-            chuyeernr đổi về đơn vị mm.
+            tất cả các thông sô khi cài đặt đơn hàng đơn vị là mm, chỉ ngoại trừ tổng số mét cắt đơn vị là met
+            chuyển đổi về đơn vị mm.
             */
-            double rong = donHang.Rong * 10;//chuyen sang đơn vị mm
-            double cao = donHang.Cao * 10;//chuyen sang đơn vị mm
+            double rong = donHang.Rong;//chuyen sang đơn vị mm
+            double cao = donHang.Cao;//chuyen sang đơn vị mm
             double canh = rong / 2;
 
             double caoA = cao;
             double canhA = canh;
-            double rongA = canhA + caoA + canhA + donHang.CongThem * 10;
+            double rongA = canhA + caoA + canhA + donHang.CongThem;
 
             double caoB = cao;
             double canhB = canh;
-            double rongB = canhB + caoB + canhB + donHang.CongThem * 10;
+            double rongB = canhB + caoB + canhB + donHang.CongThem;
 
             double caoC = cao;
             double canhC = canh;
-            double rongC = canhC + caoC + canhC + donHang.CongThem * 10;
+            double rongC = canhC + caoC + canhC + donHang.CongThem;
 
             double caoD = cao;
             double canhD = canh;
-            double rongD = canhD + caoD + canhD + donHang.CongThem * 10;
+            double rongD = canhD + caoD + canhD + donHang.CongThem;
 
             //tắt hết tất cả các dao và lằng trước khi vào set position, khi set xong vị trí thì sẽ bật dao và lằng tương ứng.
             GlobalVariable.DaoLangPosition.Dao1U = 0;

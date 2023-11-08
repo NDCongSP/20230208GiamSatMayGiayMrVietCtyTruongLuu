@@ -19,7 +19,7 @@ namespace CommonControl
         public string Song { get; set; }
         public string SoLop { get; set; }//quy định số lớp giấy
 
-        private double _congThem = 0;
+        private double _congThem = 0;//mm
         [DisplayName("+ Thêm")]
         public double CongThem //tuy vao số lớp mà cọng thêm số tương ứng.
         {
@@ -30,7 +30,7 @@ namespace CommonControl
         [DisplayName("Khổ")]
         public double Kho { get; set; }
         [DisplayName("Dài Cắt")]
-        public double DaiCat { get; set; }//don vi cm
+        public double DaiCat { get; set; }//don vi mm
         [DisplayName("SL Cắt Tấm")]
         public int SLCatTam { get; set; }//dung cho máy cắt
         public double SoMetCaiDat//don vi met
@@ -38,7 +38,7 @@ namespace CommonControl
             set { }
             get
             {
-                return Math.Round(SLCatTam * DaiCat / 100, 2);
+                return Math.Round(SLCatTam * DaiCat / 1000, 2);
             }
         }
 
@@ -62,12 +62,12 @@ namespace CommonControl
         /// Nap1
         /// </summary>
         [DisplayName("Rộng")]
-        public double Rong { get; set; }
+        public double Rong { get; set; }//mm
         /// <summary>
         /// Rong/2.
         /// </summary>
         [DisplayName("Cánh")]
-        public double Canh
+        public double Canh//mm
         {
             set { }
             get
@@ -76,7 +76,7 @@ namespace CommonControl
             }
         }
         [DisplayName("Cao")]
-        public double Cao { get; set; }
+        public double Cao { get; set; }//mm
         [DisplayName("Lằn")]
         public int Lang { get; set; }//quy định kiểu lần có giá trị 1 đến 4
 

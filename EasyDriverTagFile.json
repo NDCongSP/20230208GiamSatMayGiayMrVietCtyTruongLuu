@@ -11,7 +11,7 @@
   "IsReadOnly": true,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:42:59.5967265+07:00",
-  "ModifiedDate": "2023-09-19T21:13:42.8589858+07:00",
+  "ModifiedDate": "2023-11-08T06:17:39.9632952+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -31,7 +31,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:53:37.4671924+07:00",
-  "ModifiedDate": "2023-09-19T21:13:42.8589858+07:00",
+  "ModifiedDate": "2023-11-08T06:17:39.9632952+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -51,7 +51,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:53:42.0554424+07:00",
-  "ModifiedDate": "2023-09-19T21:13:42.8589858+07:00",
+  "ModifiedDate": "2023-11-08T06:17:39.9632952+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -340,6 +340,33 @@
   "Childs": [],
   "HaveTags": true,
   "Tags": []
+},
+    {
+  "Name": "KhoangCachMayXaDenMayCat",
+  "Description": null,
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-11-05T11:12:08.7498328+07:00",
+  "ModifiedDate": "2023-11-05T11:12:08.7498328+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {}
+},
+  "Address": "400023",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
 }
   ]
 }
@@ -352,7 +379,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2023-01-03T08:12:43.1645774+07:00",
-  "ModifiedDate": "2023-09-19T21:13:42.8589858+07:00",
+  "ModifiedDate": "2023-11-08T06:17:39.9632952+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -372,7 +399,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2023-01-03T08:12:49.0831984+07:00",
-  "ModifiedDate": "2023-09-19T21:13:42.8589858+07:00",
+  "ModifiedDate": "2023-11-08T06:17:39.9632952+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
