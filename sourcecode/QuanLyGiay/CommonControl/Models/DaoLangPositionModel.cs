@@ -92,5 +92,13 @@ namespace CommonControl
             set { }
             get { return KhoMay / 5; }
         }
+
+        //cac vi tri cua dao lang khi khong su dung, set tren phan mem
+        public int Dao1OffSV { get; set; }
+        public int Dao2OffSV { get; set; }
+        public int Lang1OffSV { get; set; }
+        public int Lang2OffSV { get; set; }
+        public int Lang3OffSV { get; set; }
+        public int Lang4OffSV { get; set; }
     }
 }

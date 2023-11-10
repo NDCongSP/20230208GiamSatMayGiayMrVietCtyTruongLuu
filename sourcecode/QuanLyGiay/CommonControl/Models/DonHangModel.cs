@@ -55,8 +55,13 @@ namespace CommonControl
         #region phần cài đặt cho máy xẩ splitter
         //chiều rộng của khổ xả = Rộng/2 + Cao + Rong/2
 
+        /// <summary>
+        /// quy định 1 lần bao nhiêu con --> 1 khổ xả ra 1 lần bao nhiêu tấm.
+        /// các giá trị lần lượt là 0,1,2,3,4.
+        /// 0-- không xả.
+        /// </summary>
         [DisplayName("Xả")]
-        public int Xa { get; set; }//quy định 1 lần bao nhiêu con --> 1 khổ xả ra 1 lần bao nhiêu tấm
+        public int Xa { get; set; } = 0;//quy định 1 lần bao nhiêu con --> 1 khổ xả ra 1 lần bao nhiêu tấm
 
         /// <summary>
         /// Nap1

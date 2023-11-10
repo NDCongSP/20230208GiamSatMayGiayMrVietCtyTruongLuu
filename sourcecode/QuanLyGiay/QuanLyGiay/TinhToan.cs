@@ -83,12 +83,16 @@ namespace QuanLyGiay
 
             if (donHang.Xa == 1)
                 rongTotal = rongA;
-            if (donHang.Xa == 2)
+            else if (donHang.Xa == 2)
                 rongTotal = rongA + rongB;
-            if (donHang.Xa == 3)
+            else if (donHang.Xa == 3)
                 rongTotal = rongA + rongB + rongC;
-            if (donHang.Xa == 4)
+            else if (donHang.Xa == 4)
                 rongTotal = rongA + rongB + rongC + rongD;
+            else//Xa=0--không dùng dáo xả
+            {
+
+            }
 
             // Xả = 1
             if (donHang.Xa == 1)
@@ -507,6 +511,17 @@ namespace QuanLyGiay
                 {
                     MessageBox.Show($"Xả 3 yêu cầu tất cả các dao phải hoạt động.\rKiểm tra lại các dao.", "CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+            }
+            else
+            {
+                GlobalVariable.DaoLangPosition.Dao1SV= GlobalVariable.DaoLangPosition.Dao5SV = GlobalVariable.DaoLangPosition.Dao1OffSV;
+                GlobalVariable.DaoLangPosition.Dao2SV= GlobalVariable.DaoLangPosition.Dao4SV = GlobalVariable.DaoLangPosition.Dao2OffSV;
+                GlobalVariable.DaoLangPosition.Dao3SV = 0;
+
+                GlobalVariable.DaoLangPosition.Lang1Sv= GlobalVariable.DaoLangPosition.Lang8Sv = GlobalVariable.DaoLangPosition.Lang1OffSV;
+                GlobalVariable.DaoLangPosition.Lang2Sv= GlobalVariable.DaoLangPosition.Lang7Sv = GlobalVariable.DaoLangPosition.Lang2OffSV;
+                GlobalVariable.DaoLangPosition.Lang3Sv= GlobalVariable.DaoLangPosition.Lang6Sv = GlobalVariable.DaoLangPosition.Lang3OffSV;
+                GlobalVariable.DaoLangPosition.Lang4Sv= GlobalVariable.DaoLangPosition.Lang5Sv = GlobalVariable.DaoLangPosition.Lang4OffSV;
             }
         }
     }

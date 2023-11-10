@@ -11,7 +11,7 @@
   "IsReadOnly": true,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:42:59.5967265+07:00",
-  "ModifiedDate": "2023-11-08T06:17:39.9632952+07:00",
+  "ModifiedDate": "2023-11-10T12:15:35.3566244+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -31,7 +31,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:53:37.4671924+07:00",
-  "ModifiedDate": "2023-11-08T06:17:39.9632952+07:00",
+  "ModifiedDate": "2023-11-10T12:15:35.3566244+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -51,7 +51,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2022-12-06T13:53:42.0554424+07:00",
-  "ModifiedDate": "2023-11-08T06:17:39.9632952+07:00",
+  "ModifiedDate": "2023-11-10T12:15:35.3566244+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -352,9 +352,72 @@
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
-  "Parameters": {}
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400023"
+  }
 },
   "Address": "400023",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "TrangThaiMayXa",
+  "Description": "Bao trang thai cua may xa khi chuyen don.",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-11-08T18:31:37.604771+07:00",
+  "ModifiedDate": "2023-11-08T18:31:37.604771+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400024"
+  }
+},
+  "Address": "400024",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "CongThemChuyenDao",
+  "Description": "so tam cong them sau khi cat du so luong. Se chuyen don khi so luong cat thuc te = so luong cat cai dat + ConThemChuyenDao.",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-11-08T18:33:30.8120091+07:00",
+  "ModifiedDate": "2023-11-08T18:33:30.8120091+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400025"
+  }
+},
+  "Address": "400025",
   "DataTypeName": "Word",
   "RefreshRate": 100,
   "ByteOrder": 0,
@@ -379,7 +442,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2023-01-03T08:12:43.1645774+07:00",
-  "ModifiedDate": "2023-11-08T06:17:39.9632952+07:00",
+  "ModifiedDate": "2023-11-10T12:15:35.3566244+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -399,7 +462,7 @@
   "IsReadOnly": false,
   "Enabled": true,
   "CreatedDate": "2023-01-03T08:12:49.0831984+07:00",
-  "ModifiedDate": "2023-11-08T06:17:39.9632952+07:00",
+  "ModifiedDate": "2023-11-10T12:40:55.5762897+07:00",
   "ParameterContainer": {
   "DisplayName": null,
   "DisplayParameters": null,
@@ -411,7 +474,7 @@
     "InputContactReadBlockSettings": "[]",
     "OutputCoilsReadBlockSettings": "[]",
     "InputRegisterReadBlockSettings": "[]",
-    "HoldingRegisterReadBlockSettings": "[\r\n  {\r\n    \"AddressType\": 4,\r\n    \"Enabled\": true,\r\n    \"StartAddress\": \"400002\",\r\n    \"EndAddress\": \"400102\"\r\n  }\r\n]",
+    "HoldingRegisterReadBlockSettings": "[\r\n  {\r\n    \"AddressType\": 4,\r\n    \"Enabled\": true,\r\n    \"StartAddress\": \"400001\",\r\n    \"EndAddress\": \"400102\"\r\n  }\r\n]",
     "MaxWritesCount": "10"
   }
 },
@@ -611,7 +674,7 @@
   "DisplayName": null,
   "DisplayParameters": null,
   "Parameters": {
-    "DataType": "Word",
+    "DataType": "DWord",
     "Address": "400020"
   }
 },
@@ -2531,7 +2594,7 @@
   "DisplayName": null,
   "DisplayParameters": null,
   "Parameters": {
-    "DataType": "Word",
+    "DataType": "DWord",
     "Address": "400096"
   }
 },
@@ -2686,6 +2749,216 @@
   }
 },
   "Address": "400102",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "TrangThaiMayXa",
+  "Description": "Bao trang thai moi khi chuyen don.",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-11-08T18:22:07.7935259+07:00",
+  "ModifiedDate": "2023-11-08T18:22:07.7935259+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400001"
+  }
+},
+  "Address": "400001",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Dao1OffSV",
+  "Description": null,
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-11-10T12:39:30.5011992+07:00",
+  "ModifiedDate": "2023-11-10T12:39:30.5011992+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400110"
+  }
+},
+  "Address": "400110",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Dao2OffSV",
+  "Description": null,
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-11-10T12:39:30.5011992+07:00",
+  "ModifiedDate": "2023-11-10T12:39:30.5011992+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400111"
+  }
+},
+  "Address": "400111",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Lang1OffSV",
+  "Description": null,
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-11-10T12:40:27.273064+07:00",
+  "ModifiedDate": "2023-11-10T12:40:27.273064+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400112"
+  }
+},
+  "Address": "400112",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Lang2OffSV",
+  "Description": null,
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-11-10T12:40:27.273064+07:00",
+  "ModifiedDate": "2023-11-10T12:40:27.273064+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400113"
+  }
+},
+  "Address": "400113",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Lang3OffSV",
+  "Description": null,
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-11-10T12:40:27.273064+07:00",
+  "ModifiedDate": "2023-11-10T12:40:27.273064+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400114"
+  }
+},
+  "Address": "400114",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "IsInternalTag": false,
+  "GUID": null,
+  "Retain": false,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Lang4OffSV",
+  "Description": null,
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": true,
+  "CreatedDate": "2023-11-10T12:40:27.274063+07:00",
+  "ModifiedDate": "2023-11-10T12:40:27.274063+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "DataType": "Word",
+    "Address": "400115"
+  }
+},
+  "Address": "400115",
   "DataTypeName": "Word",
   "RefreshRate": 100,
   "ByteOrder": 0,

@@ -46,10 +46,10 @@ namespace QuanLyGiay
                 {
                     _donHang.STT = int.TryParse(t.Text, out int value) ? value : 0;
                 }
-                else
-                {
-                    MessageBox.Show($"Không được để trống STT.", $"CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                //else
+                //{
+                //    MessageBox.Show($"Không được để trống STT.", $"CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //}
             };
 
             _txtKho.TextChanged += (s, o) =>
@@ -59,10 +59,10 @@ namespace QuanLyGiay
                 {
                     _donHang.Kho = double.TryParse(t.Text, out double value) ? value : 0;
                 }
-                else
-                {
-                    MessageBox.Show($"Không được để trống 'Khổ'.", $"CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                //else
+                //{
+                //    MessageBox.Show($"Không được để trống 'Khổ'.", $"CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //}
             };
             _txtChieuDai.TextChanged += (s, o) =>
             {
@@ -71,10 +71,10 @@ namespace QuanLyGiay
                 {
                     _donHang.DaiCat = double.TryParse(t.Text, out double value) ? value : 0;
                 }
-                else
-                {
-                    MessageBox.Show($"Không được để trống 'Chiều Dài'.", $"CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                //else
+                //{
+                //    MessageBox.Show($"Không được để trống 'Chiều Dài'.", $"CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //}
             };
             _txtSoLuong.TextChanged += (s, o) =>
             {
@@ -83,10 +83,10 @@ namespace QuanLyGiay
                 {
                     _donHang.SLCatTam = int.TryParse(t.Text, out int value) ? value : 0;
                 }
-                else
-                {
-                    MessageBox.Show($"Không được để trống 'Số Lượng'.", $"CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                //else
+                //{
+                //    MessageBox.Show($"Không được để trống 'Số Lượng'.", $"CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //}
             };
             _txtPallet.TextChanged += (s, o) =>
             {
@@ -95,10 +95,10 @@ namespace QuanLyGiay
                 {
                     _donHang.Pallet = int.TryParse(t.Text, out int value) ? value : 0;
                 }
-                else
-                {
-                    MessageBox.Show($"Không được để trống 'Pallet'.", $"CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                //else
+                //{
+                //    MessageBox.Show($"Không được để trống 'Pallet'.", $"CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //}
             };
             _txtXa.TextChanged += (s, o) =>
             {
@@ -106,11 +106,25 @@ namespace QuanLyGiay
                 if (!string.IsNullOrEmpty(t.Text))
                 {
                     _donHang.Xa = int.TryParse(t.Text, out int value) ? value : 0;
+
+                    if (_donHang.Xa==0)
+                    {
+                        if (_txtLang.InvokeRequired)
+                        {
+                            _txtLang?.Invoke(new Action(()=> {
+                                _txtLang.Text = "0";
+                            }));
+                        }
+                        else
+                        {
+                            _txtLang.Text = "0";
+                        }
+                    }
                 }
-                else
-                {
-                    MessageBox.Show($"Không được để trống 'Xả'.", $"CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                //else
+                //{
+                //    MessageBox.Show($"Không được để trống 'Xả'.", $"CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //}
             };
             _txtRong.TextChanged += (s, o) =>
             {
@@ -132,10 +146,10 @@ namespace QuanLyGiay
                         _txtCanh.Text = _donHang.Canh.ToString();
                     }
                 }
-                else
-                {
-                    MessageBox.Show($"Không được để trống 'Rộng'.", $"CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                //else
+                //{
+                //    MessageBox.Show($"Không được để trống 'Rộng'.", $"CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //}
             };
             _txtDoSauLang.TextChanged += (s, o) =>
             {
@@ -144,10 +158,10 @@ namespace QuanLyGiay
                 {
                     _donHang.DoSauLan = double.TryParse(t.Text, out double value) ? value : 0;
                 }
-                else
-                {
-                    MessageBox.Show($"Không được để trống 'Cánh'.", $"CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                //else
+                //{
+                //    MessageBox.Show($"Không được để trống 'Cánh'.", $"CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //}
             };
             _txtCao.TextChanged += (s, o) =>
             {
@@ -156,10 +170,10 @@ namespace QuanLyGiay
                 {
                     _donHang.Cao = double.TryParse(t.Text, out double value) ? value : 0;
                 }
-                else
-                {
-                    MessageBox.Show($"Không được để trống 'Cao'.", $"CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                //else
+                //{
+                //    MessageBox.Show($"Không được để trống 'Cao'.", $"CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //}
             };
             _txtLang.TextChanged += (s, o) =>
             {
@@ -168,10 +182,10 @@ namespace QuanLyGiay
                 {
                     _donHang.Lang = int.TryParse(t.Text, out int value) ? value : 0;
                 }
-                else
-                {
-                    MessageBox.Show($"Không được để trống 'Lằng'.", $"CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                //else
+                //{
+                //    MessageBox.Show($"Không được để trống 'Lằng'.", $"CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //}
             };
             _txtGhiChu.TextChanged += (s, o) =>
             {
@@ -457,13 +471,13 @@ namespace QuanLyGiay
                         if (item.IsNew)
                         {
                             var result = connection.Execute($"INSERT INTO tbldonhang (Stt,Status,Ma,Song,SoLop,CongThem,Kho,DaiCat,SLCatTam,SoMetCaiDat,Xa,Rong,Canh,Cao,Lang,DoSauLan,GiaySongE,GiayMatE," +
-                         $"GiaySongB,GiayMatB,GiaySongC,GiayMatC,GiayMen,GhiChu,MayXa,Line,KhachHang,DaiKH,RongKH,CaoKH,DonHang,PO,MayIn,ChapBe,GhimDan) " +
+                         $"GiaySongB,GiayMatB,GiaySongC,GiayMatC,GiayMen,GhiChu,MayXa,Line,KhachHang,DaiKH,RongKH,CaoKH,DonHang,PO,MayIn,ChapBe,GhimDan,Pallet) " +
                          $"VALUES (@Stt,@Status,@Ma,@Song,@SoLop,@CongThem,@Kho,@DaiCat,@SLCatTam,@SoMetCaiDat,@Xa,@Rong,@Canh,@Cao,@Lang,@DoSauLan,@GiaySongE,@GiayMatE," +
-                         $"@GiaySongB,@GiayMatB,@GiaySongC,@GiayMatC,@GiayMen,@GhiChu,@MayXa,@Line,@KhachHang,@DaiKH,@RongKH,@CaoKH,@DonHang,@PO,@MayIn,@ChapBe,@GhimDan)", item.DonHangInfo);
+                         $"@GiaySongB,@GiayMatB,@GiaySongC,@GiayMatC,@GiayMen,@GhiChu,@MayXa,@Line,@KhachHang,@DaiKH,@RongKH,@CaoKH,@DonHang,@PO,@MayIn,@ChapBe,@GhimDan,@Pallet)", item.DonHangInfo);
                         }
                         else
                         {
-                            string  query=$"UPDATE tbldonhang SET Ma = '{item.DonHangInfo.Ma}',Song = '{item.DonHangInfo.Song}',SoLop = '{item.DonHangInfo.SoLop}'," +
+                            string query = $"UPDATE tbldonhang SET Ma = '{item.DonHangInfo.Ma}',Song = '{item.DonHangInfo.Song}',SoLop = '{item.DonHangInfo.SoLop}'," +
                                 $"CongThem = {item.DonHangInfo.CongThem},Kho = {item.DonHangInfo.Kho},DaiCat = {item.DonHangInfo.DaiCat},SLCatTam = {item.DonHangInfo.SLCatTam},SoMetCaiDat = {item.DonHangInfo.SoMetCaiDat}," +
                                 $"Xa = {item.DonHangInfo.Xa},Rong = {item.DonHangInfo.Rong},Canh = {item.DonHangInfo.Canh},Cao = {item.DonHangInfo.Cao},Lang = {item.DonHangInfo.Lang},DoSauLan = {item.DonHangInfo.DoSauLan}," +
                                 $"GiaySongE = '{item.DonHangInfo.GiaySongE}',GiayMatE = '{item.DonHangInfo.GiayMatE}',GiaySongB = '{item.DonHangInfo.GiaySongB}',GiayMatB = '{item.DonHangInfo.GiayMatB}'," +
@@ -484,7 +498,8 @@ namespace QuanLyGiay
 
         private void _btnThem_Click(object sender, EventArgs e)
         {
-            if (_donHang.STT != 0)
+            if (_donHang.STT != 0 && _donHang.STT > 0 && _donHang.Kho > 0 && _donHang.DaiCat > 0 && _donHang.SLCatTam > 0 && _donHang.Pallet > 0
+                && _donHang.Rong > 0 && _donHang.Cao > 0)
             {
                 var donHang = new DonHangModel()
                 {
@@ -564,7 +579,7 @@ namespace QuanLyGiay
             }
             else
             {
-                MessageBox.Show($"CẢNH BÁO", $"Nhập thiếu thông tin đơn hàng, kiểm tra lại.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Nhập thiếu thông tin đơn hàng, kiểm tra lại.",$"CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
