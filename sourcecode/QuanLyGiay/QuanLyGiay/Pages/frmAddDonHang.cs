@@ -498,8 +498,7 @@ namespace QuanLyGiay
 
         private void _btnThem_Click(object sender, EventArgs e)
         {
-            if (_donHang.STT != 0 && _donHang.STT > 0 && _donHang.Kho > 0 && _donHang.DaiCat > 0 && _donHang.SLCatTam > 0 && _donHang.Pallet > 0
-                && _donHang.Rong > 0 && _donHang.Cao > 0)
+            if (_donHang.STT != 0 && _donHang.STT > 0 && _donHang.Kho > 0 && _donHang.DaiCat > 0 && _donHang.SLCatTam > 0 && _donHang.Pallet > 0)
             {
                 var donHang = new DonHangModel()
                 {

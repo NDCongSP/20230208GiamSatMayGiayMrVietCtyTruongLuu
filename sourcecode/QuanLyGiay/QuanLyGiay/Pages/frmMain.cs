@@ -298,6 +298,7 @@ namespace QuanLyGiay
             easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/SoLuongDat_FB").ValueChanged += SoLuongDat_ValueChanged;
             easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/SoLuongLoi_FB").ValueChanged += SoLuongLoi_ValueChanged;
             easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/TocDo_FB").ValueChanged += TocDo_ValueChanged;
+            easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/KhoangCachMayXaDenMayCat").ValueChanged += KhoangCachMayXaDenMayCat_ValueChanged;
 
             LenhChuyenDonCutter_ValueChanged(easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/LenhChuyenDon"),
                               new TagValueChangedEventArgs(easyDriverConnector1.GetTag("Local Station/ChannelServer/DeviceCutter/LenhChuyenDon")
@@ -441,6 +442,11 @@ namespace QuanLyGiay
                 _labDriverStatus.BackColor = Color.Red;
                 _labDriverStatus.ForeColor = Color.White;
             }
+        }
+
+        private void KhoangCachMayXaDenMayCat_ValueChanged(object sender, TagValueChangedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>
