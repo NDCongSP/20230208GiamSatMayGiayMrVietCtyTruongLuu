@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace CommonControl
     {
         [Browsable(false)]
         public int Id { get; set; }
+
         public StatusDHEnum Status { get; set; } = StatusDHEnum.Moi;
         public int STT { get; set; }
         [DisplayName("Mã")]
@@ -115,6 +117,7 @@ namespace CommonControl
         public string MayXa { get; set; }
         public string Line { get; set; }
         [DisplayName("Ngày tạo")]
+        [DisplayFormat(ApplyFormatInEditMode =true,DataFormatString ="{0:yyyy-MM-dd HH:mm:ss}")]
         public DateTime? CreatedDate { get; set; }
 
         public string KhachHang { get; set; }

@@ -88,11 +88,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CommonControl\CommonControl.csproj">
-      <Project>{e116c7a5-8a8d-4d83-b84b-2ef10ab04089}</Project>
-      <Name>CommonControl</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

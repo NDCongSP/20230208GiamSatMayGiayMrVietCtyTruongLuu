@@ -1,7 +1,21 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MaySong.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Song" Type="System.String" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="ConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=localhost;Port=3306;Database=quanlygiay;UID=root;Password=100100; Min Pool Size=0;Max Pool Size=1000;Pooling=true; Connect Timeout=65535;</Value>
+    </Setting>
+    <Setting Name="TenMaySong1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MÁY SÓNG E</Value>
+    </Setting>
+    <Setting Name="TenMaySong2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MÁY SONG B</Value>
+    </Setting>
+    <Setting Name="TenMaySong3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MÁY SÓNG C</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>
