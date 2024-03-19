@@ -446,7 +446,7 @@ namespace QuanLyGiay
 
         private void KhoangCachMayXaDenMayCat_ValueChanged(object sender, TagValueChangedEventArgs e)
         {
-            throw new NotImplementedException();
+            
         }
 
         /// <summary>

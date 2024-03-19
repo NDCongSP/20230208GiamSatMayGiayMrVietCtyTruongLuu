@@ -825,12 +825,12 @@
             // _labGIayMenHienTai
             // 
             this._labGIayMenHienTai.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this._labGIayMenHienTai.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold);
+            this._labGIayMenHienTai.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
             this._labGIayMenHienTai.ForeColor = System.Drawing.Color.Blue;
-            this._labGIayMenHienTai.Location = new System.Drawing.Point(145, 4);
+            this._labGIayMenHienTai.Location = new System.Drawing.Point(145, 12);
             this._labGIayMenHienTai.Name = "_labGIayMenHienTai";
             this._labGIayMenHienTai.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this._labGIayMenHienTai.Size = new System.Drawing.Size(259, 83);
+            this._labGIayMenHienTai.Size = new System.Drawing.Size(259, 71);
             this._labGIayMenHienTai.TabIndex = 17;
             this._labGIayMenHienTai.Text = "0";
             this._labGIayMenHienTai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -838,12 +838,12 @@
             // _labGIayMenKeTiep
             // 
             this._labGIayMenKeTiep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this._labGIayMenKeTiep.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold);
+            this._labGIayMenKeTiep.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
             this._labGIayMenKeTiep.ForeColor = System.Drawing.Color.Blue;
-            this._labGIayMenKeTiep.Location = new System.Drawing.Point(541, 4);
+            this._labGIayMenKeTiep.Location = new System.Drawing.Point(542, 12);
             this._labGIayMenKeTiep.Name = "_labGIayMenKeTiep";
             this._labGIayMenKeTiep.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this._labGIayMenKeTiep.Size = new System.Drawing.Size(259, 83);
+            this._labGIayMenKeTiep.Size = new System.Drawing.Size(259, 71);
             this._labGIayMenKeTiep.TabIndex = 19;
             this._labGIayMenKeTiep.Text = "0";
             this._labGIayMenKeTiep.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

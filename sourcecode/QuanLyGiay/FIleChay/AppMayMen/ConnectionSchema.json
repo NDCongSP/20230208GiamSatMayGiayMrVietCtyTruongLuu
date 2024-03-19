@@ -1,0 +1,1203 @@
+{
+  "ItemType": "ConnectionSchema",
+  "ServerAddress": "127.0.0.1",
+  "Port": 8800,
+  "CommunicationMode": "ReceiveFromServer",
+  "RefreshRate": 500,
+  "CreatedDate": "2024-03-19T10:18:56.2288505+07:00",
+  "Username": null,
+  "Password": null,
+  "Properties": {},
+  "Childs": [
+    {
+  "ItemType": "LocalStation",
+  "Name": "Local Station",
+  "Path": "Local Station",
+  "Description": null,
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {},
+  "Childs": [
+    {
+  "ItemType": "Channel",
+  "Name": "ChannelServer",
+  "Path": "Local Station/ChannelServer",
+  "Description": null,
+  "DisplayInfo": "ModbusTCP - 127.0.0.1:502",
+  "Error": null,
+  "Properties": {
+  "IpAddress": "127.0.0.1",
+  "Port": "502",
+  "DelayBetweenPool": "5",
+  "ScanRate": "100"
+},
+  "Childs": [
+    {
+  "ItemType": "Device",
+  "Name": "DeviceCutter",
+  "Path": "Local Station/ChannelServer/DeviceCutter",
+  "Description": null,
+  "DisplayInfo": "UnitId - 1",
+  "Error": null,
+  "Properties": {
+  "UnitId": "1",
+  "Timeout": "1000",
+  "TryReadWriteTimes": "3",
+  "ReadMode": "Block",
+  "InputContactReadBlockSettings": "[]",
+  "OutputCoilsReadBlockSettings": "[]",
+  "InputRegisterReadBlockSettings": "[]",
+  "HoldingRegisterReadBlockSettings": "[\r\n  {\r\n    \"AddressType\": 4,\r\n    \"Enabled\": true,\r\n    \"StartAddress\": \"400020\",\r\n    \"EndAddress\": \"400104\"\r\n  },\r\n  {\r\n    \"AddressType\": 4,\r\n    \"Enabled\": true,\r\n    \"StartAddress\": \"406108\",\r\n    \"EndAddress\": \"406110\"\r\n  }\r\n]",
+  "MaxWritesCount": "10"
+},
+  "Childs": [
+    {
+  "ItemType": "Tag",
+  "Name": "ChieuDaiCat",
+  "Path": "Local Station/ChannelServer/DeviceCutter/ChieuDaiCat",
+  "Description": "Cai dat don hang dang chay. PC set. PLC doc /10",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "406109"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "SoLuongCat",
+  "Path": "Local Station/ChannelServer/DeviceCutter/SoLuongCat",
+  "Description": "Cai dat don hang dang chay. PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "406108"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Pallet",
+  "Path": "Local Station/ChannelServer/DeviceCutter/Pallet",
+  "Description": "Cai dat don hang dang chay. PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "406110"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "SoLuongDat_FB",
+  "Path": "Local Station/ChannelServer/DeviceCutter/SoLuongDat_FB",
+  "Description": "So luong may cat dat. PLC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400102"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "SoLuongLoi_FB",
+  "Path": "Local Station/ChannelServer/DeviceCutter/SoLuongLoi_FB",
+  "Description": "so luong may cat loi. PLC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400104"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "TocDo_FB",
+  "Path": "Local Station/ChannelServer/DeviceCutter/TocDo_FB",
+  "Description": "toc do may cat. PLC set. PC doc len /10.",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400075"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "DoiDon",
+  "Path": "Local Station/ChannelServer/DeviceCutter/DoiDon",
+  "Description": "PC bao cho PLC biet da ghi chuyen don xong. PC set 1 - PLC set ve 0",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400020"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "LenhChuyenDon",
+  "Path": "Local Station/ChannelServer/DeviceCutter/LenhChuyenDon",
+  "Description": "PLC bao cho PC biet don hien tai da chay xong va yeu cau doi don. PLC set 1 - PC set 0",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400022"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Run",
+  "Path": "Local Station/ChannelServer/DeviceCutter/Run",
+  "Description": "PLC set. Bao may chay/dung",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400021"
+},
+  "Childs": []
+}
+  ]
+}
+  ]
+},
+    {
+  "ItemType": "Channel",
+  "Name": "ChannelMayXa",
+  "Path": "Local Station/ChannelMayXa",
+  "Description": null,
+  "DisplayInfo": "ModbusTCP - 127.0.0.1:503",
+  "Error": null,
+  "Properties": {
+  "IpAddress": "127.0.0.1",
+  "Port": "503",
+  "DelayBetweenPool": "5",
+  "ScanRate": "100"
+},
+  "Childs": [
+    {
+  "ItemType": "Device",
+  "Name": "May1",
+  "Path": "Local Station/ChannelMayXa/May1",
+  "Description": null,
+  "DisplayInfo": "UnitId - 4",
+  "Error": null,
+  "Properties": {
+  "UnitId": "4",
+  "Timeout": "1000",
+  "TryReadWriteTimes": "3",
+  "ReadMode": "Block",
+  "InputContactReadBlockSettings": "[]",
+  "OutputCoilsReadBlockSettings": "[]",
+  "InputRegisterReadBlockSettings": "[]",
+  "HoldingRegisterReadBlockSettings": "[\r\n  {\r\n    \"AddressType\": 4,\r\n    \"Enabled\": true,\r\n    \"StartAddress\": \"400002\",\r\n    \"EndAddress\": \"400102\"\r\n  }\r\n]",
+  "MaxWritesCount": "10"
+},
+  "Childs": [
+    {
+  "ItemType": "Tag",
+  "Name": "Xa",
+  "Path": "Local Station/ChannelMayXa/May1/Xa",
+  "Description": "chon xa bao nhieu tam 1 luc. PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400002"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Rong",
+  "Path": "Local Station/ChannelMayXa/May1/Rong",
+  "Description": "Rong. PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400003"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Cao",
+  "Path": "Local Station/ChannelMayXa/May1/Cao",
+  "Description": "doc tu cai dat don hang (order). PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400004"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Canh",
+  "Path": "Local Station/ChannelMayXa/May1/Canh",
+  "Description": "= Rong/2. PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400005"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan",
+  "Path": "Local Station/ChannelMayXa/May1/Lan",
+  "Description": "Kieu lan. PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400006"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Song",
+  "Path": "Local Station/ChannelMayXa/May1/Song",
+  "Description": "doc tu cai dat don hang (order). Chieu dai cong them. phu thuoc vao kieu song va so lop. PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400007"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "MetToiThucTe",
+  "Path": "Local Station/ChannelMayXa/May1/MetToiThucTe",
+  "Description": "PLC Set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "DWord",
+  "Address": "400020"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "TocDo",
+  "Path": "Local Station/ChannelMayXa/May1/TocDo",
+  "Description": "PLC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400022"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao2_PV",
+  "Path": "Local Station/ChannelMayXa/May1/Dao2_PV",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400024"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao3_PV",
+  "Path": "Local Station/ChannelMayXa/May1/Dao3_PV",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400025"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao4_PV",
+  "Path": "Local Station/ChannelMayXa/May1/Dao4_PV",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400026"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao5_PV",
+  "Path": "Local Station/ChannelMayXa/May1/Dao5_PV",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400027"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Hut_PV",
+  "Path": "Local Station/ChannelMayXa/May1/Hut_PV",
+  "Description": "Vi tri dau hut giay thua hien tai (giay thua o ria 2 ben). PLC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400028"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "LoaiLan_PV",
+  "Path": "Local Station/ChannelMayXa/May1/LoaiLan_PV",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400029"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "DoSauLan_PV",
+  "Path": "Local Station/ChannelMayXa/May1/DoSauLan_PV",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400030"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lang1_PV",
+  "Path": "Local Station/ChannelMayXa/May1/Lang1_PV",
+  "Description": "Vi tri lang hien tai. PLC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400031"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lang2_PV",
+  "Path": "Local Station/ChannelMayXa/May1/Lang2_PV",
+  "Description": "Vi tri lang hien tai. PLC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400032"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lang3_PV",
+  "Path": "Local Station/ChannelMayXa/May1/Lang3_PV",
+  "Description": "Vi tri lang hien tai. PLC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400033"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lang4_PV",
+  "Path": "Local Station/ChannelMayXa/May1/Lang4_PV",
+  "Description": "Vi tri lang hien tai. PLC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400034"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lang5_PV",
+  "Path": "Local Station/ChannelMayXa/May1/Lang5_PV",
+  "Description": "Vi tri lang hien tai. PLC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400035"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lang6_PV",
+  "Path": "Local Station/ChannelMayXa/May1/Lang6_PV",
+  "Description": "Vi tri lang hien tai. PLC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400036"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lang7_PV",
+  "Path": "Local Station/ChannelMayXa/May1/Lang7_PV",
+  "Description": "Vi tri lang hien tai. PLC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400037"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lang8_PV",
+  "Path": "Local Station/ChannelMayXa/May1/Lang8_PV",
+  "Description": "Vi tri lang hien tai. PLC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400038"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "DoiDon",
+  "Path": "Local Station/ChannelMayXa/May1/DoiDon",
+  "Description": "PC bao cho PLC biet da ghi chuyen don xong. PC set 1 - PLC set ve 0",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400039"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao1_SV",
+  "Path": "Local Station/ChannelMayXa/May1/Dao1_SV",
+  "Description": "Vi tri dao cai dat. PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400040"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao2_SV",
+  "Path": "Local Station/ChannelMayXa/May1/Dao2_SV",
+  "Description": "Vi tri dao cai dat. PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400041"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao3_SV",
+  "Path": "Local Station/ChannelMayXa/May1/Dao3_SV",
+  "Description": "Vi tri dao cai dat. PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400042"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao4_SV",
+  "Path": "Local Station/ChannelMayXa/May1/Dao4_SV",
+  "Description": "Vi tri dao cai dat. PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400043"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao5_SV",
+  "Path": "Local Station/ChannelMayXa/May1/Dao5_SV",
+  "Description": "Vi tri dao cai dat. PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400044"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Hut_SV",
+  "Path": "Local Station/ChannelMayXa/May1/Hut_SV",
+  "Description": "Vi tri dau hut giay thua cai dat (giay thua o ria 2 ben). PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400045"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan1_SV",
+  "Path": "Local Station/ChannelMayXa/May1/Lan1_SV",
+  "Description": "Vi tri lan cai dat. PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400048"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan2_SV",
+  "Path": "Local Station/ChannelMayXa/May1/Lan2_SV",
+  "Description": "Vi tri lan cai dat. PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400049"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan3_SV",
+  "Path": "Local Station/ChannelMayXa/May1/Lan3_SV",
+  "Description": "Vi tri lan cai dat. PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400050"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan4_SV",
+  "Path": "Local Station/ChannelMayXa/May1/Lan4_SV",
+  "Description": "Vi tri lan cai dat. PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400051"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan5_SV",
+  "Path": "Local Station/ChannelMayXa/May1/Lan5_SV",
+  "Description": "Vi tri lan cai dat. PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400052"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan6_SV",
+  "Path": "Local Station/ChannelMayXa/May1/Lan6_SV",
+  "Description": "Vi tri lan cai dat. PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400053"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan7_SV",
+  "Path": "Local Station/ChannelMayXa/May1/Lan7_SV",
+  "Description": "Vi tri lan cai dat. PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400054"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan8_SV",
+  "Path": "Local Station/ChannelMayXa/May1/Lan8_SV",
+  "Description": "Vi tri lan cai dat. PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400055"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao1_U",
+  "Path": "Local Station/ChannelMayXa/May1/Dao1_U",
+  "Description": "On/Off dao. PC set. 0-Off; 100-On",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400056"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao2_U",
+  "Path": "Local Station/ChannelMayXa/May1/Dao2_U",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400057"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao3_U",
+  "Path": "Local Station/ChannelMayXa/May1/Dao3_U",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400058"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao4_U",
+  "Path": "Local Station/ChannelMayXa/May1/Dao4_U",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400059"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao5_U",
+  "Path": "Local Station/ChannelMayXa/May1/Dao5_U",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400060"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan1_U",
+  "Path": "Local Station/ChannelMayXa/May1/Lan1_U",
+  "Description": "On/Off lang. PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400061"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan2_U",
+  "Path": "Local Station/ChannelMayXa/May1/Lan2_U",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400062"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan3_U",
+  "Path": "Local Station/ChannelMayXa/May1/Lan3_U",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400063"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan4_U",
+  "Path": "Local Station/ChannelMayXa/May1/Lan4_U",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400064"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan5_U",
+  "Path": "Local Station/ChannelMayXa/May1/Lan5_U",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400065"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan6_U",
+  "Path": "Local Station/ChannelMayXa/May1/Lan6_U",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400066"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan7_U",
+  "Path": "Local Station/ChannelMayXa/May1/Lan7_U",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400067"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan8_U",
+  "Path": "Local Station/ChannelMayXa/May1/Lan8_U",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400068"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao_Dao",
+  "Path": "Local Station/ChannelMayXa/May1/Dao_Dao",
+  "Description": "Khoang cach toi thieu de 2 dao khong dung nhau",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400069"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao1_Min",
+  "Path": "Local Station/ChannelMayXa/May1/Dao1_Min",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400070"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao1_Max",
+  "Path": "Local Station/ChannelMayXa/May1/Dao1_Max",
+  "Description": "Vi tri xa nhat dao 1 co the di chuyen. Dao 5 doi xung",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400071"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao2_Min",
+  "Path": "Local Station/ChannelMayXa/May1/Dao2_Min",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400072"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao2_Max",
+  "Path": "Local Station/ChannelMayXa/May1/Dao2_Max",
+  "Description": "Vi tri xa nhat dao 2 co the di chuyen. Dao 4 doi xung",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400073"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao4_Min",
+  "Path": "Local Station/ChannelMayXa/May1/Dao4_Min",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400074"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao4_Max",
+  "Path": "Local Station/ChannelMayXa/May1/Dao4_Max",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400075"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao5_Min",
+  "Path": "Local Station/ChannelMayXa/May1/Dao5_Min",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400076"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao5_Max",
+  "Path": "Local Station/ChannelMayXa/May1/Dao5_Max",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400077"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan_Lan",
+  "Path": "Local Station/ChannelMayXa/May1/Lan_Lan",
+  "Description": "Khoang cach toi thieu de 2 lang khong dung nhau",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400078"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan1_Min",
+  "Path": "Local Station/ChannelMayXa/May1/Lan1_Min",
+  "Description": "vi tri min lang 1 co the di chuyen",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400079"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan1_Max",
+  "Path": "Local Station/ChannelMayXa/May1/Lan1_Max",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400080"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan2_Min",
+  "Path": "Local Station/ChannelMayXa/May1/Lan2_Min",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400081"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan2_Max",
+  "Path": "Local Station/ChannelMayXa/May1/Lan2_Max",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400082"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan3_Min",
+  "Path": "Local Station/ChannelMayXa/May1/Lan3_Min",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400083"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan3_Max",
+  "Path": "Local Station/ChannelMayXa/May1/Lan3_Max",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400084"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan4_Min",
+  "Path": "Local Station/ChannelMayXa/May1/Lan4_Min",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400085"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Lan4_Max",
+  "Path": "Local Station/ChannelMayXa/May1/Lan4_Max",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400086"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "KhoMay",
+  "Path": "Local Station/ChannelMayXa/May1/KhoMay",
+  "Description": "Chieu rong cua may xa",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400095"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "MetToiKeHoach",
+  "Path": "Local Station/ChannelMayXa/May1/MetToiKeHoach",
+  "Description": "PLC Set.Tong so met theo don hang. (ChieuDaiCat*SoLuongCat)/100. Don vi met.",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "DWord",
+  "Address": "400096"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao3_Min",
+  "Path": "Local Station/ChannelMayXa/May1/Dao3_Min",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400099"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao3_Max",
+  "Path": "Local Station/ChannelMayXa/May1/Dao3_Max",
+  "Description": "",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400100"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Dao1_PV",
+  "Path": "Local Station/ChannelMayXa/May1/Dao1_PV",
+  "Description": null,
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400023"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "Run",
+  "Path": "Local Station/ChannelMayXa/May1/Run",
+  "Description": null,
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400101"
+},
+  "Childs": []
+},
+    {
+  "ItemType": "Tag",
+  "Name": "DoSauLan",
+  "Path": "Local Station/ChannelMayXa/May1/DoSauLan",
+  "Description": "PC set",
+  "DisplayInfo": null,
+  "Error": null,
+  "Properties": {
+  "DataType": "Word",
+  "Address": "400102"
+},
+  "Childs": []
+}
+  ]
+}
+  ]
+}
+  ]
+}
+  ]
+}
