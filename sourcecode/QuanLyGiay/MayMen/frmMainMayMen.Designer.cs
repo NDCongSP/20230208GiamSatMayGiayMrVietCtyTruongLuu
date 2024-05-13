@@ -297,9 +297,9 @@
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label19.Location = new System.Drawing.Point(32, 426);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(75, 25);
+            this.label19.Size = new System.Drawing.Size(79, 25);
             this.label19.TabIndex = 0;
-            this.label19.Text = "Sóng 3";
+            this.label19.Text = "Sóng C";
             // 
             // label18
             // 
@@ -307,9 +307,9 @@
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label18.Location = new System.Drawing.Point(32, 359);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(75, 25);
+            this.label18.Size = new System.Drawing.Size(77, 25);
             this.label18.TabIndex = 0;
-            this.label18.Text = "Sóng 2";
+            this.label18.Text = "Sóng B";
             // 
             // label17
             // 
@@ -317,9 +317,9 @@
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label17.Location = new System.Drawing.Point(32, 290);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(75, 25);
+            this.label17.Size = new System.Drawing.Size(77, 25);
             this.label17.TabIndex = 0;
-            this.label17.Text = "Sóng 1";
+            this.label17.Text = "Sóng E";
             // 
             // label16
             // 

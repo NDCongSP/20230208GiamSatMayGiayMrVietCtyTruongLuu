@@ -29,7 +29,6 @@ namespace MaySong
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel39 = new System.Windows.Forms.Panel();
             this.panel38 = new System.Windows.Forms.Panel();
             this.panel37 = new System.Windows.Forms.Panel();
@@ -96,7 +95,7 @@ namespace MaySong
             this.easyAcountManager1 = new EasyScada.Winforms.Controls.EasyAcountManager();
             this.grvDH = new System.Windows.Forms.DataGridView();
             this._btnTatMay = new System.Windows.Forms.Button();
-            this.easyDriverConnector1 = new EasyScada.Winforms.Controls.EasyDriverConnector(this.components);
+            this.easyDriverConnector1 = new EasyScada.Winforms.Controls.EasyDriverConnector();
             this._labGiaySongHienTai = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -303,9 +302,9 @@ namespace MaySong
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label19.Location = new System.Drawing.Point(32, 426);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(75, 25);
+            this.label19.Size = new System.Drawing.Size(79, 25);
             this.label19.TabIndex = 0;
-            this.label19.Text = "Sóng 3";
+            this.label19.Text = "Sóng C";
             // 
             // label18
             // 
@@ -313,9 +312,9 @@ namespace MaySong
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label18.Location = new System.Drawing.Point(32, 359);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(75, 25);
+            this.label18.Size = new System.Drawing.Size(77, 25);
             this.label18.TabIndex = 0;
-            this.label18.Text = "Sóng 2";
+            this.label18.Text = "Sóng B";
             // 
             // label17
             // 
@@ -323,9 +322,9 @@ namespace MaySong
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label17.Location = new System.Drawing.Point(32, 290);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(75, 25);
+            this.label17.Size = new System.Drawing.Size(77, 25);
             this.label17.TabIndex = 0;
-            this.label17.Text = "Sóng 1";
+            this.label17.Text = "Sóng E";
             // 
             // label16
             // 

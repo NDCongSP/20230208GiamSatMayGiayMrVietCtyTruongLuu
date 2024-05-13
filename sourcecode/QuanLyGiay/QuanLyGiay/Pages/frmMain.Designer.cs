@@ -67,6 +67,9 @@ namespace QuanLyGiay
             this.label1 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this._labPO = new System.Windows.Forms.Label();
+            this._labKhachHang = new System.Windows.Forms.Label();
+            this._labDonHang = new System.Windows.Forms.Label();
             this._labSoMetCL = new System.Windows.Forms.Label();
             this._labTongSoMetCD = new System.Windows.Forms.Label();
             this._labTocDo = new System.Windows.Forms.Label();
@@ -106,9 +109,6 @@ namespace QuanLyGiay
             this.btnNapMayXa = new System.Windows.Forms.Button();
             this.btnReviceError = new System.Windows.Forms.Button();
             this.easyDriverConnector1 = new EasyScada.Winforms.Controls.EasyDriverConnector(this.components);
-            this._labDonHang = new System.Windows.Forms.Label();
-            this._labKhachHang = new System.Windows.Forms.Label();
-            this._labPO = new System.Windows.Forms.Label();
             this.panel24.SuspendLayout();
             this.panel21.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -303,9 +303,9 @@ namespace QuanLyGiay
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label19.Location = new System.Drawing.Point(32, 426);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(75, 25);
+            this.label19.Size = new System.Drawing.Size(79, 25);
             this.label19.TabIndex = 0;
-            this.label19.Text = "Sóng 3";
+            this.label19.Text = "Sóng C";
             // 
             // label18
             // 
@@ -313,9 +313,9 @@ namespace QuanLyGiay
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label18.Location = new System.Drawing.Point(32, 359);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(75, 25);
+            this.label18.Size = new System.Drawing.Size(77, 25);
             this.label18.TabIndex = 0;
-            this.label18.Text = "Sóng 2";
+            this.label18.Text = "Sóng B";
             // 
             // label17
             // 
@@ -323,9 +323,9 @@ namespace QuanLyGiay
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label17.Location = new System.Drawing.Point(32, 290);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(75, 25);
+            this.label17.Size = new System.Drawing.Size(77, 25);
             this.label17.TabIndex = 0;
-            this.label17.Text = "Sóng 1";
+            this.label17.Text = "Sóng E";
             // 
             // label16
             // 
@@ -479,6 +479,33 @@ namespace QuanLyGiay
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ĐƠN HÀNG ĐANG CHẠY";
+            // 
+            // _labPO
+            // 
+            this._labPO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._labPO.Location = new System.Drawing.Point(620, 54);
+            this._labPO.Name = "_labPO";
+            this._labPO.Size = new System.Drawing.Size(155, 31);
+            this._labPO.TabIndex = 16;
+            this._labPO.Text = "PO";
+            // 
+            // _labKhachHang
+            // 
+            this._labKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._labKhachHang.Location = new System.Drawing.Point(413, 54);
+            this._labKhachHang.Name = "_labKhachHang";
+            this._labKhachHang.Size = new System.Drawing.Size(155, 31);
+            this._labKhachHang.TabIndex = 16;
+            this._labKhachHang.Text = "KH";
+            // 
+            // _labDonHang
+            // 
+            this._labDonHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._labDonHang.Location = new System.Drawing.Point(127, 54);
+            this._labDonHang.Name = "_labDonHang";
+            this._labDonHang.Size = new System.Drawing.Size(155, 31);
+            this._labDonHang.TabIndex = 16;
+            this._labDonHang.Text = "ĐH";
             // 
             // _labSoMetCL
             // 
@@ -920,33 +947,6 @@ namespace QuanLyGiay
             this.easyDriverConnector1.StationName = null;
             this.easyDriverConnector1.Timeout = 30;
             this.easyDriverConnector1.UseMongoDb = false;
-            // 
-            // _labDonHang
-            // 
-            this._labDonHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this._labDonHang.Location = new System.Drawing.Point(127, 54);
-            this._labDonHang.Name = "_labDonHang";
-            this._labDonHang.Size = new System.Drawing.Size(155, 31);
-            this._labDonHang.TabIndex = 16;
-            this._labDonHang.Text = "ĐH";
-            // 
-            // _labKhachHang
-            // 
-            this._labKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this._labKhachHang.Location = new System.Drawing.Point(413, 54);
-            this._labKhachHang.Name = "_labKhachHang";
-            this._labKhachHang.Size = new System.Drawing.Size(155, 31);
-            this._labKhachHang.TabIndex = 16;
-            this._labKhachHang.Text = "KH";
-            // 
-            // _labPO
-            // 
-            this._labPO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this._labPO.Location = new System.Drawing.Point(620, 54);
-            this._labPO.Name = "_labPO";
-            this._labPO.Size = new System.Drawing.Size(155, 31);
-            this._labPO.TabIndex = 16;
-            this._labPO.Text = "PO";
             // 
             // frmMain
             // 

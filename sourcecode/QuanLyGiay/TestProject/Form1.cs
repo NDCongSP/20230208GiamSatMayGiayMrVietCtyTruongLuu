@@ -7,14 +7,18 @@ using System.Drawing;
 using System.Linq;
 using System.Management;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Threading;
 
 namespace TestProject
 {
     public partial class Form1 : Form
     {
+        ConnectMySQL csdl = new ConnectMySQL();
+        DataTable bang1 = new DataTable();
+
         public Form1()
         {
             InitializeComponent();
@@ -23,8 +27,14 @@ namespace TestProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            _btnTest.Click += _btnTest_Click;
+            bang1 = csdl.TableWhere("tbldonhang", "*", $"IsActived = 1 and Status in (0,1)");
+            label4.Text = bang1.Rows.Count.ToString();
+            if (bang1 != null)
+            {
+                grvDH.DataSource = bang1;
+            }
         }
+
 
         private void _btnTest_Click(object sender, EventArgs e)
         {
