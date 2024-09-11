@@ -46,13 +46,10 @@
       <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
     <Reference Include="EasyScada.Core">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\PT Automation Solution\Easy Driver Server\Toolkit\EasyScada.Core.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\PT Automation Solution\Easy Driver Server\Toolkit\EasyScada.Core.dll</HintPath>
     </Reference>
     <Reference Include="EasyScada.Winforms.Controls">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\PT Automation Solution\Easy Driver Server\Toolkit\EasyScada.Winforms.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="EasyScada.Wpf.Controls">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\PT Automation Solution\Easy Driver Server\Toolkit\EasyScada.Wpf.Controls.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\PT Automation Solution\Easy Driver Server\Toolkit\EasyScada.Winforms.Controls.dll</HintPath>
     </Reference>
     <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
       <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
